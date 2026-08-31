@@ -316,5 +316,9 @@ dialog::backdrop { background: rgb(10 10 12 / 0.7); backdrop-filter: blur(0.25re
   html, body { width: auto; min-width: 0; height: auto; margin: 0; padding: 0; background: #fff !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; overflow: visible; }
   .print-deck { display: block; }
   .print-page { margin: 0; }
+  .print-page .kind-example .slide-content:has(.mascot-mask) { display: grid; }
+  .print-page .kind-example .slide-copy { max-width: 61%; padding-right: 0.7rem; }
+  .print-page .kind-example .mascot-mask { position: absolute; order: initial; right: -1%; top: 8%; width: 34% !important; height: 83%; margin-top: 0; clip-path: polygon(18% 0, 100% 0, 100% 100%, 18% 100%, 0 50%); }
+  .print-page .kind-example .mascot-mask img { width: 125%; height: 115%; max-width: none; transform: translate(-7%, -4%); }
   .profile-dialog, .toc-dialog, .result-dialog { display: none !important; }
 }

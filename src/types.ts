@@ -33,6 +33,12 @@ export type LectureTopic = {
   sourceTitle: string
   displayTitle: string
   sourceIds: string[]
+  examTaskIds: string[]
+  examAlignment: 'прямая подготовка' | 'поддерживающая подготовка'
+  examProduct: string
+  examTimebox: string
+  examPractice: string
+  examChecklist: string[]
   objective: string
   caseBrief: string
   diagnostic: string
@@ -46,7 +52,7 @@ export type LectureTopic = {
 export type SourceRecord = {
   id: string
   title: string
-  type: 'plan' | 'curriculum' | 'book' | 'documentation' | 'materials' | 'brand'
+  type: 'plan' | 'curriculum' | 'assessment' | 'book' | 'documentation' | 'materials' | 'brand'
   purpose: string
   location: string
   version: string

@@ -99,7 +99,7 @@ const makeTests = (topic: LectureTopic): TestTask[] => {
     {
       id: `${topic.id}-short`,
       mode: 'short',
-      prompt: `Коротко объясните, как вопрос «${q6.title}» влияет на работу базы сети сервисных центров.`,
+      prompt: `Коротко объясните, как вопрос «${q6.title}» влияет на работу учебной информационной системы ДЭ.`,
       correctAnswer: q6.focus,
       explanation: `Ориентир для самопроверки: ${q6.action}`,
       hint: 'Назовите наблюдаемый признак, административное действие и способ проверки.',
@@ -117,15 +117,15 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
       title: topic.displayTitle,
       body: course.realisticCase,
       bullets: course.competencies[topic.semester],
-      sourceIds: ['plan-pm07', 'uiabd-rhino', 'synergy-logo'],
+      sourceIds: ['plan-pm07', 'de-kim-2027', 'uiabd-rhino', 'synergy-logo'],
     },
     {
       kind: 'service',
-      kicker: `${topic.semester} семестр`,
-      title: course.semesterThemes[topic.semester],
-      body: 'Тема семестра задаёт границы: сервер баз данных рассматривается как объект эксплуатации, настройки, автоматизации и наблюдения.',
-      bullets: course.competencies[topic.semester],
-      sourceIds: ['plan-pm07'],
+      kicker: `КОД 09.02.07-5-2027 · ${topic.examAlignment}`,
+      title: 'Связь темы с демонстрационным экзаменом',
+      body: `${course.semesterThemes[topic.semester]}. Связь с заданиями: ${topic.examTaskIds.join(', ')}.`,
+      bullets: [`Экзаменационный продукт: ${topic.examProduct}.`, `Ориентир времени: ${topic.examTimebox}.`, `Компетенции семестра: ${course.competencies[topic.semester].join(', ')}.`],
+      sourceIds: ['plan-pm07', 'de-kim-2027', 'de-student-guide-2027'],
     },
     {
       kind: 'service',
@@ -156,7 +156,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
       kicker: 'Введение',
       title: 'Зачем администратору эта тема',
       body: topic.caseBrief,
-      bullets: ['Сначала наблюдаем и фиксируем исходное состояние.', 'Затем выполняем минимальное обоснованное действие.', 'После изменения повторяем проверку и сохраняем результат.'],
+      bullets: ['Сначала читаем условие и фиксируем требуемый продукт.', 'Затем выполняем минимальный проверяемый шаг.', 'В конце сохраняем результат в требуемом формате и проверяем по чек-листу ДЭ.'],
       sourceIds,
     },
     {
@@ -168,10 +168,10 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     },
     {
       kind: 'example',
-      kicker: 'Сквозной кейс',
-      title: 'Сеть сервисных центров: исходная ситуация',
-      body: topic.caseBrief,
-      bullets: ['Данные и значения являются условиями учебной задачи, а не статистикой реальной организации.', 'Секреты задаются локально: DB_PASSWORD=<SET_LOCALLY>.', 'Проверка выполняется на учебном сервере MySQL.'],
+      kicker: 'Сквозной кейс ДЭ 2027',
+      title: `Задания ${topic.examTaskIds.join(', ')}: тренировка по формату КОД`,
+      body: topic.examPractice,
+      bullets: topic.examChecklist.map((item) => `Проверка: ${item}.`),
       sourceIds,
     },
     {
@@ -198,7 +198,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
         `объяснить предмет темы «${topic.displayTitle}» на уровне администратора сервера;`,
         'связать наблюдаемый признак с проверяемым действием;',
         `подготовить и проверить артефакт: ${topic.adminArtifact};`,
-        'назвать типичную ошибку и её последствия для эксплуатации.',
+        `соотнести результат с продуктом ДЭ: ${topic.examProduct}.`,
       ],
       sourceIds,
     },
@@ -288,7 +288,8 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
       bullets: [
         `Выполни: ${clean(question.action)}`,
         `Ожидаемый результат: наблюдаемый признак «${clean(question.focus)}» можно подтвердить или опровергнуть.`,
-        'Способ проверки: повторить измерение, сохранить команду и фактический вывод.',
+        `Критерий ДЭ: ${topic.examChecklist[index % topic.examChecklist.length]}.`,
+        'Способ проверки: повторить измерение, сохранить команду и фактический вывод в составе экзаменационного артефакта.',
         `Типичная ошибка: ${clean(question.pitfall)}`,
       ],
       code: index === 0 ? topic.codeSample : undefined,
@@ -301,7 +302,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
   makeTests(topic).forEach((test, index) => {
     slides.push({
       kind: 'test',
-      kicker: `Итоговое задание ${index + 1} из 6 · ${test.mode}`,
+      kicker: `Подготовка к ДЭ · итоговое задание ${index + 1} из 6 · ${test.mode}`,
       title: 'Проверь решение',
       body: test.prompt,
       sourceIds,
@@ -312,10 +313,10 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
   slides.push(
     {
       kind: 'summary',
-      kicker: 'Итоговая памятка',
-      title: 'От симптома к проверяемому решению',
-      body: topic.objective,
-      bullets: topic.questions.map((question) => `${question.title}: ${question.action}`),
+      kicker: 'Итоговая памятка · КОД 09.02.07-5-2027',
+      title: `Готовность к заданиям ${topic.examTaskIds.join(', ')}`,
+      body: `${topic.examAlignment}. Экзаменационный продукт: ${topic.examProduct}.`,
+      bullets: [...topic.examChecklist.map((item) => `□ ${item}`), `□ результат сохранён в требуемом формате; ориентир: ${topic.examTimebox}`],
       sourceIds,
     },
     {
@@ -323,7 +324,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
       kicker: 'Результат и следующий шаг',
       title: topic.adminArtifact,
       body: `Следующий шаг: ${topic.nextStep}`,
-      bullets: ['Сохрани прогресс и ответы.', 'Открой результат отдельной кнопкой.', 'Для раздаточного материала используй student PDF; для проверки — teacher PDF.'],
+      bullets: [`Сопоставь артефакт с продуктом ДЭ: ${topic.examProduct}.`, 'Сохрани исходные данные, команды, фактический результат и контрольную проверку.', 'Для раздаточного материала используй student PDF; для проверки — teacher PDF.'],
       sourceIds,
     },
     {
@@ -345,4 +346,3 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
 
 export const countServiceSlides = (slides: Slide[]) =>
   slides.filter((slide) => [2, 3, 4, 5, 85].includes(slide.number)).length
-
