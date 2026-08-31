@@ -1,0 +1,28 @@
+{
+  "language": "ru-RU",
+  "allowedTerms": [
+    "ПиДИС",
+    "WMS",
+    "Field Service",
+    "GitHub",
+    "GitHub Pages",
+    "Playwright",
+    "TypeScript",
+    "React",
+    "Vite",
+    "localStorage",
+    "QR-код",
+    "IPR SMART",
+    "MySQL",
+    "PostgreSQL",
+    "SQL",
+    "PL/pgSQL",
+    "SQL/PSM",
+    "Prometheus",
+    "Grafana",
+    "InnoDB",
+    "СУБД"
+  ],
+  "ignoredScopes": ["URL", "program-code", "topic-identifiers", "file-names", "terminal-commands", "official-names", "author-surnames"]
+}
+
