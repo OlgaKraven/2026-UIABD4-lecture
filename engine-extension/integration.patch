@@ -1,0 +1,115 @@
+diff --git a/src/engine/LectureSite.tsx b/src/engine/LectureSite.tsx
+index bbc8bbd..2834e3c 100644
+--- a/src/engine/LectureSite.tsx
++++ b/src/engine/LectureSite.tsx
+@@ -38,7 +38,7 @@ import { CourseTools, StudyButtons, slideText } from './CourseTools'
+ const CourseEditor = lazy(() => import('./CourseEditor'))
+ const Teaching = lazy(() => import('./Teaching'))
+ const blankProfile: Profile = { fullName: '', position: '', department: '' }
+-export function LectureSite({ course, base = '/' }: { course: Course; base?: string }) {
++export function LectureSite({ course, base = '/', bundledTeacherNotes }: { course: Course; base?: string; bundledTeacherNotes?: string }) {
+   const mobile = useMobile()
+   const [editorLoggedIn, setEditorLoggedIn] = useState(false)
+   useEffect(() => {
+@@ -221,6 +221,7 @@ export function LectureSite({ course, base = '/' }: { course: Course; base?: str
+     return (
+       <Suspense fallback={<p>Открываем занятие…</p>}>
+         <Teaching
++          bundledTeacherNotes={bundledTeacherNotes}
+           course={course}
+           lecture={lecture}
+           base={base}
+diff --git a/src/engine/Teaching.tsx b/src/engine/Teaching.tsx
+index 40511f0..1cfd684 100644
+--- a/src/engine/Teaching.tsx
++++ b/src/engine/Teaching.tsx
+@@ -34,6 +34,7 @@ type Props = {
+   session: string
+   initialSlide: string
+   onExit: () => void
++  bundledTeacherNotes?: string
+ }
+ export default function Teaching(props: Props) {
+   return props.mode === 'audience' ? (
+@@ -151,7 +152,7 @@ function Audience({ course, lecture, base, session, profile }: Props) {
+     </main>
+   )
+ }
+-function Presenter({ course, lecture, base, profile, session, initialSlide, onExit }: Props) {
++function Presenter({ course, lecture, base, profile, session, initialSlide, onExit, bundledTeacherNotes }: Props) {
+   const storageKey = `lecture:${base}:${course.id}:private:${course.contentVersion}`
+   const layout = usePanelLayout(`lecture:${base}:${course.id}:panel-layout`)
+   const sessionKey = `lecture-session:${session}`
+@@ -162,6 +163,39 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
+   } | null>(null)
+   const [notesSaved, setNotesSaved] = useState(true)
+   const [notes, setNotes] = useState<Record<string, Note>>(() => read(storageKey, {}))
++  const notesRef = useRef(notes)
++  notesRef.current = notes
++  const [notesLoading, setNotesLoading] = useState(false)
++  const [notesLoadError, setNotesLoadError] = useState('')
++  const [notesLoadRevision, setNotesLoadRevision] = useState(0)
++  useEffect(() => {
++    if (!bundledTeacherNotes) return
++    const controller = new AbortController()
++    let cancelled = false
++    setNotesLoading(true)
++    setNotesLoadError('')
++    void (async () => {
++      try {
++        const response = await fetch(`${base}${bundledTeacherNotes}`, {signal: controller.signal})
++        if (!response.ok) throw Error('Не удалось загрузить сценарий. Повторите загрузку.')
++        const pack = await response.json() as TeacherPack
++        validateTeacherPack(pack, course)
++        const ids = new Set(course.lectures.flatMap(l => l.slides.map(s => s.id)))
++        if (Object.keys(pack.notes).some(id => !ids.has(id))) throw Error('Сценарий содержит неизвестные слайды.')
++        if (cancelled) return
++        const next = {...pack.notes, ...notesRef.current}
++        const saved = save(storageKey, next)
++        setNotes(next)
++        setNotesSaved(saved)
++        if (!saved) setNotesLoadError('Сценарий открыт, но не сохранён на устройстве. Личные правки экспортируйте перед закрытием.')
++      } catch (error) {
++        if (!cancelled) setNotesLoadError(error instanceof Error ? error.message : 'Не удалось загрузить сценарий.')
++      } finally {
++        if (!cancelled) setNotesLoading(false)
++      }
++    })()
++    return () => {cancelled = true; controller.abort()}
++  }, [bundledTeacherNotes, base, course, storageKey, notesLoadRevision])
+   const [shown, setShown] = useState(() =>
+     read(sessionKey, { slideId: initialSlide, black: false }),
+   )
+@@ -680,7 +714,7 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
+             <div className="note-reader" role="tabpanel" style={{ fontSize }}>
+               {note[tab] || (
+                 <div className="notes-empty">
+-                  <h3>Заметки ещё не добавлены</h3>
++                  <h3>{notesLoading ? 'Загружаем сценарий…' : 'Заметки ещё не добавлены'}</h3>
+                   <p>
+                     Загрузите файл сценария или нажмите «Редактировать». Текст сохраняется на этом
+                     устройстве и не передаётся в окно аудитории.
+@@ -690,6 +724,7 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
+             </div>
+           )}
+           <div className="notes-files">
++            {notesLoadError && <div role="alert">{notesLoadError}<button className="button ghost" disabled={notesLoading} onClick={() => setNotesLoadRevision(n => n + 1)}>Повторить загрузку сценария</button></div>}
+             <input
+               ref={importRef}
+               type="file"
+diff --git a/src/engine/model.ts b/src/engine/model.ts
+index 299ea2e..82c366a 100644
+--- a/src/engine/model.ts
++++ b/src/engine/model.ts
+@@ -1,5 +1,5 @@
+ import { validateStructure } from './validation.ts'
+-export const TEMPLATE_VERSION = '0.2.0'
++export const TEMPLATE_VERSION = '0.2.1-uiabd.1'
+ export type Profile = { fullName: string; position: string; department: string }
+ export type Option = { id: string; text: string }
+ export type Visual =
+@@ -177,3 +177,4 @@ export function assetUrl(path: string, base: string) {
+ export function validateCourse(value: unknown): asserts value is Course {
+   validateStructure(value)
+ }
++

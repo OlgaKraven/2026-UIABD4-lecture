@@ -16,7 +16,7 @@ async function load(){
    history.replaceState(null,'',url)
   }
   document.title=`${course.code} · ${course.discipline}`
-  root.render(<LectureSite course={course} base={import.meta.env.BASE_URL}/> )
+  root.render(<LectureSite course={course} base={import.meta.env.BASE_URL} bundledTeacherNotes="teacher-notes.json"/> )
  }catch(error){root.render(<main><h1>Курс не загрузился</h1><p role="alert">{String(error)}</p><button onClick={()=>void load()}>Повторить</button></main>)}
 }
 void load()

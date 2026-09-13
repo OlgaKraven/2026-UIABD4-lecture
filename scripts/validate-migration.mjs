@@ -3,6 +3,9 @@ import {validateCourse,validateBank,validateTeacherPack,readiness,courseAssets} 
 const c=JSON.parse(fs.readFileSync('public/course.json','utf8'));
 const bank=JSON.parse(fs.readFileSync('public/assessment.json','utf8'));
 validateCourse(c);validateBank(bank,c);
+const bundled=JSON.parse(fs.readFileSync('public/teacher-notes.json','utf8'));
+validateTeacherPack(bundled,c);
+for(const l of c.lectures)for(const s of l.slides)if(!bundled.notes[s.id]?.script.trim())throw Error('Нет встроенного сценария: '+s.id);
 const questions=JSON.parse(fs.readFileSync('authoring/questions.json','utf8'));
 for(const l of c.lectures){
  if(l.slides.length<80)throw Error(l.id+': недостаточный объём');
