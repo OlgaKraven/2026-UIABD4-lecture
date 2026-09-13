@@ -1,0 +1,2722 @@
+[
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q01",
+    "title": "Выборка как серверная операция",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q01-section",
+      "s07-01-queries-on-server-database-q01-concept",
+      "s07-01-queries-on-server-database-q01-logic",
+      "s07-01-queries-on-server-database-q01-example",
+      "s07-01-queries-on-server-database-q01-contrast",
+      "s07-01-queries-on-server-database-q01-warning",
+      "s07-01-queries-on-server-database-q01-notebook",
+      "s07-01-queries-on-server-database-q01-T01-slide",
+      "s07-01-queries-on-server-database-q01-T02-slide",
+      "s07-01-queries-on-server-database-q01-T03-slide",
+      "s07-01-queries-on-server-database-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q01-T01",
+      "s07-01-queries-on-server-database-q01-T02",
+      "s07-01-queries-on-server-database-q01-T03",
+      "s07-01-queries-on-server-database-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q01-section",
+      "s07-01-queries-on-server-database-q01-concept",
+      "s07-01-queries-on-server-database-q01-logic",
+      "s07-01-queries-on-server-database-q01-example",
+      "s07-01-queries-on-server-database-q01-contrast",
+      "s07-01-queries-on-server-database-q01-warning",
+      "s07-01-queries-on-server-database-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q02",
+    "title": "Условие WHERE",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q02-section",
+      "s07-01-queries-on-server-database-q02-concept",
+      "s07-01-queries-on-server-database-q02-logic",
+      "s07-01-queries-on-server-database-q02-example",
+      "s07-01-queries-on-server-database-q02-contrast",
+      "s07-01-queries-on-server-database-q02-warning",
+      "s07-01-queries-on-server-database-q02-notebook",
+      "s07-01-queries-on-server-database-q02-T01-slide",
+      "s07-01-queries-on-server-database-q02-T02-slide",
+      "s07-01-queries-on-server-database-q02-T03-slide",
+      "s07-01-queries-on-server-database-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q02-T01",
+      "s07-01-queries-on-server-database-q02-T02",
+      "s07-01-queries-on-server-database-q02-T03",
+      "s07-01-queries-on-server-database-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q02-section",
+      "s07-01-queries-on-server-database-q02-concept",
+      "s07-01-queries-on-server-database-q02-logic",
+      "s07-01-queries-on-server-database-q02-example",
+      "s07-01-queries-on-server-database-q02-contrast",
+      "s07-01-queries-on-server-database-q02-warning",
+      "s07-01-queries-on-server-database-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q03",
+    "title": "Соединение таблиц",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q03-section",
+      "s07-01-queries-on-server-database-q03-concept",
+      "s07-01-queries-on-server-database-q03-logic",
+      "s07-01-queries-on-server-database-q03-example",
+      "s07-01-queries-on-server-database-q03-contrast",
+      "s07-01-queries-on-server-database-q03-warning",
+      "s07-01-queries-on-server-database-q03-notebook",
+      "s07-01-queries-on-server-database-q03-T01-slide",
+      "s07-01-queries-on-server-database-q03-T02-slide",
+      "s07-01-queries-on-server-database-q03-T03-slide",
+      "s07-01-queries-on-server-database-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q03-T01",
+      "s07-01-queries-on-server-database-q03-T02",
+      "s07-01-queries-on-server-database-q03-T03",
+      "s07-01-queries-on-server-database-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q03-section",
+      "s07-01-queries-on-server-database-q03-concept",
+      "s07-01-queries-on-server-database-q03-logic",
+      "s07-01-queries-on-server-database-q03-example",
+      "s07-01-queries-on-server-database-q03-contrast",
+      "s07-01-queries-on-server-database-q03-warning",
+      "s07-01-queries-on-server-database-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q04",
+    "title": "Группировка",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q04-section",
+      "s07-01-queries-on-server-database-q04-concept",
+      "s07-01-queries-on-server-database-q04-logic",
+      "s07-01-queries-on-server-database-q04-example",
+      "s07-01-queries-on-server-database-q04-contrast",
+      "s07-01-queries-on-server-database-q04-warning",
+      "s07-01-queries-on-server-database-q04-notebook",
+      "s07-01-queries-on-server-database-q04-T01-slide",
+      "s07-01-queries-on-server-database-q04-T02-slide",
+      "s07-01-queries-on-server-database-q04-T03-slide",
+      "s07-01-queries-on-server-database-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q04-T01",
+      "s07-01-queries-on-server-database-q04-T02",
+      "s07-01-queries-on-server-database-q04-T03",
+      "s07-01-queries-on-server-database-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q04-section",
+      "s07-01-queries-on-server-database-q04-concept",
+      "s07-01-queries-on-server-database-q04-logic",
+      "s07-01-queries-on-server-database-q04-example",
+      "s07-01-queries-on-server-database-q04-contrast",
+      "s07-01-queries-on-server-database-q04-warning",
+      "s07-01-queries-on-server-database-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q05",
+    "title": "Агрегатные функции",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q05-section",
+      "s07-01-queries-on-server-database-q05-concept",
+      "s07-01-queries-on-server-database-q05-logic",
+      "s07-01-queries-on-server-database-q05-example",
+      "s07-01-queries-on-server-database-q05-contrast",
+      "s07-01-queries-on-server-database-q05-warning",
+      "s07-01-queries-on-server-database-q05-notebook",
+      "s07-01-queries-on-server-database-q05-T01-slide",
+      "s07-01-queries-on-server-database-q05-T02-slide",
+      "s07-01-queries-on-server-database-q05-T03-slide",
+      "s07-01-queries-on-server-database-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q05-T01",
+      "s07-01-queries-on-server-database-q05-T02",
+      "s07-01-queries-on-server-database-q05-T03",
+      "s07-01-queries-on-server-database-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q05-section",
+      "s07-01-queries-on-server-database-q05-concept",
+      "s07-01-queries-on-server-database-q05-logic",
+      "s07-01-queries-on-server-database-q05-example",
+      "s07-01-queries-on-server-database-q05-contrast",
+      "s07-01-queries-on-server-database-q05-warning",
+      "s07-01-queries-on-server-database-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q06",
+    "title": "Рост объёма",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q06-section",
+      "s07-01-queries-on-server-database-q06-concept",
+      "s07-01-queries-on-server-database-q06-logic",
+      "s07-01-queries-on-server-database-q06-example",
+      "s07-01-queries-on-server-database-q06-contrast",
+      "s07-01-queries-on-server-database-q06-warning",
+      "s07-01-queries-on-server-database-q06-notebook",
+      "s07-01-queries-on-server-database-q06-T01-slide",
+      "s07-01-queries-on-server-database-q06-T02-slide",
+      "s07-01-queries-on-server-database-q06-T03-slide",
+      "s07-01-queries-on-server-database-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q06-T01",
+      "s07-01-queries-on-server-database-q06-T02",
+      "s07-01-queries-on-server-database-q06-T03",
+      "s07-01-queries-on-server-database-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q06-section",
+      "s07-01-queries-on-server-database-q06-concept",
+      "s07-01-queries-on-server-database-q06-logic",
+      "s07-01-queries-on-server-database-q06-example",
+      "s07-01-queries-on-server-database-q06-contrast",
+      "s07-01-queries-on-server-database-q06-warning",
+      "s07-01-queries-on-server-database-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q07",
+    "title": "Измерение времени",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q07-section",
+      "s07-01-queries-on-server-database-q07-concept",
+      "s07-01-queries-on-server-database-q07-logic",
+      "s07-01-queries-on-server-database-q07-example",
+      "s07-01-queries-on-server-database-q07-contrast",
+      "s07-01-queries-on-server-database-q07-warning",
+      "s07-01-queries-on-server-database-q07-notebook",
+      "s07-01-queries-on-server-database-q07-T01-slide",
+      "s07-01-queries-on-server-database-q07-T02-slide",
+      "s07-01-queries-on-server-database-q07-T03-slide",
+      "s07-01-queries-on-server-database-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q07-T01",
+      "s07-01-queries-on-server-database-q07-T02",
+      "s07-01-queries-on-server-database-q07-T03",
+      "s07-01-queries-on-server-database-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q07-section",
+      "s07-01-queries-on-server-database-q07-concept",
+      "s07-01-queries-on-server-database-q07-logic",
+      "s07-01-queries-on-server-database-q07-example",
+      "s07-01-queries-on-server-database-q07-contrast",
+      "s07-01-queries-on-server-database-q07-warning",
+      "s07-01-queries-on-server-database-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-01-queries-on-server-database",
+    "questionId": "s07-01-queries-on-server-database-q08",
+    "title": "Проверка результата",
+    "slideIds": [
+      "s07-01-queries-on-server-database-q08-section",
+      "s07-01-queries-on-server-database-q08-concept",
+      "s07-01-queries-on-server-database-q08-logic",
+      "s07-01-queries-on-server-database-q08-example",
+      "s07-01-queries-on-server-database-q08-contrast",
+      "s07-01-queries-on-server-database-q08-warning",
+      "s07-01-queries-on-server-database-q08-notebook",
+      "s07-01-queries-on-server-database-q08-T01-slide",
+      "s07-01-queries-on-server-database-q08-T02-slide",
+      "s07-01-queries-on-server-database-q08-T03-slide",
+      "s07-01-queries-on-server-database-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s07-01-queries-on-server-database-q08-T01",
+      "s07-01-queries-on-server-database-q08-T02",
+      "s07-01-queries-on-server-database-q08-T03",
+      "s07-01-queries-on-server-database-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-01-queries-on-server-database-q08-section",
+      "s07-01-queries-on-server-database-q08-concept",
+      "s07-01-queries-on-server-database-q08-logic",
+      "s07-01-queries-on-server-database-q08-example",
+      "s07-01-queries-on-server-database-q08-contrast",
+      "s07-01-queries-on-server-database-q08-warning",
+      "s07-01-queries-on-server-database-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q01",
+    "title": "Гранулярность результата",
+    "slideIds": [
+      "s07-02-calculation-query-q01-section",
+      "s07-02-calculation-query-q01-concept",
+      "s07-02-calculation-query-q01-logic",
+      "s07-02-calculation-query-q01-example",
+      "s07-02-calculation-query-q01-contrast",
+      "s07-02-calculation-query-q01-warning",
+      "s07-02-calculation-query-q01-notebook",
+      "s07-02-calculation-query-q01-T01-slide",
+      "s07-02-calculation-query-q01-T02-slide",
+      "s07-02-calculation-query-q01-T03-slide",
+      "s07-02-calculation-query-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q01-T01",
+      "s07-02-calculation-query-q01-T02",
+      "s07-02-calculation-query-q01-T03",
+      "s07-02-calculation-query-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q01-section",
+      "s07-02-calculation-query-q01-concept",
+      "s07-02-calculation-query-q01-logic",
+      "s07-02-calculation-query-q01-example",
+      "s07-02-calculation-query-q01-contrast",
+      "s07-02-calculation-query-q01-warning",
+      "s07-02-calculation-query-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q02",
+    "title": "Цепочка соединений",
+    "slideIds": [
+      "s07-02-calculation-query-q02-section",
+      "s07-02-calculation-query-q02-concept",
+      "s07-02-calculation-query-q02-logic",
+      "s07-02-calculation-query-q02-example",
+      "s07-02-calculation-query-q02-contrast",
+      "s07-02-calculation-query-q02-warning",
+      "s07-02-calculation-query-q02-notebook",
+      "s07-02-calculation-query-q02-T01-slide",
+      "s07-02-calculation-query-q02-T02-slide",
+      "s07-02-calculation-query-q02-T03-slide",
+      "s07-02-calculation-query-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q02-T01",
+      "s07-02-calculation-query-q02-T02",
+      "s07-02-calculation-query-q02-T03",
+      "s07-02-calculation-query-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q02-section",
+      "s07-02-calculation-query-q02-concept",
+      "s07-02-calculation-query-q02-logic",
+      "s07-02-calculation-query-q02-example",
+      "s07-02-calculation-query-q02-contrast",
+      "s07-02-calculation-query-q02-warning",
+      "s07-02-calculation-query-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q03",
+    "title": "Количество и цена",
+    "slideIds": [
+      "s07-02-calculation-query-q03-section",
+      "s07-02-calculation-query-q03-concept",
+      "s07-02-calculation-query-q03-logic",
+      "s07-02-calculation-query-q03-example",
+      "s07-02-calculation-query-q03-contrast",
+      "s07-02-calculation-query-q03-warning",
+      "s07-02-calculation-query-q03-notebook",
+      "s07-02-calculation-query-q03-T01-slide",
+      "s07-02-calculation-query-q03-T02-slide",
+      "s07-02-calculation-query-q03-T03-slide",
+      "s07-02-calculation-query-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q03-T01",
+      "s07-02-calculation-query-q03-T02",
+      "s07-02-calculation-query-q03-T03",
+      "s07-02-calculation-query-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q03-section",
+      "s07-02-calculation-query-q03-concept",
+      "s07-02-calculation-query-q03-logic",
+      "s07-02-calculation-query-q03-example",
+      "s07-02-calculation-query-q03-contrast",
+      "s07-02-calculation-query-q03-warning",
+      "s07-02-calculation-query-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q04",
+    "title": "Норма расхода",
+    "slideIds": [
+      "s07-02-calculation-query-q04-section",
+      "s07-02-calculation-query-q04-concept",
+      "s07-02-calculation-query-q04-logic",
+      "s07-02-calculation-query-q04-example",
+      "s07-02-calculation-query-q04-contrast",
+      "s07-02-calculation-query-q04-warning",
+      "s07-02-calculation-query-q04-notebook",
+      "s07-02-calculation-query-q04-T01-slide",
+      "s07-02-calculation-query-q04-T02-slide",
+      "s07-02-calculation-query-q04-T03-slide",
+      "s07-02-calculation-query-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q04-T01",
+      "s07-02-calculation-query-q04-T02",
+      "s07-02-calculation-query-q04-T03",
+      "s07-02-calculation-query-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q04-section",
+      "s07-02-calculation-query-q04-concept",
+      "s07-02-calculation-query-q04-logic",
+      "s07-02-calculation-query-q04-example",
+      "s07-02-calculation-query-q04-contrast",
+      "s07-02-calculation-query-q04-warning",
+      "s07-02-calculation-query-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q05",
+    "title": "NULL в расчёте",
+    "slideIds": [
+      "s07-02-calculation-query-q05-section",
+      "s07-02-calculation-query-q05-concept",
+      "s07-02-calculation-query-q05-logic",
+      "s07-02-calculation-query-q05-example",
+      "s07-02-calculation-query-q05-contrast",
+      "s07-02-calculation-query-q05-warning",
+      "s07-02-calculation-query-q05-notebook",
+      "s07-02-calculation-query-q05-T01-slide",
+      "s07-02-calculation-query-q05-T02-slide",
+      "s07-02-calculation-query-q05-T03-slide",
+      "s07-02-calculation-query-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q05-T01",
+      "s07-02-calculation-query-q05-T02",
+      "s07-02-calculation-query-q05-T03",
+      "s07-02-calculation-query-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q05-section",
+      "s07-02-calculation-query-q05-concept",
+      "s07-02-calculation-query-q05-logic",
+      "s07-02-calculation-query-q05-example",
+      "s07-02-calculation-query-q05-contrast",
+      "s07-02-calculation-query-q05-warning",
+      "s07-02-calculation-query-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q06",
+    "title": "Агрегирование",
+    "slideIds": [
+      "s07-02-calculation-query-q06-section",
+      "s07-02-calculation-query-q06-concept",
+      "s07-02-calculation-query-q06-logic",
+      "s07-02-calculation-query-q06-example",
+      "s07-02-calculation-query-q06-contrast",
+      "s07-02-calculation-query-q06-warning",
+      "s07-02-calculation-query-q06-notebook",
+      "s07-02-calculation-query-q06-T01-slide",
+      "s07-02-calculation-query-q06-T02-slide",
+      "s07-02-calculation-query-q06-T03-slide",
+      "s07-02-calculation-query-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q06-T01",
+      "s07-02-calculation-query-q06-T02",
+      "s07-02-calculation-query-q06-T03",
+      "s07-02-calculation-query-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q06-section",
+      "s07-02-calculation-query-q06-concept",
+      "s07-02-calculation-query-q06-logic",
+      "s07-02-calculation-query-q06-example",
+      "s07-02-calculation-query-q06-contrast",
+      "s07-02-calculation-query-q06-warning",
+      "s07-02-calculation-query-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q07",
+    "title": "Правдоподобие",
+    "slideIds": [
+      "s07-02-calculation-query-q07-section",
+      "s07-02-calculation-query-q07-concept",
+      "s07-02-calculation-query-q07-logic",
+      "s07-02-calculation-query-q07-example",
+      "s07-02-calculation-query-q07-contrast",
+      "s07-02-calculation-query-q07-warning",
+      "s07-02-calculation-query-q07-notebook",
+      "s07-02-calculation-query-q07-T01-slide",
+      "s07-02-calculation-query-q07-T02-slide",
+      "s07-02-calculation-query-q07-T03-slide",
+      "s07-02-calculation-query-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q07-T01",
+      "s07-02-calculation-query-q07-T02",
+      "s07-02-calculation-query-q07-T03",
+      "s07-02-calculation-query-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q07-section",
+      "s07-02-calculation-query-q07-concept",
+      "s07-02-calculation-query-q07-logic",
+      "s07-02-calculation-query-q07-example",
+      "s07-02-calculation-query-q07-contrast",
+      "s07-02-calculation-query-q07-warning",
+      "s07-02-calculation-query-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-02-calculation-query",
+    "questionId": "s07-02-calculation-query-q08",
+    "title": "Документирование расчёта",
+    "slideIds": [
+      "s07-02-calculation-query-q08-section",
+      "s07-02-calculation-query-q08-concept",
+      "s07-02-calculation-query-q08-logic",
+      "s07-02-calculation-query-q08-example",
+      "s07-02-calculation-query-q08-contrast",
+      "s07-02-calculation-query-q08-warning",
+      "s07-02-calculation-query-q08-notebook",
+      "s07-02-calculation-query-q08-T01-slide",
+      "s07-02-calculation-query-q08-T02-slide",
+      "s07-02-calculation-query-q08-T03-slide",
+      "s07-02-calculation-query-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s07-02-calculation-query-q08-T01",
+      "s07-02-calculation-query-q08-T02",
+      "s07-02-calculation-query-q08-T03",
+      "s07-02-calculation-query-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-02-calculation-query-q08-section",
+      "s07-02-calculation-query-q08-concept",
+      "s07-02-calculation-query-q08-logic",
+      "s07-02-calculation-query-q08-example",
+      "s07-02-calculation-query-q08-contrast",
+      "s07-02-calculation-query-q08-warning",
+      "s07-02-calculation-query-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q01",
+    "title": "Повторяющееся серверное действие",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q01-section",
+      "s07-03-procedures-and-triggers-q01-concept",
+      "s07-03-procedures-and-triggers-q01-logic",
+      "s07-03-procedures-and-triggers-q01-example",
+      "s07-03-procedures-and-triggers-q01-contrast",
+      "s07-03-procedures-and-triggers-q01-warning",
+      "s07-03-procedures-and-triggers-q01-notebook",
+      "s07-03-procedures-and-triggers-q01-T01-slide",
+      "s07-03-procedures-and-triggers-q01-T02-slide",
+      "s07-03-procedures-and-triggers-q01-T03-slide",
+      "s07-03-procedures-and-triggers-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q01-T01",
+      "s07-03-procedures-and-triggers-q01-T02",
+      "s07-03-procedures-and-triggers-q01-T03",
+      "s07-03-procedures-and-triggers-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q01-section",
+      "s07-03-procedures-and-triggers-q01-concept",
+      "s07-03-procedures-and-triggers-q01-logic",
+      "s07-03-procedures-and-triggers-q01-example",
+      "s07-03-procedures-and-triggers-q01-contrast",
+      "s07-03-procedures-and-triggers-q01-warning",
+      "s07-03-procedures-and-triggers-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q02",
+    "title": "Хранимая процедура",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q02-section",
+      "s07-03-procedures-and-triggers-q02-concept",
+      "s07-03-procedures-and-triggers-q02-logic",
+      "s07-03-procedures-and-triggers-q02-example",
+      "s07-03-procedures-and-triggers-q02-contrast",
+      "s07-03-procedures-and-triggers-q02-warning",
+      "s07-03-procedures-and-triggers-q02-notebook",
+      "s07-03-procedures-and-triggers-q02-T01-slide",
+      "s07-03-procedures-and-triggers-q02-T02-slide",
+      "s07-03-procedures-and-triggers-q02-T03-slide",
+      "s07-03-procedures-and-triggers-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q02-T01",
+      "s07-03-procedures-and-triggers-q02-T02",
+      "s07-03-procedures-and-triggers-q02-T03",
+      "s07-03-procedures-and-triggers-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q02-section",
+      "s07-03-procedures-and-triggers-q02-concept",
+      "s07-03-procedures-and-triggers-q02-logic",
+      "s07-03-procedures-and-triggers-q02-example",
+      "s07-03-procedures-and-triggers-q02-contrast",
+      "s07-03-procedures-and-triggers-q02-warning",
+      "s07-03-procedures-and-triggers-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q03",
+    "title": "Параметры процедуры",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q03-section",
+      "s07-03-procedures-and-triggers-q03-concept",
+      "s07-03-procedures-and-triggers-q03-logic",
+      "s07-03-procedures-and-triggers-q03-example",
+      "s07-03-procedures-and-triggers-q03-contrast",
+      "s07-03-procedures-and-triggers-q03-warning",
+      "s07-03-procedures-and-triggers-q03-notebook",
+      "s07-03-procedures-and-triggers-q03-T01-slide",
+      "s07-03-procedures-and-triggers-q03-T02-slide",
+      "s07-03-procedures-and-triggers-q03-T03-slide",
+      "s07-03-procedures-and-triggers-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q03-T01",
+      "s07-03-procedures-and-triggers-q03-T02",
+      "s07-03-procedures-and-triggers-q03-T03",
+      "s07-03-procedures-and-triggers-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q03-section",
+      "s07-03-procedures-and-triggers-q03-concept",
+      "s07-03-procedures-and-triggers-q03-logic",
+      "s07-03-procedures-and-triggers-q03-example",
+      "s07-03-procedures-and-triggers-q03-contrast",
+      "s07-03-procedures-and-triggers-q03-warning",
+      "s07-03-procedures-and-triggers-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q04",
+    "title": "Триггер",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q04-section",
+      "s07-03-procedures-and-triggers-q04-concept",
+      "s07-03-procedures-and-triggers-q04-logic",
+      "s07-03-procedures-and-triggers-q04-example",
+      "s07-03-procedures-and-triggers-q04-contrast",
+      "s07-03-procedures-and-triggers-q04-warning",
+      "s07-03-procedures-and-triggers-q04-notebook",
+      "s07-03-procedures-and-triggers-q04-T01-slide",
+      "s07-03-procedures-and-triggers-q04-T02-slide",
+      "s07-03-procedures-and-triggers-q04-T03-slide",
+      "s07-03-procedures-and-triggers-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q04-T01",
+      "s07-03-procedures-and-triggers-q04-T02",
+      "s07-03-procedures-and-triggers-q04-T03",
+      "s07-03-procedures-and-triggers-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q04-section",
+      "s07-03-procedures-and-triggers-q04-concept",
+      "s07-03-procedures-and-triggers-q04-logic",
+      "s07-03-procedures-and-triggers-q04-example",
+      "s07-03-procedures-and-triggers-q04-contrast",
+      "s07-03-procedures-and-triggers-q04-warning",
+      "s07-03-procedures-and-triggers-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q05",
+    "title": "Порядок срабатывания",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q05-section",
+      "s07-03-procedures-and-triggers-q05-concept",
+      "s07-03-procedures-and-triggers-q05-logic",
+      "s07-03-procedures-and-triggers-q05-example",
+      "s07-03-procedures-and-triggers-q05-contrast",
+      "s07-03-procedures-and-triggers-q05-warning",
+      "s07-03-procedures-and-triggers-q05-notebook",
+      "s07-03-procedures-and-triggers-q05-T01-slide",
+      "s07-03-procedures-and-triggers-q05-T02-slide",
+      "s07-03-procedures-and-triggers-q05-T03-slide",
+      "s07-03-procedures-and-triggers-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q05-T01",
+      "s07-03-procedures-and-triggers-q05-T02",
+      "s07-03-procedures-and-triggers-q05-T03",
+      "s07-03-procedures-and-triggers-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q05-section",
+      "s07-03-procedures-and-triggers-q05-concept",
+      "s07-03-procedures-and-triggers-q05-logic",
+      "s07-03-procedures-and-triggers-q05-example",
+      "s07-03-procedures-and-triggers-q05-contrast",
+      "s07-03-procedures-and-triggers-q05-warning",
+      "s07-03-procedures-and-triggers-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q06",
+    "title": "Ошибки и откат",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q06-section",
+      "s07-03-procedures-and-triggers-q06-concept",
+      "s07-03-procedures-and-triggers-q06-logic",
+      "s07-03-procedures-and-triggers-q06-example",
+      "s07-03-procedures-and-triggers-q06-contrast",
+      "s07-03-procedures-and-triggers-q06-warning",
+      "s07-03-procedures-and-triggers-q06-notebook",
+      "s07-03-procedures-and-triggers-q06-T01-slide",
+      "s07-03-procedures-and-triggers-q06-T02-slide",
+      "s07-03-procedures-and-triggers-q06-T03-slide",
+      "s07-03-procedures-and-triggers-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q06-T01",
+      "s07-03-procedures-and-triggers-q06-T02",
+      "s07-03-procedures-and-triggers-q06-T03",
+      "s07-03-procedures-and-triggers-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q06-section",
+      "s07-03-procedures-and-triggers-q06-concept",
+      "s07-03-procedures-and-triggers-q06-logic",
+      "s07-03-procedures-and-triggers-q06-example",
+      "s07-03-procedures-and-triggers-q06-contrast",
+      "s07-03-procedures-and-triggers-q06-warning",
+      "s07-03-procedures-and-triggers-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q07",
+    "title": "Избыточная автоматизация",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q07-section",
+      "s07-03-procedures-and-triggers-q07-concept",
+      "s07-03-procedures-and-triggers-q07-logic",
+      "s07-03-procedures-and-triggers-q07-example",
+      "s07-03-procedures-and-triggers-q07-contrast",
+      "s07-03-procedures-and-triggers-q07-warning",
+      "s07-03-procedures-and-triggers-q07-notebook",
+      "s07-03-procedures-and-triggers-q07-T01-slide",
+      "s07-03-procedures-and-triggers-q07-T02-slide",
+      "s07-03-procedures-and-triggers-q07-T03-slide",
+      "s07-03-procedures-and-triggers-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q07-T01",
+      "s07-03-procedures-and-triggers-q07-T02",
+      "s07-03-procedures-and-triggers-q07-T03",
+      "s07-03-procedures-and-triggers-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q07-section",
+      "s07-03-procedures-and-triggers-q07-concept",
+      "s07-03-procedures-and-triggers-q07-logic",
+      "s07-03-procedures-and-triggers-q07-example",
+      "s07-03-procedures-and-triggers-q07-contrast",
+      "s07-03-procedures-and-triggers-q07-warning",
+      "s07-03-procedures-and-triggers-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-03-procedures-and-triggers",
+    "questionId": "s07-03-procedures-and-triggers-q08",
+    "title": "Проверка решения",
+    "slideIds": [
+      "s07-03-procedures-and-triggers-q08-section",
+      "s07-03-procedures-and-triggers-q08-concept",
+      "s07-03-procedures-and-triggers-q08-logic",
+      "s07-03-procedures-and-triggers-q08-example",
+      "s07-03-procedures-and-triggers-q08-contrast",
+      "s07-03-procedures-and-triggers-q08-warning",
+      "s07-03-procedures-and-triggers-q08-notebook",
+      "s07-03-procedures-and-triggers-q08-T01-slide",
+      "s07-03-procedures-and-triggers-q08-T02-slide",
+      "s07-03-procedures-and-triggers-q08-T03-slide",
+      "s07-03-procedures-and-triggers-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s07-03-procedures-and-triggers-q08-T01",
+      "s07-03-procedures-and-triggers-q08-T02",
+      "s07-03-procedures-and-triggers-q08-T03",
+      "s07-03-procedures-and-triggers-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-03-procedures-and-triggers-q08-section",
+      "s07-03-procedures-and-triggers-q08-concept",
+      "s07-03-procedures-and-triggers-q08-logic",
+      "s07-03-procedures-and-triggers-q08-example",
+      "s07-03-procedures-and-triggers-q08-contrast",
+      "s07-03-procedures-and-triggers-q08-warning",
+      "s07-03-procedures-and-triggers-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q01",
+    "title": "Воспроизводимое измерение",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q01-section",
+      "s07-04-query-performance-and-indexes-q01-concept",
+      "s07-04-query-performance-and-indexes-q01-logic",
+      "s07-04-query-performance-and-indexes-q01-example",
+      "s07-04-query-performance-and-indexes-q01-contrast",
+      "s07-04-query-performance-and-indexes-q01-warning",
+      "s07-04-query-performance-and-indexes-q01-notebook",
+      "s07-04-query-performance-and-indexes-q01-T01-slide",
+      "s07-04-query-performance-and-indexes-q01-T02-slide",
+      "s07-04-query-performance-and-indexes-q01-T03-slide",
+      "s07-04-query-performance-and-indexes-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q01-T01",
+      "s07-04-query-performance-and-indexes-q01-T02",
+      "s07-04-query-performance-and-indexes-q01-T03",
+      "s07-04-query-performance-and-indexes-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q01-section",
+      "s07-04-query-performance-and-indexes-q01-concept",
+      "s07-04-query-performance-and-indexes-q01-logic",
+      "s07-04-query-performance-and-indexes-q01-example",
+      "s07-04-query-performance-and-indexes-q01-contrast",
+      "s07-04-query-performance-and-indexes-q01-warning",
+      "s07-04-query-performance-and-indexes-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q02",
+    "title": "Объём данных",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q02-section",
+      "s07-04-query-performance-and-indexes-q02-concept",
+      "s07-04-query-performance-and-indexes-q02-logic",
+      "s07-04-query-performance-and-indexes-q02-example",
+      "s07-04-query-performance-and-indexes-q02-contrast",
+      "s07-04-query-performance-and-indexes-q02-warning",
+      "s07-04-query-performance-and-indexes-q02-notebook",
+      "s07-04-query-performance-and-indexes-q02-T01-slide",
+      "s07-04-query-performance-and-indexes-q02-T02-slide",
+      "s07-04-query-performance-and-indexes-q02-T03-slide",
+      "s07-04-query-performance-and-indexes-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q02-T01",
+      "s07-04-query-performance-and-indexes-q02-T02",
+      "s07-04-query-performance-and-indexes-q02-T03",
+      "s07-04-query-performance-and-indexes-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q02-section",
+      "s07-04-query-performance-and-indexes-q02-concept",
+      "s07-04-query-performance-and-indexes-q02-logic",
+      "s07-04-query-performance-and-indexes-q02-example",
+      "s07-04-query-performance-and-indexes-q02-contrast",
+      "s07-04-query-performance-and-indexes-q02-warning",
+      "s07-04-query-performance-and-indexes-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q03",
+    "title": "Соединение без условия",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q03-section",
+      "s07-04-query-performance-and-indexes-q03-concept",
+      "s07-04-query-performance-and-indexes-q03-logic",
+      "s07-04-query-performance-and-indexes-q03-example",
+      "s07-04-query-performance-and-indexes-q03-contrast",
+      "s07-04-query-performance-and-indexes-q03-warning",
+      "s07-04-query-performance-and-indexes-q03-notebook",
+      "s07-04-query-performance-and-indexes-q03-T01-slide",
+      "s07-04-query-performance-and-indexes-q03-T02-slide",
+      "s07-04-query-performance-and-indexes-q03-T03-slide",
+      "s07-04-query-performance-and-indexes-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q03-T01",
+      "s07-04-query-performance-and-indexes-q03-T02",
+      "s07-04-query-performance-and-indexes-q03-T03",
+      "s07-04-query-performance-and-indexes-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q03-section",
+      "s07-04-query-performance-and-indexes-q03-concept",
+      "s07-04-query-performance-and-indexes-q03-logic",
+      "s07-04-query-performance-and-indexes-q03-example",
+      "s07-04-query-performance-and-indexes-q03-contrast",
+      "s07-04-query-performance-and-indexes-q03-warning",
+      "s07-04-query-performance-and-indexes-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q04",
+    "title": "Назначение индекса",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q04-section",
+      "s07-04-query-performance-and-indexes-q04-concept",
+      "s07-04-query-performance-and-indexes-q04-logic",
+      "s07-04-query-performance-and-indexes-q04-example",
+      "s07-04-query-performance-and-indexes-q04-contrast",
+      "s07-04-query-performance-and-indexes-q04-warning",
+      "s07-04-query-performance-and-indexes-q04-notebook",
+      "s07-04-query-performance-and-indexes-q04-T01-slide",
+      "s07-04-query-performance-and-indexes-q04-T02-slide",
+      "s07-04-query-performance-and-indexes-q04-T03-slide",
+      "s07-04-query-performance-and-indexes-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q04-T01",
+      "s07-04-query-performance-and-indexes-q04-T02",
+      "s07-04-query-performance-and-indexes-q04-T03",
+      "s07-04-query-performance-and-indexes-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q04-section",
+      "s07-04-query-performance-and-indexes-q04-concept",
+      "s07-04-query-performance-and-indexes-q04-logic",
+      "s07-04-query-performance-and-indexes-q04-example",
+      "s07-04-query-performance-and-indexes-q04-contrast",
+      "s07-04-query-performance-and-indexes-q04-warning",
+      "s07-04-query-performance-and-indexes-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q05",
+    "title": "Селективность",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q05-section",
+      "s07-04-query-performance-and-indexes-q05-concept",
+      "s07-04-query-performance-and-indexes-q05-logic",
+      "s07-04-query-performance-and-indexes-q05-example",
+      "s07-04-query-performance-and-indexes-q05-contrast",
+      "s07-04-query-performance-and-indexes-q05-warning",
+      "s07-04-query-performance-and-indexes-q05-notebook",
+      "s07-04-query-performance-and-indexes-q05-T01-slide",
+      "s07-04-query-performance-and-indexes-q05-T02-slide",
+      "s07-04-query-performance-and-indexes-q05-T03-slide",
+      "s07-04-query-performance-and-indexes-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q05-T01",
+      "s07-04-query-performance-and-indexes-q05-T02",
+      "s07-04-query-performance-and-indexes-q05-T03",
+      "s07-04-query-performance-and-indexes-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q05-section",
+      "s07-04-query-performance-and-indexes-q05-concept",
+      "s07-04-query-performance-and-indexes-q05-logic",
+      "s07-04-query-performance-and-indexes-q05-example",
+      "s07-04-query-performance-and-indexes-q05-contrast",
+      "s07-04-query-performance-and-indexes-q05-warning",
+      "s07-04-query-performance-and-indexes-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q06",
+    "title": "Составной индекс",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q06-section",
+      "s07-04-query-performance-and-indexes-q06-concept",
+      "s07-04-query-performance-and-indexes-q06-logic",
+      "s07-04-query-performance-and-indexes-q06-example",
+      "s07-04-query-performance-and-indexes-q06-contrast",
+      "s07-04-query-performance-and-indexes-q06-warning",
+      "s07-04-query-performance-and-indexes-q06-notebook",
+      "s07-04-query-performance-and-indexes-q06-T01-slide",
+      "s07-04-query-performance-and-indexes-q06-T02-slide",
+      "s07-04-query-performance-and-indexes-q06-T03-slide",
+      "s07-04-query-performance-and-indexes-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q06-T01",
+      "s07-04-query-performance-and-indexes-q06-T02",
+      "s07-04-query-performance-and-indexes-q06-T03",
+      "s07-04-query-performance-and-indexes-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q06-section",
+      "s07-04-query-performance-and-indexes-q06-concept",
+      "s07-04-query-performance-and-indexes-q06-logic",
+      "s07-04-query-performance-and-indexes-q06-example",
+      "s07-04-query-performance-and-indexes-q06-contrast",
+      "s07-04-query-performance-and-indexes-q06-warning",
+      "s07-04-query-performance-and-indexes-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q07",
+    "title": "Издержки индекса",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q07-section",
+      "s07-04-query-performance-and-indexes-q07-concept",
+      "s07-04-query-performance-and-indexes-q07-logic",
+      "s07-04-query-performance-and-indexes-q07-example",
+      "s07-04-query-performance-and-indexes-q07-contrast",
+      "s07-04-query-performance-and-indexes-q07-warning",
+      "s07-04-query-performance-and-indexes-q07-notebook",
+      "s07-04-query-performance-and-indexes-q07-T01-slide",
+      "s07-04-query-performance-and-indexes-q07-T02-slide",
+      "s07-04-query-performance-and-indexes-q07-T03-slide",
+      "s07-04-query-performance-and-indexes-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q07-T01",
+      "s07-04-query-performance-and-indexes-q07-T02",
+      "s07-04-query-performance-and-indexes-q07-T03",
+      "s07-04-query-performance-and-indexes-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q07-section",
+      "s07-04-query-performance-and-indexes-q07-concept",
+      "s07-04-query-performance-and-indexes-q07-logic",
+      "s07-04-query-performance-and-indexes-q07-example",
+      "s07-04-query-performance-and-indexes-q07-contrast",
+      "s07-04-query-performance-and-indexes-q07-warning",
+      "s07-04-query-performance-and-indexes-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-04-query-performance-and-indexes",
+    "questionId": "s07-04-query-performance-and-indexes-q08",
+    "title": "Проверка после изменения",
+    "slideIds": [
+      "s07-04-query-performance-and-indexes-q08-section",
+      "s07-04-query-performance-and-indexes-q08-concept",
+      "s07-04-query-performance-and-indexes-q08-logic",
+      "s07-04-query-performance-and-indexes-q08-example",
+      "s07-04-query-performance-and-indexes-q08-contrast",
+      "s07-04-query-performance-and-indexes-q08-warning",
+      "s07-04-query-performance-and-indexes-q08-notebook",
+      "s07-04-query-performance-and-indexes-q08-T01-slide",
+      "s07-04-query-performance-and-indexes-q08-T02-slide",
+      "s07-04-query-performance-and-indexes-q08-T03-slide",
+      "s07-04-query-performance-and-indexes-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s07-04-query-performance-and-indexes-q08-T01",
+      "s07-04-query-performance-and-indexes-q08-T02",
+      "s07-04-query-performance-and-indexes-q08-T03",
+      "s07-04-query-performance-and-indexes-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-04-query-performance-and-indexes-q08-section",
+      "s07-04-query-performance-and-indexes-q08-concept",
+      "s07-04-query-performance-and-indexes-q08-logic",
+      "s07-04-query-performance-and-indexes-q08-example",
+      "s07-04-query-performance-and-indexes-q08-contrast",
+      "s07-04-query-performance-and-indexes-q08-warning",
+      "s07-04-query-performance-and-indexes-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q01",
+    "title": "Профиль нагрузки",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q01-section",
+      "s07-05-server-and-network-requirements-q01-concept",
+      "s07-05-server-and-network-requirements-q01-logic",
+      "s07-05-server-and-network-requirements-q01-example",
+      "s07-05-server-and-network-requirements-q01-contrast",
+      "s07-05-server-and-network-requirements-q01-warning",
+      "s07-05-server-and-network-requirements-q01-notebook",
+      "s07-05-server-and-network-requirements-q01-T01-slide",
+      "s07-05-server-and-network-requirements-q01-T02-slide",
+      "s07-05-server-and-network-requirements-q01-T03-slide",
+      "s07-05-server-and-network-requirements-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q01-T01",
+      "s07-05-server-and-network-requirements-q01-T02",
+      "s07-05-server-and-network-requirements-q01-T03",
+      "s07-05-server-and-network-requirements-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q01-section",
+      "s07-05-server-and-network-requirements-q01-concept",
+      "s07-05-server-and-network-requirements-q01-logic",
+      "s07-05-server-and-network-requirements-q01-example",
+      "s07-05-server-and-network-requirements-q01-contrast",
+      "s07-05-server-and-network-requirements-q01-warning",
+      "s07-05-server-and-network-requirements-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q02",
+    "title": "Процессор",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q02-section",
+      "s07-05-server-and-network-requirements-q02-concept",
+      "s07-05-server-and-network-requirements-q02-logic",
+      "s07-05-server-and-network-requirements-q02-example",
+      "s07-05-server-and-network-requirements-q02-contrast",
+      "s07-05-server-and-network-requirements-q02-warning",
+      "s07-05-server-and-network-requirements-q02-notebook",
+      "s07-05-server-and-network-requirements-q02-T01-slide",
+      "s07-05-server-and-network-requirements-q02-T02-slide",
+      "s07-05-server-and-network-requirements-q02-T03-slide",
+      "s07-05-server-and-network-requirements-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q02-T01",
+      "s07-05-server-and-network-requirements-q02-T02",
+      "s07-05-server-and-network-requirements-q02-T03",
+      "s07-05-server-and-network-requirements-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q02-section",
+      "s07-05-server-and-network-requirements-q02-concept",
+      "s07-05-server-and-network-requirements-q02-logic",
+      "s07-05-server-and-network-requirements-q02-example",
+      "s07-05-server-and-network-requirements-q02-contrast",
+      "s07-05-server-and-network-requirements-q02-warning",
+      "s07-05-server-and-network-requirements-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q03",
+    "title": "Оперативная память",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q03-section",
+      "s07-05-server-and-network-requirements-q03-concept",
+      "s07-05-server-and-network-requirements-q03-logic",
+      "s07-05-server-and-network-requirements-q03-example",
+      "s07-05-server-and-network-requirements-q03-contrast",
+      "s07-05-server-and-network-requirements-q03-warning",
+      "s07-05-server-and-network-requirements-q03-notebook",
+      "s07-05-server-and-network-requirements-q03-T01-slide",
+      "s07-05-server-and-network-requirements-q03-T02-slide",
+      "s07-05-server-and-network-requirements-q03-T03-slide",
+      "s07-05-server-and-network-requirements-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q03-T01",
+      "s07-05-server-and-network-requirements-q03-T02",
+      "s07-05-server-and-network-requirements-q03-T03",
+      "s07-05-server-and-network-requirements-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q03-section",
+      "s07-05-server-and-network-requirements-q03-concept",
+      "s07-05-server-and-network-requirements-q03-logic",
+      "s07-05-server-and-network-requirements-q03-example",
+      "s07-05-server-and-network-requirements-q03-contrast",
+      "s07-05-server-and-network-requirements-q03-warning",
+      "s07-05-server-and-network-requirements-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q04",
+    "title": "Буферный пул",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q04-section",
+      "s07-05-server-and-network-requirements-q04-concept",
+      "s07-05-server-and-network-requirements-q04-logic",
+      "s07-05-server-and-network-requirements-q04-example",
+      "s07-05-server-and-network-requirements-q04-contrast",
+      "s07-05-server-and-network-requirements-q04-warning",
+      "s07-05-server-and-network-requirements-q04-notebook",
+      "s07-05-server-and-network-requirements-q04-T01-slide",
+      "s07-05-server-and-network-requirements-q04-T02-slide",
+      "s07-05-server-and-network-requirements-q04-T03-slide",
+      "s07-05-server-and-network-requirements-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q04-T01",
+      "s07-05-server-and-network-requirements-q04-T02",
+      "s07-05-server-and-network-requirements-q04-T03",
+      "s07-05-server-and-network-requirements-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q04-section",
+      "s07-05-server-and-network-requirements-q04-concept",
+      "s07-05-server-and-network-requirements-q04-logic",
+      "s07-05-server-and-network-requirements-q04-example",
+      "s07-05-server-and-network-requirements-q04-contrast",
+      "s07-05-server-and-network-requirements-q04-warning",
+      "s07-05-server-and-network-requirements-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q05",
+    "title": "Дисковая подсистема",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q05-section",
+      "s07-05-server-and-network-requirements-q05-concept",
+      "s07-05-server-and-network-requirements-q05-logic",
+      "s07-05-server-and-network-requirements-q05-example",
+      "s07-05-server-and-network-requirements-q05-contrast",
+      "s07-05-server-and-network-requirements-q05-warning",
+      "s07-05-server-and-network-requirements-q05-notebook",
+      "s07-05-server-and-network-requirements-q05-T01-slide",
+      "s07-05-server-and-network-requirements-q05-T02-slide",
+      "s07-05-server-and-network-requirements-q05-T03-slide",
+      "s07-05-server-and-network-requirements-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q05-T01",
+      "s07-05-server-and-network-requirements-q05-T02",
+      "s07-05-server-and-network-requirements-q05-T03",
+      "s07-05-server-and-network-requirements-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q05-section",
+      "s07-05-server-and-network-requirements-q05-concept",
+      "s07-05-server-and-network-requirements-q05-logic",
+      "s07-05-server-and-network-requirements-q05-example",
+      "s07-05-server-and-network-requirements-q05-contrast",
+      "s07-05-server-and-network-requirements-q05-warning",
+      "s07-05-server-and-network-requirements-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q06",
+    "title": "Канал связи",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q06-section",
+      "s07-05-server-and-network-requirements-q06-concept",
+      "s07-05-server-and-network-requirements-q06-logic",
+      "s07-05-server-and-network-requirements-q06-example",
+      "s07-05-server-and-network-requirements-q06-contrast",
+      "s07-05-server-and-network-requirements-q06-warning",
+      "s07-05-server-and-network-requirements-q06-notebook",
+      "s07-05-server-and-network-requirements-q06-T01-slide",
+      "s07-05-server-and-network-requirements-q06-T02-slide",
+      "s07-05-server-and-network-requirements-q06-T03-slide",
+      "s07-05-server-and-network-requirements-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q06-T01",
+      "s07-05-server-and-network-requirements-q06-T02",
+      "s07-05-server-and-network-requirements-q06-T03",
+      "s07-05-server-and-network-requirements-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q06-section",
+      "s07-05-server-and-network-requirements-q06-concept",
+      "s07-05-server-and-network-requirements-q06-logic",
+      "s07-05-server-and-network-requirements-q06-example",
+      "s07-05-server-and-network-requirements-q06-contrast",
+      "s07-05-server-and-network-requirements-q06-warning",
+      "s07-05-server-and-network-requirements-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q07",
+    "title": "Расчёт с запасом",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q07-section",
+      "s07-05-server-and-network-requirements-q07-concept",
+      "s07-05-server-and-network-requirements-q07-logic",
+      "s07-05-server-and-network-requirements-q07-example",
+      "s07-05-server-and-network-requirements-q07-contrast",
+      "s07-05-server-and-network-requirements-q07-warning",
+      "s07-05-server-and-network-requirements-q07-notebook",
+      "s07-05-server-and-network-requirements-q07-T01-slide",
+      "s07-05-server-and-network-requirements-q07-T02-slide",
+      "s07-05-server-and-network-requirements-q07-T03-slide",
+      "s07-05-server-and-network-requirements-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q07-T01",
+      "s07-05-server-and-network-requirements-q07-T02",
+      "s07-05-server-and-network-requirements-q07-T03",
+      "s07-05-server-and-network-requirements-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q07-section",
+      "s07-05-server-and-network-requirements-q07-concept",
+      "s07-05-server-and-network-requirements-q07-logic",
+      "s07-05-server-and-network-requirements-q07-example",
+      "s07-05-server-and-network-requirements-q07-contrast",
+      "s07-05-server-and-network-requirements-q07-warning",
+      "s07-05-server-and-network-requirements-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s07-05-server-and-network-requirements",
+    "questionId": "s07-05-server-and-network-requirements-q08",
+    "title": "Выбор по критериям",
+    "slideIds": [
+      "s07-05-server-and-network-requirements-q08-section",
+      "s07-05-server-and-network-requirements-q08-concept",
+      "s07-05-server-and-network-requirements-q08-logic",
+      "s07-05-server-and-network-requirements-q08-example",
+      "s07-05-server-and-network-requirements-q08-contrast",
+      "s07-05-server-and-network-requirements-q08-warning",
+      "s07-05-server-and-network-requirements-q08-notebook",
+      "s07-05-server-and-network-requirements-q08-T01-slide",
+      "s07-05-server-and-network-requirements-q08-T02-slide",
+      "s07-05-server-and-network-requirements-q08-T03-slide",
+      "s07-05-server-and-network-requirements-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s07-05-server-and-network-requirements-q08-T01",
+      "s07-05-server-and-network-requirements-q08-T02",
+      "s07-05-server-and-network-requirements-q08-T03",
+      "s07-05-server-and-network-requirements-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s07-05-server-and-network-requirements-q08-section",
+      "s07-05-server-and-network-requirements-q08-concept",
+      "s07-05-server-and-network-requirements-q08-logic",
+      "s07-05-server-and-network-requirements-q08-example",
+      "s07-05-server-and-network-requirements-q08-contrast",
+      "s07-05-server-and-network-requirements-q08-warning",
+      "s07-05-server-and-network-requirements-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q01",
+    "title": "Ограничения ручной проверки",
+    "slideIds": [
+      "s08-01-server-metrics-q01-section",
+      "s08-01-server-metrics-q01-concept",
+      "s08-01-server-metrics-q01-logic",
+      "s08-01-server-metrics-q01-example",
+      "s08-01-server-metrics-q01-contrast",
+      "s08-01-server-metrics-q01-warning",
+      "s08-01-server-metrics-q01-notebook",
+      "s08-01-server-metrics-q01-T01-slide",
+      "s08-01-server-metrics-q01-T02-slide",
+      "s08-01-server-metrics-q01-T03-slide",
+      "s08-01-server-metrics-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q01-T01",
+      "s08-01-server-metrics-q01-T02",
+      "s08-01-server-metrics-q01-T03",
+      "s08-01-server-metrics-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q01-section",
+      "s08-01-server-metrics-q01-concept",
+      "s08-01-server-metrics-q01-logic",
+      "s08-01-server-metrics-q01-example",
+      "s08-01-server-metrics-q01-contrast",
+      "s08-01-server-metrics-q01-warning",
+      "s08-01-server-metrics-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q02",
+    "title": "Подключения",
+    "slideIds": [
+      "s08-01-server-metrics-q02-section",
+      "s08-01-server-metrics-q02-concept",
+      "s08-01-server-metrics-q02-logic",
+      "s08-01-server-metrics-q02-example",
+      "s08-01-server-metrics-q02-contrast",
+      "s08-01-server-metrics-q02-warning",
+      "s08-01-server-metrics-q02-notebook",
+      "s08-01-server-metrics-q02-T01-slide",
+      "s08-01-server-metrics-q02-T02-slide",
+      "s08-01-server-metrics-q02-T03-slide",
+      "s08-01-server-metrics-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q02-T01",
+      "s08-01-server-metrics-q02-T02",
+      "s08-01-server-metrics-q02-T03",
+      "s08-01-server-metrics-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q02-section",
+      "s08-01-server-metrics-q02-concept",
+      "s08-01-server-metrics-q02-logic",
+      "s08-01-server-metrics-q02-example",
+      "s08-01-server-metrics-q02-contrast",
+      "s08-01-server-metrics-q02-warning",
+      "s08-01-server-metrics-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q03",
+    "title": "Длительность запросов",
+    "slideIds": [
+      "s08-01-server-metrics-q03-section",
+      "s08-01-server-metrics-q03-concept",
+      "s08-01-server-metrics-q03-logic",
+      "s08-01-server-metrics-q03-example",
+      "s08-01-server-metrics-q03-contrast",
+      "s08-01-server-metrics-q03-warning",
+      "s08-01-server-metrics-q03-notebook",
+      "s08-01-server-metrics-q03-T01-slide",
+      "s08-01-server-metrics-q03-T02-slide",
+      "s08-01-server-metrics-q03-T03-slide",
+      "s08-01-server-metrics-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q03-T01",
+      "s08-01-server-metrics-q03-T02",
+      "s08-01-server-metrics-q03-T03",
+      "s08-01-server-metrics-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q03-section",
+      "s08-01-server-metrics-q03-concept",
+      "s08-01-server-metrics-q03-logic",
+      "s08-01-server-metrics-q03-example",
+      "s08-01-server-metrics-q03-contrast",
+      "s08-01-server-metrics-q03-warning",
+      "s08-01-server-metrics-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q04",
+    "title": "Объём данных",
+    "slideIds": [
+      "s08-01-server-metrics-q04-section",
+      "s08-01-server-metrics-q04-concept",
+      "s08-01-server-metrics-q04-logic",
+      "s08-01-server-metrics-q04-example",
+      "s08-01-server-metrics-q04-contrast",
+      "s08-01-server-metrics-q04-warning",
+      "s08-01-server-metrics-q04-notebook",
+      "s08-01-server-metrics-q04-T01-slide",
+      "s08-01-server-metrics-q04-T02-slide",
+      "s08-01-server-metrics-q04-T03-slide",
+      "s08-01-server-metrics-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q04-T01",
+      "s08-01-server-metrics-q04-T02",
+      "s08-01-server-metrics-q04-T03",
+      "s08-01-server-metrics-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q04-section",
+      "s08-01-server-metrics-q04-concept",
+      "s08-01-server-metrics-q04-logic",
+      "s08-01-server-metrics-q04-example",
+      "s08-01-server-metrics-q04-contrast",
+      "s08-01-server-metrics-q04-warning",
+      "s08-01-server-metrics-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q05",
+    "title": "Свободное место",
+    "slideIds": [
+      "s08-01-server-metrics-q05-section",
+      "s08-01-server-metrics-q05-concept",
+      "s08-01-server-metrics-q05-logic",
+      "s08-01-server-metrics-q05-example",
+      "s08-01-server-metrics-q05-contrast",
+      "s08-01-server-metrics-q05-warning",
+      "s08-01-server-metrics-q05-notebook",
+      "s08-01-server-metrics-q05-T01-slide",
+      "s08-01-server-metrics-q05-T02-slide",
+      "s08-01-server-metrics-q05-T03-slide",
+      "s08-01-server-metrics-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q05-T01",
+      "s08-01-server-metrics-q05-T02",
+      "s08-01-server-metrics-q05-T03",
+      "s08-01-server-metrics-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q05-section",
+      "s08-01-server-metrics-q05-concept",
+      "s08-01-server-metrics-q05-logic",
+      "s08-01-server-metrics-q05-example",
+      "s08-01-server-metrics-q05-contrast",
+      "s08-01-server-metrics-q05-warning",
+      "s08-01-server-metrics-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q06",
+    "title": "Количество ошибок",
+    "slideIds": [
+      "s08-01-server-metrics-q06-section",
+      "s08-01-server-metrics-q06-concept",
+      "s08-01-server-metrics-q06-logic",
+      "s08-01-server-metrics-q06-example",
+      "s08-01-server-metrics-q06-contrast",
+      "s08-01-server-metrics-q06-warning",
+      "s08-01-server-metrics-q06-notebook",
+      "s08-01-server-metrics-q06-T01-slide",
+      "s08-01-server-metrics-q06-T02-slide",
+      "s08-01-server-metrics-q06-T03-slide",
+      "s08-01-server-metrics-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q06-T01",
+      "s08-01-server-metrics-q06-T02",
+      "s08-01-server-metrics-q06-T03",
+      "s08-01-server-metrics-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q06-section",
+      "s08-01-server-metrics-q06-concept",
+      "s08-01-server-metrics-q06-logic",
+      "s08-01-server-metrics-q06-example",
+      "s08-01-server-metrics-q06-contrast",
+      "s08-01-server-metrics-q06-warning",
+      "s08-01-server-metrics-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q07",
+    "title": "Базовая линия",
+    "slideIds": [
+      "s08-01-server-metrics-q07-section",
+      "s08-01-server-metrics-q07-concept",
+      "s08-01-server-metrics-q07-logic",
+      "s08-01-server-metrics-q07-example",
+      "s08-01-server-metrics-q07-contrast",
+      "s08-01-server-metrics-q07-warning",
+      "s08-01-server-metrics-q07-notebook",
+      "s08-01-server-metrics-q07-T01-slide",
+      "s08-01-server-metrics-q07-T02-slide",
+      "s08-01-server-metrics-q07-T03-slide",
+      "s08-01-server-metrics-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q07-T01",
+      "s08-01-server-metrics-q07-T02",
+      "s08-01-server-metrics-q07-T03",
+      "s08-01-server-metrics-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q07-section",
+      "s08-01-server-metrics-q07-concept",
+      "s08-01-server-metrics-q07-logic",
+      "s08-01-server-metrics-q07-example",
+      "s08-01-server-metrics-q07-contrast",
+      "s08-01-server-metrics-q07-warning",
+      "s08-01-server-metrics-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-01-server-metrics",
+    "questionId": "s08-01-server-metrics-q08",
+    "title": "Паспорт показателя",
+    "slideIds": [
+      "s08-01-server-metrics-q08-section",
+      "s08-01-server-metrics-q08-concept",
+      "s08-01-server-metrics-q08-logic",
+      "s08-01-server-metrics-q08-example",
+      "s08-01-server-metrics-q08-contrast",
+      "s08-01-server-metrics-q08-warning",
+      "s08-01-server-metrics-q08-notebook",
+      "s08-01-server-metrics-q08-T01-slide",
+      "s08-01-server-metrics-q08-T02-slide",
+      "s08-01-server-metrics-q08-T03-slide",
+      "s08-01-server-metrics-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s08-01-server-metrics-q08-T01",
+      "s08-01-server-metrics-q08-T02",
+      "s08-01-server-metrics-q08-T03",
+      "s08-01-server-metrics-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-01-server-metrics-q08-section",
+      "s08-01-server-metrics-q08-concept",
+      "s08-01-server-metrics-q08-logic",
+      "s08-01-server-metrics-q08-example",
+      "s08-01-server-metrics-q08-contrast",
+      "s08-01-server-metrics-q08-warning",
+      "s08-01-server-metrics-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q01",
+    "title": "Источник показателя",
+    "slideIds": [
+      "s08-02-metrics-collection-q01-section",
+      "s08-02-metrics-collection-q01-concept",
+      "s08-02-metrics-collection-q01-logic",
+      "s08-02-metrics-collection-q01-example",
+      "s08-02-metrics-collection-q01-contrast",
+      "s08-02-metrics-collection-q01-warning",
+      "s08-02-metrics-collection-q01-notebook",
+      "s08-02-metrics-collection-q01-T01-slide",
+      "s08-02-metrics-collection-q01-T02-slide",
+      "s08-02-metrics-collection-q01-T03-slide",
+      "s08-02-metrics-collection-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q01-T01",
+      "s08-02-metrics-collection-q01-T02",
+      "s08-02-metrics-collection-q01-T03",
+      "s08-02-metrics-collection-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q01-section",
+      "s08-02-metrics-collection-q01-concept",
+      "s08-02-metrics-collection-q01-logic",
+      "s08-02-metrics-collection-q01-example",
+      "s08-02-metrics-collection-q01-contrast",
+      "s08-02-metrics-collection-q01-warning",
+      "s08-02-metrics-collection-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q02",
+    "title": "Периодический сбор",
+    "slideIds": [
+      "s08-02-metrics-collection-q02-section",
+      "s08-02-metrics-collection-q02-concept",
+      "s08-02-metrics-collection-q02-logic",
+      "s08-02-metrics-collection-q02-example",
+      "s08-02-metrics-collection-q02-contrast",
+      "s08-02-metrics-collection-q02-warning",
+      "s08-02-metrics-collection-q02-notebook",
+      "s08-02-metrics-collection-q02-T01-slide",
+      "s08-02-metrics-collection-q02-T02-slide",
+      "s08-02-metrics-collection-q02-T03-slide",
+      "s08-02-metrics-collection-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q02-T01",
+      "s08-02-metrics-collection-q02-T02",
+      "s08-02-metrics-collection-q02-T03",
+      "s08-02-metrics-collection-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q02-section",
+      "s08-02-metrics-collection-q02-concept",
+      "s08-02-metrics-collection-q02-logic",
+      "s08-02-metrics-collection-q02-example",
+      "s08-02-metrics-collection-q02-contrast",
+      "s08-02-metrics-collection-q02-warning",
+      "s08-02-metrics-collection-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q03",
+    "title": "Модель pull",
+    "slideIds": [
+      "s08-02-metrics-collection-q03-section",
+      "s08-02-metrics-collection-q03-concept",
+      "s08-02-metrics-collection-q03-logic",
+      "s08-02-metrics-collection-q03-example",
+      "s08-02-metrics-collection-q03-contrast",
+      "s08-02-metrics-collection-q03-warning",
+      "s08-02-metrics-collection-q03-notebook",
+      "s08-02-metrics-collection-q03-T01-slide",
+      "s08-02-metrics-collection-q03-T02-slide",
+      "s08-02-metrics-collection-q03-T03-slide",
+      "s08-02-metrics-collection-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q03-T01",
+      "s08-02-metrics-collection-q03-T02",
+      "s08-02-metrics-collection-q03-T03",
+      "s08-02-metrics-collection-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q03-section",
+      "s08-02-metrics-collection-q03-concept",
+      "s08-02-metrics-collection-q03-logic",
+      "s08-02-metrics-collection-q03-example",
+      "s08-02-metrics-collection-q03-contrast",
+      "s08-02-metrics-collection-q03-warning",
+      "s08-02-metrics-collection-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q04",
+    "title": "Показатель и имя",
+    "slideIds": [
+      "s08-02-metrics-collection-q04-section",
+      "s08-02-metrics-collection-q04-concept",
+      "s08-02-metrics-collection-q04-logic",
+      "s08-02-metrics-collection-q04-example",
+      "s08-02-metrics-collection-q04-contrast",
+      "s08-02-metrics-collection-q04-warning",
+      "s08-02-metrics-collection-q04-notebook",
+      "s08-02-metrics-collection-q04-T01-slide",
+      "s08-02-metrics-collection-q04-T02-slide",
+      "s08-02-metrics-collection-q04-T03-slide",
+      "s08-02-metrics-collection-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q04-T01",
+      "s08-02-metrics-collection-q04-T02",
+      "s08-02-metrics-collection-q04-T03",
+      "s08-02-metrics-collection-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q04-section",
+      "s08-02-metrics-collection-q04-concept",
+      "s08-02-metrics-collection-q04-logic",
+      "s08-02-metrics-collection-q04-example",
+      "s08-02-metrics-collection-q04-contrast",
+      "s08-02-metrics-collection-q04-warning",
+      "s08-02-metrics-collection-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q05",
+    "title": "Метка",
+    "slideIds": [
+      "s08-02-metrics-collection-q05-section",
+      "s08-02-metrics-collection-q05-concept",
+      "s08-02-metrics-collection-q05-logic",
+      "s08-02-metrics-collection-q05-example",
+      "s08-02-metrics-collection-q05-contrast",
+      "s08-02-metrics-collection-q05-warning",
+      "s08-02-metrics-collection-q05-notebook",
+      "s08-02-metrics-collection-q05-T01-slide",
+      "s08-02-metrics-collection-q05-T02-slide",
+      "s08-02-metrics-collection-q05-T03-slide",
+      "s08-02-metrics-collection-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q05-T01",
+      "s08-02-metrics-collection-q05-T02",
+      "s08-02-metrics-collection-q05-T03",
+      "s08-02-metrics-collection-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q05-section",
+      "s08-02-metrics-collection-q05-concept",
+      "s08-02-metrics-collection-q05-logic",
+      "s08-02-metrics-collection-q05-example",
+      "s08-02-metrics-collection-q05-contrast",
+      "s08-02-metrics-collection-q05-warning",
+      "s08-02-metrics-collection-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q06",
+    "title": "Точка во времени",
+    "slideIds": [
+      "s08-02-metrics-collection-q06-section",
+      "s08-02-metrics-collection-q06-concept",
+      "s08-02-metrics-collection-q06-logic",
+      "s08-02-metrics-collection-q06-example",
+      "s08-02-metrics-collection-q06-contrast",
+      "s08-02-metrics-collection-q06-warning",
+      "s08-02-metrics-collection-q06-notebook",
+      "s08-02-metrics-collection-q06-T01-slide",
+      "s08-02-metrics-collection-q06-T02-slide",
+      "s08-02-metrics-collection-q06-T03-slide",
+      "s08-02-metrics-collection-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q06-T01",
+      "s08-02-metrics-collection-q06-T02",
+      "s08-02-metrics-collection-q06-T03",
+      "s08-02-metrics-collection-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q06-section",
+      "s08-02-metrics-collection-q06-concept",
+      "s08-02-metrics-collection-q06-logic",
+      "s08-02-metrics-collection-q06-example",
+      "s08-02-metrics-collection-q06-contrast",
+      "s08-02-metrics-collection-q06-warning",
+      "s08-02-metrics-collection-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q07",
+    "title": "Хранение ряда",
+    "slideIds": [
+      "s08-02-metrics-collection-q07-section",
+      "s08-02-metrics-collection-q07-concept",
+      "s08-02-metrics-collection-q07-logic",
+      "s08-02-metrics-collection-q07-example",
+      "s08-02-metrics-collection-q07-contrast",
+      "s08-02-metrics-collection-q07-warning",
+      "s08-02-metrics-collection-q07-notebook",
+      "s08-02-metrics-collection-q07-T01-slide",
+      "s08-02-metrics-collection-q07-T02-slide",
+      "s08-02-metrics-collection-q07-T03-slide",
+      "s08-02-metrics-collection-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q07-T01",
+      "s08-02-metrics-collection-q07-T02",
+      "s08-02-metrics-collection-q07-T03",
+      "s08-02-metrics-collection-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q07-section",
+      "s08-02-metrics-collection-q07-concept",
+      "s08-02-metrics-collection-q07-logic",
+      "s08-02-metrics-collection-q07-example",
+      "s08-02-metrics-collection-q07-contrast",
+      "s08-02-metrics-collection-q07-warning",
+      "s08-02-metrics-collection-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-02-metrics-collection",
+    "questionId": "s08-02-metrics-collection-q08",
+    "title": "Заменяемая архитектура",
+    "slideIds": [
+      "s08-02-metrics-collection-q08-section",
+      "s08-02-metrics-collection-q08-concept",
+      "s08-02-metrics-collection-q08-logic",
+      "s08-02-metrics-collection-q08-example",
+      "s08-02-metrics-collection-q08-contrast",
+      "s08-02-metrics-collection-q08-warning",
+      "s08-02-metrics-collection-q08-notebook",
+      "s08-02-metrics-collection-q08-T01-slide",
+      "s08-02-metrics-collection-q08-T02-slide",
+      "s08-02-metrics-collection-q08-T03-slide",
+      "s08-02-metrics-collection-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s08-02-metrics-collection-q08-T01",
+      "s08-02-metrics-collection-q08-T02",
+      "s08-02-metrics-collection-q08-T03",
+      "s08-02-metrics-collection-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-02-metrics-collection-q08-section",
+      "s08-02-metrics-collection-q08-concept",
+      "s08-02-metrics-collection-q08-logic",
+      "s08-02-metrics-collection-q08-example",
+      "s08-02-metrics-collection-q08-contrast",
+      "s08-02-metrics-collection-q08-warning",
+      "s08-02-metrics-collection-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q01",
+    "title": "Вопрос панели",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q01-section",
+      "s08-03-dashboard-and-alerting-q01-concept",
+      "s08-03-dashboard-and-alerting-q01-logic",
+      "s08-03-dashboard-and-alerting-q01-example",
+      "s08-03-dashboard-and-alerting-q01-contrast",
+      "s08-03-dashboard-and-alerting-q01-warning",
+      "s08-03-dashboard-and-alerting-q01-notebook",
+      "s08-03-dashboard-and-alerting-q01-T01-slide",
+      "s08-03-dashboard-and-alerting-q01-T02-slide",
+      "s08-03-dashboard-and-alerting-q01-T03-slide",
+      "s08-03-dashboard-and-alerting-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q01-T01",
+      "s08-03-dashboard-and-alerting-q01-T02",
+      "s08-03-dashboard-and-alerting-q01-T03",
+      "s08-03-dashboard-and-alerting-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q01-section",
+      "s08-03-dashboard-and-alerting-q01-concept",
+      "s08-03-dashboard-and-alerting-q01-logic",
+      "s08-03-dashboard-and-alerting-q01-example",
+      "s08-03-dashboard-and-alerting-q01-contrast",
+      "s08-03-dashboard-and-alerting-q01-warning",
+      "s08-03-dashboard-and-alerting-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q02",
+    "title": "Выбор визуализации",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q02-section",
+      "s08-03-dashboard-and-alerting-q02-concept",
+      "s08-03-dashboard-and-alerting-q02-logic",
+      "s08-03-dashboard-and-alerting-q02-example",
+      "s08-03-dashboard-and-alerting-q02-contrast",
+      "s08-03-dashboard-and-alerting-q02-warning",
+      "s08-03-dashboard-and-alerting-q02-notebook",
+      "s08-03-dashboard-and-alerting-q02-T01-slide",
+      "s08-03-dashboard-and-alerting-q02-T02-slide",
+      "s08-03-dashboard-and-alerting-q02-T03-slide",
+      "s08-03-dashboard-and-alerting-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q02-T01",
+      "s08-03-dashboard-and-alerting-q02-T02",
+      "s08-03-dashboard-and-alerting-q02-T03",
+      "s08-03-dashboard-and-alerting-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q02-section",
+      "s08-03-dashboard-and-alerting-q02-concept",
+      "s08-03-dashboard-and-alerting-q02-logic",
+      "s08-03-dashboard-and-alerting-q02-example",
+      "s08-03-dashboard-and-alerting-q02-contrast",
+      "s08-03-dashboard-and-alerting-q02-warning",
+      "s08-03-dashboard-and-alerting-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q03",
+    "title": "Временной диапазон",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q03-section",
+      "s08-03-dashboard-and-alerting-q03-concept",
+      "s08-03-dashboard-and-alerting-q03-logic",
+      "s08-03-dashboard-and-alerting-q03-example",
+      "s08-03-dashboard-and-alerting-q03-contrast",
+      "s08-03-dashboard-and-alerting-q03-warning",
+      "s08-03-dashboard-and-alerting-q03-notebook",
+      "s08-03-dashboard-and-alerting-q03-T01-slide",
+      "s08-03-dashboard-and-alerting-q03-T02-slide",
+      "s08-03-dashboard-and-alerting-q03-T03-slide",
+      "s08-03-dashboard-and-alerting-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q03-T01",
+      "s08-03-dashboard-and-alerting-q03-T02",
+      "s08-03-dashboard-and-alerting-q03-T03",
+      "s08-03-dashboard-and-alerting-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q03-section",
+      "s08-03-dashboard-and-alerting-q03-concept",
+      "s08-03-dashboard-and-alerting-q03-logic",
+      "s08-03-dashboard-and-alerting-q03-example",
+      "s08-03-dashboard-and-alerting-q03-contrast",
+      "s08-03-dashboard-and-alerting-q03-warning",
+      "s08-03-dashboard-and-alerting-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q04",
+    "title": "Пороговое значение",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q04-section",
+      "s08-03-dashboard-and-alerting-q04-concept",
+      "s08-03-dashboard-and-alerting-q04-logic",
+      "s08-03-dashboard-and-alerting-q04-example",
+      "s08-03-dashboard-and-alerting-q04-contrast",
+      "s08-03-dashboard-and-alerting-q04-warning",
+      "s08-03-dashboard-and-alerting-q04-notebook",
+      "s08-03-dashboard-and-alerting-q04-T01-slide",
+      "s08-03-dashboard-and-alerting-q04-T02-slide",
+      "s08-03-dashboard-and-alerting-q04-T03-slide",
+      "s08-03-dashboard-and-alerting-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q04-T01",
+      "s08-03-dashboard-and-alerting-q04-T02",
+      "s08-03-dashboard-and-alerting-q04-T03",
+      "s08-03-dashboard-and-alerting-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q04-section",
+      "s08-03-dashboard-and-alerting-q04-concept",
+      "s08-03-dashboard-and-alerting-q04-logic",
+      "s08-03-dashboard-and-alerting-q04-example",
+      "s08-03-dashboard-and-alerting-q04-contrast",
+      "s08-03-dashboard-and-alerting-q04-warning",
+      "s08-03-dashboard-and-alerting-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q05",
+    "title": "Условие оповещения",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q05-section",
+      "s08-03-dashboard-and-alerting-q05-concept",
+      "s08-03-dashboard-and-alerting-q05-logic",
+      "s08-03-dashboard-and-alerting-q05-example",
+      "s08-03-dashboard-and-alerting-q05-contrast",
+      "s08-03-dashboard-and-alerting-q05-warning",
+      "s08-03-dashboard-and-alerting-q05-notebook",
+      "s08-03-dashboard-and-alerting-q05-T01-slide",
+      "s08-03-dashboard-and-alerting-q05-T02-slide",
+      "s08-03-dashboard-and-alerting-q05-T03-slide",
+      "s08-03-dashboard-and-alerting-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q05-T01",
+      "s08-03-dashboard-and-alerting-q05-T02",
+      "s08-03-dashboard-and-alerting-q05-T03",
+      "s08-03-dashboard-and-alerting-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q05-section",
+      "s08-03-dashboard-and-alerting-q05-concept",
+      "s08-03-dashboard-and-alerting-q05-logic",
+      "s08-03-dashboard-and-alerting-q05-example",
+      "s08-03-dashboard-and-alerting-q05-contrast",
+      "s08-03-dashboard-and-alerting-q05-warning",
+      "s08-03-dashboard-and-alerting-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q06",
+    "title": "Состав панели дежурного",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q06-section",
+      "s08-03-dashboard-and-alerting-q06-concept",
+      "s08-03-dashboard-and-alerting-q06-logic",
+      "s08-03-dashboard-and-alerting-q06-example",
+      "s08-03-dashboard-and-alerting-q06-contrast",
+      "s08-03-dashboard-and-alerting-q06-warning",
+      "s08-03-dashboard-and-alerting-q06-notebook",
+      "s08-03-dashboard-and-alerting-q06-T01-slide",
+      "s08-03-dashboard-and-alerting-q06-T02-slide",
+      "s08-03-dashboard-and-alerting-q06-T03-slide",
+      "s08-03-dashboard-and-alerting-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q06-T01",
+      "s08-03-dashboard-and-alerting-q06-T02",
+      "s08-03-dashboard-and-alerting-q06-T03",
+      "s08-03-dashboard-and-alerting-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q06-section",
+      "s08-03-dashboard-and-alerting-q06-concept",
+      "s08-03-dashboard-and-alerting-q06-logic",
+      "s08-03-dashboard-and-alerting-q06-example",
+      "s08-03-dashboard-and-alerting-q06-contrast",
+      "s08-03-dashboard-and-alerting-q06-warning",
+      "s08-03-dashboard-and-alerting-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q07",
+    "title": "Доступность визуализации",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q07-section",
+      "s08-03-dashboard-and-alerting-q07-concept",
+      "s08-03-dashboard-and-alerting-q07-logic",
+      "s08-03-dashboard-and-alerting-q07-example",
+      "s08-03-dashboard-and-alerting-q07-contrast",
+      "s08-03-dashboard-and-alerting-q07-warning",
+      "s08-03-dashboard-and-alerting-q07-notebook",
+      "s08-03-dashboard-and-alerting-q07-T01-slide",
+      "s08-03-dashboard-and-alerting-q07-T02-slide",
+      "s08-03-dashboard-and-alerting-q07-T03-slide",
+      "s08-03-dashboard-and-alerting-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q07-T01",
+      "s08-03-dashboard-and-alerting-q07-T02",
+      "s08-03-dashboard-and-alerting-q07-T03",
+      "s08-03-dashboard-and-alerting-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q07-section",
+      "s08-03-dashboard-and-alerting-q07-concept",
+      "s08-03-dashboard-and-alerting-q07-logic",
+      "s08-03-dashboard-and-alerting-q07-example",
+      "s08-03-dashboard-and-alerting-q07-contrast",
+      "s08-03-dashboard-and-alerting-q07-warning",
+      "s08-03-dashboard-and-alerting-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-03-dashboard-and-alerting",
+    "questionId": "s08-03-dashboard-and-alerting-q08",
+    "title": "Проверка оповещения",
+    "slideIds": [
+      "s08-03-dashboard-and-alerting-q08-section",
+      "s08-03-dashboard-and-alerting-q08-concept",
+      "s08-03-dashboard-and-alerting-q08-logic",
+      "s08-03-dashboard-and-alerting-q08-example",
+      "s08-03-dashboard-and-alerting-q08-contrast",
+      "s08-03-dashboard-and-alerting-q08-warning",
+      "s08-03-dashboard-and-alerting-q08-notebook",
+      "s08-03-dashboard-and-alerting-q08-T01-slide",
+      "s08-03-dashboard-and-alerting-q08-T02-slide",
+      "s08-03-dashboard-and-alerting-q08-T03-slide",
+      "s08-03-dashboard-and-alerting-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s08-03-dashboard-and-alerting-q08-T01",
+      "s08-03-dashboard-and-alerting-q08-T02",
+      "s08-03-dashboard-and-alerting-q08-T03",
+      "s08-03-dashboard-and-alerting-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-03-dashboard-and-alerting-q08-section",
+      "s08-03-dashboard-and-alerting-q08-concept",
+      "s08-03-dashboard-and-alerting-q08-logic",
+      "s08-03-dashboard-and-alerting-q08-example",
+      "s08-03-dashboard-and-alerting-q08-contrast",
+      "s08-03-dashboard-and-alerting-q08-warning",
+      "s08-03-dashboard-and-alerting-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q01",
+    "title": "Рост числа подключений",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q01-section",
+      "s08-04-incident-analysis-and-recovery-q01-concept",
+      "s08-04-incident-analysis-and-recovery-q01-logic",
+      "s08-04-incident-analysis-and-recovery-q01-example",
+      "s08-04-incident-analysis-and-recovery-q01-contrast",
+      "s08-04-incident-analysis-and-recovery-q01-warning",
+      "s08-04-incident-analysis-and-recovery-q01-notebook",
+      "s08-04-incident-analysis-and-recovery-q01-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q01-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q01-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q01-T01",
+      "s08-04-incident-analysis-and-recovery-q01-T02",
+      "s08-04-incident-analysis-and-recovery-q01-T03",
+      "s08-04-incident-analysis-and-recovery-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q01-section",
+      "s08-04-incident-analysis-and-recovery-q01-concept",
+      "s08-04-incident-analysis-and-recovery-q01-logic",
+      "s08-04-incident-analysis-and-recovery-q01-example",
+      "s08-04-incident-analysis-and-recovery-q01-contrast",
+      "s08-04-incident-analysis-and-recovery-q01-warning",
+      "s08-04-incident-analysis-and-recovery-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q02",
+    "title": "Рост длительности запросов",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q02-section",
+      "s08-04-incident-analysis-and-recovery-q02-concept",
+      "s08-04-incident-analysis-and-recovery-q02-logic",
+      "s08-04-incident-analysis-and-recovery-q02-example",
+      "s08-04-incident-analysis-and-recovery-q02-contrast",
+      "s08-04-incident-analysis-and-recovery-q02-warning",
+      "s08-04-incident-analysis-and-recovery-q02-notebook",
+      "s08-04-incident-analysis-and-recovery-q02-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q02-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q02-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q02-T01",
+      "s08-04-incident-analysis-and-recovery-q02-T02",
+      "s08-04-incident-analysis-and-recovery-q02-T03",
+      "s08-04-incident-analysis-and-recovery-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q02-section",
+      "s08-04-incident-analysis-and-recovery-q02-concept",
+      "s08-04-incident-analysis-and-recovery-q02-logic",
+      "s08-04-incident-analysis-and-recovery-q02-example",
+      "s08-04-incident-analysis-and-recovery-q02-contrast",
+      "s08-04-incident-analysis-and-recovery-q02-warning",
+      "s08-04-incident-analysis-and-recovery-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q03",
+    "title": "Исчерпание места",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q03-section",
+      "s08-04-incident-analysis-and-recovery-q03-concept",
+      "s08-04-incident-analysis-and-recovery-q03-logic",
+      "s08-04-incident-analysis-and-recovery-q03-example",
+      "s08-04-incident-analysis-and-recovery-q03-contrast",
+      "s08-04-incident-analysis-and-recovery-q03-warning",
+      "s08-04-incident-analysis-and-recovery-q03-notebook",
+      "s08-04-incident-analysis-and-recovery-q03-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q03-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q03-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q03-T01",
+      "s08-04-incident-analysis-and-recovery-q03-T02",
+      "s08-04-incident-analysis-and-recovery-q03-T03",
+      "s08-04-incident-analysis-and-recovery-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q03-section",
+      "s08-04-incident-analysis-and-recovery-q03-concept",
+      "s08-04-incident-analysis-and-recovery-q03-logic",
+      "s08-04-incident-analysis-and-recovery-q03-example",
+      "s08-04-incident-analysis-and-recovery-q03-contrast",
+      "s08-04-incident-analysis-and-recovery-q03-warning",
+      "s08-04-incident-analysis-and-recovery-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q04",
+    "title": "Всплеск ошибок",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q04-section",
+      "s08-04-incident-analysis-and-recovery-q04-concept",
+      "s08-04-incident-analysis-and-recovery-q04-logic",
+      "s08-04-incident-analysis-and-recovery-q04-example",
+      "s08-04-incident-analysis-and-recovery-q04-contrast",
+      "s08-04-incident-analysis-and-recovery-q04-warning",
+      "s08-04-incident-analysis-and-recovery-q04-notebook",
+      "s08-04-incident-analysis-and-recovery-q04-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q04-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q04-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q04-T01",
+      "s08-04-incident-analysis-and-recovery-q04-T02",
+      "s08-04-incident-analysis-and-recovery-q04-T03",
+      "s08-04-incident-analysis-and-recovery-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q04-section",
+      "s08-04-incident-analysis-and-recovery-q04-concept",
+      "s08-04-incident-analysis-and-recovery-q04-logic",
+      "s08-04-incident-analysis-and-recovery-q04-example",
+      "s08-04-incident-analysis-and-recovery-q04-contrast",
+      "s08-04-incident-analysis-and-recovery-q04-warning",
+      "s08-04-incident-analysis-and-recovery-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q05",
+    "title": "Корреляция картин",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q05-section",
+      "s08-04-incident-analysis-and-recovery-q05-concept",
+      "s08-04-incident-analysis-and-recovery-q05-logic",
+      "s08-04-incident-analysis-and-recovery-q05-example",
+      "s08-04-incident-analysis-and-recovery-q05-contrast",
+      "s08-04-incident-analysis-and-recovery-q05-warning",
+      "s08-04-incident-analysis-and-recovery-q05-notebook",
+      "s08-04-incident-analysis-and-recovery-q05-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q05-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q05-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q05-T01",
+      "s08-04-incident-analysis-and-recovery-q05-T02",
+      "s08-04-incident-analysis-and-recovery-q05-T03",
+      "s08-04-incident-analysis-and-recovery-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q05-section",
+      "s08-04-incident-analysis-and-recovery-q05-concept",
+      "s08-04-incident-analysis-and-recovery-q05-logic",
+      "s08-04-incident-analysis-and-recovery-q05-example",
+      "s08-04-incident-analysis-and-recovery-q05-contrast",
+      "s08-04-incident-analysis-and-recovery-q05-warning",
+      "s08-04-incident-analysis-and-recovery-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q06",
+    "title": "Порядок действий",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q06-section",
+      "s08-04-incident-analysis-and-recovery-q06-concept",
+      "s08-04-incident-analysis-and-recovery-q06-logic",
+      "s08-04-incident-analysis-and-recovery-q06-example",
+      "s08-04-incident-analysis-and-recovery-q06-contrast",
+      "s08-04-incident-analysis-and-recovery-q06-warning",
+      "s08-04-incident-analysis-and-recovery-q06-notebook",
+      "s08-04-incident-analysis-and-recovery-q06-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q06-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q06-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q06-T01",
+      "s08-04-incident-analysis-and-recovery-q06-T02",
+      "s08-04-incident-analysis-and-recovery-q06-T03",
+      "s08-04-incident-analysis-and-recovery-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q06-section",
+      "s08-04-incident-analysis-and-recovery-q06-concept",
+      "s08-04-incident-analysis-and-recovery-q06-logic",
+      "s08-04-incident-analysis-and-recovery-q06-example",
+      "s08-04-incident-analysis-and-recovery-q06-contrast",
+      "s08-04-incident-analysis-and-recovery-q06-warning",
+      "s08-04-incident-analysis-and-recovery-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q07",
+    "title": "Восстановление из копии",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q07-section",
+      "s08-04-incident-analysis-and-recovery-q07-concept",
+      "s08-04-incident-analysis-and-recovery-q07-logic",
+      "s08-04-incident-analysis-and-recovery-q07-example",
+      "s08-04-incident-analysis-and-recovery-q07-contrast",
+      "s08-04-incident-analysis-and-recovery-q07-warning",
+      "s08-04-incident-analysis-and-recovery-q07-notebook",
+      "s08-04-incident-analysis-and-recovery-q07-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q07-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q07-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q07-T01",
+      "s08-04-incident-analysis-and-recovery-q07-T02",
+      "s08-04-incident-analysis-and-recovery-q07-T03",
+      "s08-04-incident-analysis-and-recovery-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q07-section",
+      "s08-04-incident-analysis-and-recovery-q07-concept",
+      "s08-04-incident-analysis-and-recovery-q07-logic",
+      "s08-04-incident-analysis-and-recovery-q07-example",
+      "s08-04-incident-analysis-and-recovery-q07-contrast",
+      "s08-04-incident-analysis-and-recovery-q07-warning",
+      "s08-04-incident-analysis-and-recovery-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-04-incident-analysis-and-recovery",
+    "questionId": "s08-04-incident-analysis-and-recovery-q08",
+    "title": "Закрытие инцидента",
+    "slideIds": [
+      "s08-04-incident-analysis-and-recovery-q08-section",
+      "s08-04-incident-analysis-and-recovery-q08-concept",
+      "s08-04-incident-analysis-and-recovery-q08-logic",
+      "s08-04-incident-analysis-and-recovery-q08-example",
+      "s08-04-incident-analysis-and-recovery-q08-contrast",
+      "s08-04-incident-analysis-and-recovery-q08-warning",
+      "s08-04-incident-analysis-and-recovery-q08-notebook",
+      "s08-04-incident-analysis-and-recovery-q08-T01-slide",
+      "s08-04-incident-analysis-and-recovery-q08-T02-slide",
+      "s08-04-incident-analysis-and-recovery-q08-T03-slide",
+      "s08-04-incident-analysis-and-recovery-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s08-04-incident-analysis-and-recovery-q08-T01",
+      "s08-04-incident-analysis-and-recovery-q08-T02",
+      "s08-04-incident-analysis-and-recovery-q08-T03",
+      "s08-04-incident-analysis-and-recovery-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-04-incident-analysis-and-recovery-q08-section",
+      "s08-04-incident-analysis-and-recovery-q08-concept",
+      "s08-04-incident-analysis-and-recovery-q08-logic",
+      "s08-04-incident-analysis-and-recovery-q08-example",
+      "s08-04-incident-analysis-and-recovery-q08-contrast",
+      "s08-04-incident-analysis-and-recovery-q08-warning",
+      "s08-04-incident-analysis-and-recovery-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q01",
+    "title": "Одинаковая учебная задача",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q01-section",
+      "s08-05-database-platform-comparison-q01-concept",
+      "s08-05-database-platform-comparison-q01-logic",
+      "s08-05-database-platform-comparison-q01-example",
+      "s08-05-database-platform-comparison-q01-contrast",
+      "s08-05-database-platform-comparison-q01-warning",
+      "s08-05-database-platform-comparison-q01-notebook",
+      "s08-05-database-platform-comparison-q01-T01-slide",
+      "s08-05-database-platform-comparison-q01-T02-slide",
+      "s08-05-database-platform-comparison-q01-T03-slide",
+      "s08-05-database-platform-comparison-q01-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q01-T01",
+      "s08-05-database-platform-comparison-q01-T02",
+      "s08-05-database-platform-comparison-q01-T03",
+      "s08-05-database-platform-comparison-q01-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q01-section",
+      "s08-05-database-platform-comparison-q01-concept",
+      "s08-05-database-platform-comparison-q01-logic",
+      "s08-05-database-platform-comparison-q01-example",
+      "s08-05-database-platform-comparison-q01-contrast",
+      "s08-05-database-platform-comparison-q01-warning",
+      "s08-05-database-platform-comparison-q01-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q02",
+    "title": "Установка и служба",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q02-section",
+      "s08-05-database-platform-comparison-q02-concept",
+      "s08-05-database-platform-comparison-q02-logic",
+      "s08-05-database-platform-comparison-q02-example",
+      "s08-05-database-platform-comparison-q02-contrast",
+      "s08-05-database-platform-comparison-q02-warning",
+      "s08-05-database-platform-comparison-q02-notebook",
+      "s08-05-database-platform-comparison-q02-T01-slide",
+      "s08-05-database-platform-comparison-q02-T02-slide",
+      "s08-05-database-platform-comparison-q02-T03-slide",
+      "s08-05-database-platform-comparison-q02-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q02-T01",
+      "s08-05-database-platform-comparison-q02-T02",
+      "s08-05-database-platform-comparison-q02-T03",
+      "s08-05-database-platform-comparison-q02-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q02-section",
+      "s08-05-database-platform-comparison-q02-concept",
+      "s08-05-database-platform-comparison-q02-logic",
+      "s08-05-database-platform-comparison-q02-example",
+      "s08-05-database-platform-comparison-q02-contrast",
+      "s08-05-database-platform-comparison-q02-warning",
+      "s08-05-database-platform-comparison-q02-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q03",
+    "title": "Базы и схемы",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q03-section",
+      "s08-05-database-platform-comparison-q03-concept",
+      "s08-05-database-platform-comparison-q03-logic",
+      "s08-05-database-platform-comparison-q03-example",
+      "s08-05-database-platform-comparison-q03-contrast",
+      "s08-05-database-platform-comparison-q03-warning",
+      "s08-05-database-platform-comparison-q03-notebook",
+      "s08-05-database-platform-comparison-q03-T01-slide",
+      "s08-05-database-platform-comparison-q03-T02-slide",
+      "s08-05-database-platform-comparison-q03-T03-slide",
+      "s08-05-database-platform-comparison-q03-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q03-T01",
+      "s08-05-database-platform-comparison-q03-T02",
+      "s08-05-database-platform-comparison-q03-T03",
+      "s08-05-database-platform-comparison-q03-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q03-section",
+      "s08-05-database-platform-comparison-q03-concept",
+      "s08-05-database-platform-comparison-q03-logic",
+      "s08-05-database-platform-comparison-q03-example",
+      "s08-05-database-platform-comparison-q03-contrast",
+      "s08-05-database-platform-comparison-q03-warning",
+      "s08-05-database-platform-comparison-q03-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q04",
+    "title": "Учётные записи и роли",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q04-section",
+      "s08-05-database-platform-comparison-q04-concept",
+      "s08-05-database-platform-comparison-q04-logic",
+      "s08-05-database-platform-comparison-q04-example",
+      "s08-05-database-platform-comparison-q04-contrast",
+      "s08-05-database-platform-comparison-q04-warning",
+      "s08-05-database-platform-comparison-q04-notebook",
+      "s08-05-database-platform-comparison-q04-T01-slide",
+      "s08-05-database-platform-comparison-q04-T02-slide",
+      "s08-05-database-platform-comparison-q04-T03-slide",
+      "s08-05-database-platform-comparison-q04-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q04-T01",
+      "s08-05-database-platform-comparison-q04-T02",
+      "s08-05-database-platform-comparison-q04-T03",
+      "s08-05-database-platform-comparison-q04-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q04-section",
+      "s08-05-database-platform-comparison-q04-concept",
+      "s08-05-database-platform-comparison-q04-logic",
+      "s08-05-database-platform-comparison-q04-example",
+      "s08-05-database-platform-comparison-q04-contrast",
+      "s08-05-database-platform-comparison-q04-warning",
+      "s08-05-database-platform-comparison-q04-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q05",
+    "title": "Типы данных",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q05-section",
+      "s08-05-database-platform-comparison-q05-concept",
+      "s08-05-database-platform-comparison-q05-logic",
+      "s08-05-database-platform-comparison-q05-example",
+      "s08-05-database-platform-comparison-q05-contrast",
+      "s08-05-database-platform-comparison-q05-warning",
+      "s08-05-database-platform-comparison-q05-notebook",
+      "s08-05-database-platform-comparison-q05-T01-slide",
+      "s08-05-database-platform-comparison-q05-T02-slide",
+      "s08-05-database-platform-comparison-q05-T03-slide",
+      "s08-05-database-platform-comparison-q05-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q05-T01",
+      "s08-05-database-platform-comparison-q05-T02",
+      "s08-05-database-platform-comparison-q05-T03",
+      "s08-05-database-platform-comparison-q05-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q05-section",
+      "s08-05-database-platform-comparison-q05-concept",
+      "s08-05-database-platform-comparison-q05-logic",
+      "s08-05-database-platform-comparison-q05-example",
+      "s08-05-database-platform-comparison-q05-contrast",
+      "s08-05-database-platform-comparison-q05-warning",
+      "s08-05-database-platform-comparison-q05-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q06",
+    "title": "Конструкции SQL",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q06-section",
+      "s08-05-database-platform-comparison-q06-concept",
+      "s08-05-database-platform-comparison-q06-logic",
+      "s08-05-database-platform-comparison-q06-example",
+      "s08-05-database-platform-comparison-q06-contrast",
+      "s08-05-database-platform-comparison-q06-warning",
+      "s08-05-database-platform-comparison-q06-notebook",
+      "s08-05-database-platform-comparison-q06-T01-slide",
+      "s08-05-database-platform-comparison-q06-T02-slide",
+      "s08-05-database-platform-comparison-q06-T03-slide",
+      "s08-05-database-platform-comparison-q06-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q06-T01",
+      "s08-05-database-platform-comparison-q06-T02",
+      "s08-05-database-platform-comparison-q06-T03",
+      "s08-05-database-platform-comparison-q06-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q06-section",
+      "s08-05-database-platform-comparison-q06-concept",
+      "s08-05-database-platform-comparison-q06-logic",
+      "s08-05-database-platform-comparison-q06-example",
+      "s08-05-database-platform-comparison-q06-contrast",
+      "s08-05-database-platform-comparison-q06-warning",
+      "s08-05-database-platform-comparison-q06-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q07",
+    "title": "Средства наблюдения",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q07-section",
+      "s08-05-database-platform-comparison-q07-concept",
+      "s08-05-database-platform-comparison-q07-logic",
+      "s08-05-database-platform-comparison-q07-example",
+      "s08-05-database-platform-comparison-q07-contrast",
+      "s08-05-database-platform-comparison-q07-warning",
+      "s08-05-database-platform-comparison-q07-notebook",
+      "s08-05-database-platform-comparison-q07-T01-slide",
+      "s08-05-database-platform-comparison-q07-T02-slide",
+      "s08-05-database-platform-comparison-q07-T03-slide",
+      "s08-05-database-platform-comparison-q07-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q07-T01",
+      "s08-05-database-platform-comparison-q07-T02",
+      "s08-05-database-platform-comparison-q07-T03",
+      "s08-05-database-platform-comparison-q07-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q07-section",
+      "s08-05-database-platform-comparison-q07-concept",
+      "s08-05-database-platform-comparison-q07-logic",
+      "s08-05-database-platform-comparison-q07-example",
+      "s08-05-database-platform-comparison-q07-contrast",
+      "s08-05-database-platform-comparison-q07-warning",
+      "s08-05-database-platform-comparison-q07-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  },
+  {
+    "lectureId": "s08-05-database-platform-comparison",
+    "questionId": "s08-05-database-platform-comparison-q08",
+    "title": "Основание выбора",
+    "slideIds": [
+      "s08-05-database-platform-comparison-q08-section",
+      "s08-05-database-platform-comparison-q08-concept",
+      "s08-05-database-platform-comparison-q08-logic",
+      "s08-05-database-platform-comparison-q08-example",
+      "s08-05-database-platform-comparison-q08-contrast",
+      "s08-05-database-platform-comparison-q08-warning",
+      "s08-05-database-platform-comparison-q08-notebook",
+      "s08-05-database-platform-comparison-q08-T01-slide",
+      "s08-05-database-platform-comparison-q08-T02-slide",
+      "s08-05-database-platform-comparison-q08-T03-slide",
+      "s08-05-database-platform-comparison-q08-T04-slide"
+    ],
+    "taskIds": [
+      "s08-05-database-platform-comparison-q08-T01",
+      "s08-05-database-platform-comparison-q08-T02",
+      "s08-05-database-platform-comparison-q08-T03",
+      "s08-05-database-platform-comparison-q08-T04"
+    ],
+    "evidenceSlideIds": [
+      "s08-05-database-platform-comparison-q08-section",
+      "s08-05-database-platform-comparison-q08-concept",
+      "s08-05-database-platform-comparison-q08-logic",
+      "s08-05-database-platform-comparison-q08-example",
+      "s08-05-database-platform-comparison-q08-contrast",
+      "s08-05-database-platform-comparison-q08-warning",
+      "s08-05-database-platform-comparison-q08-notebook"
+    ],
+    "source": "Исходные формулировки + авторский пример и задания"
+  }
+]

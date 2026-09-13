@@ -10,13 +10,18 @@
     "lint": "oxlint src scripts tests",
     "test": "vitest run",
     "spellcheck": "node scripts/spellcheck.mjs",
-    "build": "npm run generate:qr && tsc -b && vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test",
     "export:pdf": "node scripts/export-pdf.mjs",
-    "check:pdf": "node scripts/check-pdf.mjs"
+    "check:pdf": "node scripts/check-pdf.mjs",
+    "migrate": "node private/migrate.mjs",
+    "validate:content": "node scripts/validate-migration.mjs",
+    "check:teacher": "node scripts/validate-migration.mjs --teacher",
+    "build": "npm run validate:content && tsc -b && vite build && node scripts/build-offline.mjs",
+    "check:privacy": "node scripts/check-course-privacy.mjs"
   },
   "dependencies": {
+    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.2.0.tgz",
     "lucide-react": "^1.38.0",
     "motion": "^13.1.1",
     "react": "^19.2.8",
@@ -41,4 +46,3 @@
     "vitest": "^4.1.11"
   }
 }
-

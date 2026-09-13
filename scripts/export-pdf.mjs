@@ -10,8 +10,8 @@ const isCourse3 = packageJson.name.includes('uiabd3')
 const courseId = isCourse3 ? 'uiabd3' : 'uiabd4'
 const basePath = isCourse3 ? '/2026-UIABD3-lecture/' : '/2026-UIABD4-lecture/'
 const port = isCourse3 ? 5293 : 5294
-const source = await readFile(path.resolve('src', 'data', 'courseData.ts'), 'utf8')
-const allTopics = [...source.matchAll(/id:\s*'(s\d{2}-[^']+)'/g)].map((match) => match[1])
+const course = JSON.parse(await readFile('public/course.json','utf8'))
+const allTopics = course.lectures.map(l=>l.id)
 const args = process.argv.slice(2)
 const valueAfter = (flag) => {
   const index = args.indexOf(flag)
@@ -20,9 +20,9 @@ const valueAfter = (flag) => {
 const requestedTopic = valueAfter('--topic')
 const requestedVariant = valueAfter('--variant')
 if (requestedTopic && !allTopics.includes(requestedTopic)) throw new Error(`Unknown topic: ${requestedTopic}`)
-if (requestedVariant && !['student', 'teacher'].includes(requestedVariant)) throw new Error(`Unknown variant: ${requestedVariant}`)
+if (requestedVariant && requestedVariant !== 'student') throw new Error('PDF is student-only. Teacher scenarios are in private/teacher-pack.json.')
 const topics = requestedTopic ? [requestedTopic] : allTopics
-const variants = requestedVariant ? [requestedVariant] : ['student', 'teacher']
+const variants = ['student']
 if (!fs.existsSync(path.resolve('dist', 'index.html'))) throw new Error('dist is missing. Run npm run build first.')
 
 const profilePath = path.resolve('config', 'teacher-profile.json')
@@ -60,18 +60,20 @@ try {
   const context = await browser.newContext({ viewport: { width: 1600, height: 900 } })
   await context.addInitScript(({ key, value }) => {
     localStorage.setItem(key, JSON.stringify(value))
-  }, { key: `${courseId}.teacherProfile`, value: profile })
+  }, { key: `lecture:${basePath}:${courseId}:profile`, value: {...profile,department:profile.organizationUnit||''} })
   const page = await context.newPage()
   await page.emulateMedia({ media: 'print', reducedMotion: 'reduce' })
 
   for (const topic of topics) {
     for (const variant of variants) {
-      const url = `${baseUrl}print?topic=${encodeURIComponent(topic)}&variant=${variant}`
+      const url = `${baseUrl}?mode=print&scope=${encodeURIComponent(topic)}`
       await page.goto(url, { waitUntil: 'networkidle' })
-      await page.waitForFunction(() => document.body.dataset.printReady === 'true', undefined, { timeout: 60_000 })
+      await page.locator('.print-page').last().waitFor()
+      await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(im=>im.decode().catch(()=>{})))})
       const pageElements = await page.locator('.print-page').count()
-      if (pageElements !== 85) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages`)
-      const outputDir = path.resolve('outputs', 'pdf', variant)
+      const expected=course.lectures.find(l=>l.id===topic).slides.length
+      if (pageElements !== expected) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages`)
+      const outputDir = path.resolve(valueAfter('--out')||path.join('outputs','pdf','student'))
       await mkdir(outputDir, { recursive: true })
       const outputPath = path.join(outputDir, `${topic}.pdf`)
       await page.pdf({
@@ -83,8 +85,8 @@ try {
         outline: true,
       })
       const pdf = await PDFDocument.load(await readFile(outputPath))
-      if (pdf.getPageCount() !== 85) throw new Error(`${topic}/${variant}: PDF has ${pdf.getPageCount()} pages`)
-      console.log(`Exported ${variant}: ${topic} — 85 pages`)
+      if (pdf.getPageCount() !== expected) throw new Error(`${topic}/${variant}: PDF has ${pdf.getPageCount()} pages`)
+      console.log(`Exported ${variant}: ${topic} — ${expected} pages`)
     }
   }
 } finally {

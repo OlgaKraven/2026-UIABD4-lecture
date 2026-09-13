@@ -1,0 +1,62 @@
+[
+  {
+    "file": "s07-01-queries-on-server-database.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s07-02-calculation-query.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s07-03-procedures-and-triggers.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s07-04-query-performance-and-indexes.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s07-05-server-and-network-requirements.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s08-01-server-metrics.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s08-02-metrics-collection.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s08-03-dashboard-and-alerting.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s08-04-incident-analysis-and-recovery.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  },
+  {
+    "file": "s08-05-database-platform-comparison.pdf",
+    "pages": 101,
+    "lastHasQuestions": true,
+    "emptyPages": []
+  }
+]

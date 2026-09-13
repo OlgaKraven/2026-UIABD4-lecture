@@ -26,9 +26,11 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
+      - run: npm run validate:content
       - run: npm run test
       - run: npm run spellcheck
       - run: npm run build
+      - run: npm run check:privacy
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
