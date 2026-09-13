@@ -2,12 +2,19 @@
   "sourceRepository": "OlgaKraven/2026-UIABD4-lecture",
   "templateCommit": "dd0a0dc09e10916e3c07157677f7a1769396a110",
   "contentVersion": "uiabd4-2026.09.13-1",
-  "stage": "проверено",
-  "next": "публикация GitHub Pages",
+  "stage": "опубликовано",
+  "next": "нет незавершённых технических этапов; ограничения проверки перечислены отдельно",
   "limitations": [
     "Официальный тематический план по исходному пути недоступен; часы и полнота РПД не подтверждены.",
     "Расчёт времени авторский; 8 вопросов и 32 задания требуют больше двух академических часов. Расписание не выдумано.",
     "SQL/PromQL не запускались на реальной СУБД.",
     "Физический проектор и два монитора не проверены."
-  ]
+  ],
+  "deployment": {
+    "codeCommit": "b7188ab509262288313a20e3812625811033ce95",
+    "url": "https://olgakraven.github.io/2026-UIABD4-lecture/",
+    "status": "success",
+    "verifiedVersion": "uiabd4-2026.09.13-1",
+    "workflow": "https://github.com/OlgaKraven/2026-UIABD4-lecture/actions/runs/34747760673"
+  }
 }
