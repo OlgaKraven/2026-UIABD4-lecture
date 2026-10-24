@@ -18,7 +18,7 @@ function note(s,answer=''){
 }
 function codePages(code){
  // Keep source lines intact: a continued statement may span adjacent slides.
- const lines=code.trimEnd().split('\n'),pages=[];let page=[],cost=0;
+ const lines=code.replaceAll('\r\n','\n').trimEnd().split('\n'),pages=[];let page=[],cost=0;
  for(const line of lines){const size=Math.max(1,Math.ceil(line.length/76));if(cost+size>7&&page.length){pages.push(page.join('\n'));page=[];cost=0;}page.push(line);cost+=size;}
  if(page.length)pages.push(page.join('\n'));return pages;
 }

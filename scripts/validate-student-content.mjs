@@ -16,7 +16,7 @@ export function validateStudentContent(){
   for(const step of practice[li].steps){
    assert(l.slides.some(s=>s.body===step.text));assert(l.slides.some(s=>s.body===step.expected));
    for(const f of [step.file,step.extraFile].filter(Boolean)){
-    const code=fs.readFileSync('public/practice/'+f,'utf8').trimEnd();files.add(f);
+    const code=fs.readFileSync('public/practice/'+f,'utf8').replaceAll('\r\n','\n').trimEnd();files.add(f);
     const si=practice[li].steps.indexOf(step)+1,bi=f===step.file?1:step.file||step.code?2:1;
     const prefix=`${l.id}-practice-${String(si).padStart(2,'0')}-code-${bi}-`;
     assert.equal(l.slides.filter(s=>s.id.startsWith(prefix)).map(s=>s.visual.parts[0].code).join('\n'),code,'Incomplete source: '+f);
