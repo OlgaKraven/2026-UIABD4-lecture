@@ -1,0 +1,607 @@
+{
+  "sourceSha256": "de1eed81ec1c3350a8e954c5769fde5a976bbdfec5611de7b6a6666d468f8dda",
+  "browser": {
+    "cases": 80,
+    "actualOperations": 161,
+    "undoCases": 80,
+    "changedInputs": 79,
+    "alertClock": true,
+    "audience": true,
+    "lateAudience": true,
+    "mobile": [
+      {
+        "width": 390,
+        "index": 0
+      },
+      {
+        "width": 390,
+        "index": 2
+      },
+      {
+        "width": 390,
+        "index": 17
+      },
+      {
+        "width": 390,
+        "index": 39
+      },
+      {
+        "width": 390,
+        "index": 60
+      },
+      {
+        "width": 390,
+        "index": 73
+      },
+      {
+        "width": 390,
+        "index": 79
+      },
+      {
+        "width": 320,
+        "index": 0
+      },
+      {
+        "width": 320,
+        "index": 2
+      },
+      {
+        "width": 320,
+        "index": 17
+      },
+      {
+        "width": 320,
+        "index": 39
+      },
+      {
+        "width": 320,
+        "index": 60
+      },
+      {
+        "width": 320,
+        "index": 73
+      },
+      {
+        "width": 320,
+        "index": 79
+      }
+    ],
+    "errors": [],
+    "checks": [
+      {
+        "id": "s07-01-queries-on-server-database-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-01-queries-on-server-database-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-02-calculation-query-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q02",
+        "actions": 4,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q06",
+        "actions": 3,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-03-procedures-and-triggers-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-04-query-performance-and-indexes-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s07-05-server-and-network-requirements-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-01-server-metrics-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-02-metrics-collection-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q05",
+        "actions": 0,
+        "changedInput": false,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-03-dashboard-and-alerting-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-04-incident-analysis-and-recovery-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q01",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q02",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q03",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q04",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q05",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q06",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q07",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      },
+      {
+        "id": "s08-05-database-platform-comparison-q08",
+        "actions": 2,
+        "changedInput": true,
+        "undo": true
+      }
+    ]
+  },
+  "printLayout": [
+    {
+      "lecture": "s07-01-queries-on-server-database",
+      "pages": 130,
+      "issues": []
+    },
+    {
+      "lecture": "s07-02-calculation-query",
+      "pages": 128,
+      "issues": []
+    },
+    {
+      "lecture": "s07-03-procedures-and-triggers",
+      "pages": 131,
+      "issues": []
+    },
+    {
+      "lecture": "s07-04-query-performance-and-indexes",
+      "pages": 127,
+      "issues": []
+    },
+    {
+      "lecture": "s07-05-server-and-network-requirements",
+      "pages": 122,
+      "issues": []
+    },
+    {
+      "lecture": "s08-01-server-metrics",
+      "pages": 126,
+      "issues": []
+    },
+    {
+      "lecture": "s08-02-metrics-collection",
+      "pages": 130,
+      "issues": []
+    },
+    {
+      "lecture": "s08-03-dashboard-and-alerting",
+      "pages": 126,
+      "issues": []
+    },
+    {
+      "lecture": "s08-04-incident-analysis-and-recovery",
+      "pages": 131,
+      "issues": []
+    },
+    {
+      "lecture": "s08-05-database-platform-comparison",
+      "pages": 147,
+      "issues": []
+    }
+  ],
+  "unitTests": 25,
+  "status": "passed"
+}
