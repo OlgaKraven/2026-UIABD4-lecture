@@ -4,7 +4,7 @@ import type { Course, Note, TeacherPack } from '@olgakraven/lecture-engine'
 // the same content version. Compare exact fingerprints; preserve manual edits.
 export async function prepareUpdatedTeacherNotes(course: Course, base: string, value: unknown, storage: Pick<Storage,'getItem'>) {
   const prepared=prepareTeacherNotes(course,base,value,storage)
-  const pack=value as TeacherPack & {previousNoteHashes?:Record<string,Partial<Record<keyof Note,string[]>>>}
+  const pack=value as TeacherPack & {previousContentVersion?:string;slideAliases?:Record<string,string>;previousNoteHashes?:Record<string,Partial<Record<keyof Note,string[]>>>}
   if(!pack.previousNoteHashes)return prepared
   const fields=['script','preparation','notebook','questions','answer','estimatedSeconds'] as const
   await Promise.all(Object.entries(pack.previousNoteHashes).map(async([id,hashes])=>{
@@ -22,6 +22,19 @@ export async function prepareUpdatedTeacherNotes(course: Course, base: string, v
     }))
     prepared[id]=note
   }))
+  // Keep personal notes from a book's old slide on the combined bibliography.
+  let saved:Record<string,Partial<Note>>={}
+  try{saved=JSON.parse(storage.getItem(`lecture:${base}:${course.id}:private:${course.contentVersion}`)||(pack.previousContentVersion?storage.getItem(`lecture:${base}:${course.id}:private:${pack.previousContentVersion}`):null)||'{}')}catch{/* Original storage stays untouched. */}
+  for(const [oldId,target] of Object.entries(pack.slideAliases||{})){
+    if(!prepared[target])continue
+    for(const field of ['script','preparation','notebook','questions','answer'] as const){
+      const text=saved[oldId]?.[field];if(typeof text!=='string'||!text.trim())continue
+      const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))
+      const hash=[...new Uint8Array(digest)].map(n=>n.toString(16).padStart(2,'0')).join('')
+      if(pack.previousNoteHashes[oldId]?.[field]?.includes(hash)||prepared[target][field].includes(text))continue
+      prepared[target]={...prepared[target],[field]:[prepared[target][field],text].filter(Boolean).join('\n\n')}
+    }
+  }
   return prepared
 }
 

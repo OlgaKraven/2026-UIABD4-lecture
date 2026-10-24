@@ -168,6 +168,7 @@ export type Lecture = {
     slides: Slide[];
 };
 export type Course = {
+    slideAliases?: Record<string,string>;
     schemaVersion: 1;
     contentVersion: string;
     id: string;

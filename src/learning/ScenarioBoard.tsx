@@ -1,0 +1,10 @@
+export type Board={kind:string;columns?:string[];rows?:unknown[];unit?:string;max?:number;items?:string[]}
+type Bar={label:string;value:number}
+type Interval={label:string;start:number;end:number;state:string;points?:number[]}
+const number=(n:number)=>n.toLocaleString('ru-RU',{maximumFractionDigits:4})
+export function ScenarioBoard({board}:{board:Board}){
+ if(board.kind==='table')return <div className="scenario-table-wrap"><table className="scenario-table"><thead><tr>{board.columns?.map(c=><th key={c} scope="col">{c}</th>)}</tr></thead><tbody>{(board.rows as string[][]).map((r,i)=><tr key={i}>{r.map((c,j)=><td key={j} className={c==='NULL'||c==='UNKNOWN'?'unknown-value':undefined}>{c}</td>)}</tr>)}</tbody></table></div>
+ if(board.kind==='bars')return <figure className="scenario-bars"><figcaption>Шкала: 0–{number(board.max!)} {board.unit}</figcaption>{(board.rows as Bar[]).map((r,i)=><div className="scenario-bar" key={i}><span>{r.label}</span><div className="bar-track"><div style={{width:`${Math.max(0,r.value)/board.max!*100}%`}}/></div><strong>{number(r.value)}</strong></div>)}</figure>
+ if(board.kind==='timeline')return <figure className="scenario-timeline"><figcaption>Время: 0–{number(board.max!)} {board.unit}; единая линейная шкала</figcaption>{(board.rows as Interval[]).map((r,i)=><div className="timeline-row" key={i}><span>{r.label}</span><div className="timeline-track">{r.points?r.points.map(p=><div key={p} className="timeline-point" style={{left:`${p/board.max!*100}%`}} title={`${number(p)} ${board.unit}`}/>):<div className={r.start===r.end?'timeline-point':'timeline-range'} style={{left:`${r.start/board.max!*100}%`,width:r.start===r.end?undefined:`${(r.end-r.start)/board.max!*100}%`}}/>}</div><span>{r.points?r.state:`${r.start===r.end?number(r.start):`${number(r.start)}–${number(r.end)}`} ${board.unit} · ${r.state}`}</span></div>)}</figure>
+ return <ol className="scenario-chain">{board.items?.map((s,i)=><li key={i}><span className="chain-index">{i+1}</span><span>{s}</span>{i<board.items!.length-1&&<span className="chain-arrow" aria-label="следующее действие">↓</span>}</li>)}</ol>
+}

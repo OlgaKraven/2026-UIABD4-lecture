@@ -21,6 +21,8 @@ async function load(){
    url.searchParams.set('slide',links[topic]?.[url.searchParams.get('slide')||'1']||'')
    history.replaceState(null,'',url)
   }
+  const slideId=url.searchParams.get('slide'),redirect=slideId&&course.slideAliases?.[slideId]
+  if(redirect){url.searchParams.set('slide',redirect);history.replaceState(null,'',url)}
   document.title=`${course.code} · ${course.discipline}`
   const base=import.meta.env.BASE_URL,mode=url.searchParams.get('mode')
   try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem(`lecture:${base}:${course.id}:theme`)||'"light"')}catch{/* Use the default theme if storage is unavailable. */}

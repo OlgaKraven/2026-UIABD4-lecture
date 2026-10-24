@@ -174,7 +174,7 @@ function T({ course: n, base: s = "/", teacherNotes: d, resolveTeacherNotes: f, 
 		let r = new URL(location.href);
 		r.searchParams.set("slide", t.id), history.replaceState({}, "", r), D(new URLSearchParams(r.search));
 	}, Ce = (e) => {
-		let t = l(`${T}:${n.contentVersion}:${e.id}:progress`, e.slides[0].id);
+		let t = l(`${T}:${n.contentVersion}:${e.id}:progress`, e.slides[0].id);t=n.slideAliases?.[t]||t;
 		Y({
 			lecture: e.id,
 			slide: e.slides.some((e) => e.id === t) ? t : e.slides[0].id

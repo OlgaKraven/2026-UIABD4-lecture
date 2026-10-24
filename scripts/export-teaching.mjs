@@ -22,7 +22,7 @@ for(const [li,lecture] of course.lectures.entries()){
   if(slide.notebook)teacher+=`**Запишите:** ${slide.notebook}\n\n`;
   if(slide.task)teacher+=`**Разбор после попытки.** ${note.answer}\n\n`;
   const item=cases.find(item=>item.returnSlide===slide.id);
-  if(item)teacher+=`**Самостоятельный случай.** ${item.context} ${item.operation}\n\n**Разбор после выполнения.** ${item.solution}\n\n`;
+  if(item)teacher+=`**Задача для группового разбора.** ${item.context} ${item.operation}\n\n**Показ:** кнопка «Решить задачу», затем «Следующий шаг». Сначала соберите устные объяснения, затем покажите соответствующее действие. Для проектора откройте «Окно для группы»; оно следует за шагами преподавателя.\n\n**Разбор.** ${item.solution}\n\n`;
   presenter+=`<a id="${anchor}"></a>\n## ${i+1}. ${slide.title}\n\n${note.script}\n\n`;
   if(references)presenter+=references+'\n\n';
   if(slide.kind==='materials')presenter+=`[Материалы курса](${course.materialsUrl})\n\n`;
@@ -37,4 +37,4 @@ for(const [li,lecture] of course.lectures.entries()){
  for(const type of ['teacher','presenter'])for(const row of alignment.slides)if(!fs.readFileSync(path.join(destination,alignment.documents[type]),'utf8').includes(`<a id="${row.anchors[type]}"></a>`))throw Error('Missing anchor');
 }
 write('teacher-pack.json',JSON.stringify(pack,null,2)+'\n');
-console.log(JSON.stringify({lectures:10,documents:20,alignedSlides:1090,sourceSha256:sha,destination}));
+console.log(JSON.stringify({lectures:course.lectures.length,documents:course.lectures.length*2,alignedSlides:course.lectures.reduce((n,l)=>n+l.slides.length,0),sourceSha256:sha,destination}));

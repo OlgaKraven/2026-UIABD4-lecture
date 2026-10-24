@@ -32,7 +32,7 @@ for(const [index,item] of cases.entries()){
  assert.equal(notes.notes[passport.id].answer,item.solution);
 }
 for(const old of baseline.slides){
- const l=course.lectures.find(l=>l.id===old.id);assert.deepEqual(l.slides.filter(s=>!s.id.endsWith('-case')).map(s=>s.id),old.slideIds);
+ const l=course.lectures.find(l=>l.id===old.id);assert.deepEqual(l.slides.filter(s=>!s.id.endsWith('-case')).map(s=>s.id),old.slideIds.filter(id=>!course.slideAliases?.[id]));
  for(const s of l.slides){assert(!s.source,'Service source returned: '+s.id);assert(notes.notes[s.id]?.script.trim());}
 }
 for(const [li,l] of course.lectures.entries())for(let qi=0;qi<8;qi++){
@@ -41,5 +41,27 @@ for(const [li,l] of course.lectures.entries())for(let qi=0;qi<8;qi++){
  assert.equal(l.slides.find(s=>s.id===id+'-example').body,'Учебные данные. '+variations[li][qi].input);
  assert.notEqual(variations[li][qi].input,cases[li*8+qi].context);
 }
-assert.equal(Object.keys(notes.notes).length,1090);
-console.log(JSON.stringify({cases:80,independentCheckpoints:160,stableOriginalSlides:1010,notes:1090,status:'passed'}));
+const slides=course.lectures.flatMap(l=>l.slides);
+const demos=JSON.parse(fs.readFileSync('src/learning/demonstrations.json','utf8'));
+const diagrams=JSON.parse(fs.readFileSync('src/learning/explanation-boards.json','utf8'));
+assert.deepEqual(demos.map(m=>m.id),cases.map(c=>c.id));assert.equal(Object.keys(diagrams).length,80);
+for(const l of course.lectures){
+ for(const group of ['primary','additional']){
+  const bibliography=l.slides.filter(s=>s.readingGroup===group);assert.equal(bibliography.length,1);assert.equal(bibliography[0].references.length,3);
+  assert.equal(new Set(bibliography[0].references.map(r=>r.url)).size,3);
+ }
+}
+for(const demo of demos)for(const scenario of demo.scenarios){
+ assert(scenario.conclusion.trim());assert.equal(scenario.frames.length,3);
+ for(const frame of scenario.frames){
+  const b=frame.board;assert(frame.title.trim()&&frame.prompt.trim());assert(['table','bars','chain','timeline'].includes(b.kind));
+  if(b.kind==='table')for(const row of b.rows)assert.equal(row.length,b.columns.length);
+  if(b.kind==='bars'){assert(b.unit&&b.max>0);for(const r of b.rows)assert(r.value>=0&&r.value<=b.max);}
+  if(b.kind==='timeline'){assert(b.unit&&b.max>0);for(const r of b.rows)assert(r.start>=0&&r.start<=r.end&&r.end<=b.max);}
+ }
+}
+assert.equal(demos[4].scenarios[0].frames[2].board.items.at(-1),'AVG = 30 / 3 = 10');
+assert.equal(demos[4].scenarios[1].frames[2].board.items.at(-1),'AVG = 30 / 5 = 6');
+assert.equal(Object.keys(notes.notes).length,slides.length);
+for(const [from,to] of Object.entries(course.slideAliases||{})){assert(!slides.some(s=>s.id===from));assert(slides.some(s=>s.id===to));}
+console.log(JSON.stringify({cases:80,scenarios:demos.reduce((n,d)=>n+d.scenarios.length,0),explanationDiagrams:80,independentCheckpoints:160,retainedOriginalSlides:slides.length-cases.length,notes:slides.length,status:'passed'}));

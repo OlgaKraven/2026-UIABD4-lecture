@@ -31,6 +31,7 @@ needle='document.documentElement.dataset.theme = O, h(`${T}:theme`, O);'
 assert needle in s
 s=s.replace(needle,needle+'''\n }, [O,T]), v(()=>{const sync=()=>ge(l(`${T}:theme`,"light"));window.addEventListener("storage",sync);window.addEventListener("course-theme",sync);return()=>{window.removeEventListener("storage",sync);window.removeEventListener("course-theme",sync)};''',1)
 s=s.replace('y(() => l(`${T}:animation`, !0))','y(false)')
+s=s.replace('let t = l(`${T}:${n.contentVersion}:${e.id}:progress`, e.slides[0].id);','let t = l(`${T}:${n.contentVersion}:${e.id}:progress`, e.slides[0].id);t=n.slideAliases?.[t]||t;')
 p.write_text(s,encoding='utf-8')
 p=root/'lib/Teaching-CZWN6_7h.js';s=p.read_text(encoding='utf-8')
 needle='function ce({ course: n, lecture: u, base: h, profile: S, session: C, initialSlide: ie, onExit: oe, teacherNotes: se, resolveTeacherNotes: ce }) {'
@@ -59,5 +60,6 @@ s=s[:start]+s[end:]
 s=s.replace('animations: !0','animations: !1')
 p.write_text(s,encoding='utf-8')
 p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8');s=s.replace('fetch(k(e.assessment.url, t))','fetch(k(e.assessment.url, t),{cache:"no-cache"})');p.write_text(s,encoding='utf-8')
+p=root/'lib/model.d.ts';s=p.read_text(encoding='utf-8').replace('export type Course = {','export type Course = {\n    slideAliases?: Record<string,string>;');p.write_text(s,encoding='utf-8')
 p=root/'package.json';d=json.loads(p.read_text(encoding='utf-8'));d['version']='0.1.1-uiabd4.1';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Runtime prepared:',root)

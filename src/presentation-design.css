@@ -227,3 +227,17 @@
 @media print{.slide-frame[data-slide-id]:has(.learning-visual)>.slide-header{padding-top:1.5cqw;padding-bottom:.3cqw}.slide-frame[data-slide-id]:has(.learning-visual)>.slide-content{padding-top:.4cqw}.learning-visual .visual-input{margin-top:.3cqw}.learning-visual>figure{margin-top:.5cqw}.learning-visual .infographic svg{max-height:21cqw}.learning-visual :is(th,td){font-size:1.8cqw;line-height:1.35;padding:.6cqw}.learning-visual figcaption{font-size:1.5cqw;line-height:1.35;margin-top:.5cqw}.slide-frame[data-slide-id] .slide-copy{overflow:visible!important}}
 
 .presenter-notes>.button.primary{order:2;margin:8px 16px}.presenter-notes .note-reader,.presenter-notes .note-editor{order:3}.presenter-notes .notes-files{order:4}.presenter-notes .notes-duration{order:5}
+
+/* Bibliography is grouped by reading list; QR sizes follow the slide scale. */
+.slide-frame[data-slide-id].kind-literature>.slide-header{padding-top:1.4cqw;padding-bottom:.4cqw}
+.slide-frame[data-slide-id].kind-literature>.slide-content{padding-top:.5cqw;padding-bottom:.3cqw}
+.slide-frame[data-slide-id].kind-literature .slide-copy>.slide-kicker{display:none}
+.slide-frame[data-slide-id].kind-literature .slide-copy>h2{font-size:3cqw}
+.slide-frame[data-slide-id].kind-literature .reading-list{gap:.6cqw;margin-top:1.2cqw}
+.slide-frame[data-slide-id].kind-literature .reading-entry{padding:.5cqw .8cqw;gap:1.4cqw;align-items:center;border-top:1px solid var(--pd-red)}
+.slide-frame[data-slide-id].kind-literature .reading-entry>div{min-width:0}
+.slide-frame[data-slide-id].kind-literature .reading-entry :is(p,a){font-size:1.6cqw;line-height:1.35}
+.slide-frame[data-slide-id].kind-literature .reading-entry p{margin:0 0 .3cqw}
+.slide-frame[data-slide-id].kind-literature .resource-qr{width:11.5cqw;height:11.5cqw;flex:none;background:#fff;border:0;border-radius:0}
+.slide-frame[data-slide-id].kind-materials .materials-resource>.resource-qr{width:24cqw;height:24cqw;flex:none;background:#fff;border:2px solid var(--pd-red);border-radius:10px}
+@media screen and (max-width:820px){.active-slide .slide-frame[data-slide-id].kind-literature .slide-header{padding:20px}.active-slide .slide-frame[data-slide-id].kind-literature .slide-content{padding:16px 20px}.active-slide .slide-frame[data-slide-id].kind-literature .slide-copy>h2{font-size:28px}.active-slide .slide-frame[data-slide-id].kind-literature .reading-list{gap:14px;margin-top:20px}.active-slide .slide-frame[data-slide-id].kind-literature .reading-entry{gap:14px;padding:12px 6px;align-items:flex-start}.active-slide .slide-frame[data-slide-id].kind-literature .reading-entry :is(p,a){font-size:16px;line-height:1.45}.active-slide .slide-frame[data-slide-id].kind-literature .resource-qr{width:108px;height:108px}.active-slide .slide-frame[data-slide-id].kind-materials .materials-resource>.resource-qr{width:220px;height:220px}}

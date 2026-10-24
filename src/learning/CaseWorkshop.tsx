@@ -1,35 +1,44 @@
-import {useEffect,useState} from 'react'
+import {useEffect,useRef,useState} from 'react'
 import cases from '../../authoring/cases.json'
-type Draft={prediction:string;values:string[];reasoning:string;attempted:boolean;revealed:boolean;verified:number[]}
+import demonstrations from './demonstrations.json'
+import {ScenarioBoard} from './ScenarioBoard'
 export function CaseWorkshop({base,id}:{base:string;id:string}){
- const item=cases.find(c=>c.id===id)
- return item?<Workshop key={item.id} base={base} item={item}/>:<main className="case-workshop"><h1>Случай не найден</h1><a href={base}>К каталогу</a></main>
+ const index=cases.findIndex(c=>c.id===id)
+ return index>=0?<Workshop key={id} base={base} index={index}/>:<main className="case-workshop"><h1>Задача не найдена</h1><a href={base}>К каталогу</a></main>
 }
-function Workshop({base,item}:{base:string;item:typeof cases[number]}){
- const key=`uiabd4:case:${item.id}:r${item.revision}`
- const fresh:Draft={prediction:'',values:item.checks.map(()=>''),reasoning:'',attempted:false,revealed:false,verified:[]}
- const [draft,setDraft]=useState<Draft>(()=>{try{const d=JSON.parse(localStorage.getItem(key)||'null');return d&&typeof d.prediction==='string'&&Array.isArray(d.values)&&d.values.length===item.checks.length&&d.values.every((v:unknown)=>typeof v==='string')&&typeof d.reasoning==='string'?{...fresh,...d,attempted:d.attempted===true,revealed:d.revealed===true,verified:Array.isArray(d.verified)?d.verified.filter((v:unknown)=>Number.isInteger(v)):[]}:fresh}catch{return fresh}})
- const [feedback,setFeedback]=useState<{index:number;correct:boolean}|null>(null)
- const [stage,setStage]=useState(0),[checked,setChecked]=useState(false),[saveError,setSaveError]=useState(false)
- const [theme,setTheme]=useState(()=>{try{return localStorage.getItem('uiabd4:case-theme')||'light'}catch{return 'light'}})
- useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('uiabd4:case-theme',theme)}catch{/* Theme works in memory. */}},[theme])
- useEffect(()=>{let active=true;queueMicrotask(()=>{if(!active)return;try{localStorage.setItem(key,JSON.stringify(draft));setSaveError(false)}catch{setSaveError(true)}});return()=>{active=false}},[draft,key])
- useEffect(()=>{document.title=`${item.title} · Самостоятельная работа`},[item.title])
- const numeric=(i:number)=>{const raw=draft.values[i].trim().replace(',','.');const v=Number(raw);return raw!==''&&Number.isFinite(v)&&(Number.isInteger(item.checks[i].expected)?v===item.checks[i].expected:Math.abs(v-item.checks[i].expected)<=0.005)}
- const allCorrect=item.checks.every((_,i)=>numeric(i))
- const update=(patch:Partial<Draft>)=>{setDraft(d=>{const changed=patch.values?.findIndex((v,i)=>v!==d.values[i]);return {...d,...patch,attempted:false,revealed:false,verified:patch.values?d.verified.filter(i=>i<(changed??0)):d.verified}});setChecked(false);setFeedback(null)}
- useEffect(()=>{(document.querySelector('.case-workshop section h2') as HTMLElement|null)?.focus()},[stage])
+function Workshop({base,index}:{base:string;index:number}){
+ const item=cases[index],model=demonstrations[index]
+ const [step,setStep]=useState(0),[branch,setBranch]=useState(0),[started,setStarted]=useState(false)
+ const [theme,setTheme]=useState(()=>document.documentElement.dataset.theme||'light')
+ const params=new URLSearchParams(location.search),audience=params.get('audience')==='1'
+ const [session]=useState(()=>params.get('session')||crypto.randomUUID())
+ const channel=useRef<BroadcastChannel|null>(null),latest=useRef({step,branch,theme,started,sequence:0})
+ useEffect(()=>{
+  const key=`uiabd4:case-show:${session}:${item.id}`,bus=new BroadcastChannel(key);channel.current=bus
+  const receive=(value:unknown)=>{const v=value as typeof latest.current;if(!Number.isInteger(v?.branch)||!model.scenarios[v.branch]||!Number.isInteger(v.step)||!model.scenarios[v.branch].frames[v.step]||!Number.isFinite(v.sequence)||v.sequence<latest.current.sequence)return;latest.current.sequence=v.sequence;setBranch(v.branch);setStep(v.step);setStarted(v.started===true);setTheme(v.theme==='dark'?'dark':'light')}
+  bus.onmessage=e=>{if(audience)receive(e.data);else if(e.data?.request)bus.postMessage(latest.current)}
+  if(audience){try{receive(JSON.parse(localStorage.getItem(key)||'null'))}catch{/* No earlier public snapshot. */}bus.postMessage({request:true})}
+  return()=>{bus.close();channel.current=null}
+ },[audience,session,item.id,model])
+ useEffect(()=>{if(audience)return;const value={step,branch,theme,started,sequence:Date.now()};latest.current=value;channel.current?.postMessage(value);try{localStorage.setItem(`uiabd4:case-show:${session}:${item.id}`,JSON.stringify(value))}catch{/* Broadcast still works. */}},[step,branch,theme,started,audience,session,item.id])
+ const showAudience=()=>{const url=new URL(location.href);url.searchParams.set('session',session);history.replaceState(null,'',url);url.searchParams.set('audience','1');window.open(url,`uiabd4-case-${session}`)}
+ const frames=model.scenarios[branch].frames,current=frames[step],last=step===frames.length-1
  const back=`${base}?lecture=${encodeURIComponent(item.lectureId)}&slide=${encodeURIComponent(item.returnSlide)}`
- return <main className="case-workshop">
-  <header><a href={back}>← К лекции</a><span>{item.semester} семестр</span><button type="button" onClick={()=>setTheme(theme==='dark'?'light':'dark')}>{theme==='dark'?'Светлая тема':'Тёмная тема'}</button></header>
-  <p className="case-kicker">Самостоятельная работа · учебные данные</p><h1>{item.title}</h1>
-  <p className="case-context">{item.context}</p><p>{item.operation}</p>
-  <p className="case-environment">Среда: расчёты и исследование модели в браузере. SQL и команды в тексте служат для переноса на отдельно подготовленный учебный стенд; эта страница их не исполняет.</p>
-  {saveError&&<p role="status">Черновик не удалось сохранить на устройстве. Текущую работу можно продолжить.</p>}
-  <nav aria-label="Ход работы">{['Прогноз','Выполнение','Проверка и вывод'].map((label,i)=><button key={label} type="button" aria-current={i===stage?'step':undefined} disabled={i>0&&!draft.prediction.trim()} onClick={()=>setStage(i)}>{i+1}. {label}</button>)}</nav>
-  {stage===0&&<section><h2 tabIndex={-1}>Предскажите результат</h2><label>Какие данные нужны и что ожидаете получить?<textarea value={draft.prediction} onChange={e=>update({prediction:e.target.value})}/></label><p>Прогноз не оценивается автоматически. Сохраните свою мысль до расчёта.</p><button type="button" disabled={!draft.prediction.trim()} onClick={()=>setStage(1)}>К выполнению →</button></section>}
-  {stage===1&&<section><h2 tabIndex={-1}>Постройте результат</h2><p>{item.operation} Составьте промежуточную таблицу, формулу, граф зависимостей или команды согласно условию.</p><div className="case-fields">{item.checks.map((check,i)=>(i===0||draft.verified.includes(i-1))&&<div key={check.label}><label>{check.label}<input inputMode="decimal" aria-invalid={feedback?.index===i&&!feedback.correct?true:undefined} value={draft.values[i]} onChange={e=>update({values:draft.values.map((v,j)=>i===j?e.target.value:v)})}/></label><button type="button" onClick={()=>{const correct=numeric(i);setFeedback({index:i,correct});setDraft(d=>({...d,attempted:true,verified:correct?[...new Set([...d.verified,i])]:d.verified}))}}>Проверить шаг {i+1}</button>{feedback?.index===i&&<p role="status">{feedback.correct?"Контрольная точка совпала. Можно перейти к следующему действию.":`Для «${check.label}» результат не совпал. Повторите действие по условию: ${item.operation} Проверьте границы и единицы.`}</p>}</div>)}</div><label>Ход действий, промежуточные значения или команды<textarea value={draft.reasoning} onChange={e=>update({reasoning:e.target.value})}/></label><details><summary>Подсказка к проверке</summary><p>Согласуйте единицы и границы условия. Для строк проверьте каждый ключ и кратность; для счётчика — интервал и сброс; для решений — обязательные ограничения раньше числовой оценки.</p></details><button type="button" disabled={!item.checks.every((_,i)=>draft.verified.includes(i))||!draft.reasoning.trim()} onClick={()=>{setDraft(d=>({...d,attempted:true}));setChecked(true);setStage(2)}}>Проверить результаты →</button></section>}
-  {stage===2&&<section><h2 tabIndex={-1}>Проверка и вывод</h2>{!draft.attempted?<p>Сначала выполните расчёты на предыдущем шаге.</p>:<><ul className="case-feedback">{item.checks.map((check,i)=><li key={check.label}>{check.label}: {numeric(i)?'совпадает с контрольным результатом':'есть расхождение — проверьте исходные данные и единицы'}</li>)}</ul><p role="status">{allCorrect?'Числовые контрольные точки совпали. Обоснование требует ручной сверки.':'Исправьте отмеченные значения. Вернитесь к выполнению; остальные введённые данные сохранятся.'}</p><h3>Критерий ручной проверки</h3><p>В обосновании должны быть исходные значения, действие с единицами или связями, проверенный результат и граница вывода. Наличие текста не означает правильность. Для SQL сопоставьте состав и кратность строк, для команд — целевую систему и отсутствие неожиданных изменений.</p><button type="button" onClick={()=>setDraft(d=>({...d,revealed:!d.revealed}))}>{draft.revealed?'Скрыть разбор':'Сравнить с полным разбором'}</button>{draft.revealed&&<div className="case-solution"><h3>Разбор по шагам</h3><ol><li>Восстановите вход: {item.context}</li><li>Выполните действие: {item.operation}</li><li>{item.solution}</li><li>Сопоставьте контрольные точки: {item.checks.map(c=>`${c.label} = ${c.expected.toLocaleString('ru-RU',{maximumFractionDigits:4})}`).join('; ')}. При расхождении вернитесь к исходным значениям и пересчитайте зависимый шаг.</li></ol><p>После сверки уточните собственный вывод. Реальную СУБД эта модель не изменяла; для выполнения команд на стенде используйте отдельную учебную базу.</p></div>}</>}{checked&&<span className="sr-only" role="status">Попытка проверена</span>}</section>}
-  <footer><button type="button" disabled={stage===0} onClick={()=>setStage(s=>s-1)}>← Назад</button><button type="button" onClick={()=>{setDraft(fresh);setStage(0);setChecked(false);setFeedback(null)}}>Начать заново</button><a href={back}>Вернуться к самопроверке лекции →</a></footer>
+ useEffect(()=>{document.title=`${item.title} · Разбор задачи`},[item.title])
+ useEffect(()=>{document.documentElement.dataset.theme=theme},[theme])
+ return <main className={`case-workshop case-demo ${started?'demo-started':''}`}>
+  <header><a href={back}>← К лекции</a><span>{item.semester} семестр</span>{!audience&&<><button type="button" onClick={showAudience}>Окно для группы ↗</button><button type="button" onClick={()=>setTheme(theme==='dark'?'light':'dark')}>{theme==='dark'?'Светлая тема':'Тёмная тема'}</button></>}</header>
+  <p className="case-kicker">Задача для группового разбора</p><h1>{item.title}</h1>
+  {!started&&<><div className="demo-brief"><section><h2>Описание задачи</h2><p>{item.context}</p></section><section><h2>Что делаем</h2><p>{item.operation}</p></section></div><section className="demo-launch"><p>Обсудите с группой исходные данные и предложите первое действие. Затем покажите решение по шагам.</p>{!audience&&<button className="solve-button" type="button" onClick={()=>{setStarted(true);setStep(0)}}>Решить задачу</button>}</section></>}
+  {started&&<section className="demo-stage" aria-label="Демонстрация решения">
+   {model.scenarios.length>1&&(audience?<p>Условия: {model.scenarios[branch].label}</p>:<div className="scenario-picker" role="group" aria-label="Условия задачи"><span>Условия:</span>{model.scenarios.map((s,i)=><button type="button" key={s.label} aria-pressed={branch===i} onClick={()=>{setBranch(i);setStep(0)}}>{s.label}</button>)}</div>)}
+   <div className="demo-step-heading"><span>{String(step+1).padStart(2,'0')} / {String(frames.length).padStart(2,'0')}</span><h2>{current.title}</h2></div>
+   <ScenarioBoard board={current.board}/>
+   <p className="oral-prompt"><strong>Обсудите с группой.</strong> {current.prompt}</p>
+   {!audience&&<div className="demo-controls"><button type="button" disabled={step===0} onClick={()=>setStep(s=>s-1)}>← Назад</button><span role="status" aria-live="polite">{current.title}</span>{!last?<button className="solve-button" type="button" onClick={()=>setStep(s=>s+1)}>Следующий шаг →</button>:<button className="solve-button" type="button" onClick={()=>setStep(0)}>Показать сначала</button>}</div>}
+  </section>}
+  {started&&last&&<section className="demo-explanation"><h2>Разбор и граница вывода</h2><p>{branch===0?item.solution:model.scenarios[branch].conclusion}</p><p>Назовите изменённое условие и объясните, какой шаг решения придётся пересмотреть.</p></section>}
+  <p className="case-environment">Учебная модель для показа и устного обсуждения. Команды на этой странице не выполняются на сервере.</p>
+  <footer>{started&&!audience&&<button type="button" onClick={()=>{setStarted(false);setStep(0)}}>К условию задачи</button>}<a href={back}>Вернуться к лекции →</a></footer>
  </main>
 }

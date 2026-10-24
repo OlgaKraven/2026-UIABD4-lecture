@@ -1,0 +1,1023 @@
+{
+  "sourceSha256": "b3245491606ab82594c44e0c2008843c74bf414c57b491354ad6b65045d67a07",
+  "lectures": 10,
+  "slides": 1060,
+  "tasks": 320,
+  "browserTasks": {
+    "tasks": 80,
+    "scenarios": 85,
+    "snapshots": 255,
+    "forms": 0,
+    "quizzes": 0,
+    "backRestoration": "passed",
+    "consoleErrors": []
+  },
+  "browserExplanations": {
+    "explanations": 80,
+    "semanticSteps": 241,
+    "initialState": "no autostart",
+    "backAndRepeat": "passed",
+    "audienceSync": "passed",
+    "audienceReload": "passed",
+    "teacherRequestsFromAudience": 0
+  },
+  "projection": {
+    "twoWindows": "steps, intentional reveal, branch reset, late reload and theme passed",
+    "audienceControls": 0,
+    "mobileWidths": [
+      390
+    ],
+    "mobileExamples": [
+      4,
+      17,
+      49,
+      60,
+      65,
+      74
+    ],
+    "reducedMotion": "manual controls passed"
+  },
+  "qr": {
+    "decoded": 14,
+    "minLiteratureSize": 116.21875,
+    "aliases": "passed",
+    "catalogFooter": "removed"
+  },
+  "unitTests": 18,
+  "print": {
+    "pages": 1060,
+    "overflowIssues": 0,
+    "pdfs": 10,
+    "renderedChecks": 30
+  },
+  "teacherDocuments": 20,
+  "diagramPlan": [
+    {
+      "id": "s07-01-queries-on-server-database-q01-logic",
+      "title": "Выборка как серверная операция",
+      "representation": "chain",
+      "shows": "40 строк результата не означают 40 прочитанных строк: способ доступа проверяют планом."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q02-logic",
+      "title": "Условие WHERE",
+      "representation": "table",
+      "shows": "Выбрано 5% строк. Малый результат сам по себе не доказывает использование индекса."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q03-logic",
+      "title": "Соединение таблиц",
+      "representation": "table",
+      "shows": "Правильный JOIN даёт 3 строки; декартово произведение — 6. DISTINCT не восстанавливает потерянный смысл связи."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q04-logic",
+      "title": "Группировка",
+      "representation": "table",
+      "shows": "Итоги: филиал 1 — 300, филиал 2 — 50; общая сумма 350 сохранена."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q05-logic",
+      "title": "Агрегатные функции",
+      "representation": "table",
+      "shows": "COUNT(*)=3, COUNT(amount)=2, AVG=15. Неизвестное значение не заменяется нулём автоматически."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q06-logic",
+      "title": "Рост объёма",
+      "representation": "table",
+      "shows": "В данном измерении рост не пропорционален числу строк; прогноз требует новых замеров."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q07-logic",
+      "title": "Измерение времени",
+      "representation": "bars",
+      "shows": "Медиана 21 мс описывает типичный повтор, но выброс 70 мс также сохраняют для диагностики."
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q08-logic",
+      "title": "Проверка результата",
+      "representation": "table",
+      "shows": "Одна контрольная сумма недостаточна: нужны ключи, значения, кратности строк и обработка NULL."
+    },
+    {
+      "id": "s07-02-calculation-query-q01-logic",
+      "title": "Гранулярность результата",
+      "representation": "table",
+      "shows": "Заказ 10 получает итог 300 рублей в одной строке; уровень позиции и заказа не смешивается."
+    },
+    {
+      "id": "s07-02-calculation-query-q02-logic",
+      "title": "Цепочка соединений",
+      "representation": "chain",
+      "shows": "Стоимость материалов и операций учитывается по одному разу; шесть комбинаций нельзя суммировать как шесть затрат."
+    },
+    {
+      "id": "s07-02-calculation-query-q03-logic",
+      "title": "Количество и цена",
+      "representation": "chain",
+      "shows": "Стоимость 50,00 рублей. Округление и масштаб денежных значений определяются правилом расчёта."
+    },
+    {
+      "id": "s07-02-calculation-query-q04-logic",
+      "title": "Норма расхода",
+      "representation": "chain",
+      "shows": "600 рублей — стоимость материала; повтор нормы ошибочно даст 1200."
+    },
+    {
+      "id": "s07-02-calculation-query-q05-logic",
+      "title": "NULL в расчёте",
+      "representation": "table",
+      "shows": "Фиксируем неполноту расчёта и запрашиваем цену; COALESCE(цена,0) допустим лишь при явном правиле бесплатности."
+    },
+    {
+      "id": "s07-02-calculation-query-q06-logic",
+      "title": "Агрегирование",
+      "representation": "table",
+      "shows": "Правильный итог 210, а DISTINCT даст 150 и потеряет самостоятельную позицию."
+    },
+    {
+      "id": "s07-02-calculation-query-q07-logic",
+      "title": "Правдоподобие",
+      "representation": "chain",
+      "shows": "900 требует проверки количества, соединений и коэффициентов; диапазон обнаруживает ошибку, но не локализует её."
+    },
+    {
+      "id": "s07-02-calculation-query-q08-logic",
+      "title": "Документирование расчёта",
+      "representation": "table",
+      "shows": "Контрольный пример можно повторить и отличить изменение алгоритма от изменения входа."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q01-logic",
+      "title": "Повторяющееся серверное действие",
+      "representation": "chain",
+      "shows": "Единая операция уменьшает расхождения, если её границы и побочные эффекты явно описаны."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q02-logic",
+      "title": "Хранимая процедура",
+      "representation": "chain",
+      "shows": "Заказ закрыт одним проверяемым сценарием; несуществующий ID даёт предусмотренную ошибку."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q03-logic",
+      "title": "Параметры процедуры",
+      "representation": "table",
+      "shows": "Три невалидных входа отклоняются до изменения данных, допустимый — обрабатывается."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q04-logic",
+      "title": "Триггер",
+      "representation": "chain",
+      "shows": "Аудит связан с фактом изменения строки, а не с любым повторным UPDATE тех же значений."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q05-logic",
+      "title": "Порядок срабатывания",
+      "representation": "table",
+      "shows": "Событие и момент BEFORE/AFTER объясняют порядок; несколько триггеров одного момента требуют отдельной проверки порядка."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q06-logic",
+      "title": "Ошибки и откат",
+      "representation": "chain",
+      "shows": "После явного отката статус заказа исходный; граница транзакции и обработчик ошибки проверены."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q07-logic",
+      "title": "Избыточная автоматизация",
+      "representation": "table",
+      "shows": "В локальном триггере остаётся узкое правило; последовательность бизнес-действий становится наблюдаемой."
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q08-logic",
+      "title": "Проверка решения",
+      "representation": "table",
+      "shows": "Проверен не только успешный путь: отрицательные сценарии сохраняют согласованность данных."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q01-logic",
+      "title": "Воспроизводимое измерение",
+      "representation": "table",
+      "shows": "В этом учебном опыте типичное время уменьшилось вдвое; одиночный быстрый запуск не был основанием вывода."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q02-logic",
+      "title": "Объём данных",
+      "representation": "chain",
+      "shows": "2 МБ — оценка полезных данных в десятичных единицах, не полный размер файлов базы."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q03-logic",
+      "title": "Соединение без условия",
+      "representation": "table",
+      "shows": "Исправление условия устраняет лишние 36 сочетаний; индекс не исправляет логическую ошибку."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q04-logic",
+      "title": "Назначение индекса",
+      "representation": "chain",
+      "shows": "Порядок столбцов соответствует равенству и диапазону; ускорение не гарантируется без измерения."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q05-logic",
+      "title": "Селективность",
+      "representation": "bars",
+      "shows": "Оптимизатор может выбрать сканирование для B; наличие индекса не обязывает его использовать."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q06-logic",
+      "title": "Составной индекс",
+      "representation": "table",
+      "shows": "Не обещаем одинаковую эффективность трём запросам; возможные специальные планы проверяем отдельно."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q07-logic",
+      "title": "Издержки индекса",
+      "representation": "table",
+      "shows": "Одна быстрая выборка не оправдывает индекс автоматически; нагрузка и место входят в решение."
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q08-logic",
+      "title": "Проверка после изменения",
+      "representation": "chain",
+      "shows": "Быстрый неэквивалентный результат не принимается; правильность предшествует оценке ускорения."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q01-logic",
+      "title": "Профиль нагрузки",
+      "representation": "chain",
+      "shows": "Средняя нагрузка 1 запрос/с не описывает одновременный старт всех пользователей."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q02-logic",
+      "title": "Процессор",
+      "representation": "table",
+      "shows": "Сам процент 90 не доказывает неисправность; важен результат обслуживания нагрузки."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q03-logic",
+      "title": "Оперативная память",
+      "representation": "table",
+      "shows": "Оценка относится к заданному профилю, а не к универсальному максимуму памяти MySQL."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q04-logic",
+      "title": "Буферный пул",
+      "representation": "chain",
+      "shows": "8 ГиБ — обоснование для данного стенда, не процентное правило на любой сервер."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q05-logic",
+      "title": "Дисковая подсистема",
+      "representation": "chain",
+      "shows": "Пропускная способность и задержка отвечают на разные вопросы о диске."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q06-logic",
+      "title": "Канал связи",
+      "representation": "chain",
+      "shows": "160 мс — нижняя оценка передачи при принятых десятичных единицах, без обработки запроса."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q07-logic",
+      "title": "Расчёт с запасом",
+      "representation": "chain",
+      "shows": "260 ГБ — расчёт по условию, коэффициент 1,3 не является нормативом."
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q08-logic",
+      "title": "Выбор по критериям",
+      "representation": "table",
+      "shows": "B лидирует только при этих весах и шкале; смена приоритетов может изменить выбор."
+    },
+    {
+      "id": "s08-01-server-metrics-q01-logic",
+      "title": "Ограничения ручной проверки",
+      "representation": "bars",
+      "shows": "Разовая успешная проверка не исключает недавнюю деградацию."
+    },
+    {
+      "id": "s08-01-server-metrics-q02-logic",
+      "title": "Подключения",
+      "representation": "table",
+      "shows": "Текущее число и накопительный счётчик описывают разные стороны нагрузки."
+    },
+    {
+      "id": "s08-01-server-metrics-q03-logic",
+      "title": "Длительность запросов",
+      "representation": "table",
+      "shows": "Метод квантиля указывают явно; даже p90 этого малого набора скрывает самый долгий запрос."
+    },
+    {
+      "id": "s08-01-server-metrics-q04-logic",
+      "title": "Объём данных",
+      "representation": "chain",
+      "shows": "Согласованные уровни агрегации предотвращают двойной счёт объёма."
+    },
+    {
+      "id": "s08-01-server-metrics-q05-logic",
+      "title": "Свободное место",
+      "representation": "bars",
+      "shows": "Проверка относится к фактическому размещению файлов СУБД."
+    },
+    {
+      "id": "s08-01-server-metrics-q06-logic",
+      "title": "Количество ошибок",
+      "representation": "chain",
+      "shows": "Ненулевые старые 40 не означают новые ошибки в текущем окне."
+    },
+    {
+      "id": "s08-01-server-metrics-q07-logic",
+      "title": "Базовая линия",
+      "representation": "table",
+      "shows": "45 может быть штатным для отчёта и необычным ночью; контекст нужен до оповещения."
+    },
+    {
+      "id": "s08-01-server-metrics-q08-logic",
+      "title": "Паспорт показателя",
+      "representation": "table",
+      "shows": "График можно интерпретировать и сопровождать без устных догадок о единицах."
+    },
+    {
+      "id": "s08-02-metrics-collection-q01-logic",
+      "title": "Источник показателя",
+      "representation": "chain",
+      "shows": "Владелец и единица определены до построения графика."
+    },
+    {
+      "id": "s08-02-metrics-collection-q02-logic",
+      "title": "Периодический сбор",
+      "representation": "timeline",
+      "shows": "Интервал 15 с ограничивает временную детализацию; чаще не всегда экономически оправданно."
+    },
+    {
+      "id": "s08-02-metrics-collection-q03-logic",
+      "title": "Модель pull",
+      "representation": "chain",
+      "shows": "Недоступность цепочки сбора отличается от нулевого числа запросов."
+    },
+    {
+      "id": "s08-02-metrics-collection-q04-logic",
+      "title": "Показатель и имя",
+      "representation": "chain",
+      "shows": "Один ряд сохраняет единую величину и единицу; изменение единиц требует явной миграции."
+    },
+    {
+      "id": "s08-02-metrics-collection-q05-logic",
+      "title": "Метка",
+      "representation": "chain",
+      "shows": "Метки описывают ограниченные измерения, а уникальные запросы обычно относят к журналам."
+    },
+    {
+      "id": "s08-02-metrics-collection-q06-logic",
+      "title": "Точка во времени",
+      "representation": "table",
+      "shows": "Пробел, ноль и устаревшее значение сохраняют разные значения в диагностике."
+    },
+    {
+      "id": "s08-02-metrics-collection-q07-logic",
+      "title": "Хранение ряда",
+      "representation": "chain",
+      "shows": "Количество образцов рассчитано; перевод в байты требует отдельного измерения хранилища."
+    },
+    {
+      "id": "s08-02-metrics-collection-q08-logic",
+      "title": "Заменяемая архитектура",
+      "representation": "chain",
+      "shows": "Заменяемость определяется интерфейсами, а не одинаковыми логотипами продуктов."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q01-logic",
+      "title": "Вопрос панели",
+      "representation": "table",
+      "shows": "Графики отвечают на оперативный вопрос и ведут к следующему шагу."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q02-logic",
+      "title": "Выбор визуализации",
+      "representation": "bars",
+      "shows": "Выбор формы зависит от вопроса о тренде или текущем состоянии."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q03-logic",
+      "title": "Временной диапазон",
+      "representation": "chain",
+      "shows": "Агрегация крупным шагом может скрыть короткий эпизод."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q04-logic",
+      "title": "Пороговое значение",
+      "representation": "table",
+      "shows": "Разные пороги включения и выключения снижают дребезг вокруг границы."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q05-logic",
+      "title": "Условие оповещения",
+      "representation": "timeline",
+      "shows": "Окно подтверждения отличается от среднего за окно; отсутствие данных обрабатывается отдельно."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q06-logic",
+      "title": "Состав панели дежурного",
+      "representation": "chain",
+      "shows": "Порядок панели следует диагностике от результата сервиса к возможной причине."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q07-logic",
+      "title": "Доступность визуализации",
+      "representation": "table",
+      "shows": "Смысл сохраняется при нарушении цветовосприятия и без мыши."
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q08-logic",
+      "title": "Проверка оповещения",
+      "representation": "timeline",
+      "shows": "Успешное вычисление правила ещё не подтверждает доставку; обе части проверены."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q01-logic",
+      "title": "Рост числа подключений",
+      "representation": "table",
+      "shows": "Гипотеза шторма переподключений проверяется журналом клиента и временем события."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q02-logic",
+      "title": "Рост длительности запросов",
+      "representation": "chain",
+      "shows": "Низкий CPU совместим с долгим ожиданием; медленный запрос не всегда требует нового индекса."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q03-logic",
+      "title": "Исчерпание места",
+      "representation": "chain",
+      "shows": "Скорость расхода 10 ГБ/ч указывает срочность, а расположение определяет безопасное действие."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q04-logic",
+      "title": "Всплеск ошибок",
+      "representation": "table",
+      "shows": "Две категории требуют разных проверок и не объединяются в одну причину по сумме 32."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q05-logic",
+      "title": "Корреляция картин",
+      "representation": "table",
+      "shows": "Совпадение графиков обосновывает гипотезу, но не доказывает её."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q06-logic",
+      "title": "Порядок действий",
+      "representation": "chain",
+      "shows": "Стабилизация и устранение первопричины — разные действия; доказательства сохраняются."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q07-logic",
+      "title": "Восстановление из копии",
+      "representation": "chain",
+      "shows": "Совпадение 100 и 50000 необходимо, но дополнительно проверяются ключи и работа приложения."
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q08-logic",
+      "title": "Закрытие инцидента",
+      "representation": "chain",
+      "shows": "Исчезновение красного индикатора само по себе не закрывает инцидент."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q01-logic",
+      "title": "Одинаковая учебная задача",
+      "representation": "chain",
+      "shows": "Различие платформ оценивают на общей задаче, а не на разных наборах данных."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q02-logic",
+      "title": "Установка и служба",
+      "representation": "table",
+      "shows": "Единой универсальной команды запуска двух продуктов нет; чек-листы остаются раздельными."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q03-logic",
+      "title": "Базы и схемы",
+      "representation": "table",
+      "shows": "Схема PostgreSQL — пространство имён внутри базы; термины двух СУБД не полностью взаимозаменяемы."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q04-logic",
+      "title": "Учётные записи и роли",
+      "representation": "table",
+      "shows": "Проверяется одинаковое минимальное право, а синтаксис и модель доступа различаются."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q05-logic",
+      "title": "Типы данных",
+      "representation": "table",
+      "shows": "Совпадение названий типов недостаточно: нужны граничные тесты и правила преобразования."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q06-logic",
+      "title": "Конструкции SQL",
+      "representation": "table",
+      "shows": "Переносимые запросы и команды клиента проверяют раздельно; PL/pgSQL не запускают как MySQL."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q07-logic",
+      "title": "Средства наблюдения",
+      "representation": "table",
+      "shows": "Похожие имена показателей не гарантируют одинаковый состав; сравнение начинается с диагностического вопроса."
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q08-logic",
+      "title": "Основание выбора",
+      "representation": "chain",
+      "shows": "Выбор делается по обязательным требованиям, затем по стоимости и удобству; универсальный победитель не определяется."
+    }
+  ],
+  "groupScenarios": [
+    {
+      "id": "s07-01-queries-on-server-database-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q03",
+      "conditions": [
+        "INNER JOIN",
+        "LEFT JOIN"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q05",
+      "conditions": [
+        "NULL остаётся неизвестным",
+        "Предметное правило: NULL заменить на 0"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-01-queries-on-server-database-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-02-calculation-query-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q01",
+      "conditions": [
+        "A: существует и оплачен",
+        "B: существует, не оплачен",
+        "C: не существует"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-03-procedures-and-triggers-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-04-query-performance-and-indexes-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s07-05-server-and-network-requirements-q08",
+      "conditions": [
+        "Веса 0,4 / 0,6",
+        "Веса 0,8 / 0,2"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-01-server-metrics-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-02-metrics-collection-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-03-dashboard-and-alerting-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-04-incident-analysis-and-recovery-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q01",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q02",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q03",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q04",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q05",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q06",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q07",
+      "conditions": [
+        "Условие задачи"
+      ]
+    },
+    {
+      "id": "s08-05-database-platform-comparison-q08",
+      "conditions": [
+        "Условие задачи"
+      ]
+    }
+  ]
+}
