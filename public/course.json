@@ -111,8 +111,12 @@
           "kicker": "Запросы на серверной базе и рост данных",
           "id": "s07-01-queries-on-server-database-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "От исходных строк к проверенному запросу. Запустите клиент из терминала: mysql -h127.0.0.1 -P3306 -u student -p, заменив student своей учётной записью и при необходимости порт. Пароль вводится по приглашению. Один раз создайте пустую учебную базу под своей учётной записью. Если база уже предоставлена, используйте её имя вместо uiabd4_training в USE. Нужны права на создание учебных объектов; рабочие базы для этой практики не используются."
+          "title": "От исходных строк к проверенному запросу",
+          "body": "MySQL 8.4, новый сеанс клиента и учебная база uiabd4_training. Временные таблицы существуют только в этом сеансе; файл запускают один раз, затем исследуют созданные строки.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -221,6 +225,149 @@
           "title": "Запишите",
           "notebook": "Результат — набор строк, возвращённый запросом клиенту.",
           "body": "40 строк результата не означают 40 прочитанных строк: способ доступа проверяют планом."
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "От исходных строк к проверенному запросу",
+          "body": "MySQL 8.4, новый сеанс клиента и учебная база uiabd4_training. Временные таблицы существуют только в этом сеансе; файл запускают один раз, затем исследуют созданные строки.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Подготовить учебную базу и проверить подключение",
+          "body": "Скачайте тестовый стенд по кнопке на этом слайде и распакуйте комплект. В его папке выполните powershell -NoProfile -ExecutionPolicy Bypass -File .\\start.ps1, затем .\\client.ps1. Скрипт скачивает проверенный MySQL 8.4.13 и создаёт локальный экземпляр 127.0.0.1:33064, базу uiabd4_training и пользователя student. Установленный клиент не требуется; пароли создаются локально. База уже подготовлена, повторно создавать её не нужно.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-01-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "SELECT VERSION(), CURRENT_USER();\nUSE uiabd4_training;\nSELECT DATABASE();",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Стенд запущен на 127.0.0.1:33064; версия MySQL 8.4.13, учётная запись student и текущая база uiabd4_training подтверждены SQL-ответом."
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Создать набор и выполнить запросы",
+          "body": "В комплекте стенда файл находится в папке sql. SOURCE — команда клиента mysql для чтения SQL-файла; путь для запуска показан на следующем слайде, полный код приведён далее. id различает объекты, order_id связывает позицию с заказом, total — заданная сумма заказа в рублях, а не автоматически вычисленная сумма его позиций.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/01-queries.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 01-queries.sql",
+            "href": "practice/01-queries.sql"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 1/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE lab_orders (\n id INT PRIMARY KEY, branch_id INT NOT NULL,\n status VARCHAR(12) NOT NULL, total DECIMAL(10,2)\n);\nCREATE TEMPORARY TABLE lab_items (\n id INT PRIMARY KEY, order_id INT, qty DECIMAL(10,2), price DECIMAL(10,2)",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 2/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": ");\nINSERT INTO lab_orders VALUES\n (101,1,'new',100),(102,1,'paid',200),(103,2,'new',50),(104,2,'new',NULL);\nINSERT INTO lab_items VALUES\n (1,101,2,25),(2,101,1,50),(3,102,1,200),(4,NULL,1,10);\n\nSELECT id,total FROM lab_orders WHERE status='new' ORDER BY id;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-code-1-3",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 3/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SELECT COUNT(*) AS rows_count,COUNT(total) AS known_count,\n SUM(total) AS known_sum,AVG(total) AS known_average\nFROM lab_orders WHERE status='new';\nSELECT o.id AS order_id,i.id AS item_id\nFROM lab_orders o INNER JOIN lab_items i ON i.order_id=o.id ORDER BY o.id,i.id;\nSELECT o.id AS order_id,i.id AS item_id",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-code-1-4",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 4/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "FROM lab_orders o LEFT JOIN lab_items i ON i.order_id=o.id ORDER BY o.id,i.id;\nSELECT branch_id,SUM(total) AS known_sum FROM lab_orders\nGROUP BY branch_id HAVING SUM(total)>=100 ORDER BY branch_id;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "WHERE вернёт ID 101,103,104. Агрегаты по новым заказам: 3 строки, 2 известные суммы, SUM=150, AVG=75. NULL не объявляется нулевой стоимостью."
         },
         {
           "id": "s07-01-queries-on-server-database-q01-case",
@@ -472,6 +619,24 @@
           "title": "Запишите",
           "notebook": "Предикат — логическое условие, по которому отбирают строки.",
           "body": "Выбрано 5% строк. Малый результат сам по себе не доказывает использование индекса."
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-04-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Объяснить перенос условия",
+          "body": "До запуска предскажите, что изменится при WHERE status='paid' и при замене LEFT на INNER. После выполнения сравните ID и значения, а не только количество строк.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-04-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Для paid останется ID 102 с суммой 200. INNER теряет заказы без позиций, поэтому такая замена сохраняет смысл лишь при соответствующем требовании."
         },
         {
           "id": "s07-01-queries-on-server-database-q02-case",
@@ -733,6 +898,24 @@
           "title": "Запишите",
           "notebook": "JOIN — операция соединения строк таблиц по условию.",
           "body": "Правильный JOIN даёт 3 строки; декартово произведение — 6. DISTINCT не восстанавливает потерянный смысл связи."
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 3 · практика",
+          "title": "Сопоставить пары и группы",
+          "body": "Проследите каждую пару по ключу. Позиция 4 с неизвестным order_id не присоединяется. У заказов 103 и 104 нет позиций, поэтому LEFT сохраняет их с NULL справа.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-01-queries-on-server-database-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 3 · практика",
+          "title": "Ожидаемый результат",
+          "body": "INNER: 101/1,101/2,102/3 — 3 строки. LEFT добавит 103/NULL и 104/NULL — 5 строк. HAVING оставит филиал 1 с известной суммой 300."
         },
         {
           "id": "s07-01-queries-on-server-database-q03-case",
@@ -2210,165 +2393,6 @@
           }
         },
         {
-          "id": "s07-01-queries-on-server-database-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "От исходных строк к проверенному запросу",
-          "body": "MySQL 8.4, новый сеанс клиента и учебная база uiabd4_training. Временные таблицы существуют только в этом сеансе; файл запускают один раз, затем исследуют созданные строки."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Подготовить учебную базу и проверить подключение",
-          "body": "Запустите клиент из терминала: mysql -h127.0.0.1 -P3306 -u student -p, заменив student своей учётной записью и при необходимости порт. Пароль вводится по приглашению. Один раз создайте пустую учебную базу под своей учётной записью. Если база уже предоставлена, используйте её имя вместо uiabd4_training в USE. Нужны права на создание учебных объектов; рабочие базы для этой практики не используются."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-01-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "SELECT VERSION(), CURRENT_USER();\nCREATE DATABASE uiabd4_training;\nUSE uiabd4_training;\nSELECT DATABASE();",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Версия относится к MySQL 8.4, текущая база — выбранная учебная. CREATE DATABASE повторно для уже существующей базы выполнять не нужно."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Создать набор и выполнить запросы",
-          "body": "Сохраните файл в рабочую папку клиента. SOURCE — команда клиента mysql для чтения SQL-файла; полный текст файла приведён ниже. id различает объекты, order_id связывает позицию с заказом, total — заданная сумма заказа в рублях, а не автоматически вычисленная сумма его позиций."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 01-queries.sql в рабочую папку клиента. В клиенте mysql: SOURCE 01-queries.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 01-queries.sql",
-            "href": "practice/01-queries.sql"
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 1/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE lab_orders (\n id INT PRIMARY KEY, branch_id INT NOT NULL,\n status VARCHAR(12) NOT NULL, total DECIMAL(10,2)\n);\nCREATE TEMPORARY TABLE lab_items (\n id INT PRIMARY KEY, order_id INT, qty DECIMAL(10,2), price DECIMAL(10,2)",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 2/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": ");\nINSERT INTO lab_orders VALUES\n (101,1,'new',100),(102,1,'paid',200),(103,2,'new',50),(104,2,'new',NULL);\nINSERT INTO lab_items VALUES\n (1,101,2,25),(2,101,1,50),(3,102,1,200),(4,NULL,1,10);\n\nSELECT id,total FROM lab_orders WHERE status='new' ORDER BY id;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-code-1-3",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 3/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SELECT COUNT(*) AS rows_count,COUNT(total) AS known_count,\n SUM(total) AS known_sum,AVG(total) AS known_average\nFROM lab_orders WHERE status='new';\nSELECT o.id AS order_id,i.id AS item_id\nFROM lab_orders o INNER JOIN lab_items i ON i.order_id=o.id ORDER BY o.id,i.id;\nSELECT o.id AS order_id,i.id AS item_id",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-code-1-4",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 4/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "FROM lab_orders o LEFT JOIN lab_items i ON i.order_id=o.id ORDER BY o.id,i.id;\nSELECT branch_id,SUM(total) AS known_sum FROM lab_orders\nGROUP BY branch_id HAVING SUM(total)>=100 ORDER BY branch_id;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "WHERE вернёт ID 101,103,104. Агрегаты по новым заказам: 3 строки, 2 известные суммы, SUM=150, AVG=75. NULL не объявляется нулевой стоимостью."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Сопоставить пары и группы",
-          "body": "Проследите каждую пару по ключу. Позиция 4 с неизвестным order_id не присоединяется. У заказов 103 и 104 нет позиций, поэтому LEFT сохраняет их с NULL справа."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "INNER: 101/1,101/2,102/3 — 3 строки. LEFT добавит 103/NULL и 104/NULL — 5 строк. HAVING оставит филиал 1 с известной суммой 300."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-04-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Объяснить перенос условия",
-          "body": "До запуска предскажите, что изменится при WHERE status='paid' и при замене LEFT на INNER. После выполнения сравните ID и значения, а не только количество строк."
-        },
-        {
-          "id": "s07-01-queries-on-server-database-practice-04-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 4",
-          "title": "Ожидаемый результат",
-          "body": "Для paid останется ID 102 с суммой 200. INNER теряет заказы без позиций, поэтому такая замена сохраняет смысл лишь при соответствующем требовании."
-        },
-        {
           "kicker": "Запросы на серверной базе и рост данных",
           "id": "s07-01-queries-on-server-database-summary",
           "kind": "summary",
@@ -2475,8 +2499,12 @@
           "kicker": "Расчётный запрос и проверка правдоподобия",
           "id": "s07-02-calculation-query-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Стоимость заказа без размножения затрат. У заказа 1 два материала: 2×10 и 3×20, две операции: 5 и 15. У заказа 2 цена материала неизвестна, операция стоит 10. Перед SQL сложите известные части вручную."
+          "title": "Стоимость заказа без размножения затрат",
+          "body": "MySQL 8.4, новый сеанс в uiabd4_training. Количество материалов — кг, цена — руб./кг, операции — руб. Отсутствующий дочерний набор означает отсутствие этой категории затрат; NULL цены означает неизвестную стоимость существующей позиции.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -2593,6 +2621,35 @@
           "title": "Запишите",
           "notebook": "Гранулярность — уровень детализации, определяющий, какому объекту соответствует строка.",
           "body": "Заказ 10 получает итог 300 рублей в одной строке; уровень позиции и заказа не смешивается."
+        },
+        {
+          "id": "s07-02-calculation-query-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Стоимость заказа без размножения затрат",
+          "body": "MySQL 8.4, новый сеанс в uiabd4_training. Количество материалов — кг, цена — руб./кг, операции — руб. Отсутствующий дочерний набор означает отсутствие этой категории затрат; NULL цены означает неизвестную стоимость существующей позиции.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Восстановить промежуточные затраты",
+          "body": "У заказа 1 два материала: 2×10 и 3×20, две операции: 5 и 15. У заказа 2 цена материала неизвестна, операция стоит 10. Перед SQL сложите известные части вручную.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Материалы заказа 1: 80 руб., операции: 20 руб., полный итог: 100 руб. Для заказа 2 известны только 10 руб. операций."
         },
         {
           "id": "s07-02-calculation-query-q01-case",
@@ -2850,6 +2907,138 @@
           "title": "Запишите",
           "notebook": "Кардинальность — количество строк набора или кратность связи между наборами.",
           "body": "Стоимость материалов и операций учитывается по одному разу; шесть комбинаций нельзя суммировать как шесть затрат."
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Сравнить прямое соединение и предварительные суммы",
+          "body": "Запустите файл в новом сеансе. WITH именует промежуточные результаты m и o; в каждом получается одна строка на order_id. LEFT JOIN от списка заказов сохраняет заказы без соответствующего дочернего набора.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/02-calculation.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 02-calculation.sql",
+            "href": "practice/02-calculation.sql"
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 1/5",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE calc_orders(id INT PRIMARY KEY);\nCREATE TEMPORARY TABLE calc_materials(\n id INT PRIMARY KEY,order_id INT,qty DECIMAL(10,2),price DECIMAL(10,2));\nCREATE TEMPORARY TABLE calc_operations(id INT PRIMARY KEY,order_id INT,cost DECIMAL(10,2));\nINSERT INTO calc_orders VALUES (1),(2);",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 2/5",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "INSERT INTO calc_materials VALUES (11,1,2,10),(12,1,3,20),(13,2,2,NULL);\nINSERT INTO calc_operations VALUES (21,1,5),(22,1,15),(23,2,10);\n\nSELECT SUM(m.qty*m.price+o.cost) AS wrong_total\nFROM calc_materials m JOIN calc_operations o ON o.order_id=m.order_id WHERE m.order_id=1;\n",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-code-1-3",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 3/5",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "WITH m AS (\n SELECT order_id,SUM(qty*price) AS known_materials,SUM(price IS NULL) AS missing\n FROM calc_materials GROUP BY order_id\n), o AS (\n SELECT order_id,SUM(cost) AS work_cost FROM calc_operations GROUP BY order_id",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-code-1-4",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 4/5",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": ")\nSELECT c.id,COALESCE(m.known_materials,0)+COALESCE(o.work_cost,0) AS known_part,\n CASE WHEN COALESCE(m.missing,0)=0\n THEN COALESCE(m.known_materials,0)+COALESCE(o.work_cost,0) ELSE NULL END AS full_cost,\n COALESCE(m.missing,0) AS missing_prices",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-code-1-5",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 5/5",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "FROM calc_orders c LEFT JOIN m ON m.order_id=c.id LEFT JOIN o ON o.order_id=c.id ORDER BY c.id;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Неверный прямой JOIN даст 200 для заказа 1. Правильный итог: ID 1 → known_part=100, full_cost=100, missing_prices=0; ID 2 → known_part=10, full_cost=NULL, missing_prices=1."
+        },
+        {
+          "id": "s07-02-calculation-query-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Проверить причину расхождения",
+          "body": "В прямом JOIN каждый материал участвует в двух строках и каждая операция — в двух. В правильном запросе COALESCE применяется к уже известным итогам категорий, а отдельный счётчик missing сохраняет неполноту неизвестной цены.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-02-calculation-query-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "2×80+2×20=200 объясняет ошибку. Нулевое значение промежуточной известной части не выдаётся за доказанную бесплатность неизвестного материала."
         },
         {
           "id": "s07-02-calculation-query-q02-case",
@@ -4550,151 +4739,6 @@
           }
         },
         {
-          "id": "s07-02-calculation-query-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Стоимость заказа без размножения затрат",
-          "body": "MySQL 8.4, новый сеанс в uiabd4_training. Количество материалов — кг, цена — руб./кг, операции — руб. Отсутствующий дочерний набор означает отсутствие этой категории затрат; NULL цены означает неизвестную стоимость существующей позиции."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Восстановить промежуточные затраты",
-          "body": "У заказа 1 два материала: 2×10 и 3×20, две операции: 5 и 15. У заказа 2 цена материала неизвестна, операция стоит 10. Перед SQL сложите известные части вручную."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Материалы заказа 1: 80 руб., операции: 20 руб., полный итог: 100 руб. Для заказа 2 известны только 10 руб. операций."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Сравнить прямое соединение и предварительные суммы",
-          "body": "Запустите файл в новом сеансе. WITH именует промежуточные результаты m и o; в каждом получается одна строка на order_id. LEFT JOIN от списка заказов сохраняет заказы без соответствующего дочернего набора."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 02-calculation.sql в рабочую папку клиента. В клиенте mysql: SOURCE 02-calculation.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 02-calculation.sql",
-            "href": "practice/02-calculation.sql"
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 1/5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE calc_orders(id INT PRIMARY KEY);\nCREATE TEMPORARY TABLE calc_materials(\n id INT PRIMARY KEY,order_id INT,qty DECIMAL(10,2),price DECIMAL(10,2));\nCREATE TEMPORARY TABLE calc_operations(id INT PRIMARY KEY,order_id INT,cost DECIMAL(10,2));\nINSERT INTO calc_orders VALUES (1),(2);",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 2/5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "INSERT INTO calc_materials VALUES (11,1,2,10),(12,1,3,20),(13,2,2,NULL);\nINSERT INTO calc_operations VALUES (21,1,5),(22,1,15),(23,2,10);\n\nSELECT SUM(m.qty*m.price+o.cost) AS wrong_total\nFROM calc_materials m JOIN calc_operations o ON o.order_id=m.order_id WHERE m.order_id=1;\n",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-code-1-3",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 3/5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "WITH m AS (\n SELECT order_id,SUM(qty*price) AS known_materials,SUM(price IS NULL) AS missing\n FROM calc_materials GROUP BY order_id\n), o AS (\n SELECT order_id,SUM(cost) AS work_cost FROM calc_operations GROUP BY order_id",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-code-1-4",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 4/5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": ")\nSELECT c.id,COALESCE(m.known_materials,0)+COALESCE(o.work_cost,0) AS known_part,\n CASE WHEN COALESCE(m.missing,0)=0\n THEN COALESCE(m.known_materials,0)+COALESCE(o.work_cost,0) ELSE NULL END AS full_cost,\n COALESCE(m.missing,0) AS missing_prices",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-code-1-5",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 5/5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "FROM calc_orders c LEFT JOIN m ON m.order_id=c.id LEFT JOIN o ON o.order_id=c.id ORDER BY c.id;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-02-calculation-query-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "Неверный прямой JOIN даст 200 для заказа 1. Правильный итог: ID 1 → known_part=100, full_cost=100, missing_prices=0; ID 2 → known_part=10, full_cost=NULL, missing_prices=1."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Проверить причину расхождения",
-          "body": "В прямом JOIN каждый материал участвует в двух строках и каждая операция — в двух. В правильном запросе COALESCE применяется к уже известным итогам категорий, а отдельный счётчик missing сохраняет неполноту неизвестной цены."
-        },
-        {
-          "id": "s07-02-calculation-query-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "2×80+2×20=200 объясняет ошибку. Нулевое значение промежуточной известной части не выдаётся за доказанную бесплатность неизвестного материала."
-        },
-        {
           "kicker": "Расчётный запрос и проверка правдоподобия",
           "id": "s07-02-calculation-query-summary",
           "kind": "summary",
@@ -4801,8 +4845,12 @@
           "kicker": "Хранимые процедуры и триггеры",
           "id": "s07-03-procedures-and-triggers-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Процедура, аудит и управляемый откат. Заказ 1 оплачен, заказ 2 новый. close_paid_order принимает ID существующего оплаченного заказа, меняет статус на closed и не выполняет COMMIT. AFTER UPDATE пишет только фактическую смену NOT NULL статуса."
+          "title": "Процедура, аудит и управляемый откат",
+          "body": "MySQL 8.4, InnoDB, пустая учебная база uiabd4_training. Нужны CREATE ROUTINE, EXECUTE и TRIGGER на учебных объектах. Объекты файла постоянные; повторный запуск выполняют в новой пустой учебной базе с заменой USE.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -4915,6 +4963,35 @@
           "title": "Запишите",
           "notebook": "Контракт — описание входов, выходов, условий и ошибок операции.",
           "body": "Единая операция уменьшает расхождения, если её границы и побочные эффекты явно описаны."
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Процедура, аудит и управляемый откат",
+          "body": "MySQL 8.4, InnoDB, пустая учебная база uiabd4_training. Нужны CREATE ROUTINE, EXECUTE и TRIGGER на учебных объектах. Объекты файла постоянные; повторный запуск выполняют в новой пустой учебной базе с заменой USE.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Определить допустимые состояния",
+          "body": "Заказ 1 оплачен, заказ 2 новый. close_paid_order принимает ID существующего оплаченного заказа, меняет статус на closed и не выполняет COMMIT. AFTER UPDATE пишет только фактическую смену NOT NULL статуса.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Недопустимые ID, NULL и неоплаченный заказ должны завершаться ошибкой до изменения статуса. Транзакцией управляет вызывающий клиент."
         },
         {
           "id": "s07-03-procedures-and-triggers-q01-case",
@@ -5172,6 +5249,154 @@
           "title": "Запишите",
           "notebook": "CALL — оператор явного вызова хранимой процедуры.",
           "body": "Заказ закрыт одним проверяемым сценарием; несуществующий ID даёт предусмотренную ошибку."
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Создать объекты и пройти обе границы транзакции",
+          "body": "Файл выполняется клиентом mysql целиком. DELIMITER меняет разделитель команд клиента, позволяя передать BEGIN…END с внутренними точками с запятой; это не серверный SQL-оператор. SELECT … FOR UPDATE удерживает найденную строку до завершения внешней транзакции.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/03-procedure.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 03-procedure.sql",
+            "href": "practice/03-procedure.sql"
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 1/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nCREATE TABLE procedure_orders(id INT PRIMARY KEY,status VARCHAR(12) NOT NULL) ENGINE=InnoDB;\nCREATE TABLE procedure_audit(\n id INT AUTO_INCREMENT PRIMARY KEY,order_id INT,old_status VARCHAR(12),new_status VARCHAR(12)\n) ENGINE=InnoDB;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 2/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "INSERT INTO procedure_orders VALUES (1,'paid'),(2,'new');\nDELIMITER //\nCREATE TRIGGER procedure_order_audit AFTER UPDATE ON procedure_orders FOR EACH ROW\nBEGIN\n IF OLD.status<>NEW.status THEN",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-3",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 3/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "  INSERT INTO procedure_audit(order_id,old_status,new_status) VALUES(NEW.id,OLD.status,NEW.status);\n END IF;\nEND//\nCREATE PROCEDURE close_paid_order(IN p_id INT)\nBEGIN\n DECLARE v_status VARCHAR(12) DEFAULT NULL;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-4",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 4/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": " DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_status=NULL;\n IF p_id IS NULL THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order ID is required'; END IF;\n SELECT status INTO v_status FROM procedure_orders WHERE id=p_id FOR UPDATE;\n IF v_status IS NULL THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order not found'; END IF;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-5",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 5/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": " IF v_status<>'paid' THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order is not paid'; END IF;\n UPDATE procedure_orders SET status='closed' WHERE id=p_id;\nEND//\nDELIMITER ;\nSTART TRANSACTION;\nCALL close_paid_order(1);",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-6",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 6/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SELECT status FROM procedure_orders WHERE id=1;\nSELECT COUNT(*) AS audit_inside FROM procedure_audit;\nROLLBACK;\nSELECT status FROM procedure_orders WHERE id=1;\nSELECT COUNT(*) AS audit_after_rollback FROM procedure_audit;\nSTART TRANSACTION;\nCALL close_paid_order(1);",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-code-1-7",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики · 7/7",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "COMMIT;\nSELECT id,status FROM procedure_orders ORDER BY id;\nSELECT order_id,old_status,new_status FROM procedure_audit;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "В первой транзакции видны closed и 1 запись аудита. После ROLLBACK — paid и 0 записей. После второго вызова с COMMIT заказ 1 closed, заказ 2 new, аудит содержит ровно paid→closed."
         },
         {
           "id": "s07-03-procedures-and-triggers-q02-case",
@@ -6213,6 +6438,41 @@
           "body": "После явного отката статус заказа исходный; граница транзакции и обработчик ошибки проверены."
         },
         {
+          "id": "s07-03-procedures-and-triggers-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Выполнить отрицательные вызовы отдельно",
+          "body": "Выполните каждый CALL отдельно в явной транзакции. После ожидаемой ошибки вручную завершите её ROLLBACK и проверьте таблицы. Программа клиента может остановить выполнение файла при ошибке, поэтому эти проверки не смешаны с успешным проходом.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "START TRANSACTION;\nCALL close_paid_order(2);\n-- После ошибки выполнить отдельно:\nROLLBACK;\nSELECT id,status FROM procedure_orders ORDER BY id;\nSELECT COUNT(*) FROM procedure_audit;",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-03-procedures-and-triggers-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Заказ 2 остаётся new, аудит по-прежнему содержит 1 запись. Аналогично CALL close_paid_order(999) сообщает отсутствие, а CALL close_paid_order(NULL) — недопустимый вход. Ошибка не означает автоматического COMMIT или общего ROLLBACK."
+        },
+        {
           "id": "s07-03-procedures-and-triggers-q06-case",
           "kind": "theory",
           "kicker": "Вопрос 6",
@@ -6894,202 +7154,6 @@
           }
         },
         {
-          "id": "s07-03-procedures-and-triggers-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Процедура, аудит и управляемый откат",
-          "body": "MySQL 8.4, InnoDB, пустая учебная база uiabd4_training. Нужны CREATE ROUTINE, EXECUTE и TRIGGER на учебных объектах. Объекты файла постоянные; повторный запуск выполняют в новой пустой учебной базе с заменой USE."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Определить допустимые состояния",
-          "body": "Заказ 1 оплачен, заказ 2 новый. close_paid_order принимает ID существующего оплаченного заказа, меняет статус на closed и не выполняет COMMIT. AFTER UPDATE пишет только фактическую смену NOT NULL статуса."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Недопустимые ID, NULL и неоплаченный заказ должны завершаться ошибкой до изменения статуса. Транзакцией управляет вызывающий клиент."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Создать объекты и пройти обе границы транзакции",
-          "body": "Файл выполняется клиентом mysql целиком. DELIMITER меняет разделитель команд клиента, позволяя передать BEGIN…END с внутренними точками с запятой; это не серверный SQL-оператор. SELECT … FOR UPDATE удерживает найденную строку до завершения внешней транзакции."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 03-procedure.sql в рабочую папку клиента. В клиенте mysql: SOURCE 03-procedure.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 03-procedure.sql",
-            "href": "practice/03-procedure.sql"
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 1/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nCREATE TABLE procedure_orders(id INT PRIMARY KEY,status VARCHAR(12) NOT NULL) ENGINE=InnoDB;\nCREATE TABLE procedure_audit(\n id INT AUTO_INCREMENT PRIMARY KEY,order_id INT,old_status VARCHAR(12),new_status VARCHAR(12)\n) ENGINE=InnoDB;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 2/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "INSERT INTO procedure_orders VALUES (1,'paid'),(2,'new');\nDELIMITER //\nCREATE TRIGGER procedure_order_audit AFTER UPDATE ON procedure_orders FOR EACH ROW\nBEGIN\n IF OLD.status<>NEW.status THEN",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-3",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 3/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "  INSERT INTO procedure_audit(order_id,old_status,new_status) VALUES(NEW.id,OLD.status,NEW.status);\n END IF;\nEND//\nCREATE PROCEDURE close_paid_order(IN p_id INT)\nBEGIN\n DECLARE v_status VARCHAR(12) DEFAULT NULL;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-4",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 4/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": " DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_status=NULL;\n IF p_id IS NULL THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order ID is required'; END IF;\n SELECT status INTO v_status FROM procedure_orders WHERE id=p_id FOR UPDATE;\n IF v_status IS NULL THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order not found'; END IF;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-5",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 5/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": " IF v_status<>'paid' THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='Order is not paid'; END IF;\n UPDATE procedure_orders SET status='closed' WHERE id=p_id;\nEND//\nDELIMITER ;\nSTART TRANSACTION;\nCALL close_paid_order(1);",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-6",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 6/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SELECT status FROM procedure_orders WHERE id=1;\nSELECT COUNT(*) AS audit_inside FROM procedure_audit;\nROLLBACK;\nSELECT status FROM procedure_orders WHERE id=1;\nSELECT COUNT(*) AS audit_after_rollback FROM procedure_audit;\nSTART TRANSACTION;\nCALL close_paid_order(1);",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-code-1-7",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 7/7",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "COMMIT;\nSELECT id,status FROM procedure_orders ORDER BY id;\nSELECT order_id,old_status,new_status FROM procedure_audit;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "В первой транзакции видны closed и 1 запись аудита. После ROLLBACK — paid и 0 записей. После второго вызова с COMMIT заказ 1 closed, заказ 2 new, аудит содержит ровно paid→closed."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Выполнить отрицательные вызовы отдельно",
-          "body": "Выполните каждый CALL отдельно в явной транзакции. После ожидаемой ошибки вручную завершите её ROLLBACK и проверьте таблицы. Программа клиента может остановить выполнение файла при ошибке, поэтому эти проверки не смешаны с успешным проходом."
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "START TRANSACTION;\nCALL close_paid_order(2);\n-- После ошибки выполнить отдельно:\nROLLBACK;\nSELECT id,status FROM procedure_orders ORDER BY id;\nSELECT COUNT(*) FROM procedure_audit;",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-03-procedures-and-triggers-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "Заказ 2 остаётся new, аудит по-прежнему содержит 1 запись. Аналогично CALL close_paid_order(999) сообщает отсутствие, а CALL close_paid_order(NULL) — недопустимый вход. Ошибка не означает автоматического COMMIT или общего ROLLBACK."
-        },
-        {
           "kicker": "Хранимые процедуры и триггеры",
           "id": "s07-03-procedures-and-triggers-summary",
           "kind": "summary",
@@ -7196,8 +7260,12 @@
           "kicker": "Производительность запросов и индексы",
           "id": "s07-04-query-performance-and-indexes-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "План до и после индекса. Файл строит 10000 строк из комбинаций четырёх цифр. Каждая тысячная строка имеет status=rare, остальные — common. Такой набор позволяет обсуждать фильтр на 0,1% строк, а не ждать заметного эффекта от таблицы из четырёх записей."
+          "title": "План до и после индекса",
+          "body": "MySQL 8.4, новый сеанс в uiabd4_training. EXPLAIN ANALYZE выполняет SELECT; файл не содержит запросов изменения рабочих данных. Длительность зависит от компьютера, кэша и версии оптимизатора.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -7304,6 +7372,132 @@
           "title": "Запишите",
           "notebook": "Повтор — повторное измерение одного сценария при зафиксированных условиях.",
           "body": "В этом учебном опыте типичное время уменьшилось вдвое; одиночный быстрый запуск не был основанием вывода."
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "План до и после индекса",
+          "body": "MySQL 8.4, новый сеанс в uiabd4_training. EXPLAIN ANALYZE выполняет SELECT; файл не содержит запросов изменения рабочих данных. Длительность зависит от компьютера, кэша и версии оптимизатора.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Создать достаточно различающийся набор",
+          "body": "Файл строит 10000 строк из комбинаций четырёх цифр. Каждая тысячная строка имеет status=rare, остальные — common. Такой набор позволяет обсуждать фильтр на 0,1% строк, а не ждать заметного эффекта от таблицы из четырёх записей.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/04-index.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 04-index.sql",
+            "href": "practice/04-index.sql"
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 1/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE index_orders(id INT PRIMARY KEY,status VARCHAR(12) NOT NULL);\nINSERT INTO index_orders\nWITH digits AS (\n SELECT 0 AS d UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 2/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": " UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9\n)\nSELECT n+1,CASE WHEN MOD(n+1,1000)=0 THEN 'rare' ELSE 'common' END\nFROM (\n SELECT a.d+10*b.d+100*c.d+1000*d.d AS n\n FROM digits a CROSS JOIN digits b CROSS JOIN digits c CROSS JOIN digits d",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-3",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 3/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": ") AS numbers;\nSELECT COUNT(*) AS n, SUM(status='rare') AS rare_rows FROM index_orders;\nEXPLAIN ANALYZE FORMAT=TREE SELECT SUM(id) FROM index_orders WHERE status='rare';\nSELECT SUM(id) AS checksum_before FROM index_orders WHERE status='rare';\nCREATE INDEX idx_status_id ON index_orders(status,id);",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-4",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 4/4",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "EXPLAIN ANALYZE FORMAT=TREE SELECT SUM(id) FROM index_orders WHERE status='rare';\nSELECT SUM(id) AS checksum_after FROM index_orders WHERE status='rare';",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Всего 10000 строк, rare — 10. Сумма ID редких строк до и после индекса равна 55000."
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Получить воспроизводимое сравнение",
+          "body": "Повторите один SELECT несколько раз при одинаковых условиях. Для чтения без индекса используйте новый сеанс с исходным созданием набора до CREATE INDEX, а не меняйте сразу несколько факторов. В протоколе оставьте все длительности и выбранный способ обобщения.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Вывод включает корректность, наблюдаемый план и медиану повторов. Нельзя объявить число возвращённых строк числом физических чтений."
         },
         {
           "id": "s07-04-query-performance-and-indexes-q01-case",
@@ -8075,6 +8269,24 @@
           "title": "Запишите",
           "notebook": "Индекс — дополнительная структура для ускоренного доступа к данным.",
           "body": "Порядок столбцов соответствует равенству и диапазону; ускорение не гарантируется без измерения."
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Прочитать TREE-планы",
+          "body": "Сопоставьте операции доступа и фильтра, оценённые и фактические строки, loops и длительность. Вложенный оператор выполняется указанное число раз; actual rows в плане нужно читать вместе с loops. Индекс (status,id) позволяет искать редкий статус и содержит нужный ID.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-04-query-performance-and-indexes-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Результат обязан совпасть. На этом наборе можно увидеть отличие доступа, но конкретный текст плана и ускорение заранее не обещаются; сохраните оба реальных плана."
         },
         {
           "id": "s07-04-query-performance-and-indexes-q04-case",
@@ -9274,134 +9486,6 @@
           }
         },
         {
-          "id": "s07-04-query-performance-and-indexes-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "План до и после индекса",
-          "body": "MySQL 8.4, новый сеанс в uiabd4_training. EXPLAIN ANALYZE выполняет SELECT; файл не содержит запросов изменения рабочих данных. Длительность зависит от компьютера, кэша и версии оптимизатора."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Создать достаточно различающийся набор",
-          "body": "Файл строит 10000 строк из комбинаций четырёх цифр. Каждая тысячная строка имеет status=rare, остальные — common. Такой набор позволяет обсуждать фильтр на 0,1% строк, а не ждать заметного эффекта от таблицы из четырёх записей."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 04-index.sql в рабочую папку клиента. В клиенте mysql: SOURCE 04-index.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 04-index.sql",
-            "href": "practice/04-index.sql"
-          }
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 1/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nCREATE TEMPORARY TABLE index_orders(id INT PRIMARY KEY,status VARCHAR(12) NOT NULL);\nINSERT INTO index_orders\nWITH digits AS (\n SELECT 0 AS d UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 2/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": " UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9\n)\nSELECT n+1,CASE WHEN MOD(n+1,1000)=0 THEN 'rare' ELSE 'common' END\nFROM (\n SELECT a.d+10*b.d+100*c.d+1000*d.d AS n\n FROM digits a CROSS JOIN digits b CROSS JOIN digits c CROSS JOIN digits d",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-3",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 3/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": ") AS numbers;\nSELECT COUNT(*) AS n, SUM(status='rare') AS rare_rows FROM index_orders;\nEXPLAIN ANALYZE FORMAT=TREE SELECT SUM(id) FROM index_orders WHERE status='rare';\nSELECT SUM(id) AS checksum_before FROM index_orders WHERE status='rare';\nCREATE INDEX idx_status_id ON index_orders(status,id);",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-code-1-4",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 4/4",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "EXPLAIN ANALYZE FORMAT=TREE SELECT SUM(id) FROM index_orders WHERE status='rare';\nSELECT SUM(id) AS checksum_after FROM index_orders WHERE status='rare';",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Всего 10000 строк, rare — 10. Сумма ID редких строк до и после индекса равна 55000."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Прочитать TREE-планы",
-          "body": "Сопоставьте операции доступа и фильтра, оценённые и фактические строки, loops и длительность. Вложенный оператор выполняется указанное число раз; actual rows в плане нужно читать вместе с loops. Индекс (status,id) позволяет искать редкий статус и содержит нужный ID."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "Результат обязан совпасть. На этом наборе можно увидеть отличие доступа, но конкретный текст плана и ускорение заранее не обещаются; сохраните оба реальных плана."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Получить воспроизводимое сравнение",
-          "body": "Повторите один SELECT несколько раз при одинаковых условиях. Для чтения без индекса используйте новый сеанс с исходным созданием набора до CREATE INDEX, а не меняйте сразу несколько факторов. В протоколе оставьте все длительности и выбранный способ обобщения."
-        },
-        {
-          "id": "s07-04-query-performance-and-indexes-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "Вывод включает корректность, наблюдаемый план и медиану повторов. Нельзя объявить число возвращённых строк числом физических чтений."
-        },
-        {
           "kicker": "Производительность запросов и индексы",
           "id": "s07-04-query-performance-and-indexes-summary",
           "kind": "summary",
@@ -9508,8 +9592,12 @@
           "kicker": "Требования к серверу и локальной сети",
           "id": "s07-05-server-and-network-requirements-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Бюджет ресурсов для заданной нагрузки. 24 пользователя выполняют по 5 запросов в минуту, средний ответ 120 КБ. Отдельный сценарий — одновременный старт всех 24 пользователей. Цель p95 не выше 200 мс."
+          "title": "Бюджет ресурсов для заданной нагрузки",
+          "body": "Расчётная учебная модель, установка СУБД для этой задачи не нужна. МБ и ГБ десятичные, ГиБ двоичные. Указанные длительности — заданные наблюдения двух стендов, а не замеры текущего устройства.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -9618,6 +9706,35 @@
           "title": "Запишите",
           "notebook": "Нагрузка — совокупность интенсивности, состава и параллелизма выполняемых операций.",
           "body": "Средняя нагрузка 1 запрос/с не описывает одновременный старт всех пользователей."
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Бюджет ресурсов для заданной нагрузки",
+          "body": "Расчётная учебная модель, установка СУБД для этой задачи не нужна. МБ и ГБ десятичные, ГиБ двоичные. Указанные длительности — заданные наблюдения двух стендов, а не замеры текущего устройства.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Перевести пользовательский профиль в поток",
+          "body": "24 пользователя выполняют по 5 запросов в минуту, средний ответ 120 КБ. Отдельный сценарий — одновременный старт всех 24 пользователей. Цель p95 не выше 200 мс.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "24×5/60=2 запроса/с, поток ответов 2×120=240 КБ/с. Средние 2 запроса/с не описывают пик из 24 запросов."
         },
         {
           "id": "s07-05-server-and-network-requirements-q01-case",
@@ -10387,6 +10504,24 @@
           "title": "Запишите",
           "notebook": "Рабочий набор — данные, к которым активно обращаются в рассматриваемом интервале.",
           "body": "8 ГиБ — обоснование для данного стенда, не процентное правило на любой сервер."
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Разделить память и хранение",
+          "body": "RAM 16 ГиБ: ОС 4, сеансы 2, резерв 2; активные данные 6. Для хранения: основные данные 200 ГБ с запасом ×1,25, журналы 30 и отдельные копии 80 ГБ.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Пулу остаётся 8 ГиБ, разница с активными данными — 2 ГиБ. Бюджет хранения: 200×1,25+30+80=360 ГБ. Размещение копий и исходных данных уточняют отдельно."
         },
         {
           "id": "s07-05-server-and-network-requirements-q04-case",
@@ -11407,6 +11542,24 @@
           "body": "B лидирует только при этих весах и шкале; смена приоритетов может изменить выбор."
         },
         {
+          "id": "s07-05-server-and-network-requirements-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Принять решение по цели",
+          "body": "Стенд A: CPU 90%, p95 180 мс. Стенд B: CPU 50%, p95 260 мс. У обоих задан достаточный объём памяти и диска. Объясните, какой стенд проходит именно по задержке и чего ещё не хватает для выбора.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s07-05-server-and-network-requirements-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Ожидаемый результат",
+          "body": "A выполняет 180≤200, B не выполняет 260>200. Нужны очередь, ожидания, пиковый тест, стоимость сопровождения и восстановление; одного процента CPU недостаточно."
+        },
+        {
           "id": "s07-05-server-and-network-requirements-q08-case",
           "kind": "theory",
           "kicker": "Вопрос 8",
@@ -11574,55 +11727,6 @@
           }
         },
         {
-          "id": "s07-05-server-and-network-requirements-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Бюджет ресурсов для заданной нагрузки",
-          "body": "Расчётная учебная модель, установка СУБД для этой задачи не нужна. МБ и ГБ десятичные, ГиБ двоичные. Указанные длительности — заданные наблюдения двух стендов, а не замеры текущего устройства."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Перевести пользовательский профиль в поток",
-          "body": "24 пользователя выполняют по 5 запросов в минуту, средний ответ 120 КБ. Отдельный сценарий — одновременный старт всех 24 пользователей. Цель p95 не выше 200 мс."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "24×5/60=2 запроса/с, поток ответов 2×120=240 КБ/с. Средние 2 запроса/с не описывают пик из 24 запросов."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Разделить память и хранение",
-          "body": "RAM 16 ГиБ: ОС 4, сеансы 2, резерв 2; активные данные 6. Для хранения: основные данные 200 ГБ с запасом ×1,25, журналы 30 и отдельные копии 80 ГБ."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "Пулу остаётся 8 ГиБ, разница с активными данными — 2 ГиБ. Бюджет хранения: 200×1,25+30+80=360 ГБ. Размещение копий и исходных данных уточняют отдельно."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Принять решение по цели",
-          "body": "Стенд A: CPU 90%, p95 180 мс. Стенд B: CPU 50%, p95 260 мс. У обоих задан достаточный объём памяти и диска. Объясните, какой стенд проходит именно по задержке и чего ещё не хватает для выбора."
-        },
-        {
-          "id": "s07-05-server-and-network-requirements-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "A выполняет 180≤200, B не выполняет 260>200. Нужны очередь, ожидания, пиковый тест, стоимость сопровождения и восстановление; одного процента CPU недостаточно."
-        },
-        {
           "kicker": "Требования к серверу и локальной сети",
           "id": "s07-05-server-and-network-requirements-summary",
           "kind": "summary",
@@ -11729,8 +11833,12 @@
           "kicker": "Показатели работы сервера",
           "id": "s08-01-server-metrics-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Паспорт реальных показателей и расчёт скорости. Выполните файл, сохраните момент SELECT NOW и значения показателей. Threads_connected — текущее число соединений; Connections включает попытки подключения. Показатели таблиц InnoDB могут быть оценочными и не заменяют свободное место тома."
+          "title": "Паспорт реальных показателей и расчёт скорости",
+          "body": "MySQL 8.4 и права чтения используемых показателей. Системные значения текущего сервера не подменяются учебными числами; для ручного расчёта ниже дан отдельный пример.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -11841,6 +11949,80 @@
           "title": "Запишите",
           "notebook": "Временной ряд — последовательность значений показателя с временными отметками.",
           "body": "Разовая успешная проверка не исключает недавнюю деградацию."
+        },
+        {
+          "id": "s08-01-server-metrics-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Паспорт реальных показателей и расчёт скорости",
+          "body": "MySQL 8.4 и права чтения используемых показателей. Системные значения текущего сервера не подменяются учебными числами; для ручного расчёта ниже дан отдельный пример.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Получить источник и время образца",
+          "body": "Выполните файл, сохраните момент SELECT NOW и значения показателей. Threads_connected — текущее число соединений; Connections включает попытки подключения. Показатели таблиц InnoDB могут быть оценочными и не заменяют свободное место тома.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-01-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/06-metrics.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 06-metrics.sql",
+            "href": "practice/06-metrics.sql"
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-01-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 1/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nSELECT VERSION() AS server_version,DATABASE() AS current_database,CURRENT_USER() AS account;\nSELECT NOW() AS sampled_at;\nSHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected','Connections','Uptime','Aborted_connects');\nSELECT @@datadir AS datadir,@@innodb_buffer_pool_size AS buffer_pool_bytes;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-01-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 2/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SELECT TABLE_NAME,DATA_LENGTH,INDEX_LENGTH\nFROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() ORDER BY TABLE_NAME;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Получены версия, база, учётная запись, время, gauge, counter, uptime, каталог и размеры объектов. Числа зависят от стенда; ожидается состав полей, а не выдуманное фиксированное значение."
         },
         {
           "id": "s08-01-server-metrics-q01-case",
@@ -12097,6 +12279,24 @@
           "title": "Запишите",
           "notebook": "Счётчик — накопительный показатель событий, который обычно растёт и может сбрасываться.",
           "body": "Текущее число и накопительный счётчик описывают разные стороны нагрузки."
+        },
+        {
+          "id": "s08-01-server-metrics-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Разделить текущую величину и прирост",
+          "body": "В отдельном учебном протоколе counter попыток равен 1000 в 12:00:00 и 1120 в 12:01:00, uptime растёт без перезапуска. Текущий gauge во втором образце равен 35.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Прирост 120 за 60 с даёт 2 попытки/с; текущее состояние — 35 соединений. По одному приросту попыток нельзя вывести число успешных открытий или причину роста."
         },
         {
           "id": "s08-01-server-metrics-q02-case",
@@ -12862,6 +13062,41 @@
           "title": "Запишите",
           "notebook": "Том — логическая область файловой системы, для которой измеряется свободное место.",
           "body": "Проверка относится к фактическому размещению файлов СУБД."
+        },
+        {
+          "id": "s08-01-server-metrics-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Привязать свободное место к объекту",
+          "body": "Сопоставьте datadir с файловой системой сервера. В Linux свободное место выбранного пути показывает df, в Windows сведения о томах — Get-Volume. Команду выполняют на сервере или в его среде, а не на произвольном компьютере клиента.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "Linux: df -B1 /путь/к/datadir\nWindows PowerShell: Get-Volume",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-01-server-metrics-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Ожидаемый результат",
+          "body": "В паспорте указаны конкретный том, байты, источник ОС, время и интервал. Свободное место соседнего тома не прибавляется автоматически к запасу datadir."
         },
         {
           "id": "s08-01-server-metrics-q05-case",
@@ -13801,117 +14036,6 @@
           }
         },
         {
-          "id": "s08-01-server-metrics-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Паспорт реальных показателей и расчёт скорости",
-          "body": "MySQL 8.4 и права чтения используемых показателей. Системные значения текущего сервера не подменяются учебными числами; для ручного расчёта ниже дан отдельный пример."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Получить источник и время образца",
-          "body": "Выполните файл, сохраните момент SELECT NOW и значения показателей. Threads_connected — текущее число соединений; Connections включает попытки подключения. Показатели таблиц InnoDB могут быть оценочными и не заменяют свободное место тома."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-01-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 06-metrics.sql в рабочую папку клиента. В клиенте mysql: SOURCE 06-metrics.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 06-metrics.sql",
-            "href": "practice/06-metrics.sql"
-          }
-        },
-        {
-          "id": "s08-01-server-metrics-practice-01-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 1/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nSELECT VERSION() AS server_version,DATABASE() AS current_database,CURRENT_USER() AS account;\nSELECT NOW() AS sampled_at;\nSHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected','Connections','Uptime','Aborted_connects');\nSELECT @@datadir AS datadir,@@innodb_buffer_pool_size AS buffer_pool_bytes;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-01-server-metrics-practice-01-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 2/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SELECT TABLE_NAME,DATA_LENGTH,INDEX_LENGTH\nFROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() ORDER BY TABLE_NAME;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-01-server-metrics-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Получены версия, база, учётная запись, время, gauge, counter, uptime, каталог и размеры объектов. Числа зависят от стенда; ожидается состав полей, а не выдуманное фиксированное значение."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Разделить текущую величину и прирост",
-          "body": "В отдельном учебном протоколе counter попыток равен 1000 в 12:00:00 и 1120 в 12:01:00, uptime растёт без перезапуска. Текущий gauge во втором образце равен 35."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "Прирост 120 за 60 с даёт 2 попытки/с; текущее состояние — 35 соединений. По одному приросту попыток нельзя вывести число успешных открытий или причину роста."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Привязать свободное место к объекту",
-          "body": "Сопоставьте datadir с файловой системой сервера. В Linux свободное место выбранного пути показывает df, в Windows сведения о томах — Get-Volume. Команду выполняют на сервере или в его среде, а не на произвольном компьютере клиента."
-        },
-        {
-          "id": "s08-01-server-metrics-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "Linux: df -B1 /путь/к/datadir\nWindows PowerShell: Get-Volume",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-01-server-metrics-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "В паспорте указаны конкретный том, байты, источник ОС, время и интервал. Свободное место соседнего тома не прибавляется автоматически к запасу datadir."
-        },
-        {
           "kicker": "Показатели работы сервера",
           "id": "s08-01-server-metrics-summary",
           "kind": "summary",
@@ -14018,8 +14142,12 @@
           "kicker": "Сбор и хранение метрик",
           "id": "s08-02-metrics-collection-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Полный путь синтетической метрики. В Windows выполните py -3 demo_exporter.py, в Linux/macOS — python3 demo_exporter.py. Откройте http://127.0.0.1:9108/metrics. HELP объясняет смысл, TYPE — тип; строки ниже содержат метки и значения."
+          "title": "Полный путь синтетической метрики",
+          "body": "Python 3 и установленный Prometheus в локальной среде. Скачайте demo_exporter.py, prometheus.yml и alerts.yml в одну папку. Экспортёр использует только стандартную библиотеку, слушает 127.0.0.1:9108 и не подключается к БД.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -14132,6 +14260,85 @@
           "title": "Запишите",
           "notebook": "Экспортёр — компонент, преобразующий данные системы в формат метрик для сбора.",
           "body": "Владелец и единица определены до построения графика."
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Полный путь синтетической метрики",
+          "body": "Python 3 и установленный Prometheus в локальной среде. Скачайте demo_exporter.py, prometheus.yml и alerts.yml в одну папку. Экспортёр использует только стандартную библиотеку, слушает 127.0.0.1:9108 и не подключается к БД.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-file-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните demo_exporter.py в общую рабочую папку. Это источник синтетических метрик; он не подключается к базе данных.",
+          "supplement": {
+            "label": "Скачать demo_exporter.py",
+            "href": "practice/demo_exporter.py"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-file-2",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните prometheus.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать prometheus.yml",
+            "href": "practice/prometheus.yml"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-file-3",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните alerts.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать alerts.yml",
+            "href": "practice/alerts.yml"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Запустить источник",
+          "body": "В Windows выполните py -3 demo_exporter.py, в Linux/macOS — python3 demo_exporter.py. Откройте http://127.0.0.1:9108/metrics. HELP объясняет смысл, TYPE — тип; строки ниже содержат метки и значения.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-01-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "py -3 demo_exporter.py --connections 27",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "demo_db_active_connections{env=\"training\"}=27; counter demo_db_connection_attempts_total увеличивается примерно на 2 в секунду; demo_volume_free_bytes=2147483648. Это синтетические числа."
         },
         {
           "id": "s08-02-metrics-collection-q01-case",
@@ -14383,6 +14590,41 @@
           "title": "Запишите",
           "notebook": "Интервал — временное расстояние между запланированными опросами цели.",
           "body": "Интервал 15 с ограничивает временную детализацию; чаще не всегда экономически оправданно."
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Проверить состояние и скорость",
+          "body": "После нескольких опросов выполните запросы в Prometheus. Запрос range [30s] выбирает окно ряда; rate вычисляет среднюю скорость counter за секунду с учётом сбросов. Gauge объёма переводится в ГиБ делением на 1024³.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "demo_db_active_connections{env=\"training\"}\nrate(demo_db_connection_attempts_total{env=\"training\"}[30s])\ndemo_volume_free_bytes{mount=\"/data\"} / 1024^3",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 2 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Текущее значение 27, скорость приблизительно 2/с, свободно 2 ГиБ. Точное значение rate зависит от временных отметок опросов; нужны как минимум два образца."
         },
         {
           "id": "s08-02-metrics-collection-q02-case",
@@ -14640,6 +14882,41 @@
           "title": "Запишите",
           "notebook": "Pull — модель, в которой сборщик сам запрашивает данные у источника.",
           "body": "Недоступность цепочки сбора отличается от нулевого числа запросов."
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 3 · практика",
+          "title": "Настроить и запустить сборщик",
+          "body": "Прочитайте prometheus.yml: scrape_interval и evaluation_interval заданы по 5 с, job_name — uiabd4_demo, target — локальный экспортёр. Запустите из той же папки установленный Prometheus; на Windows имя исполняемого файла — prometheus.exe.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 3 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "prometheus --config.file=prometheus.yml --web.listen-address=127.0.0.1:9090",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 3 · практика",
+          "title": "Ожидаемый результат",
+          "body": "В интерфейсе http://127.0.0.1:9090 на странице Targets цель доступна. Запрос up{job=\"uiabd4_demo\"} даёт 1 после успешного опроса."
         },
         {
           "id": "s08-02-metrics-collection-q03-case",
@@ -15409,6 +15686,24 @@
           "body": "Пробел, ноль и устаревшее значение сохраняют разные значения в диагностике."
         },
         {
+          "id": "s08-02-metrics-collection-practice-04-action",
+          "kind": "theory",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Отличить отказ источника от нулевого значения",
+          "body": "Остановите экспортёр Ctrl+C и дождитесь следующего опроса. Сам Prometheus продолжает работать; это контролируемый отказ endpoint, а не доказательство отказа MySQL.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-02-metrics-collection-practice-04-check",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Ожидаемый результат",
+          "body": "up для обнаруженной цели становится 0. Gauge 27 не превращается автоматически в измеренный ноль; свежих значений этого источника нет. После запуска экспортёра сбор возобновится, counter начнёт новый отсчёт."
+        },
+        {
           "id": "s08-02-metrics-collection-q06-case",
           "kind": "theory",
           "kicker": "Вопрос 6",
@@ -16086,153 +16381,6 @@
           }
         },
         {
-          "id": "s08-02-metrics-collection-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Полный путь синтетической метрики",
-          "body": "Python 3 и установленный Prometheus в локальной среде. Скачайте demo_exporter.py, prometheus.yml и alerts.yml в одну папку. Экспортёр использует только стандартную библиотеку, слушает 127.0.0.1:9108 и не подключается к БД."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-file-1",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните demo_exporter.py в общую рабочую папку. Это источник синтетических метрик; он не подключается к базе данных.",
-          "supplement": {
-            "label": "Скачать demo_exporter.py",
-            "href": "practice/demo_exporter.py"
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-file-2",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните prometheus.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать prometheus.yml",
-            "href": "practice/prometheus.yml"
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-file-3",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните alerts.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать alerts.yml",
-            "href": "practice/alerts.yml"
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Запустить источник",
-          "body": "В Windows выполните py -3 demo_exporter.py, в Linux/macOS — python3 demo_exporter.py. Откройте http://127.0.0.1:9108/metrics. HELP объясняет смысл, TYPE — тип; строки ниже содержат метки и значения."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-01-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "py -3 demo_exporter.py --connections 27",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "demo_db_active_connections{env=\"training\"}=27; counter demo_db_connection_attempts_total увеличивается примерно на 2 в секунду; demo_volume_free_bytes=2147483648. Это синтетические числа."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Настроить и запустить сборщик",
-          "body": "Прочитайте prometheus.yml: scrape_interval и evaluation_interval заданы по 5 с, job_name — uiabd4_demo, target — локальный экспортёр. Запустите из той же папки установленный Prometheus; на Windows имя исполняемого файла — prometheus.exe."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "prometheus --config.file=prometheus.yml --web.listen-address=127.0.0.1:9090",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "В интерфейсе http://127.0.0.1:9090 на странице Targets цель доступна. Запрос up{job=\"uiabd4_demo\"} даёт 1 после успешного опроса."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Проверить состояние и скорость",
-          "body": "После нескольких опросов выполните запросы в Prometheus. Запрос range [30s] выбирает окно ряда; rate вычисляет среднюю скорость counter за секунду с учётом сбросов. Gauge объёма переводится в ГиБ делением на 1024³."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "demo_db_active_connections{env=\"training\"}\nrate(demo_db_connection_attempts_total{env=\"training\"}[30s])\ndemo_volume_free_bytes{mount=\"/data\"} / 1024^3",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "Текущее значение 27, скорость приблизительно 2/с, свободно 2 ГиБ. Точное значение rate зависит от временных отметок опросов; нужны как минимум два образца."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-04-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Отличить отказ источника от нулевого значения",
-          "body": "Остановите экспортёр Ctrl+C и дождитесь следующего опроса. Сам Prometheus продолжает работать; это контролируемый отказ endpoint, а не доказательство отказа MySQL."
-        },
-        {
-          "id": "s08-02-metrics-collection-practice-04-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 4",
-          "title": "Ожидаемый результат",
-          "body": "up для обнаруженной цели становится 0. Gauge 27 не превращается автоматически в измеренный ноль; свежих значений этого источника нет. После запуска экспортёра сбор возобновится, counter начнёт новый отсчёт."
-        },
-        {
           "kicker": "Сбор и хранение метрик",
           "id": "s08-02-metrics-collection-summary",
           "kind": "summary",
@@ -16339,8 +16487,12 @@
           "kicker": "Панель наблюдения и оповещения",
           "id": "s08-03-dashboard-and-alerting-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Панель и переходы учебного правила. В Prometheus выполните запросы: up{job=\"uiabd4_demo\"}, demo_db_active_connections{env=\"training\"}, rate(demo_db_connection_attempts_total{env=\"training\"}[30s]). Для текущего состояния используйте последнее значение, для динамики — график с единицами и общим окном."
+          "title": "Панель и переходы учебного правила",
+          "body": "Работающий стенд из предыдущей лекции. Файлы prometheus.yml и alerts.yml находятся рядом; правило вычисляется каждые 5 с. Alertmanager и внешние адресаты в этой практике не настроены.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -16452,6 +16604,46 @@
           "title": "Запишите",
           "notebook": "Панель — набор согласованных визуализаций для решения определённой задачи наблюдения.",
           "body": "Графики отвечают на оперативный вопрос и ведут к следующему шагу."
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Панель и переходы учебного правила",
+          "body": "Работающий стенд из предыдущей лекции. Файлы prometheus.yml и alerts.yml находятся рядом; правило вычисляется каждые 5 с. Alertmanager и внешние адресаты в этой практике не настроены.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-file-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните alerts.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать alerts.yml",
+            "href": "practice/alerts.yml"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Построить три согласованных представления",
+          "body": "В Prometheus выполните запросы: up{job=\"uiabd4_demo\"}, demo_db_active_connections{env=\"training\"}, rate(demo_db_connection_attempts_total{env=\"training\"}[30s]). Для текущего состояния используйте последнее значение, для динамики — график с единицами и общим окном.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Панель различает успешность опроса, текущие соединения и попытки/с. Нельзя подписывать все три числа словом «нагрузка» и ожидать однозначного решения."
         },
         {
           "id": "s08-03-dashboard-and-alerting-q01-case",
@@ -17488,6 +17680,59 @@
           "body": "Окно подтверждения отличается от среднего за окно; отсутствие данных обрабатывается отдельно."
         },
         {
+          "id": "s08-03-dashboard-and-alerting-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Проследить pending и firing",
+          "body": "При экспортёре с --connections 27 правило DemoConnectionsHigh проверяет значение >25 с for=20s. На странице Alerts наблюдайте переходы и запишите фактические моменты; они зависят от ближайшего вычисления правила.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Ожидаемый результат",
+          "body": "После первого подтверждения — pending, после устойчивого нарушения не менее 20 с — firing. Эти 20 с не являются средним за окно и не складываются из разрозненных нарушений."
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Проверить отказ и восстановление",
+          "body": "Остановите экспортёр более чем на 15 с. Затем запустите его с --connections 10 и дождитесь новых опросов и вычислений.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "py -3 demo_exporter.py --connections 10",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 5 · практика",
+          "title": "Ожидаемый результат",
+          "body": "При остановке up=0, DemoExporterDown становится pending, затем firing. После запуска up=1, оба условия ложны и состояния снимаются. Отсутствие ряда высокого gauge не следует трактовать как подтверждённые 0 соединений."
+        },
+        {
           "id": "s08-03-dashboard-and-alerting-q05-case",
           "kind": "theory",
           "kicker": "Вопрос 5",
@@ -18254,6 +18499,24 @@
           "body": "Успешное вычисление правила ещё не подтверждает доставку; обе части проверены."
         },
         {
+          "id": "s08-03-dashboard-and-alerting-practice-04-action",
+          "kind": "theory",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Отделить правило от доставки",
+          "body": "Наличие firing здесь подтверждает вычисление локального правила. Для рабочего маршрута отдельно задают ответственного, канал, подтверждение получения и сообщение восстановления; тест проводят с выбранным адресатом по согласованному сценарию.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-03-dashboard-and-alerting-practice-04-check",
+          "kind": "example",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Эта практика не заявляет отправку уведомлений. В протоколе различены вычисление, получение и реакция, а непроверенный канал доставки отмечен отдельно."
+        },
+        {
           "id": "s08-03-dashboard-and-alerting-q08-case",
           "kind": "theory",
           "kicker": "Вопрос 8",
@@ -18421,97 +18684,6 @@
           }
         },
         {
-          "id": "s08-03-dashboard-and-alerting-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Панель и переходы учебного правила",
-          "body": "Работающий стенд из предыдущей лекции. Файлы prometheus.yml и alerts.yml находятся рядом; правило вычисляется каждые 5 с. Alertmanager и внешние адресаты в этой практике не настроены."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-file-1",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните alerts.yml в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать alerts.yml",
-            "href": "practice/alerts.yml"
-          }
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Построить три согласованных представления",
-          "body": "В Prometheus выполните запросы: up{job=\"uiabd4_demo\"}, demo_db_active_connections{env=\"training\"}, rate(demo_db_connection_attempts_total{env=\"training\"}[30s]). Для текущего состояния используйте последнее значение, для динамики — график с единицами и общим окном."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Панель различает успешность опроса, текущие соединения и попытки/с. Нельзя подписывать все три числа словом «нагрузка» и ожидать однозначного решения."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Проследить pending и firing",
-          "body": "При экспортёре с --connections 27 правило DemoConnectionsHigh проверяет значение >25 с for=20s. На странице Alerts наблюдайте переходы и запишите фактические моменты; они зависят от ближайшего вычисления правила."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "После первого подтверждения — pending, после устойчивого нарушения не менее 20 с — firing. Эти 20 с не являются средним за окно и не складываются из разрозненных нарушений."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Проверить отказ и восстановление",
-          "body": "Остановите экспортёр более чем на 15 с. Затем запустите его с --connections 10 и дождитесь новых опросов и вычислений."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "py -3 demo_exporter.py --connections 10",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "При остановке up=0, DemoExporterDown становится pending, затем firing. После запуска up=1, оба условия ложны и состояния снимаются. Отсутствие ряда высокого gauge не следует трактовать как подтверждённые 0 соединений."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-04-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Отделить правило от доставки",
-          "body": "Наличие firing здесь подтверждает вычисление локального правила. Для рабочего маршрута отдельно задают ответственного, канал, подтверждение получения и сообщение восстановления; тест проводят с выбранным адресатом по согласованному сценарию."
-        },
-        {
-          "id": "s08-03-dashboard-and-alerting-practice-04-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 4",
-          "title": "Ожидаемый результат",
-          "body": "Эта практика не заявляет отправку уведомлений. В протоколе различены вычисление, получение и реакция, а непроверенный канал доставки отмечен отдельно."
-        },
-        {
           "kicker": "Панель наблюдения и оповещения",
           "id": "s08-03-dashboard-and-alerting-summary",
           "kind": "summary",
@@ -18618,8 +18790,12 @@
           "kicker": "Разбор инцидента и восстановление",
           "id": "s08-04-incident-analysis-and-recovery-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Восстановление в отдельную учебную цель. Запустите 09-backup-source.sql. Он создаёт три заказа с суммами 100,200,300 и три позиции с внешними ключами. Одна команда HTTP или факт наличия файла ещё не проверяет восстановимость."
+          "title": "Восстановление в отдельную учебную цель",
+          "body": "Локальный тестовый стенд по ссылке на слайде. В папке распакованного комплекта откройте .\\client.ps1 -Admin: только в этом учебном экземпляре понадобятся права на создание двух баз. Исходная uiabd4_backup_source и целевая uiabd4_restore_check должны быть новыми; при занятых именах используйте другие и согласованно замените команды.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -18736,6 +18912,39 @@
           "title": "Запишите",
           "notebook": "Пул — набор повторно используемых соединений, управляемый приложением.",
           "body": "Гипотеза шторма переподключений проверяется журналом клиента и временем события."
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Восстановление в отдельную учебную цель",
+          "body": "Локальный тестовый стенд по ссылке на слайде. В папке распакованного комплекта откройте .\\client.ps1 -Admin: только в этом учебном экземпляре понадобятся права на создание двух баз. Исходная uiabd4_backup_source и целевая uiabd4_restore_check должны быть новыми; при занятых именах используйте другие и согласованно замените команды.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-file-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 09-backup-source.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 09-backup-source.sql",
+            "href": "practice/09-backup-source.sql"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-file-2",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 09-check.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 09-check.sql",
+            "href": "practice/09-check.sql"
+          }
         },
         {
           "id": "s08-04-incident-analysis-and-recovery-q01-case",
@@ -20283,6 +20492,157 @@
           "body": "Совпадение 100 и 50000 необходимо, но дополнительно проверяются ключи и работа приложения."
         },
         {
+          "id": "s08-04-incident-analysis-and-recovery-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Создать источник и зафиксировать контроль",
+          "body": "Запустите 09-backup-source.sql. Он создаёт три заказа с суммами 100,200,300 и три позиции с внешними ключами. Одна команда HTTP или факт наличия файла ещё не проверяет восстановимость.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-01-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/09-backup-source.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 09-backup-source.sql",
+            "href": "practice/09-backup-source.sql"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-01-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Код практики · 1/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "CREATE DATABASE uiabd4_backup_source;\nUSE uiabd4_backup_source;\nCREATE TABLE orders(id INT PRIMARY KEY,total DECIMAL(10,2) NOT NULL) ENGINE=InnoDB;\nCREATE TABLE items(id INT PRIMARY KEY,order_id INT NOT NULL,\n FOREIGN KEY(order_id) REFERENCES orders(id)) ENGINE=InnoDB;\nINSERT INTO orders VALUES (1,100),(2,200),(3,300);",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-01-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Код практики · 2/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "INSERT INTO items VALUES (11,1),(12,1),(13,3);\nSELECT COUNT(*) AS orders_count,SUM(total) AS total_sum FROM orders;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Ожидаемый результат",
+          "body": "В источнике 3 заказа, сумма 600, 3 позиции. Заказ 1 имеет 2 позиции, заказ 2 — 0, заказ 3 — 1."
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Создать логическую копию",
+          "body": "В PowerShell из папки комплекта выполните dump.ps1. Он запускает mysqldump данного стенда с --single-transaction, --no-tablespaces, --set-gtid-purged=OFF и --result-file. Файл не перезаписывается. --databases не используется, поэтому дамп не выбирает исходную базу при импорте.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": ".\\dump.ps1 -Database uiabd4_backup_source -OutFile .\\uiabd4-copy.sql",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Клиент завершился без ошибки, создан SQL-файл. Для InnoDB --single-transaction даёт согласованное чтение транзакционных данных; во время копии не выполняют изменение схемы. Пока это копия, а не доказанное восстановление."
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Восстановить в новую цель",
+          "body": "В административном клиенте .\\client.ps1 -Admin создайте новую пустую цель, выберите её и прочитайте дамп. Перед SOURCE проверьте DATABASE(); SQL дампа выполняется в выбранной базе. Путь sql/09-check.sql задан относительно папки комплекта.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "CREATE DATABASE uiabd4_restore_check;\nUSE uiabd4_restore_check;\nSELECT DATABASE();\nSOURCE uiabd4-copy.sql;\nSOURCE sql/09-check.sql;",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Текущая база uiabd4_restore_check; 3 заказа, сумма 600, нарушенных связей 0. Функциональный LEFT JOIN возвращает число позиций 2,0,1 для ID 1,2,3."
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-04-action",
+          "kind": "theory",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Принять результат по нескольким свидетельствам",
+          "body": "Сравните контрольные значения, отдельные строки и связи с источником. Сохраните протокол импорта и запросов; после этого можно обсуждать переключение приложения. Учебная проверка не требует удаления исходной базы.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-04-incident-analysis-and-recovery-practice-04-check",
+          "kind": "example",
+          "kicker": "Вопрос 7 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Количество и сумма совпали, связи целы, функциональный запрос подтверждён. Ошибка любого из этих условий оставляет восстановление неприёмлемым."
+        },
+        {
           "id": "s08-04-incident-analysis-and-recovery-q07-case",
           "kind": "theory",
           "kicker": "Вопрос 7",
@@ -20707,170 +21067,6 @@
           }
         },
         {
-          "id": "s08-04-incident-analysis-and-recovery-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Восстановление в отдельную учебную цель",
-          "body": "MySQL 8.4, клиент mysql и mysqldump, права на создание двух учебных баз. Исходная uiabd4_backup_source и целевая uiabd4_restore_check должны быть новыми; при занятых именах используйте другие и согласованно замените команды."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-file-1",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 09-backup-source.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 09-backup-source.sql",
-            "href": "practice/09-backup-source.sql"
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-file-2",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 09-check.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 09-check.sql",
-            "href": "practice/09-check.sql"
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Создать источник и зафиксировать контроль",
-          "body": "Запустите 09-backup-source.sql. Он создаёт три заказа с суммами 100,200,300 и три позиции с внешними ключами. Одна команда HTTP или факт наличия файла ещё не проверяет восстановимость."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-01-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 09-backup-source.sql в рабочую папку клиента. В клиенте mysql: SOURCE 09-backup-source.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 09-backup-source.sql",
-            "href": "practice/09-backup-source.sql"
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-01-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 1/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "CREATE DATABASE uiabd4_backup_source;\nUSE uiabd4_backup_source;\nCREATE TABLE orders(id INT PRIMARY KEY,total DECIMAL(10,2) NOT NULL) ENGINE=InnoDB;\nCREATE TABLE items(id INT PRIMARY KEY,order_id INT NOT NULL,\n FOREIGN KEY(order_id) REFERENCES orders(id)) ENGINE=InnoDB;\nINSERT INTO orders VALUES (1,100),(2,200),(3,300);",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-01-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 1",
-          "title": "Команды шага 1 · 2/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "INSERT INTO items VALUES (11,1),(12,1),(13,3);\nSELECT COUNT(*) AS orders_count,SUM(total) AS total_sum FROM orders;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "В источнике 3 заказа, сумма 600, 3 позиции. Заказ 1 имеет 2 позиции, заказ 2 — 0, заказ 3 — 1."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Создать логическую копию",
-          "body": "В терминале замените student своей учётной записью и при необходимости порт. Пароль вводится по приглашению -p. Флаг --result-file сохраняет файл без перенаправления оболочки; --databases намеренно не используется, чтобы дамп не выбирал исходную базу при импорте."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "mysqldump -h127.0.0.1 -P3306 -u student -p --single-transaction --no-tablespaces --set-gtid-purged=OFF --result-file=uiabd4-copy.sql uiabd4_backup_source",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "Клиент завершился без ошибки, создан SQL-файл. Для InnoDB --single-transaction даёт согласованное чтение транзакционных данных; во время копии не выполняют изменение схемы. Пока это копия, а не доказанное восстановление."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Восстановить в новую цель",
-          "body": "В клиенте mysql создайте новую пустую цель, выберите её и прочитайте дамп. Перед SOURCE проверьте DATABASE(); SQL дампа выполняется в выбранной базе."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "CREATE DATABASE uiabd4_restore_check;\nUSE uiabd4_restore_check;\nSELECT DATABASE();\nSOURCE uiabd4-copy.sql;\nSOURCE 09-check.sql;",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "Текущая база uiabd4_restore_check; 3 заказа, сумма 600, нарушенных связей 0. Функциональный LEFT JOIN возвращает число позиций 2,0,1 для ID 1,2,3."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-04-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Принять результат по нескольким свидетельствам",
-          "body": "Сравните контрольные значения, отдельные строки и связи с источником. Сохраните протокол импорта и запросов; после этого можно обсуждать переключение приложения. Учебная проверка не требует удаления исходной базы."
-        },
-        {
-          "id": "s08-04-incident-analysis-and-recovery-practice-04-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 4",
-          "title": "Ожидаемый результат",
-          "body": "Количество и сумма совпали, связи целы, функциональный запрос подтверждён. Ошибка любого из этих условий оставляет восстановление неприёмлемым."
-        },
-        {
           "kicker": "Разбор инцидента и восстановление",
           "id": "s08-04-incident-analysis-and-recovery-summary",
           "kind": "summary",
@@ -20977,8 +21173,12 @@
           "kicker": "Сравнение MySQL и PostgreSQL",
           "id": "s08-05-database-platform-comparison-exam",
           "kind": "example",
-          "title": "Задача лекции",
-          "body": "Одинаковые данные на двух СУБД. MySQL: SELECT VERSION(),DATABASE(),CURRENT_USER(). PostgreSQL: SELECT version(),current_database(),current_user. У клиентов разные ключи порта: mysql -P и psql -p; метакоманды клиента не смешивают с SQL."
+          "title": "Одинаковые данные на двух СУБД",
+          "body": "Отдельные учебные подключения к MySQL 8.4 и PostgreSQL 18. В каждой выбрана база uiabd4_training. Временные таблицы создаются в новом сеансе; файл 10-common.sql не содержит платформенной команды USE. Для создания учебной роли и пользователя нужны административные права на собственном стенде; имена объектов и учётных записей должны быть новыми.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
         },
         {
           "kicker": "Вопрос 01",
@@ -21091,6 +21291,153 @@
           "title": "Запишите",
           "notebook": "Критерий — признак и правило, по которым оценивают пригодность решения.",
           "body": "Различие платформ оценивают на общей задаче, а не на разных наборах данных."
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-environment",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Одинаковые данные на двух СУБД",
+          "body": "Отдельные учебные подключения к MySQL 8.4 и PostgreSQL 18. В каждой выбрана база uiabd4_training. Временные таблицы создаются в новом сеансе; файл 10-common.sql не содержит платформенной команды USE. Для создания учебной роли и пользователя нужны административные права на собственном стенде; имена объектов и учётных записей должны быть новыми.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-file-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 10-common.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 10-common.sql",
+            "href": "practice/10-common.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-file-2",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 10-json-mysql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 10-json-mysql.sql",
+            "href": "practice/10-json-mysql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-file-3",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 10-json-postgresql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 10-json-postgresql.sql",
+            "href": "practice/10-json-postgresql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-file-4",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 10-rights-mysql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 10-rights-mysql.sql",
+            "href": "practice/10-rights-mysql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-file-5",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Файлы для локального запуска",
+          "body": "Сохраните 10-rights-postgresql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
+          "supplement": {
+            "label": "Скачать 10-rights-postgresql.sql",
+            "href": "practice/10-rights-postgresql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-01-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Подтвердить сервер и базу",
+          "body": "MySQL: SELECT VERSION(),DATABASE(),CURRENT_USER(). PostgreSQL: SELECT version(),current_database(),current_user. У клиентов разные ключи порта: mysql -P и psql -p; метакоманды клиента не смешивают с SQL.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-01-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Записаны две реальные версии, адреса/порты и выбранные базы. Успешный запуск клиента без этого не подтверждает правильность подключения."
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-02-action",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Выполнить общий SQL",
+          "body": "В каждом новом сеансе выполните полный текст общего файла. BIGINT с CHECK сохраняет диапазон исходного UNSIGNED INT, а DECIMAL сохраняет точные деньги. В mysql файл читает SOURCE, в psql — метакоманда \\i.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-02-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/10-common.sql; В клиенте psql: \\i sql/10-common.sql На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 10-common.sql",
+            "href": "practice/10-common.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-02-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 1/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "CREATE TEMPORARY TABLE transfer_orders(\n id BIGINT PRIMARY KEY CHECK(id BETWEEN 0 AND 4294967295),\n total DECIMAL(10,2) NOT NULL\n);\nINSERT INTO transfer_orders VALUES (0,12.50),(4000000000,27.50);\nSELECT id,total FROM transfer_orders ORDER BY id;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-02-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Код практики · 2/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SELECT COUNT(*) AS n,SUM(total) AS total_sum,MAX(id) AS max_id FROM transfer_orders;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-02-check",
+          "kind": "example",
+          "kicker": "Вопрос 1 · практика",
+          "title": "Ожидаемый результат",
+          "body": "На обеих платформах ID 0 и 4000000000, суммы 12,50 и 27,50. Агрегат: n=2, total_sum=40, max_id=4000000000. Совпадение агрегата дополнено сопоставлением каждой строки."
         },
         {
           "id": "s08-05-database-platform-comparison-q01-case",
@@ -21866,6 +22213,149 @@
           "body": "Проверяется одинаковое минимальное право, а синтаксис и модель доступа различаются."
         },
         {
+          "id": "s08-05-database-platform-comparison-practice-04-action",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Выдать и активировать минимальное право",
+          "body": "MySQL: откройте .\\client.ps1 -Admin и выполните соответствующий файл. Создаются роль и отдельный uiabd4_readonly@localhost; случайный пароль из результата CREATE USER сохраните локально для следующего входа. PostgreSQL создаёт роль без входа и проверяет её через SET ROLE. Одним SET ROLE у администратора MySQL нельзя доказать отказ: его прямые права сохраняются.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/10-rights-mysql.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 10-rights-mysql.sql",
+            "href": "practice/10-rights-mysql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Код практики · 1/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "USE uiabd4_training;\nCREATE TABLE permission_orders(id INT PRIMARY KEY,total DECIMAL(10,2));\nINSERT INTO permission_orders VALUES (1,40);\nCREATE ROLE 'uiabd4_reader';\nGRANT SELECT ON uiabd4_training.permission_orders TO 'uiabd4_reader';\nCREATE USER 'uiabd4_readonly'@'localhost' IDENTIFIED BY RANDOM PASSWORD;\nGRANT 'uiabd4_reader' TO 'uiabd4_readonly'@'localhost';",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-code-1-2",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Код практики · 2/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SET DEFAULT ROLE 'uiabd4_reader' TO 'uiabd4_readonly'@'localhost';",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-source-2",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте psql: \\i sql/10-rights-postgresql.sql На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 10-rights-postgresql.sql",
+            "href": "practice/10-rights-postgresql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-code-2-1",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Код практики · 1/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · PostgreSQL",
+                "code": "CREATE SCHEMA practice_sales;\nCREATE TABLE practice_sales.permission_orders(id integer PRIMARY KEY,total numeric(10,2));\nINSERT INTO practice_sales.permission_orders VALUES (1,40);\nCREATE ROLE uiabd4_reader NOLOGIN;\nGRANT CONNECT ON DATABASE uiabd4_training TO uiabd4_reader;\nGRANT USAGE ON SCHEMA practice_sales TO uiabd4_reader;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-code-2-2",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Код практики · 2/2",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · PostgreSQL",
+                "code": "GRANT SELECT ON TABLE practice_sales.permission_orders TO uiabd4_reader;\nSET ROLE uiabd4_reader;\nSELECT id,total FROM practice_sales.permission_orders;\nRESET ROLE;",
+                "explanation": "Выполняйте файл целиком, включая продолжения."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-04-check",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Ожидаемый результат",
+          "body": "В MySQL откройте .\\client.ps1 -User uiabd4_readonly, введите выданный пароль и выполните SELECT id,total FROM uiabd4_training.permission_orders. В PostgreSQL выполните SET ROLE uiabd4_reader и SELECT id,total FROM practice_sales.permission_orders. Оба чтения дают ID 1, сумму 40."
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-05-action",
+          "kind": "theory",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Проверить запрещённые изменения",
+          "body": "Под отчётной учётной записью MySQL или активной ролью PostgreSQL выполните по отдельности INSERT, UPDATE и DELETE. Для PostgreSQL используйте полное имя practice_sales.permission_orders, для MySQL — uiabd4_training.permission_orders. После проверки роль PostgreSQL сбрасывают RESET ROLE.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-05-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "Команды",
+                "code": "INSERT INTO permission_orders VALUES (2,50);\nUPDATE permission_orders SET total=50 WHERE id=1;\nDELETE FROM permission_orders WHERE id=1;",
+                "explanation": "Выполните команды в указанной среде."
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-05-check",
+          "kind": "example",
+          "kicker": "Вопрос 4 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Все три операции должны получить отказ в правах, исходная строка 1/40 остаётся. Проверяйте точную ошибку доступа: ошибка «таблица не найдена» не подтверждает правильность запрета. Для PostgreSQL перед выполнением замените имя таблицы полным."
+        },
+        {
           "id": "s08-05-database-platform-comparison-q04-case",
           "kind": "theory",
           "kicker": "Вопрос 4",
@@ -22378,6 +22868,80 @@
           "title": "Запишите",
           "notebook": "Диалект — особенности языка запросов, поддерживаемые конкретной СУБД.",
           "body": "Переносимые запросы и команды клиента проверяют раздельно; PL/pgSQL не запускают как MySQL."
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-action",
+          "kind": "theory",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Сравнить платформенное преобразование JSON",
+          "body": "В MySQL выполните 10-json-mysql.sql, в PostgreSQL — 10-json-postgresql.sql. JSON-массив одинаковый; каждый объект становится строкой с явно заданными id BIGINT и десятичной стоимостью.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-source-1",
+          "kind": "theory",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте mysql: SOURCE sql/10-json-mysql.sql; На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 10-json-mysql.sql",
+            "href": "practice/10-json-mysql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-code-1-1",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · MySQL",
+                "code": "SELECT j.id,j.total\nFROM JSON_TABLE('[{\"id\":0,\"total\":12.50},{\"id\":4000000000,\"total\":27.50}]',\n '$[*]' COLUMNS(id BIGINT PATH '$.id',total DECIMAL(10,2) PATH '$.total')) AS j\nORDER BY j.id;",
+                "explanation": "В клиенте mysql: SOURCE sql/10-json-mysql.sql;"
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-source-2",
+          "kind": "theory",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Запуск учебного файла",
+          "body": "В комплекте стенда файл находится в папке sql. В клиенте psql: \\i sql/10-json-postgresql.sql На следующих слайдах приведён полный код; продолжения составляют одну программу.",
+          "supplement": {
+            "label": "Скачать 10-json-postgresql.sql",
+            "href": "practice/10-json-postgresql.sql"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-code-2-1",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Код практики",
+          "visual": {
+            "type": "codeParts",
+            "parts": [
+              {
+                "label": "SQL · PostgreSQL",
+                "code": "SELECT j.id,j.total\nFROM jsonb_to_recordset('[{\"id\":0,\"total\":12.50},{\"id\":4000000000,\"total\":27.50}]'::jsonb)\n AS j(id bigint,total numeric(10,2))\nORDER BY j.id;",
+                "explanation": "В клиенте psql: \\i sql/10-json-postgresql.sql"
+              }
+            ],
+            "caption": "После выполнения проверьте ожидаемый результат шага."
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-03-check",
+          "kind": "example",
+          "kicker": "Вопрос 6 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Оба запроса возвращают те же две строки. Совпадение подтверждает этот набор и указанные типы; пропуски полей, JSON null и неверные типы требуют своих граничных проверок."
         },
         {
           "id": "s08-05-database-platform-comparison-q06-case",
@@ -22893,6 +23457,24 @@
           "body": "Выбор делается по обязательным требованиям, затем по стоимости и удобству; универсальный победитель не определяется."
         },
         {
+          "id": "s08-05-database-platform-comparison-practice-06-action",
+          "kind": "theory",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Сформулировать основание выбора",
+          "body": "Отделите проверенную переносимую часть от особенностей базы/схемы, ролей и диагностики. Укажите обязательные требования приложения, совместимость расширений и доступные навыки сопровождения, затем сравнивайте затраты.",
+          "supplement": {
+            "label": "Тестовый стенд",
+            "href": "practice/uiabd4-stand.zip"
+          }
+        },
+        {
+          "id": "s08-05-database-platform-comparison-practice-06-check",
+          "kind": "example",
+          "kicker": "Вопрос 8 · практика",
+          "title": "Ожидаемый результат",
+          "body": "Вывод относится к задаче и наблюдениям. Один успешный SELECT не доказывает одинаковые модели прав, процедурные языки и свойства восстановления."
+        },
+        {
           "id": "s08-05-database-platform-comparison-q08-case",
           "kind": "theory",
           "kicker": "Вопрос 8",
@@ -23058,360 +23640,6 @@
             "label": "К исходным данным",
             "href": "?lecture=s08-05-database-platform-comparison&slide=s08-05-database-platform-comparison-practice-environment"
           }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-environment",
-          "kind": "theory",
-          "kicker": "Практика",
-          "title": "Одинаковые данные на двух СУБД",
-          "body": "Отдельные учебные подключения к MySQL 8.4 и PostgreSQL 18. В каждой выбрана база uiabd4_training. Временные таблицы создаются в новом сеансе; файл 10-common.sql не содержит платформенной команды USE. Для создания учебной роли и пользователя нужны административные права на собственном стенде; имена объектов и учётных записей должны быть новыми."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-file-1",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 10-common.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 10-common.sql",
-            "href": "practice/10-common.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-file-2",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 10-json-mysql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 10-json-mysql.sql",
-            "href": "practice/10-json-mysql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-file-3",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 10-json-postgresql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 10-json-postgresql.sql",
-            "href": "practice/10-json-postgresql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-file-4",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 10-rights-mysql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 10-rights-mysql.sql",
-            "href": "practice/10-rights-mysql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-file-5",
-          "kind": "theory",
-          "kicker": "Практика · подготовка",
-          "title": "Файлы для локального запуска",
-          "body": "Сохраните 10-rights-postgresql.sql в общую рабочую папку. Файл используется в командах практики на следующих слайдах.",
-          "supplement": {
-            "label": "Скачать 10-rights-postgresql.sql",
-            "href": "practice/10-rights-postgresql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-01-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 1",
-          "title": "Подтвердить сервер и базу",
-          "body": "MySQL: SELECT VERSION(),DATABASE(),CURRENT_USER(). PostgreSQL: SELECT version(),current_database(),current_user. У клиентов разные ключи порта: mysql -P и psql -p; метакоманды клиента не смешивают с SQL."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-01-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 1",
-          "title": "Ожидаемый результат",
-          "body": "Записаны две реальные версии, адреса/порты и выбранные базы. Успешный запуск клиента без этого не подтверждает правильность подключения."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-02-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Выполнить общий SQL",
-          "body": "В каждом новом сеансе выполните полный текст общего файла. BIGINT с CHECK сохраняет диапазон исходного UNSIGNED INT, а DECIMAL сохраняет точные деньги. В mysql файл читает SOURCE, в psql — метакоманда \\i."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-02-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 2",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 10-common.sql в рабочую папку клиента. В клиенте mysql: SOURCE 10-common.sql; В клиенте psql: \\i 10-common.sql На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 10-common.sql",
-            "href": "practice/10-common.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-02-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 1/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "CREATE TEMPORARY TABLE transfer_orders(\n id BIGINT PRIMARY KEY CHECK(id BETWEEN 0 AND 4294967295),\n total DECIMAL(10,2) NOT NULL\n);\nINSERT INTO transfer_orders VALUES (0,12.50),(4000000000,27.50);\nSELECT id,total FROM transfer_orders ORDER BY id;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-02-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 2",
-          "title": "Команды шага 2 · 2/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SELECT COUNT(*) AS n,SUM(total) AS total_sum,MAX(id) AS max_id FROM transfer_orders;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-02-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 2",
-          "title": "Ожидаемый результат",
-          "body": "На обеих платформах ID 0 и 4000000000, суммы 12,50 и 27,50. Агрегат: n=2, total_sum=40, max_id=4000000000. Совпадение агрегата дополнено сопоставлением каждой строки."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Сравнить платформенное преобразование JSON",
-          "body": "В MySQL выполните 10-json-mysql.sql, в PostgreSQL — 10-json-postgresql.sql. JSON-массив одинаковый; каждый объект становится строкой с явно заданными id BIGINT и десятичной стоимостью."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 10-json-mysql.sql в рабочую папку клиента. В клиенте mysql: SOURCE 10-json-mysql.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 10-json-mysql.sql",
-            "href": "practice/10-json-mysql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SELECT j.id,j.total\nFROM JSON_TABLE('[{\"id\":0,\"total\":12.50},{\"id\":4000000000,\"total\":27.50}]',\n '$[*]' COLUMNS(id BIGINT PATH '$.id',total DECIMAL(10,2) PATH '$.total')) AS j\nORDER BY j.id;",
-                "explanation": "В клиенте mysql: SOURCE 10-json-mysql.sql;"
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-source-2",
-          "kind": "theory",
-          "kicker": "Практика · шаг 3",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 10-json-postgresql.sql в рабочую папку клиента. В клиенте psql: \\i 10-json-postgresql.sql На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 10-json-postgresql.sql",
-            "href": "practice/10-json-postgresql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-code-2-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 3",
-          "title": "Команды шага 3",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · PostgreSQL",
-                "code": "SELECT j.id,j.total\nFROM jsonb_to_recordset('[{\"id\":0,\"total\":12.50},{\"id\":4000000000,\"total\":27.50}]'::jsonb)\n AS j(id bigint,total numeric(10,2))\nORDER BY j.id;",
-                "explanation": "В клиенте psql: \\i 10-json-postgresql.sql"
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-03-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 3",
-          "title": "Ожидаемый результат",
-          "body": "Оба запроса возвращают те же две строки. Совпадение подтверждает этот набор и указанные типы; пропуски полей, JSON null и неверные типы требуют своих граничных проверок."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Выдать и активировать минимальное право",
-          "body": "Сначала выполните соответствующий файл от администратора своего учебного стенда. MySQL создаёт роль и отдельного пользователя uiabd4_readonly@localhost; случайный пароль появляется в результате CREATE USER, затем используется при новом входе через -p. PostgreSQL создаёт роль без входа и проверяет её через SET ROLE, что меняет текущие права. Одним SET ROLE у администратора MySQL нельзя доказать отказ: его прямые права сохраняются."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-source-1",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 10-rights-mysql.sql в рабочую папку клиента. В клиенте mysql: SOURCE 10-rights-mysql.sql; На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 10-rights-mysql.sql",
-            "href": "practice/10-rights-mysql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 4",
-          "title": "Команды шага 4 · 1/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "USE uiabd4_training;\nCREATE TABLE permission_orders(id INT PRIMARY KEY,total DECIMAL(10,2));\nINSERT INTO permission_orders VALUES (1,40);\nCREATE ROLE 'uiabd4_reader';\nGRANT SELECT ON uiabd4_training.permission_orders TO 'uiabd4_reader';\nCREATE USER 'uiabd4_readonly'@'localhost' IDENTIFIED BY RANDOM PASSWORD;\nGRANT 'uiabd4_reader' TO 'uiabd4_readonly'@'localhost';",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-code-1-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 4",
-          "title": "Команды шага 4 · 2/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · MySQL",
-                "code": "SET DEFAULT ROLE 'uiabd4_reader' TO 'uiabd4_readonly'@'localhost';",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-source-2",
-          "kind": "theory",
-          "kicker": "Практика · шаг 4",
-          "title": "Запуск учебного файла",
-          "body": "Сохраните 10-rights-postgresql.sql в рабочую папку клиента. В клиенте psql: \\i 10-rights-postgresql.sql На следующих слайдах приведён полный код файла; продолжения составляют одну программу.",
-          "supplement": {
-            "label": "Скачать 10-rights-postgresql.sql",
-            "href": "practice/10-rights-postgresql.sql"
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-code-2-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 4",
-          "title": "Команды шага 4 · 1/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · PostgreSQL",
-                "code": "CREATE SCHEMA practice_sales;\nCREATE TABLE practice_sales.permission_orders(id integer PRIMARY KEY,total numeric(10,2));\nINSERT INTO practice_sales.permission_orders VALUES (1,40);\nCREATE ROLE uiabd4_reader NOLOGIN;\nGRANT CONNECT ON DATABASE uiabd4_training TO uiabd4_reader;\nGRANT USAGE ON SCHEMA practice_sales TO uiabd4_reader;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-code-2-2",
-          "kind": "example",
-          "kicker": "Практика · шаг 4",
-          "title": "Команды шага 4 · 2/2",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "SQL · PostgreSQL",
-                "code": "GRANT SELECT ON TABLE practice_sales.permission_orders TO uiabd4_reader;\nSET ROLE uiabd4_reader;\nSELECT id,total FROM practice_sales.permission_orders;\nRESET ROLE;",
-                "explanation": "Выполняйте файл целиком, включая продолжения."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-04-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 4",
-          "title": "Ожидаемый результат",
-          "body": "В MySQL подключитесь командой mysql -h127.0.0.1 -P3306 -u uiabd4_readonly -p uiabd4_training со сгенерированным паролем и выполните SELECT id,total FROM uiabd4_training.permission_orders. В PostgreSQL выполните SET ROLE uiabd4_reader и SELECT id,total FROM practice_sales.permission_orders. Оба чтения дают ID 1, сумму 40."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-05-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 5",
-          "title": "Проверить запрещённые изменения",
-          "body": "Под отчётной учётной записью MySQL или активной ролью PostgreSQL выполните по отдельности INSERT, UPDATE и DELETE. Для PostgreSQL используйте полное имя practice_sales.permission_orders, для MySQL — uiabd4_training.permission_orders. После проверки роль PostgreSQL сбрасывают RESET ROLE."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-05-code-1-1",
-          "kind": "example",
-          "kicker": "Практика · шаг 5",
-          "title": "Команды шага 5",
-          "visual": {
-            "type": "codeParts",
-            "parts": [
-              {
-                "label": "Команды",
-                "code": "INSERT INTO permission_orders VALUES (2,50);\nUPDATE permission_orders SET total=50 WHERE id=1;\nDELETE FROM permission_orders WHERE id=1;",
-                "explanation": "Выполните команды в указанной среде."
-              }
-            ],
-            "caption": "После выполнения проверьте ожидаемый результат шага."
-          }
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-05-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 5",
-          "title": "Ожидаемый результат",
-          "body": "Все три операции должны получить отказ в правах, исходная строка 1/40 остаётся. Проверяйте точную ошибку доступа: ошибка «таблица не найдена» не подтверждает правильность запрета. Для PostgreSQL перед выполнением замените имя таблицы полным."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-06-action",
-          "kind": "theory",
-          "kicker": "Практика · шаг 6",
-          "title": "Сформулировать основание выбора",
-          "body": "Отделите проверенную переносимую часть от особенностей базы/схемы, ролей и диагностики. Укажите обязательные требования приложения, совместимость расширений и доступные навыки сопровождения, затем сравнивайте затраты."
-        },
-        {
-          "id": "s08-05-database-platform-comparison-practice-06-check",
-          "kind": "example",
-          "kicker": "Практика · проверка 6",
-          "title": "Ожидаемый результат",
-          "body": "Вывод относится к задаче и наблюдениям. Один успешный SELECT не доказывает одинаковые модели прав, процедурные языки и свойства восстановления."
         },
         {
           "kicker": "Сравнение MySQL и PostgreSQL",

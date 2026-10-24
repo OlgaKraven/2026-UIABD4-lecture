@@ -1,0 +1,10 @@
+{
+  "courseId": "uiabd4",
+  "folder": "UIABD4-study",
+  "database": "uiabd4_training",
+  "port": 33064,
+  "version": "8.4.13",
+  "archiveDirectory": "mysql-8.4.13-winx64",
+  "url": "https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.13-winx64.zip",
+  "sha256": "E9CD98B1D23F122987B1AFCA26AD942EFEC5891481103D48AE3CDE237FA3EA54"
+}

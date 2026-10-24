@@ -15,7 +15,7 @@ export function installPresentation(course:Course,base:string){
    const topicLabel=create('span','presentation-topic presentation-added',`Тема ${String(topic).padStart(2,'0')}`);actions?.append(topicLabel)
    if(slide.kind!=='title'){const mark=create('img','presentation-mark presentation-added') as HTMLImageElement;mark.src=base+'brand/synergy-mark.png';mark.alt='';actions?.append(mark)}
    const circle=create('div','presentation-circles presentation-added');frame.prepend(circle)
-   const match=slide.id.match(/-q(\d+)-/)
+   const match=slide.id.match(/-q(\d+)-/)||slide.kicker.match(/^Вопрос (\d+)/)
    footer?.append(create('span','presentation-question presentation-added',match?`Вопрос ${Number(match[1])}`:''),create('span','presentation-page presentation-added',String(page).padStart(2,'0')))
    if(slide.kind==='title'){
     const profile=frame.querySelector('.title-profile');profile?.prepend(create('small','presentation-added','Преподаватель'));const name=profile?.querySelector('strong');if(name?.textContent==='Преподаватель')name.setAttribute('data-empty-profile','true');else name?.removeAttribute('data-empty-profile')

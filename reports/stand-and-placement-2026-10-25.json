@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-25",
+  "sourceSha256": "d90c810c8e1268a4e130585171efec1dd8ea9b0aa4ec28a25a47cafb560dc448",
+  "standFiles": [
+    "README.md",
+    "client.ps1",
+    "common.ps1",
+    "dump.ps1",
+    "monitoring/alerts.yml",
+    "monitoring/demo_exporter.py",
+    "monitoring/prometheus.yml",
+    "sql/01-queries.sql",
+    "sql/02-calculation.sql",
+    "sql/03-procedure.sql",
+    "sql/04-index.sql",
+    "sql/06-metrics.sql",
+    "sql/09-backup-source.sql",
+    "sql/09-check.sql",
+    "sql/10-common.sql",
+    "sql/10-json-mysql.sql",
+    "sql/10-json-postgresql.sql",
+    "sql/10-rights-mysql.sql",
+    "sql/10-rights-postgresql.sql",
+    "stand.json",
+    "start.ps1",
+    "stop.ps1"
+  ],
+  "mysqlVersion": "8.4.13",
+  "port": 33064,
+  "secureInitialization": true,
+  "studentScopeDenial": 1044,
+  "negativeWriteDenials": [
+    1142,
+    1142,
+    1142
+  ],
+  "backupRestored": {
+    "orders": 3,
+    "sum": 600,
+    "brokenLinks": 0
+  },
+  "restartPreservedRow": 7,
+  "slides": 1298,
+  "originalSlideIds": 1060,
+  "casesBeforeFourSelfChecks": 80,
+  "layoutIssues": 0,
+  "unitTests": 25
+}

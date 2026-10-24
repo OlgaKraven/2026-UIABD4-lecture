@@ -12,6 +12,8 @@ export function validateStudentContent(){
  const files=new Set();
  for(const [li,l] of course.lectures.entries()){
   for(const [qi,paragraphs] of explanations[li].entries())for(const p of paragraphs)assert(l.slides.some(s=>s.body===p),`Explanation missing: ${li}/${qi}`);
+  for(let qi=1;qi<=8;qi++){const id=`${l.id}-q${String(qi).padStart(2,'0')}`,at=l.slides.findIndex(s=>s.id===id+'-case');assert.equal(l.slides[at+1]?.id,id+'-T01-slide');assert.deepEqual(l.slides.slice(at+1,at+5).map(s=>s.task?.type),['single','multiple','short','matching']);}
+  assert(!l.slides.slice(l.slides.findIndex(s=>s.id===l.id+'-q08-T04-slide')+1).some(s=>s.id.includes('-practice-')),'Detached end-of-lecture practice');
   assert(l.slides.some(s=>s.body===practice[li].environment));
   for(const step of practice[li].steps){
    assert(l.slides.some(s=>s.body===step.text));assert(l.slides.some(s=>s.body===step.expected));

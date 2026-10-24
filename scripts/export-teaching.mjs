@@ -22,7 +22,7 @@ for(const [li,lecture] of course.lectures.entries()){
   if(slide.notebook)teacher+=`**Запишите:** ${slide.notebook}\n\n`;
   if(slide.task)teacher+=`**Разбор после попытки.** ${note.answer}\n\n`;
   const item=cases.find(item=>item.returnSlide===slide.id);
-  if(item)teacher+=`**Задача для группового разбора.** ${item.context} ${item.operation}\n\n**Показ:** кнопка «Решить задачу», затем «Следующий шаг». Сначала соберите устные объяснения, затем покажите соответствующее действие. Для проектора откройте «Окно для группы»; оно следует за шагами преподавателя.\n\n**Разбор.** ${item.solution}\n\n`;
+  if(item)teacher+=`**Задача для группового разбора.** ${item.context} ${item.operation}\n\n**Показ:** кнопка «Решить задачу» открывает рабочую схему на этом слайде. Сначала соберите устные объяснения, затем выполните предложенные операции, измените исходные параметры и сравните результат. В штатном режиме показа окно аудитории следует за действиями преподавателя.\n\n**Разбор.** ${item.solution}\n\n`;
   presenter+=`<a id="${anchor}"></a>\n## ${i+1}. ${slide.title}\n\n${note.script}\n\n`;
   if(references)presenter+=references+'\n\n';
   if(slide.kind==='materials')presenter+=`[Материалы курса](${course.materialsUrl})\n\n`;
