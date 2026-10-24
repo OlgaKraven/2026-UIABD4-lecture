@@ -2926,13 +2926,11 @@ function Qe({ course: e, lecture: t, slide: n, profile: i, base: a, number: o, i
 					] })]
 				}), /* @__PURE__ */ d("div", {
 					className: "slide-header-actions",
-					children: [n.supplement && /* @__PURE__ */ d("a", {
-						className: "button secondary slide-supplement",
-						href: A(n.supplement.href, a),
-						target: "_blank",
-						rel: "noopener",
-						children: [n.supplement.label, " ↗"]
-					}), /* @__PURE__ */ u("span", {
+					children: [n.supplement && d(/mode=(diagram|case)/.test(n.supplement.href)?"button":"a", {
+ className:"button secondary slide-supplement",
+ ...(/mode=(diagram|case)/.test(n.supplement.href)?{type:"button","aria-haspopup":"dialog",onClick:event=>{const url=new URL(A(n.supplement.href,a),location.href);document.dispatchEvent(new CustomEvent("lecture-tool",{detail:{kind:url.searchParams.get("mode"),id:url.searchParams.get("case")||url.searchParams.get("slide"),opener:event.currentTarget}}));}}:{href:A(n.supplement.href,a),target:"_blank",rel:"noopener"}),
+ children:[n.supplement.label,/mode=(diagram|case)/.test(n.supplement.href)?"":" ↗"]
+ }), /* @__PURE__ */ u("span", {
 						className: "slide-number",
 						children: String(o).padStart(2, "0")
 					})]

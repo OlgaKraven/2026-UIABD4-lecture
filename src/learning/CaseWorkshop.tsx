@@ -4,13 +4,14 @@ import {models,initialValues} from './workbenchModels'
 import {OperationWorkbench} from './OperationWorkbench'
 import type {WorkState} from './OperationWorkbench'
 import './workbench.css'
-export function CaseWorkshop({base,id}:{base:string;id:string}){
+type Props={base:string;id:string;onClose?:()=>void;readOnly?:boolean;sessionId?:string}
+export function CaseWorkshop({base,id,onClose,readOnly,sessionId}:Props){
  const index=cases.findIndex(c=>c.id===id)
- return index>=0&&models[index]?<Workshop key={id} base={base} index={index}/>:<main className="case-workshop"><h1>Задача не найдена</h1><a href={base}>К каталогу</a></main>
+ return index>=0&&models[index]?<Workshop key={id} base={base} index={index} onClose={onClose} readOnly={readOnly} sessionId={sessionId}/>:<main className="case-workshop"><h1>Задача не найдена</h1><a href={base}>К каталогу</a></main>
 }
-function Workshop({base,index}:{base:string;index:number}){
- const item=cases[index],model=models[index],params=new URLSearchParams(location.search),audience=params.get('audience')==='1'
- const [session]=useState(()=>params.get('session')||crypto.randomUUID())
+function Workshop({base,index,onClose,readOnly,sessionId}:Omit<Props,'id'>&{index:number}){
+ const item=cases[index],model=models[index],params=new URLSearchParams(location.search),audience=readOnly===true
+ const [session]=useState(()=>sessionId||params.get('session')||crypto.randomUUID())
  const [state,setState]=useState<WorkState>(()=>({values:initialValues(model),phase:0,time:0,events:[],theme:document.documentElement.dataset.theme||'light'}))
  const [canUndo,setCanUndo]=useState(false)
  const undoStack=useRef<WorkState[]>([]),bus=useRef<BroadcastChannel|null>(null),latest=useRef({...state,sequence:0})
@@ -28,8 +29,8 @@ function Workshop({base,index}:{base:string;index:number}){
   return()=>{channel.close();bus.current=null}
  },[audience,session,item.id,model])
  useEffect(()=>{document.documentElement.dataset.theme=state.theme;if(audience)return;const value={...state,sequence:Date.now()};latest.current=value;bus.current?.postMessage(value);try{localStorage.setItem(`uiabd4:workbench:${session}:${item.id}`,JSON.stringify(value))}catch{/* Broadcast still works. */}},[state,audience,session,item.id])
- useEffect(()=>{document.title=`${item.title} · Рабочая схема`},[item.title])
+ useEffect(()=>{const previous=document.title;document.title=`${item.title} · Рабочая схема`;return()=>{document.title=previous}},[item.title])
  const back=`${base}?lecture=${item.lectureId}&slide=${item.returnSlide}`
- const showAudience=()=>{const url=new URL(location.href);url.searchParams.set('session',session);window.history.replaceState(null,'',url);url.searchParams.set('audience','1');window.open(url,`uiabd4-workbench-${session}`)}
- return <main className="case-workshop case-demo"><header><a href={back}>← К условию на слайде</a><span>{item.semester} семестр</span>{!audience&&<><button onClick={showAudience}>Окно для группы ↗</button><button onClick={()=>change({...state,theme:state.theme==='dark'?'light':'dark'})}>{state.theme==='dark'?'Светлая тема':'Тёмная тема'}</button></>}</header><h1>{item.title}</h1><OperationWorkbench model={model} state={state} onChange={change} onUndo={undo} canUndo={canUndo} audience={audience}/><footer><a href={back}>Вернуться к условию на слайде →</a></footer></main>
+ const toggleTheme=()=>{const theme=state.theme==='dark'?'light':'dark';setState({...state,theme});try{localStorage.setItem(`lecture:${base}:uiabd4:theme`,JSON.stringify(theme))}catch{/* Theme still changes for this view. */}window.dispatchEvent(new Event('course-theme'))}
+ return <main className="case-workshop case-demo"><header>{!onClose&&<a href={back}>← К условию на слайде</a>}<span>{item.semester} семестр</span>{!audience&&<button onClick={toggleTheme}>{state.theme==='dark'?'Светлая тема':'Тёмная тема'}</button>}</header><h1>{item.title}</h1><OperationWorkbench model={model} state={state} onChange={change} onUndo={undo} canUndo={canUndo} audience={audience}/>{!onClose&&<footer><a href={back}>Вернуться к условию на слайде →</a></footer>}</main>
 }

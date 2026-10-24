@@ -59,7 +59,21 @@ end=s.index('\t\t\t\t\t\t\tU ?',start)
 s=s[:start]+s[end:]
 s=s.replace('animations: !0','animations: !1')
 p.write_text(s,encoding='utf-8')
-p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8');s=s.replace('fetch(k(e.assessment.url, t))','fetch(k(e.assessment.url, t),{cache:"no-cache"})');p.write_text(s,encoding='utf-8')
+p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8');s=s.replace('fetch(k(e.assessment.url, t))','fetch(k(e.assessment.url, t),{cache:"no-cache"})')
+old='''n.supplement && /* @__PURE__ */ d("a", {
+						className: "button secondary slide-supplement",
+						href: A(n.supplement.href, a),
+						target: "_blank",
+						rel: "noopener",
+						children: [n.supplement.label, " ↗"]
+					})'''
+new='''n.supplement && d(/mode=(diagram|case)/.test(n.supplement.href)?"button":"a", {
+ className:"button secondary slide-supplement",
+ ...(/mode=(diagram|case)/.test(n.supplement.href)?{type:"button","aria-haspopup":"dialog",onClick:event=>{const url=new URL(A(n.supplement.href,a),location.href);document.dispatchEvent(new CustomEvent("lecture-tool",{detail:{kind:url.searchParams.get("mode"),id:url.searchParams.get("case")||url.searchParams.get("slide"),opener:event.currentTarget}}));}}:{href:A(n.supplement.href,a),target:"_blank",rel:"noopener"}),
+ children:[n.supplement.label,/mode=(diagram|case)/.test(n.supplement.href)?"":" ↗"]
+ })'''
+assert old in s
+s=s.replace(old,new);p.write_text(s,encoding='utf-8')
 p=root/'lib/model.d.ts';s=p.read_text(encoding='utf-8').replace('export type Course = {','export type Course = {\n    slideAliases?: Record<string,string>;');p.write_text(s,encoding='utf-8')
 p=root/'package.json';d=json.loads(p.read_text(encoding='utf-8'));d['version']='0.1.1-uiabd4.1';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Runtime prepared:',root)
