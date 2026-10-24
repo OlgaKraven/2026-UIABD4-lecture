@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {validateStudentContent} from './validate-student-content.mjs';
 import {validateCourse,validateBank,validateTeacherPack,readiness,courseAssets} from '@olgakraven/lecture-validation';
 const c=JSON.parse(fs.readFileSync('public/course.json','utf8'));
 const bank=JSON.parse(fs.readFileSync('public/assessment.json','utf8'));
@@ -19,6 +20,7 @@ for(const l of c.lectures){
 }
 for(const p of courseAssets(c))if(!/^https?:/.test(p)&&!fs.existsSync('public/'+p))throw Error('Нет ресурса '+p);
 const warnings=readiness(c);if(warnings.length)throw Error(warnings.join('\n'));
+validateStudentContent();
 if(process.argv.includes('--teacher')){
  const pack=JSON.parse(fs.readFileSync('private/teacher-pack.json','utf8'));validateTeacherPack(pack,c);
  const ids=c.lectures.flatMap(l=>l.slides.map(s=>s.id));

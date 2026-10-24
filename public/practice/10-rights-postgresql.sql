@@ -1,0 +1,10 @@
+CREATE SCHEMA practice_sales;
+CREATE TABLE practice_sales.permission_orders(id integer PRIMARY KEY,total numeric(10,2));
+INSERT INTO practice_sales.permission_orders VALUES (1,40);
+CREATE ROLE uiabd4_reader NOLOGIN;
+GRANT CONNECT ON DATABASE uiabd4_training TO uiabd4_reader;
+GRANT USAGE ON SCHEMA practice_sales TO uiabd4_reader;
+GRANT SELECT ON TABLE practice_sales.permission_orders TO uiabd4_reader;
+SET ROLE uiabd4_reader;
+SELECT id,total FROM practice_sales.permission_orders;
+RESET ROLE;

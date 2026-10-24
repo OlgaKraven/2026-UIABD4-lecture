@@ -32,7 +32,7 @@ for(const [index,item] of cases.entries()){
  assert.equal(notes.notes[passport.id].answer,item.solution);
 }
 for(const old of baseline.slides){
- const l=course.lectures.find(l=>l.id===old.id);assert.deepEqual(l.slides.filter(s=>!s.id.endsWith('-case')).map(s=>s.id),old.slideIds.filter(id=>!course.slideAliases?.[id]));
+ const l=course.lectures.find(l=>l.id===old.id);const oldIds=new Set(old.slideIds);assert.deepEqual(l.slides.filter(s=>oldIds.has(s.id)).map(s=>s.id),old.slideIds.filter(id=>!course.slideAliases?.[id]));
  for(const s of l.slides){assert(!s.source,'Service source returned: '+s.id);assert(notes.notes[s.id]?.script.trim());}
 }
 for(const [li,l] of course.lectures.entries())for(let qi=0;qi<8;qi++){
@@ -64,4 +64,4 @@ assert.equal(demos[4].scenarios[0].frames[2].board.items.at(-1),'AVG = 30 / 3 = 
 assert.equal(demos[4].scenarios[1].frames[2].board.items.at(-1),'AVG = 30 / 5 = 6');
 assert.equal(Object.keys(notes.notes).length,slides.length);
 for(const [from,to] of Object.entries(course.slideAliases||{})){assert(!slides.some(s=>s.id===from));assert(slides.some(s=>s.id===to));}
-console.log(JSON.stringify({cases:80,scenarios:demos.reduce((n,d)=>n+d.scenarios.length,0),explanationDiagrams:80,independentCheckpoints:160,retainedOriginalSlides:slides.length-cases.length,notes:slides.length,status:'passed'}));
+console.log(JSON.stringify({cases:80,scenarios:demos.reduce((n,d)=>n+d.scenarios.length,0),explanationDiagrams:80,independentCheckpoints:160,retainedOriginalSlides:baseline.slides.reduce((n,l)=>n+l.slideIds.filter(id=>!course.slideAliases?.[id]).length,0),notes:slides.length,status:'passed'}));

@@ -1,0 +1,13 @@
+groups:
+  - name: uiabd4_training
+    rules:
+      - alert: DemoConnectionsHigh
+        expr: demo_db_active_connections{env="training"} > 25
+        for: 20s
+        annotations:
+          summary: 'Учебное превышение числа соединений'
+      - alert: DemoExporterDown
+        expr: up{job="uiabd4_demo"} == 0
+        for: 15s
+        annotations:
+          summary: 'Учебный экспортёр не отвечает'

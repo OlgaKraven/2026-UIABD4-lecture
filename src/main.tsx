@@ -29,6 +29,13 @@ async function load(){
   try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem(`lecture:${base}:${course.id}:theme`)||'"light"')}catch{/* Use the default theme if storage is unavailable. */}
   if(mode==='case'){const {CaseWorkshop}=await import('./learning/CaseWorkshop');root.render(<CaseWorkshop base={base} id={url.searchParams.get('case')||''}/>);return}
   if(mode==='diagram'){const {DiagramView}=await import('./learning/DiagramView');root.render(<DiagramView course={course} base={base} id={url.searchParams.get('slide')||''}/>);return}
+  if(mode==='read'){
+   url.searchParams.delete('mode')
+   const id=url.hash.slice(1),lecture=course.lectures.find(l=>l.id===url.searchParams.get('lecture'))
+   const target=id==='practice'?lecture?.id+'-practice-environment':id+'-concept'
+   if(lecture?.slides.some(s=>s.id===target))url.searchParams.set('slide',target)
+   url.hash='';history.replaceState(null,'',url)
+  }
   let teacherSession:Awaited<ReturnType<typeof prepareTeacherSession>>|undefined
   if(mode!=='audience'&&mode!=='print'){
    const response=await fetch(`${base}teacher-notes.json`,{cache:'no-cache',signal:AbortSignal.timeout(15000)})

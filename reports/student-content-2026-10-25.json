@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-25",
+  "sourceSha256": "eca905ef804513808c90bf7fcf65c33db9a410cf7069ad7a73e3424a930158a7",
+  "scope": {
+    "lectures": 10,
+    "questions": 80,
+    "explanationParagraphs": 160,
+    "originalIdsPreserved": 1060,
+    "slides": 1298,
+    "definitionsPreserved": 80,
+    "assessmentTasks": 320,
+    "practiceFiles": 15
+  },
+  "browser": {
+    "lectures": 10,
+    "themedChecks": 20,
+    "mobileChecks": 20,
+    "widths": [
+      390,
+      320
+    ],
+    "oldReadingLinkRedirect": true,
+    "download": true,
+    "consoleErrors": [],
+    "checks": [
+      {
+        "lecture": "s07-01-queries-on-server-database",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-02-calculation-query",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-03-procedures-and-triggers",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-04-query-performance-and-indexes",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-05-server-and-network-requirements",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-01-server-metrics",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-02-metrics-collection",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-03-dashboard-and-alerting",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-04-incident-analysis-and-recovery",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-05-database-platform-comparison",
+        "theme": "light",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-01-queries-on-server-database",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-02-calculation-query",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-03-procedures-and-triggers",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-04-query-performance-and-indexes",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s07-05-server-and-network-requirements",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-01-server-metrics",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-02-metrics-collection",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-03-dashboard-and-alerting",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-04-incident-analysis-and-recovery",
+        "theme": "dark",
+        "nextPrevious": true
+      },
+      {
+        "lecture": "s08-05-database-platform-comparison",
+        "theme": "dark",
+        "nextPrevious": true
+      }
+    ]
+  },
+  "printLayout": [
+    {
+      "lecture": "s07-01-queries-on-server-database",
+      "pages": 130,
+      "issues": []
+    },
+    {
+      "lecture": "s07-02-calculation-query",
+      "pages": 128,
+      "issues": []
+    },
+    {
+      "lecture": "s07-03-procedures-and-triggers",
+      "pages": 131,
+      "issues": []
+    },
+    {
+      "lecture": "s07-04-query-performance-and-indexes",
+      "pages": 127,
+      "issues": []
+    },
+    {
+      "lecture": "s07-05-server-and-network-requirements",
+      "pages": 122,
+      "issues": []
+    },
+    {
+      "lecture": "s08-01-server-metrics",
+      "pages": 126,
+      "issues": []
+    },
+    {
+      "lecture": "s08-02-metrics-collection",
+      "pages": 130,
+      "issues": []
+    },
+    {
+      "lecture": "s08-03-dashboard-and-alerting",
+      "pages": 126,
+      "issues": []
+    },
+    {
+      "lecture": "s08-04-incident-analysis-and-recovery",
+      "pages": 131,
+      "issues": []
+    },
+    {
+      "lecture": "s08-05-database-platform-comparison",
+      "pages": 147,
+      "issues": []
+    }
+  ],
+  "pdf": {
+    "documents": 10,
+    "pages": 1298,
+    "renderedAndViewedPages": 30
+  },
+  "sql": {
+    "mysql": "8.4.13",
+    "postgresql": "18.1",
+    "checks": [
+      "WHERE, COUNT/SUM/AVG, INNER/LEFT, HAVING",
+      "pre-aggregation, incomplete price",
+      "procedure, trigger, ROLLBACK/COMMIT, three rejected inputs",
+      "10000 rows, index, EXPLAIN ANALYZE, equivalent sum",
+      "status and metadata queries",
+      "dump, separate restore, sums, foreign keys, functional query",
+      "common SQL and typed JSON on MySQL and PostgreSQL"
+    ],
+    "status": "passed"
+  },
+  "permissions": {
+    "mysql": {
+      "select": "passed",
+      "deniedWrites": 3
+    },
+    "postgresql": {
+      "select": "passed",
+      "deniedWrites": 3
+    },
+    "credentials": "generated and used in memory, not exported",
+    "status": "passed"
+  },
+  "indexTree": {
+    "exitCode": 0,
+    "output": "n\trare_rows\r\n10000\t10\r\nEXPLAIN\r\n-> Aggregate: sum(index_orders.id)  (cost=1190 rows=1) (actual time=3.43..3.43 rows=1 loops=1)\\n    -> Filter: (index_orders.`status` = 'rare')  (cost=1091 rows=994) (actual time=0.507..3.43 rows=10 loops=1)\\n        -> Table scan on index_orders  (cost=1091 rows=9940) (actual time=0.165..2.66 rows=10000 loops=1)\\n\r\nchecksum_before\r\n55000\r\nEXPLAIN\r\n-> Aggregate: sum(index_orders.id)  (cost=3.06 rows=1) (actual time=0.0175..0.0176 rows=1 loops=1)\\n    -> Covering index lookup on index_orders using idx_status_id (status='rare')  (cost=2.06 rows=10) (actual time=0.011..0.0133 rows=10 loops=1)\\n\r\nchecksum_after\r\n55000\r\n",
+    "error": ""
+  },
+  "monitoring": {
+    "prometheus": "3.15.1",
+    "events": [
+      {
+        "event": "normal: up=1 and gauge=10",
+        "at": 1792874795.781519
+      },
+      {
+        "event": "high rule inactive",
+        "at": 1792874795.7965357
+      },
+      {
+        "event": "exporter down: up=0",
+        "at": 1792874799.9216566
+      },
+      {
+        "event": "down pending",
+        "at": 1792874804.9813106
+      },
+      {
+        "event": "down firing",
+        "at": 1792874820.080381
+      },
+      {
+        "event": "recovered: up=1",
+        "at": 1792874825.1975384
+      },
+      {
+        "event": "high pending",
+        "at": 1792874830.2233706
+      },
+      {
+        "event": "high firing",
+        "at": 1792874850.4346955
+      },
+      {
+        "event": "counter rate near 2/s",
+        "at": 1792874850.4641182
+      },
+      {
+        "event": "high condition clears",
+        "at": 1792874859.6160314
+      }
+    ],
+    "units": "2 GiB",
+    "missingSeries": "absent=1 after scrape failure",
+    "notificationDelivery": "not configured, not claimed",
+    "status": "passed"
+  },
+  "teacher": {
+    "documents": 20,
+    "alignmentMaps": 10,
+    "alignedSlides": 1298,
+    "maps": "passed individually against exact course bytes",
+    "pack": "complete schema and coverage checked by validate:content"
+  },
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": 18,
+    "spellcheck": "passed",
+    "privacy": "passed",
+    "independentCaseCheckpoints": 160,
+    "build": "passed"
+  },
+  "boundary": "Expert student and teacher review; no trial with a real class or normative programme conformity claim."
+}
