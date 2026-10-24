@@ -12,6 +12,7 @@
       "s07-01-queries-on-server-database-q01-contrast",
       "s07-01-queries-on-server-database-q01-warning",
       "s07-01-queries-on-server-database-q01-notebook",
+      "s07-01-queries-on-server-database-q01-case-input-1",
       "s07-01-queries-on-server-database-q01-case",
       "s07-01-queries-on-server-database-q01-T01-slide",
       "s07-01-queries-on-server-database-q01-T02-slide",
@@ -32,7 +33,8 @@
       "s07-01-queries-on-server-database-q01-contrast",
       "s07-01-queries-on-server-database-q01-warning",
       "s07-01-queries-on-server-database-q01-notebook",
-      "s07-01-queries-on-server-database-q01-explanation-2"
+      "s07-01-queries-on-server-database-q01-explanation-2",
+      "s07-01-queries-on-server-database-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -49,6 +51,8 @@
       "s07-01-queries-on-server-database-q02-contrast",
       "s07-01-queries-on-server-database-q02-warning",
       "s07-01-queries-on-server-database-q02-notebook",
+      "s07-01-queries-on-server-database-q02-case-input-1",
+      "s07-01-queries-on-server-database-q02-case-input-2",
       "s07-01-queries-on-server-database-q02-case",
       "s07-01-queries-on-server-database-q02-T01-slide",
       "s07-01-queries-on-server-database-q02-T02-slide",
@@ -69,7 +73,9 @@
       "s07-01-queries-on-server-database-q02-contrast",
       "s07-01-queries-on-server-database-q02-warning",
       "s07-01-queries-on-server-database-q02-notebook",
-      "s07-01-queries-on-server-database-q02-explanation-2"
+      "s07-01-queries-on-server-database-q02-explanation-2",
+      "s07-01-queries-on-server-database-q02-case-input-1",
+      "s07-01-queries-on-server-database-q02-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -86,6 +92,8 @@
       "s07-01-queries-on-server-database-q03-contrast",
       "s07-01-queries-on-server-database-q03-warning",
       "s07-01-queries-on-server-database-q03-notebook",
+      "s07-01-queries-on-server-database-q03-case-input-1",
+      "s07-01-queries-on-server-database-q03-case-input-2",
       "s07-01-queries-on-server-database-q03-case",
       "s07-01-queries-on-server-database-q03-T01-slide",
       "s07-01-queries-on-server-database-q03-T02-slide",
@@ -106,7 +114,9 @@
       "s07-01-queries-on-server-database-q03-contrast",
       "s07-01-queries-on-server-database-q03-warning",
       "s07-01-queries-on-server-database-q03-notebook",
-      "s07-01-queries-on-server-database-q03-explanation-2"
+      "s07-01-queries-on-server-database-q03-explanation-2",
+      "s07-01-queries-on-server-database-q03-case-input-1",
+      "s07-01-queries-on-server-database-q03-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -123,6 +133,8 @@
       "s07-01-queries-on-server-database-q04-contrast",
       "s07-01-queries-on-server-database-q04-warning",
       "s07-01-queries-on-server-database-q04-notebook",
+      "s07-01-queries-on-server-database-q04-case-input-1",
+      "s07-01-queries-on-server-database-q04-case-input-2",
       "s07-01-queries-on-server-database-q04-case",
       "s07-01-queries-on-server-database-q04-T01-slide",
       "s07-01-queries-on-server-database-q04-T02-slide",
@@ -143,7 +155,9 @@
       "s07-01-queries-on-server-database-q04-contrast",
       "s07-01-queries-on-server-database-q04-warning",
       "s07-01-queries-on-server-database-q04-notebook",
-      "s07-01-queries-on-server-database-q04-explanation-2"
+      "s07-01-queries-on-server-database-q04-explanation-2",
+      "s07-01-queries-on-server-database-q04-case-input-1",
+      "s07-01-queries-on-server-database-q04-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -160,6 +174,7 @@
       "s07-01-queries-on-server-database-q05-contrast",
       "s07-01-queries-on-server-database-q05-warning",
       "s07-01-queries-on-server-database-q05-notebook",
+      "s07-01-queries-on-server-database-q05-case-input-1",
       "s07-01-queries-on-server-database-q05-case",
       "s07-01-queries-on-server-database-q05-T01-slide",
       "s07-01-queries-on-server-database-q05-T02-slide",
@@ -180,7 +195,8 @@
       "s07-01-queries-on-server-database-q05-contrast",
       "s07-01-queries-on-server-database-q05-warning",
       "s07-01-queries-on-server-database-q05-notebook",
-      "s07-01-queries-on-server-database-q05-explanation-2"
+      "s07-01-queries-on-server-database-q05-explanation-2",
+      "s07-01-queries-on-server-database-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -197,6 +213,7 @@
       "s07-01-queries-on-server-database-q06-contrast",
       "s07-01-queries-on-server-database-q06-warning",
       "s07-01-queries-on-server-database-q06-notebook",
+      "s07-01-queries-on-server-database-q06-case-input-1",
       "s07-01-queries-on-server-database-q06-case",
       "s07-01-queries-on-server-database-q06-T01-slide",
       "s07-01-queries-on-server-database-q06-T02-slide",
@@ -217,7 +234,8 @@
       "s07-01-queries-on-server-database-q06-contrast",
       "s07-01-queries-on-server-database-q06-warning",
       "s07-01-queries-on-server-database-q06-notebook",
-      "s07-01-queries-on-server-database-q06-explanation-2"
+      "s07-01-queries-on-server-database-q06-explanation-2",
+      "s07-01-queries-on-server-database-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -234,6 +252,8 @@
       "s07-01-queries-on-server-database-q07-contrast",
       "s07-01-queries-on-server-database-q07-warning",
       "s07-01-queries-on-server-database-q07-notebook",
+      "s07-01-queries-on-server-database-q07-case-input-1",
+      "s07-01-queries-on-server-database-q07-case-input-2",
       "s07-01-queries-on-server-database-q07-case",
       "s07-01-queries-on-server-database-q07-T01-slide",
       "s07-01-queries-on-server-database-q07-T02-slide",
@@ -254,7 +274,9 @@
       "s07-01-queries-on-server-database-q07-contrast",
       "s07-01-queries-on-server-database-q07-warning",
       "s07-01-queries-on-server-database-q07-notebook",
-      "s07-01-queries-on-server-database-q07-explanation-2"
+      "s07-01-queries-on-server-database-q07-explanation-2",
+      "s07-01-queries-on-server-database-q07-case-input-1",
+      "s07-01-queries-on-server-database-q07-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -271,6 +293,8 @@
       "s07-01-queries-on-server-database-q08-contrast",
       "s07-01-queries-on-server-database-q08-warning",
       "s07-01-queries-on-server-database-q08-notebook",
+      "s07-01-queries-on-server-database-q08-case-input-1",
+      "s07-01-queries-on-server-database-q08-case-input-2",
       "s07-01-queries-on-server-database-q08-case",
       "s07-01-queries-on-server-database-q08-T01-slide",
       "s07-01-queries-on-server-database-q08-T02-slide",
@@ -291,7 +315,9 @@
       "s07-01-queries-on-server-database-q08-contrast",
       "s07-01-queries-on-server-database-q08-warning",
       "s07-01-queries-on-server-database-q08-notebook",
-      "s07-01-queries-on-server-database-q08-explanation-2"
+      "s07-01-queries-on-server-database-q08-explanation-2",
+      "s07-01-queries-on-server-database-q08-case-input-1",
+      "s07-01-queries-on-server-database-q08-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -308,6 +334,8 @@
       "s07-02-calculation-query-q01-contrast",
       "s07-02-calculation-query-q01-warning",
       "s07-02-calculation-query-q01-notebook",
+      "s07-02-calculation-query-q01-case-input-1",
+      "s07-02-calculation-query-q01-case-input-2",
       "s07-02-calculation-query-q01-case",
       "s07-02-calculation-query-q01-T01-slide",
       "s07-02-calculation-query-q01-T02-slide",
@@ -328,7 +356,9 @@
       "s07-02-calculation-query-q01-contrast",
       "s07-02-calculation-query-q01-warning",
       "s07-02-calculation-query-q01-notebook",
-      "s07-02-calculation-query-q01-explanation-2"
+      "s07-02-calculation-query-q01-explanation-2",
+      "s07-02-calculation-query-q01-case-input-1",
+      "s07-02-calculation-query-q01-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -345,6 +375,8 @@
       "s07-02-calculation-query-q02-contrast",
       "s07-02-calculation-query-q02-warning",
       "s07-02-calculation-query-q02-notebook",
+      "s07-02-calculation-query-q02-case-input-1",
+      "s07-02-calculation-query-q02-case-input-2",
       "s07-02-calculation-query-q02-case",
       "s07-02-calculation-query-q02-T01-slide",
       "s07-02-calculation-query-q02-T02-slide",
@@ -365,7 +397,9 @@
       "s07-02-calculation-query-q02-contrast",
       "s07-02-calculation-query-q02-warning",
       "s07-02-calculation-query-q02-notebook",
-      "s07-02-calculation-query-q02-explanation-2"
+      "s07-02-calculation-query-q02-explanation-2",
+      "s07-02-calculation-query-q02-case-input-1",
+      "s07-02-calculation-query-q02-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -382,6 +416,7 @@
       "s07-02-calculation-query-q03-contrast",
       "s07-02-calculation-query-q03-warning",
       "s07-02-calculation-query-q03-notebook",
+      "s07-02-calculation-query-q03-case-input-1",
       "s07-02-calculation-query-q03-case",
       "s07-02-calculation-query-q03-T01-slide",
       "s07-02-calculation-query-q03-T02-slide",
@@ -402,7 +437,8 @@
       "s07-02-calculation-query-q03-contrast",
       "s07-02-calculation-query-q03-warning",
       "s07-02-calculation-query-q03-notebook",
-      "s07-02-calculation-query-q03-explanation-2"
+      "s07-02-calculation-query-q03-explanation-2",
+      "s07-02-calculation-query-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -419,6 +455,7 @@
       "s07-02-calculation-query-q04-contrast",
       "s07-02-calculation-query-q04-warning",
       "s07-02-calculation-query-q04-notebook",
+      "s07-02-calculation-query-q04-case-input-1",
       "s07-02-calculation-query-q04-case",
       "s07-02-calculation-query-q04-T01-slide",
       "s07-02-calculation-query-q04-T02-slide",
@@ -439,7 +476,8 @@
       "s07-02-calculation-query-q04-contrast",
       "s07-02-calculation-query-q04-warning",
       "s07-02-calculation-query-q04-notebook",
-      "s07-02-calculation-query-q04-explanation-2"
+      "s07-02-calculation-query-q04-explanation-2",
+      "s07-02-calculation-query-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -456,6 +494,7 @@
       "s07-02-calculation-query-q05-contrast",
       "s07-02-calculation-query-q05-warning",
       "s07-02-calculation-query-q05-notebook",
+      "s07-02-calculation-query-q05-case-input-1",
       "s07-02-calculation-query-q05-case",
       "s07-02-calculation-query-q05-T01-slide",
       "s07-02-calculation-query-q05-T02-slide",
@@ -476,7 +515,8 @@
       "s07-02-calculation-query-q05-contrast",
       "s07-02-calculation-query-q05-warning",
       "s07-02-calculation-query-q05-notebook",
-      "s07-02-calculation-query-q05-explanation-2"
+      "s07-02-calculation-query-q05-explanation-2",
+      "s07-02-calculation-query-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -493,6 +533,7 @@
       "s07-02-calculation-query-q06-contrast",
       "s07-02-calculation-query-q06-warning",
       "s07-02-calculation-query-q06-notebook",
+      "s07-02-calculation-query-q06-case-input-1",
       "s07-02-calculation-query-q06-case",
       "s07-02-calculation-query-q06-T01-slide",
       "s07-02-calculation-query-q06-T02-slide",
@@ -513,7 +554,8 @@
       "s07-02-calculation-query-q06-contrast",
       "s07-02-calculation-query-q06-warning",
       "s07-02-calculation-query-q06-notebook",
-      "s07-02-calculation-query-q06-explanation-2"
+      "s07-02-calculation-query-q06-explanation-2",
+      "s07-02-calculation-query-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -530,6 +572,7 @@
       "s07-02-calculation-query-q07-contrast",
       "s07-02-calculation-query-q07-warning",
       "s07-02-calculation-query-q07-notebook",
+      "s07-02-calculation-query-q07-case-input-1",
       "s07-02-calculation-query-q07-case",
       "s07-02-calculation-query-q07-T01-slide",
       "s07-02-calculation-query-q07-T02-slide",
@@ -550,7 +593,8 @@
       "s07-02-calculation-query-q07-contrast",
       "s07-02-calculation-query-q07-warning",
       "s07-02-calculation-query-q07-notebook",
-      "s07-02-calculation-query-q07-explanation-2"
+      "s07-02-calculation-query-q07-explanation-2",
+      "s07-02-calculation-query-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -567,6 +611,7 @@
       "s07-02-calculation-query-q08-contrast",
       "s07-02-calculation-query-q08-warning",
       "s07-02-calculation-query-q08-notebook",
+      "s07-02-calculation-query-q08-case-input-1",
       "s07-02-calculation-query-q08-case",
       "s07-02-calculation-query-q08-T01-slide",
       "s07-02-calculation-query-q08-T02-slide",
@@ -587,7 +632,8 @@
       "s07-02-calculation-query-q08-contrast",
       "s07-02-calculation-query-q08-warning",
       "s07-02-calculation-query-q08-notebook",
-      "s07-02-calculation-query-q08-explanation-2"
+      "s07-02-calculation-query-q08-explanation-2",
+      "s07-02-calculation-query-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -604,6 +650,7 @@
       "s07-03-procedures-and-triggers-q01-contrast",
       "s07-03-procedures-and-triggers-q01-warning",
       "s07-03-procedures-and-triggers-q01-notebook",
+      "s07-03-procedures-and-triggers-q01-case-input-1",
       "s07-03-procedures-and-triggers-q01-case",
       "s07-03-procedures-and-triggers-q01-T01-slide",
       "s07-03-procedures-and-triggers-q01-T02-slide",
@@ -624,7 +671,8 @@
       "s07-03-procedures-and-triggers-q01-contrast",
       "s07-03-procedures-and-triggers-q01-warning",
       "s07-03-procedures-and-triggers-q01-notebook",
-      "s07-03-procedures-and-triggers-q01-explanation-2"
+      "s07-03-procedures-and-triggers-q01-explanation-2",
+      "s07-03-procedures-and-triggers-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -641,6 +689,7 @@
       "s07-03-procedures-and-triggers-q02-contrast",
       "s07-03-procedures-and-triggers-q02-warning",
       "s07-03-procedures-and-triggers-q02-notebook",
+      "s07-03-procedures-and-triggers-q02-case-input-1",
       "s07-03-procedures-and-triggers-q02-case",
       "s07-03-procedures-and-triggers-q02-T01-slide",
       "s07-03-procedures-and-triggers-q02-T02-slide",
@@ -661,7 +710,8 @@
       "s07-03-procedures-and-triggers-q02-contrast",
       "s07-03-procedures-and-triggers-q02-warning",
       "s07-03-procedures-and-triggers-q02-notebook",
-      "s07-03-procedures-and-triggers-q02-explanation-2"
+      "s07-03-procedures-and-triggers-q02-explanation-2",
+      "s07-03-procedures-and-triggers-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -678,6 +728,7 @@
       "s07-03-procedures-and-triggers-q03-contrast",
       "s07-03-procedures-and-triggers-q03-warning",
       "s07-03-procedures-and-triggers-q03-notebook",
+      "s07-03-procedures-and-triggers-q03-case-input-1",
       "s07-03-procedures-and-triggers-q03-case",
       "s07-03-procedures-and-triggers-q03-T01-slide",
       "s07-03-procedures-and-triggers-q03-T02-slide",
@@ -698,7 +749,8 @@
       "s07-03-procedures-and-triggers-q03-contrast",
       "s07-03-procedures-and-triggers-q03-warning",
       "s07-03-procedures-and-triggers-q03-notebook",
-      "s07-03-procedures-and-triggers-q03-explanation-2"
+      "s07-03-procedures-and-triggers-q03-explanation-2",
+      "s07-03-procedures-and-triggers-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -715,6 +767,7 @@
       "s07-03-procedures-and-triggers-q04-contrast",
       "s07-03-procedures-and-triggers-q04-warning",
       "s07-03-procedures-and-triggers-q04-notebook",
+      "s07-03-procedures-and-triggers-q04-case-input-1",
       "s07-03-procedures-and-triggers-q04-case",
       "s07-03-procedures-and-triggers-q04-T01-slide",
       "s07-03-procedures-and-triggers-q04-T02-slide",
@@ -735,7 +788,8 @@
       "s07-03-procedures-and-triggers-q04-contrast",
       "s07-03-procedures-and-triggers-q04-warning",
       "s07-03-procedures-and-triggers-q04-notebook",
-      "s07-03-procedures-and-triggers-q04-explanation-2"
+      "s07-03-procedures-and-triggers-q04-explanation-2",
+      "s07-03-procedures-and-triggers-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -752,6 +806,7 @@
       "s07-03-procedures-and-triggers-q05-contrast",
       "s07-03-procedures-and-triggers-q05-warning",
       "s07-03-procedures-and-triggers-q05-notebook",
+      "s07-03-procedures-and-triggers-q05-case-input-1",
       "s07-03-procedures-and-triggers-q05-case",
       "s07-03-procedures-and-triggers-q05-T01-slide",
       "s07-03-procedures-and-triggers-q05-T02-slide",
@@ -772,7 +827,8 @@
       "s07-03-procedures-and-triggers-q05-contrast",
       "s07-03-procedures-and-triggers-q05-warning",
       "s07-03-procedures-and-triggers-q05-notebook",
-      "s07-03-procedures-and-triggers-q05-explanation-2"
+      "s07-03-procedures-and-triggers-q05-explanation-2",
+      "s07-03-procedures-and-triggers-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -789,6 +845,7 @@
       "s07-03-procedures-and-triggers-q06-contrast",
       "s07-03-procedures-and-triggers-q06-warning",
       "s07-03-procedures-and-triggers-q06-notebook",
+      "s07-03-procedures-and-triggers-q06-case-input-1",
       "s07-03-procedures-and-triggers-q06-case",
       "s07-03-procedures-and-triggers-q06-T01-slide",
       "s07-03-procedures-and-triggers-q06-T02-slide",
@@ -809,7 +866,8 @@
       "s07-03-procedures-and-triggers-q06-contrast",
       "s07-03-procedures-and-triggers-q06-warning",
       "s07-03-procedures-and-triggers-q06-notebook",
-      "s07-03-procedures-and-triggers-q06-explanation-2"
+      "s07-03-procedures-and-triggers-q06-explanation-2",
+      "s07-03-procedures-and-triggers-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -826,6 +884,7 @@
       "s07-03-procedures-and-triggers-q07-contrast",
       "s07-03-procedures-and-triggers-q07-warning",
       "s07-03-procedures-and-triggers-q07-notebook",
+      "s07-03-procedures-and-triggers-q07-case-input-1",
       "s07-03-procedures-and-triggers-q07-case",
       "s07-03-procedures-and-triggers-q07-T01-slide",
       "s07-03-procedures-and-triggers-q07-T02-slide",
@@ -846,7 +905,8 @@
       "s07-03-procedures-and-triggers-q07-contrast",
       "s07-03-procedures-and-triggers-q07-warning",
       "s07-03-procedures-and-triggers-q07-notebook",
-      "s07-03-procedures-and-triggers-q07-explanation-2"
+      "s07-03-procedures-and-triggers-q07-explanation-2",
+      "s07-03-procedures-and-triggers-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -863,6 +923,7 @@
       "s07-03-procedures-and-triggers-q08-contrast",
       "s07-03-procedures-and-triggers-q08-warning",
       "s07-03-procedures-and-triggers-q08-notebook",
+      "s07-03-procedures-and-triggers-q08-case-input-1",
       "s07-03-procedures-and-triggers-q08-case",
       "s07-03-procedures-and-triggers-q08-T01-slide",
       "s07-03-procedures-and-triggers-q08-T02-slide",
@@ -883,7 +944,8 @@
       "s07-03-procedures-and-triggers-q08-contrast",
       "s07-03-procedures-and-triggers-q08-warning",
       "s07-03-procedures-and-triggers-q08-notebook",
-      "s07-03-procedures-and-triggers-q08-explanation-2"
+      "s07-03-procedures-and-triggers-q08-explanation-2",
+      "s07-03-procedures-and-triggers-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -900,6 +962,8 @@
       "s07-04-query-performance-and-indexes-q01-contrast",
       "s07-04-query-performance-and-indexes-q01-warning",
       "s07-04-query-performance-and-indexes-q01-notebook",
+      "s07-04-query-performance-and-indexes-q01-case-input-1",
+      "s07-04-query-performance-and-indexes-q01-case-input-2",
       "s07-04-query-performance-and-indexes-q01-case",
       "s07-04-query-performance-and-indexes-q01-T01-slide",
       "s07-04-query-performance-and-indexes-q01-T02-slide",
@@ -920,7 +984,9 @@
       "s07-04-query-performance-and-indexes-q01-contrast",
       "s07-04-query-performance-and-indexes-q01-warning",
       "s07-04-query-performance-and-indexes-q01-notebook",
-      "s07-04-query-performance-and-indexes-q01-explanation-2"
+      "s07-04-query-performance-and-indexes-q01-explanation-2",
+      "s07-04-query-performance-and-indexes-q01-case-input-1",
+      "s07-04-query-performance-and-indexes-q01-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -937,6 +1003,7 @@
       "s07-04-query-performance-and-indexes-q02-contrast",
       "s07-04-query-performance-and-indexes-q02-warning",
       "s07-04-query-performance-and-indexes-q02-notebook",
+      "s07-04-query-performance-and-indexes-q02-case-input-1",
       "s07-04-query-performance-and-indexes-q02-case",
       "s07-04-query-performance-and-indexes-q02-T01-slide",
       "s07-04-query-performance-and-indexes-q02-T02-slide",
@@ -957,7 +1024,8 @@
       "s07-04-query-performance-and-indexes-q02-contrast",
       "s07-04-query-performance-and-indexes-q02-warning",
       "s07-04-query-performance-and-indexes-q02-notebook",
-      "s07-04-query-performance-and-indexes-q02-explanation-2"
+      "s07-04-query-performance-and-indexes-q02-explanation-2",
+      "s07-04-query-performance-and-indexes-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -974,6 +1042,7 @@
       "s07-04-query-performance-and-indexes-q03-contrast",
       "s07-04-query-performance-and-indexes-q03-warning",
       "s07-04-query-performance-and-indexes-q03-notebook",
+      "s07-04-query-performance-and-indexes-q03-case-input-1",
       "s07-04-query-performance-and-indexes-q03-case",
       "s07-04-query-performance-and-indexes-q03-T01-slide",
       "s07-04-query-performance-and-indexes-q03-T02-slide",
@@ -994,7 +1063,8 @@
       "s07-04-query-performance-and-indexes-q03-contrast",
       "s07-04-query-performance-and-indexes-q03-warning",
       "s07-04-query-performance-and-indexes-q03-notebook",
-      "s07-04-query-performance-and-indexes-q03-explanation-2"
+      "s07-04-query-performance-and-indexes-q03-explanation-2",
+      "s07-04-query-performance-and-indexes-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1011,6 +1081,7 @@
       "s07-04-query-performance-and-indexes-q04-contrast",
       "s07-04-query-performance-and-indexes-q04-warning",
       "s07-04-query-performance-and-indexes-q04-notebook",
+      "s07-04-query-performance-and-indexes-q04-case-input-1",
       "s07-04-query-performance-and-indexes-q04-case",
       "s07-04-query-performance-and-indexes-q04-T01-slide",
       "s07-04-query-performance-and-indexes-q04-T02-slide",
@@ -1031,7 +1102,8 @@
       "s07-04-query-performance-and-indexes-q04-contrast",
       "s07-04-query-performance-and-indexes-q04-warning",
       "s07-04-query-performance-and-indexes-q04-notebook",
-      "s07-04-query-performance-and-indexes-q04-explanation-2"
+      "s07-04-query-performance-and-indexes-q04-explanation-2",
+      "s07-04-query-performance-and-indexes-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1048,6 +1120,7 @@
       "s07-04-query-performance-and-indexes-q05-contrast",
       "s07-04-query-performance-and-indexes-q05-warning",
       "s07-04-query-performance-and-indexes-q05-notebook",
+      "s07-04-query-performance-and-indexes-q05-case-input-1",
       "s07-04-query-performance-and-indexes-q05-case",
       "s07-04-query-performance-and-indexes-q05-T01-slide",
       "s07-04-query-performance-and-indexes-q05-T02-slide",
@@ -1068,7 +1141,8 @@
       "s07-04-query-performance-and-indexes-q05-contrast",
       "s07-04-query-performance-and-indexes-q05-warning",
       "s07-04-query-performance-and-indexes-q05-notebook",
-      "s07-04-query-performance-and-indexes-q05-explanation-2"
+      "s07-04-query-performance-and-indexes-q05-explanation-2",
+      "s07-04-query-performance-and-indexes-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1085,6 +1159,7 @@
       "s07-04-query-performance-and-indexes-q06-contrast",
       "s07-04-query-performance-and-indexes-q06-warning",
       "s07-04-query-performance-and-indexes-q06-notebook",
+      "s07-04-query-performance-and-indexes-q06-case-input-1",
       "s07-04-query-performance-and-indexes-q06-case",
       "s07-04-query-performance-and-indexes-q06-T01-slide",
       "s07-04-query-performance-and-indexes-q06-T02-slide",
@@ -1105,7 +1180,8 @@
       "s07-04-query-performance-and-indexes-q06-contrast",
       "s07-04-query-performance-and-indexes-q06-warning",
       "s07-04-query-performance-and-indexes-q06-notebook",
-      "s07-04-query-performance-and-indexes-q06-explanation-2"
+      "s07-04-query-performance-and-indexes-q06-explanation-2",
+      "s07-04-query-performance-and-indexes-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1122,6 +1198,7 @@
       "s07-04-query-performance-and-indexes-q07-contrast",
       "s07-04-query-performance-and-indexes-q07-warning",
       "s07-04-query-performance-and-indexes-q07-notebook",
+      "s07-04-query-performance-and-indexes-q07-case-input-1",
       "s07-04-query-performance-and-indexes-q07-case",
       "s07-04-query-performance-and-indexes-q07-T01-slide",
       "s07-04-query-performance-and-indexes-q07-T02-slide",
@@ -1142,7 +1219,8 @@
       "s07-04-query-performance-and-indexes-q07-contrast",
       "s07-04-query-performance-and-indexes-q07-warning",
       "s07-04-query-performance-and-indexes-q07-notebook",
-      "s07-04-query-performance-and-indexes-q07-explanation-2"
+      "s07-04-query-performance-and-indexes-q07-explanation-2",
+      "s07-04-query-performance-and-indexes-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1159,6 +1237,7 @@
       "s07-04-query-performance-and-indexes-q08-contrast",
       "s07-04-query-performance-and-indexes-q08-warning",
       "s07-04-query-performance-and-indexes-q08-notebook",
+      "s07-04-query-performance-and-indexes-q08-case-input-1",
       "s07-04-query-performance-and-indexes-q08-case",
       "s07-04-query-performance-and-indexes-q08-T01-slide",
       "s07-04-query-performance-and-indexes-q08-T02-slide",
@@ -1179,7 +1258,8 @@
       "s07-04-query-performance-and-indexes-q08-contrast",
       "s07-04-query-performance-and-indexes-q08-warning",
       "s07-04-query-performance-and-indexes-q08-notebook",
-      "s07-04-query-performance-and-indexes-q08-explanation-2"
+      "s07-04-query-performance-and-indexes-q08-explanation-2",
+      "s07-04-query-performance-and-indexes-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1196,6 +1276,7 @@
       "s07-05-server-and-network-requirements-q01-contrast",
       "s07-05-server-and-network-requirements-q01-warning",
       "s07-05-server-and-network-requirements-q01-notebook",
+      "s07-05-server-and-network-requirements-q01-case-input-1",
       "s07-05-server-and-network-requirements-q01-case",
       "s07-05-server-and-network-requirements-q01-T01-slide",
       "s07-05-server-and-network-requirements-q01-T02-slide",
@@ -1216,7 +1297,8 @@
       "s07-05-server-and-network-requirements-q01-contrast",
       "s07-05-server-and-network-requirements-q01-warning",
       "s07-05-server-and-network-requirements-q01-notebook",
-      "s07-05-server-and-network-requirements-q01-explanation-2"
+      "s07-05-server-and-network-requirements-q01-explanation-2",
+      "s07-05-server-and-network-requirements-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1233,6 +1315,7 @@
       "s07-05-server-and-network-requirements-q02-contrast",
       "s07-05-server-and-network-requirements-q02-warning",
       "s07-05-server-and-network-requirements-q02-notebook",
+      "s07-05-server-and-network-requirements-q02-case-input-1",
       "s07-05-server-and-network-requirements-q02-case",
       "s07-05-server-and-network-requirements-q02-T01-slide",
       "s07-05-server-and-network-requirements-q02-T02-slide",
@@ -1253,7 +1336,8 @@
       "s07-05-server-and-network-requirements-q02-contrast",
       "s07-05-server-and-network-requirements-q02-warning",
       "s07-05-server-and-network-requirements-q02-notebook",
-      "s07-05-server-and-network-requirements-q02-explanation-2"
+      "s07-05-server-and-network-requirements-q02-explanation-2",
+      "s07-05-server-and-network-requirements-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1270,6 +1354,7 @@
       "s07-05-server-and-network-requirements-q03-contrast",
       "s07-05-server-and-network-requirements-q03-warning",
       "s07-05-server-and-network-requirements-q03-notebook",
+      "s07-05-server-and-network-requirements-q03-case-input-1",
       "s07-05-server-and-network-requirements-q03-case",
       "s07-05-server-and-network-requirements-q03-T01-slide",
       "s07-05-server-and-network-requirements-q03-T02-slide",
@@ -1290,7 +1375,8 @@
       "s07-05-server-and-network-requirements-q03-contrast",
       "s07-05-server-and-network-requirements-q03-warning",
       "s07-05-server-and-network-requirements-q03-notebook",
-      "s07-05-server-and-network-requirements-q03-explanation-2"
+      "s07-05-server-and-network-requirements-q03-explanation-2",
+      "s07-05-server-and-network-requirements-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1307,6 +1393,8 @@
       "s07-05-server-and-network-requirements-q04-contrast",
       "s07-05-server-and-network-requirements-q04-warning",
       "s07-05-server-and-network-requirements-q04-notebook",
+      "s07-05-server-and-network-requirements-q04-case-input-1",
+      "s07-05-server-and-network-requirements-q04-case-input-2",
       "s07-05-server-and-network-requirements-q04-case",
       "s07-05-server-and-network-requirements-q04-T01-slide",
       "s07-05-server-and-network-requirements-q04-T02-slide",
@@ -1327,7 +1415,9 @@
       "s07-05-server-and-network-requirements-q04-contrast",
       "s07-05-server-and-network-requirements-q04-warning",
       "s07-05-server-and-network-requirements-q04-notebook",
-      "s07-05-server-and-network-requirements-q04-explanation-2"
+      "s07-05-server-and-network-requirements-q04-explanation-2",
+      "s07-05-server-and-network-requirements-q04-case-input-1",
+      "s07-05-server-and-network-requirements-q04-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1344,6 +1434,7 @@
       "s07-05-server-and-network-requirements-q05-contrast",
       "s07-05-server-and-network-requirements-q05-warning",
       "s07-05-server-and-network-requirements-q05-notebook",
+      "s07-05-server-and-network-requirements-q05-case-input-1",
       "s07-05-server-and-network-requirements-q05-case",
       "s07-05-server-and-network-requirements-q05-T01-slide",
       "s07-05-server-and-network-requirements-q05-T02-slide",
@@ -1364,7 +1455,8 @@
       "s07-05-server-and-network-requirements-q05-contrast",
       "s07-05-server-and-network-requirements-q05-warning",
       "s07-05-server-and-network-requirements-q05-notebook",
-      "s07-05-server-and-network-requirements-q05-explanation-2"
+      "s07-05-server-and-network-requirements-q05-explanation-2",
+      "s07-05-server-and-network-requirements-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1381,6 +1473,7 @@
       "s07-05-server-and-network-requirements-q06-contrast",
       "s07-05-server-and-network-requirements-q06-warning",
       "s07-05-server-and-network-requirements-q06-notebook",
+      "s07-05-server-and-network-requirements-q06-case-input-1",
       "s07-05-server-and-network-requirements-q06-case",
       "s07-05-server-and-network-requirements-q06-T01-slide",
       "s07-05-server-and-network-requirements-q06-T02-slide",
@@ -1401,7 +1494,8 @@
       "s07-05-server-and-network-requirements-q06-contrast",
       "s07-05-server-and-network-requirements-q06-warning",
       "s07-05-server-and-network-requirements-q06-notebook",
-      "s07-05-server-and-network-requirements-q06-explanation-2"
+      "s07-05-server-and-network-requirements-q06-explanation-2",
+      "s07-05-server-and-network-requirements-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1418,6 +1512,7 @@
       "s07-05-server-and-network-requirements-q07-contrast",
       "s07-05-server-and-network-requirements-q07-warning",
       "s07-05-server-and-network-requirements-q07-notebook",
+      "s07-05-server-and-network-requirements-q07-case-input-1",
       "s07-05-server-and-network-requirements-q07-case",
       "s07-05-server-and-network-requirements-q07-T01-slide",
       "s07-05-server-and-network-requirements-q07-T02-slide",
@@ -1438,7 +1533,8 @@
       "s07-05-server-and-network-requirements-q07-contrast",
       "s07-05-server-and-network-requirements-q07-warning",
       "s07-05-server-and-network-requirements-q07-notebook",
-      "s07-05-server-and-network-requirements-q07-explanation-2"
+      "s07-05-server-and-network-requirements-q07-explanation-2",
+      "s07-05-server-and-network-requirements-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1455,6 +1551,8 @@
       "s07-05-server-and-network-requirements-q08-contrast",
       "s07-05-server-and-network-requirements-q08-warning",
       "s07-05-server-and-network-requirements-q08-notebook",
+      "s07-05-server-and-network-requirements-q08-case-input-1",
+      "s07-05-server-and-network-requirements-q08-case-input-2",
       "s07-05-server-and-network-requirements-q08-case",
       "s07-05-server-and-network-requirements-q08-T01-slide",
       "s07-05-server-and-network-requirements-q08-T02-slide",
@@ -1475,7 +1573,9 @@
       "s07-05-server-and-network-requirements-q08-contrast",
       "s07-05-server-and-network-requirements-q08-warning",
       "s07-05-server-and-network-requirements-q08-notebook",
-      "s07-05-server-and-network-requirements-q08-explanation-2"
+      "s07-05-server-and-network-requirements-q08-explanation-2",
+      "s07-05-server-and-network-requirements-q08-case-input-1",
+      "s07-05-server-and-network-requirements-q08-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1492,6 +1592,7 @@
       "s08-01-server-metrics-q01-contrast",
       "s08-01-server-metrics-q01-warning",
       "s08-01-server-metrics-q01-notebook",
+      "s08-01-server-metrics-q01-case-input-1",
       "s08-01-server-metrics-q01-case",
       "s08-01-server-metrics-q01-T01-slide",
       "s08-01-server-metrics-q01-T02-slide",
@@ -1512,7 +1613,8 @@
       "s08-01-server-metrics-q01-contrast",
       "s08-01-server-metrics-q01-warning",
       "s08-01-server-metrics-q01-notebook",
-      "s08-01-server-metrics-q01-explanation-2"
+      "s08-01-server-metrics-q01-explanation-2",
+      "s08-01-server-metrics-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1529,6 +1631,7 @@
       "s08-01-server-metrics-q02-contrast",
       "s08-01-server-metrics-q02-warning",
       "s08-01-server-metrics-q02-notebook",
+      "s08-01-server-metrics-q02-case-input-1",
       "s08-01-server-metrics-q02-case",
       "s08-01-server-metrics-q02-T01-slide",
       "s08-01-server-metrics-q02-T02-slide",
@@ -1549,7 +1652,8 @@
       "s08-01-server-metrics-q02-contrast",
       "s08-01-server-metrics-q02-warning",
       "s08-01-server-metrics-q02-notebook",
-      "s08-01-server-metrics-q02-explanation-2"
+      "s08-01-server-metrics-q02-explanation-2",
+      "s08-01-server-metrics-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1566,6 +1670,7 @@
       "s08-01-server-metrics-q03-contrast",
       "s08-01-server-metrics-q03-warning",
       "s08-01-server-metrics-q03-notebook",
+      "s08-01-server-metrics-q03-case-input-1",
       "s08-01-server-metrics-q03-case",
       "s08-01-server-metrics-q03-T01-slide",
       "s08-01-server-metrics-q03-T02-slide",
@@ -1586,7 +1691,8 @@
       "s08-01-server-metrics-q03-contrast",
       "s08-01-server-metrics-q03-warning",
       "s08-01-server-metrics-q03-notebook",
-      "s08-01-server-metrics-q03-explanation-2"
+      "s08-01-server-metrics-q03-explanation-2",
+      "s08-01-server-metrics-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1603,6 +1709,7 @@
       "s08-01-server-metrics-q04-contrast",
       "s08-01-server-metrics-q04-warning",
       "s08-01-server-metrics-q04-notebook",
+      "s08-01-server-metrics-q04-case-input-1",
       "s08-01-server-metrics-q04-case",
       "s08-01-server-metrics-q04-T01-slide",
       "s08-01-server-metrics-q04-T02-slide",
@@ -1623,7 +1730,8 @@
       "s08-01-server-metrics-q04-contrast",
       "s08-01-server-metrics-q04-warning",
       "s08-01-server-metrics-q04-notebook",
-      "s08-01-server-metrics-q04-explanation-2"
+      "s08-01-server-metrics-q04-explanation-2",
+      "s08-01-server-metrics-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1640,6 +1748,7 @@
       "s08-01-server-metrics-q05-contrast",
       "s08-01-server-metrics-q05-warning",
       "s08-01-server-metrics-q05-notebook",
+      "s08-01-server-metrics-q05-case-input-1",
       "s08-01-server-metrics-q05-case",
       "s08-01-server-metrics-q05-T01-slide",
       "s08-01-server-metrics-q05-T02-slide",
@@ -1660,7 +1769,8 @@
       "s08-01-server-metrics-q05-contrast",
       "s08-01-server-metrics-q05-warning",
       "s08-01-server-metrics-q05-notebook",
-      "s08-01-server-metrics-q05-explanation-2"
+      "s08-01-server-metrics-q05-explanation-2",
+      "s08-01-server-metrics-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1677,6 +1787,7 @@
       "s08-01-server-metrics-q06-contrast",
       "s08-01-server-metrics-q06-warning",
       "s08-01-server-metrics-q06-notebook",
+      "s08-01-server-metrics-q06-case-input-1",
       "s08-01-server-metrics-q06-case",
       "s08-01-server-metrics-q06-T01-slide",
       "s08-01-server-metrics-q06-T02-slide",
@@ -1697,7 +1808,8 @@
       "s08-01-server-metrics-q06-contrast",
       "s08-01-server-metrics-q06-warning",
       "s08-01-server-metrics-q06-notebook",
-      "s08-01-server-metrics-q06-explanation-2"
+      "s08-01-server-metrics-q06-explanation-2",
+      "s08-01-server-metrics-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1714,6 +1826,7 @@
       "s08-01-server-metrics-q07-contrast",
       "s08-01-server-metrics-q07-warning",
       "s08-01-server-metrics-q07-notebook",
+      "s08-01-server-metrics-q07-case-input-1",
       "s08-01-server-metrics-q07-case",
       "s08-01-server-metrics-q07-T01-slide",
       "s08-01-server-metrics-q07-T02-slide",
@@ -1734,7 +1847,8 @@
       "s08-01-server-metrics-q07-contrast",
       "s08-01-server-metrics-q07-warning",
       "s08-01-server-metrics-q07-notebook",
-      "s08-01-server-metrics-q07-explanation-2"
+      "s08-01-server-metrics-q07-explanation-2",
+      "s08-01-server-metrics-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1751,6 +1865,7 @@
       "s08-01-server-metrics-q08-contrast",
       "s08-01-server-metrics-q08-warning",
       "s08-01-server-metrics-q08-notebook",
+      "s08-01-server-metrics-q08-case-input-1",
       "s08-01-server-metrics-q08-case",
       "s08-01-server-metrics-q08-T01-slide",
       "s08-01-server-metrics-q08-T02-slide",
@@ -1771,7 +1886,8 @@
       "s08-01-server-metrics-q08-contrast",
       "s08-01-server-metrics-q08-warning",
       "s08-01-server-metrics-q08-notebook",
-      "s08-01-server-metrics-q08-explanation-2"
+      "s08-01-server-metrics-q08-explanation-2",
+      "s08-01-server-metrics-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1788,6 +1904,7 @@
       "s08-02-metrics-collection-q01-contrast",
       "s08-02-metrics-collection-q01-warning",
       "s08-02-metrics-collection-q01-notebook",
+      "s08-02-metrics-collection-q01-case-input-1",
       "s08-02-metrics-collection-q01-case",
       "s08-02-metrics-collection-q01-T01-slide",
       "s08-02-metrics-collection-q01-T02-slide",
@@ -1808,7 +1925,8 @@
       "s08-02-metrics-collection-q01-contrast",
       "s08-02-metrics-collection-q01-warning",
       "s08-02-metrics-collection-q01-notebook",
-      "s08-02-metrics-collection-q01-explanation-2"
+      "s08-02-metrics-collection-q01-explanation-2",
+      "s08-02-metrics-collection-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1825,6 +1943,7 @@
       "s08-02-metrics-collection-q02-contrast",
       "s08-02-metrics-collection-q02-warning",
       "s08-02-metrics-collection-q02-notebook",
+      "s08-02-metrics-collection-q02-case-input-1",
       "s08-02-metrics-collection-q02-case",
       "s08-02-metrics-collection-q02-T01-slide",
       "s08-02-metrics-collection-q02-T02-slide",
@@ -1845,7 +1964,8 @@
       "s08-02-metrics-collection-q02-contrast",
       "s08-02-metrics-collection-q02-warning",
       "s08-02-metrics-collection-q02-notebook",
-      "s08-02-metrics-collection-q02-explanation-2"
+      "s08-02-metrics-collection-q02-explanation-2",
+      "s08-02-metrics-collection-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1862,6 +1982,7 @@
       "s08-02-metrics-collection-q03-contrast",
       "s08-02-metrics-collection-q03-warning",
       "s08-02-metrics-collection-q03-notebook",
+      "s08-02-metrics-collection-q03-case-input-1",
       "s08-02-metrics-collection-q03-case",
       "s08-02-metrics-collection-q03-T01-slide",
       "s08-02-metrics-collection-q03-T02-slide",
@@ -1882,7 +2003,8 @@
       "s08-02-metrics-collection-q03-contrast",
       "s08-02-metrics-collection-q03-warning",
       "s08-02-metrics-collection-q03-notebook",
-      "s08-02-metrics-collection-q03-explanation-2"
+      "s08-02-metrics-collection-q03-explanation-2",
+      "s08-02-metrics-collection-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1899,6 +2021,7 @@
       "s08-02-metrics-collection-q04-contrast",
       "s08-02-metrics-collection-q04-warning",
       "s08-02-metrics-collection-q04-notebook",
+      "s08-02-metrics-collection-q04-case-input-1",
       "s08-02-metrics-collection-q04-case",
       "s08-02-metrics-collection-q04-T01-slide",
       "s08-02-metrics-collection-q04-T02-slide",
@@ -1919,7 +2042,8 @@
       "s08-02-metrics-collection-q04-contrast",
       "s08-02-metrics-collection-q04-warning",
       "s08-02-metrics-collection-q04-notebook",
-      "s08-02-metrics-collection-q04-explanation-2"
+      "s08-02-metrics-collection-q04-explanation-2",
+      "s08-02-metrics-collection-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1936,6 +2060,7 @@
       "s08-02-metrics-collection-q05-contrast",
       "s08-02-metrics-collection-q05-warning",
       "s08-02-metrics-collection-q05-notebook",
+      "s08-02-metrics-collection-q05-case-input-1",
       "s08-02-metrics-collection-q05-case",
       "s08-02-metrics-collection-q05-T01-slide",
       "s08-02-metrics-collection-q05-T02-slide",
@@ -1956,7 +2081,8 @@
       "s08-02-metrics-collection-q05-contrast",
       "s08-02-metrics-collection-q05-warning",
       "s08-02-metrics-collection-q05-notebook",
-      "s08-02-metrics-collection-q05-explanation-2"
+      "s08-02-metrics-collection-q05-explanation-2",
+      "s08-02-metrics-collection-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -1973,6 +2099,7 @@
       "s08-02-metrics-collection-q06-contrast",
       "s08-02-metrics-collection-q06-warning",
       "s08-02-metrics-collection-q06-notebook",
+      "s08-02-metrics-collection-q06-case-input-1",
       "s08-02-metrics-collection-q06-case",
       "s08-02-metrics-collection-q06-T01-slide",
       "s08-02-metrics-collection-q06-T02-slide",
@@ -1993,7 +2120,8 @@
       "s08-02-metrics-collection-q06-contrast",
       "s08-02-metrics-collection-q06-warning",
       "s08-02-metrics-collection-q06-notebook",
-      "s08-02-metrics-collection-q06-explanation-2"
+      "s08-02-metrics-collection-q06-explanation-2",
+      "s08-02-metrics-collection-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2010,6 +2138,7 @@
       "s08-02-metrics-collection-q07-contrast",
       "s08-02-metrics-collection-q07-warning",
       "s08-02-metrics-collection-q07-notebook",
+      "s08-02-metrics-collection-q07-case-input-1",
       "s08-02-metrics-collection-q07-case",
       "s08-02-metrics-collection-q07-T01-slide",
       "s08-02-metrics-collection-q07-T02-slide",
@@ -2030,7 +2159,8 @@
       "s08-02-metrics-collection-q07-contrast",
       "s08-02-metrics-collection-q07-warning",
       "s08-02-metrics-collection-q07-notebook",
-      "s08-02-metrics-collection-q07-explanation-2"
+      "s08-02-metrics-collection-q07-explanation-2",
+      "s08-02-metrics-collection-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2047,6 +2177,7 @@
       "s08-02-metrics-collection-q08-contrast",
       "s08-02-metrics-collection-q08-warning",
       "s08-02-metrics-collection-q08-notebook",
+      "s08-02-metrics-collection-q08-case-input-1",
       "s08-02-metrics-collection-q08-case",
       "s08-02-metrics-collection-q08-T01-slide",
       "s08-02-metrics-collection-q08-T02-slide",
@@ -2067,7 +2198,8 @@
       "s08-02-metrics-collection-q08-contrast",
       "s08-02-metrics-collection-q08-warning",
       "s08-02-metrics-collection-q08-notebook",
-      "s08-02-metrics-collection-q08-explanation-2"
+      "s08-02-metrics-collection-q08-explanation-2",
+      "s08-02-metrics-collection-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2084,6 +2216,7 @@
       "s08-03-dashboard-and-alerting-q01-contrast",
       "s08-03-dashboard-and-alerting-q01-warning",
       "s08-03-dashboard-and-alerting-q01-notebook",
+      "s08-03-dashboard-and-alerting-q01-case-input-1",
       "s08-03-dashboard-and-alerting-q01-case",
       "s08-03-dashboard-and-alerting-q01-T01-slide",
       "s08-03-dashboard-and-alerting-q01-T02-slide",
@@ -2104,7 +2237,8 @@
       "s08-03-dashboard-and-alerting-q01-contrast",
       "s08-03-dashboard-and-alerting-q01-warning",
       "s08-03-dashboard-and-alerting-q01-notebook",
-      "s08-03-dashboard-and-alerting-q01-explanation-2"
+      "s08-03-dashboard-and-alerting-q01-explanation-2",
+      "s08-03-dashboard-and-alerting-q01-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2121,6 +2255,7 @@
       "s08-03-dashboard-and-alerting-q02-contrast",
       "s08-03-dashboard-and-alerting-q02-warning",
       "s08-03-dashboard-and-alerting-q02-notebook",
+      "s08-03-dashboard-and-alerting-q02-case-input-1",
       "s08-03-dashboard-and-alerting-q02-case",
       "s08-03-dashboard-and-alerting-q02-T01-slide",
       "s08-03-dashboard-and-alerting-q02-T02-slide",
@@ -2141,7 +2276,8 @@
       "s08-03-dashboard-and-alerting-q02-contrast",
       "s08-03-dashboard-and-alerting-q02-warning",
       "s08-03-dashboard-and-alerting-q02-notebook",
-      "s08-03-dashboard-and-alerting-q02-explanation-2"
+      "s08-03-dashboard-and-alerting-q02-explanation-2",
+      "s08-03-dashboard-and-alerting-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2158,6 +2294,7 @@
       "s08-03-dashboard-and-alerting-q03-contrast",
       "s08-03-dashboard-and-alerting-q03-warning",
       "s08-03-dashboard-and-alerting-q03-notebook",
+      "s08-03-dashboard-and-alerting-q03-case-input-1",
       "s08-03-dashboard-and-alerting-q03-case",
       "s08-03-dashboard-and-alerting-q03-T01-slide",
       "s08-03-dashboard-and-alerting-q03-T02-slide",
@@ -2178,7 +2315,8 @@
       "s08-03-dashboard-and-alerting-q03-contrast",
       "s08-03-dashboard-and-alerting-q03-warning",
       "s08-03-dashboard-and-alerting-q03-notebook",
-      "s08-03-dashboard-and-alerting-q03-explanation-2"
+      "s08-03-dashboard-and-alerting-q03-explanation-2",
+      "s08-03-dashboard-and-alerting-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2195,6 +2333,8 @@
       "s08-03-dashboard-and-alerting-q04-contrast",
       "s08-03-dashboard-and-alerting-q04-warning",
       "s08-03-dashboard-and-alerting-q04-notebook",
+      "s08-03-dashboard-and-alerting-q04-case-input-1",
+      "s08-03-dashboard-and-alerting-q04-case-input-2",
       "s08-03-dashboard-and-alerting-q04-case",
       "s08-03-dashboard-and-alerting-q04-T01-slide",
       "s08-03-dashboard-and-alerting-q04-T02-slide",
@@ -2215,7 +2355,9 @@
       "s08-03-dashboard-and-alerting-q04-contrast",
       "s08-03-dashboard-and-alerting-q04-warning",
       "s08-03-dashboard-and-alerting-q04-notebook",
-      "s08-03-dashboard-and-alerting-q04-explanation-2"
+      "s08-03-dashboard-and-alerting-q04-explanation-2",
+      "s08-03-dashboard-and-alerting-q04-case-input-1",
+      "s08-03-dashboard-and-alerting-q04-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2232,6 +2374,7 @@
       "s08-03-dashboard-and-alerting-q05-contrast",
       "s08-03-dashboard-and-alerting-q05-warning",
       "s08-03-dashboard-and-alerting-q05-notebook",
+      "s08-03-dashboard-and-alerting-q05-case-input-1",
       "s08-03-dashboard-and-alerting-q05-case",
       "s08-03-dashboard-and-alerting-q05-T01-slide",
       "s08-03-dashboard-and-alerting-q05-T02-slide",
@@ -2252,7 +2395,8 @@
       "s08-03-dashboard-and-alerting-q05-contrast",
       "s08-03-dashboard-and-alerting-q05-warning",
       "s08-03-dashboard-and-alerting-q05-notebook",
-      "s08-03-dashboard-and-alerting-q05-explanation-2"
+      "s08-03-dashboard-and-alerting-q05-explanation-2",
+      "s08-03-dashboard-and-alerting-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2269,6 +2413,7 @@
       "s08-03-dashboard-and-alerting-q06-contrast",
       "s08-03-dashboard-and-alerting-q06-warning",
       "s08-03-dashboard-and-alerting-q06-notebook",
+      "s08-03-dashboard-and-alerting-q06-case-input-1",
       "s08-03-dashboard-and-alerting-q06-case",
       "s08-03-dashboard-and-alerting-q06-T01-slide",
       "s08-03-dashboard-and-alerting-q06-T02-slide",
@@ -2289,7 +2434,8 @@
       "s08-03-dashboard-and-alerting-q06-contrast",
       "s08-03-dashboard-and-alerting-q06-warning",
       "s08-03-dashboard-and-alerting-q06-notebook",
-      "s08-03-dashboard-and-alerting-q06-explanation-2"
+      "s08-03-dashboard-and-alerting-q06-explanation-2",
+      "s08-03-dashboard-and-alerting-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2306,6 +2452,7 @@
       "s08-03-dashboard-and-alerting-q07-contrast",
       "s08-03-dashboard-and-alerting-q07-warning",
       "s08-03-dashboard-and-alerting-q07-notebook",
+      "s08-03-dashboard-and-alerting-q07-case-input-1",
       "s08-03-dashboard-and-alerting-q07-case",
       "s08-03-dashboard-and-alerting-q07-T01-slide",
       "s08-03-dashboard-and-alerting-q07-T02-slide",
@@ -2326,7 +2473,8 @@
       "s08-03-dashboard-and-alerting-q07-contrast",
       "s08-03-dashboard-and-alerting-q07-warning",
       "s08-03-dashboard-and-alerting-q07-notebook",
-      "s08-03-dashboard-and-alerting-q07-explanation-2"
+      "s08-03-dashboard-and-alerting-q07-explanation-2",
+      "s08-03-dashboard-and-alerting-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2343,6 +2491,7 @@
       "s08-03-dashboard-and-alerting-q08-contrast",
       "s08-03-dashboard-and-alerting-q08-warning",
       "s08-03-dashboard-and-alerting-q08-notebook",
+      "s08-03-dashboard-and-alerting-q08-case-input-1",
       "s08-03-dashboard-and-alerting-q08-case",
       "s08-03-dashboard-and-alerting-q08-T01-slide",
       "s08-03-dashboard-and-alerting-q08-T02-slide",
@@ -2363,7 +2512,8 @@
       "s08-03-dashboard-and-alerting-q08-contrast",
       "s08-03-dashboard-and-alerting-q08-warning",
       "s08-03-dashboard-and-alerting-q08-notebook",
-      "s08-03-dashboard-and-alerting-q08-explanation-2"
+      "s08-03-dashboard-and-alerting-q08-explanation-2",
+      "s08-03-dashboard-and-alerting-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2380,6 +2530,8 @@
       "s08-04-incident-analysis-and-recovery-q01-contrast",
       "s08-04-incident-analysis-and-recovery-q01-warning",
       "s08-04-incident-analysis-and-recovery-q01-notebook",
+      "s08-04-incident-analysis-and-recovery-q01-case-input-1",
+      "s08-04-incident-analysis-and-recovery-q01-case-input-2",
       "s08-04-incident-analysis-and-recovery-q01-case",
       "s08-04-incident-analysis-and-recovery-q01-T01-slide",
       "s08-04-incident-analysis-and-recovery-q01-T02-slide",
@@ -2400,7 +2552,9 @@
       "s08-04-incident-analysis-and-recovery-q01-contrast",
       "s08-04-incident-analysis-and-recovery-q01-warning",
       "s08-04-incident-analysis-and-recovery-q01-notebook",
-      "s08-04-incident-analysis-and-recovery-q01-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q01-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q01-case-input-1",
+      "s08-04-incident-analysis-and-recovery-q01-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2417,6 +2571,7 @@
       "s08-04-incident-analysis-and-recovery-q02-contrast",
       "s08-04-incident-analysis-and-recovery-q02-warning",
       "s08-04-incident-analysis-and-recovery-q02-notebook",
+      "s08-04-incident-analysis-and-recovery-q02-case-input-1",
       "s08-04-incident-analysis-and-recovery-q02-case",
       "s08-04-incident-analysis-and-recovery-q02-T01-slide",
       "s08-04-incident-analysis-and-recovery-q02-T02-slide",
@@ -2437,7 +2592,8 @@
       "s08-04-incident-analysis-and-recovery-q02-contrast",
       "s08-04-incident-analysis-and-recovery-q02-warning",
       "s08-04-incident-analysis-and-recovery-q02-notebook",
-      "s08-04-incident-analysis-and-recovery-q02-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q02-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2454,6 +2610,7 @@
       "s08-04-incident-analysis-and-recovery-q03-contrast",
       "s08-04-incident-analysis-and-recovery-q03-warning",
       "s08-04-incident-analysis-and-recovery-q03-notebook",
+      "s08-04-incident-analysis-and-recovery-q03-case-input-1",
       "s08-04-incident-analysis-and-recovery-q03-case",
       "s08-04-incident-analysis-and-recovery-q03-T01-slide",
       "s08-04-incident-analysis-and-recovery-q03-T02-slide",
@@ -2474,7 +2631,8 @@
       "s08-04-incident-analysis-and-recovery-q03-contrast",
       "s08-04-incident-analysis-and-recovery-q03-warning",
       "s08-04-incident-analysis-and-recovery-q03-notebook",
-      "s08-04-incident-analysis-and-recovery-q03-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q03-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2491,6 +2649,7 @@
       "s08-04-incident-analysis-and-recovery-q04-contrast",
       "s08-04-incident-analysis-and-recovery-q04-warning",
       "s08-04-incident-analysis-and-recovery-q04-notebook",
+      "s08-04-incident-analysis-and-recovery-q04-case-input-1",
       "s08-04-incident-analysis-and-recovery-q04-case",
       "s08-04-incident-analysis-and-recovery-q04-T01-slide",
       "s08-04-incident-analysis-and-recovery-q04-T02-slide",
@@ -2511,7 +2670,8 @@
       "s08-04-incident-analysis-and-recovery-q04-contrast",
       "s08-04-incident-analysis-and-recovery-q04-warning",
       "s08-04-incident-analysis-and-recovery-q04-notebook",
-      "s08-04-incident-analysis-and-recovery-q04-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q04-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2528,6 +2688,7 @@
       "s08-04-incident-analysis-and-recovery-q05-contrast",
       "s08-04-incident-analysis-and-recovery-q05-warning",
       "s08-04-incident-analysis-and-recovery-q05-notebook",
+      "s08-04-incident-analysis-and-recovery-q05-case-input-1",
       "s08-04-incident-analysis-and-recovery-q05-case",
       "s08-04-incident-analysis-and-recovery-q05-T01-slide",
       "s08-04-incident-analysis-and-recovery-q05-T02-slide",
@@ -2548,7 +2709,8 @@
       "s08-04-incident-analysis-and-recovery-q05-contrast",
       "s08-04-incident-analysis-and-recovery-q05-warning",
       "s08-04-incident-analysis-and-recovery-q05-notebook",
-      "s08-04-incident-analysis-and-recovery-q05-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q05-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2565,6 +2727,7 @@
       "s08-04-incident-analysis-and-recovery-q06-contrast",
       "s08-04-incident-analysis-and-recovery-q06-warning",
       "s08-04-incident-analysis-and-recovery-q06-notebook",
+      "s08-04-incident-analysis-and-recovery-q06-case-input-1",
       "s08-04-incident-analysis-and-recovery-q06-case",
       "s08-04-incident-analysis-and-recovery-q06-T01-slide",
       "s08-04-incident-analysis-and-recovery-q06-T02-slide",
@@ -2585,7 +2748,8 @@
       "s08-04-incident-analysis-and-recovery-q06-contrast",
       "s08-04-incident-analysis-and-recovery-q06-warning",
       "s08-04-incident-analysis-and-recovery-q06-notebook",
-      "s08-04-incident-analysis-and-recovery-q06-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q06-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2602,6 +2766,8 @@
       "s08-04-incident-analysis-and-recovery-q07-contrast",
       "s08-04-incident-analysis-and-recovery-q07-warning",
       "s08-04-incident-analysis-and-recovery-q07-notebook",
+      "s08-04-incident-analysis-and-recovery-q07-case-input-1",
+      "s08-04-incident-analysis-and-recovery-q07-case-input-2",
       "s08-04-incident-analysis-and-recovery-q07-case",
       "s08-04-incident-analysis-and-recovery-q07-T01-slide",
       "s08-04-incident-analysis-and-recovery-q07-T02-slide",
@@ -2622,7 +2788,9 @@
       "s08-04-incident-analysis-and-recovery-q07-contrast",
       "s08-04-incident-analysis-and-recovery-q07-warning",
       "s08-04-incident-analysis-and-recovery-q07-notebook",
-      "s08-04-incident-analysis-and-recovery-q07-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q07-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q07-case-input-1",
+      "s08-04-incident-analysis-and-recovery-q07-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2639,6 +2807,7 @@
       "s08-04-incident-analysis-and-recovery-q08-contrast",
       "s08-04-incident-analysis-and-recovery-q08-warning",
       "s08-04-incident-analysis-and-recovery-q08-notebook",
+      "s08-04-incident-analysis-and-recovery-q08-case-input-1",
       "s08-04-incident-analysis-and-recovery-q08-case",
       "s08-04-incident-analysis-and-recovery-q08-T01-slide",
       "s08-04-incident-analysis-and-recovery-q08-T02-slide",
@@ -2659,7 +2828,8 @@
       "s08-04-incident-analysis-and-recovery-q08-contrast",
       "s08-04-incident-analysis-and-recovery-q08-warning",
       "s08-04-incident-analysis-and-recovery-q08-notebook",
-      "s08-04-incident-analysis-and-recovery-q08-explanation-2"
+      "s08-04-incident-analysis-and-recovery-q08-explanation-2",
+      "s08-04-incident-analysis-and-recovery-q08-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2676,6 +2846,8 @@
       "s08-05-database-platform-comparison-q01-contrast",
       "s08-05-database-platform-comparison-q01-warning",
       "s08-05-database-platform-comparison-q01-notebook",
+      "s08-05-database-platform-comparison-q01-case-input-1",
+      "s08-05-database-platform-comparison-q01-case-input-2",
       "s08-05-database-platform-comparison-q01-case",
       "s08-05-database-platform-comparison-q01-T01-slide",
       "s08-05-database-platform-comparison-q01-T02-slide",
@@ -2696,7 +2868,9 @@
       "s08-05-database-platform-comparison-q01-contrast",
       "s08-05-database-platform-comparison-q01-warning",
       "s08-05-database-platform-comparison-q01-notebook",
-      "s08-05-database-platform-comparison-q01-explanation-2"
+      "s08-05-database-platform-comparison-q01-explanation-2",
+      "s08-05-database-platform-comparison-q01-case-input-1",
+      "s08-05-database-platform-comparison-q01-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2713,6 +2887,7 @@
       "s08-05-database-platform-comparison-q02-contrast",
       "s08-05-database-platform-comparison-q02-warning",
       "s08-05-database-platform-comparison-q02-notebook",
+      "s08-05-database-platform-comparison-q02-case-input-1",
       "s08-05-database-platform-comparison-q02-case",
       "s08-05-database-platform-comparison-q02-T01-slide",
       "s08-05-database-platform-comparison-q02-T02-slide",
@@ -2733,7 +2908,8 @@
       "s08-05-database-platform-comparison-q02-contrast",
       "s08-05-database-platform-comparison-q02-warning",
       "s08-05-database-platform-comparison-q02-notebook",
-      "s08-05-database-platform-comparison-q02-explanation-2"
+      "s08-05-database-platform-comparison-q02-explanation-2",
+      "s08-05-database-platform-comparison-q02-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2750,6 +2926,7 @@
       "s08-05-database-platform-comparison-q03-contrast",
       "s08-05-database-platform-comparison-q03-warning",
       "s08-05-database-platform-comparison-q03-notebook",
+      "s08-05-database-platform-comparison-q03-case-input-1",
       "s08-05-database-platform-comparison-q03-case",
       "s08-05-database-platform-comparison-q03-T01-slide",
       "s08-05-database-platform-comparison-q03-T02-slide",
@@ -2770,7 +2947,8 @@
       "s08-05-database-platform-comparison-q03-contrast",
       "s08-05-database-platform-comparison-q03-warning",
       "s08-05-database-platform-comparison-q03-notebook",
-      "s08-05-database-platform-comparison-q03-explanation-2"
+      "s08-05-database-platform-comparison-q03-explanation-2",
+      "s08-05-database-platform-comparison-q03-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2787,6 +2965,7 @@
       "s08-05-database-platform-comparison-q04-contrast",
       "s08-05-database-platform-comparison-q04-warning",
       "s08-05-database-platform-comparison-q04-notebook",
+      "s08-05-database-platform-comparison-q04-case-input-1",
       "s08-05-database-platform-comparison-q04-case",
       "s08-05-database-platform-comparison-q04-T01-slide",
       "s08-05-database-platform-comparison-q04-T02-slide",
@@ -2807,7 +2986,8 @@
       "s08-05-database-platform-comparison-q04-contrast",
       "s08-05-database-platform-comparison-q04-warning",
       "s08-05-database-platform-comparison-q04-notebook",
-      "s08-05-database-platform-comparison-q04-explanation-2"
+      "s08-05-database-platform-comparison-q04-explanation-2",
+      "s08-05-database-platform-comparison-q04-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2824,6 +3004,7 @@
       "s08-05-database-platform-comparison-q05-contrast",
       "s08-05-database-platform-comparison-q05-warning",
       "s08-05-database-platform-comparison-q05-notebook",
+      "s08-05-database-platform-comparison-q05-case-input-1",
       "s08-05-database-platform-comparison-q05-case",
       "s08-05-database-platform-comparison-q05-T01-slide",
       "s08-05-database-platform-comparison-q05-T02-slide",
@@ -2844,7 +3025,8 @@
       "s08-05-database-platform-comparison-q05-contrast",
       "s08-05-database-platform-comparison-q05-warning",
       "s08-05-database-platform-comparison-q05-notebook",
-      "s08-05-database-platform-comparison-q05-explanation-2"
+      "s08-05-database-platform-comparison-q05-explanation-2",
+      "s08-05-database-platform-comparison-q05-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2861,6 +3043,7 @@
       "s08-05-database-platform-comparison-q06-contrast",
       "s08-05-database-platform-comparison-q06-warning",
       "s08-05-database-platform-comparison-q06-notebook",
+      "s08-05-database-platform-comparison-q06-case-input-1",
       "s08-05-database-platform-comparison-q06-case",
       "s08-05-database-platform-comparison-q06-T01-slide",
       "s08-05-database-platform-comparison-q06-T02-slide",
@@ -2881,7 +3064,8 @@
       "s08-05-database-platform-comparison-q06-contrast",
       "s08-05-database-platform-comparison-q06-warning",
       "s08-05-database-platform-comparison-q06-notebook",
-      "s08-05-database-platform-comparison-q06-explanation-2"
+      "s08-05-database-platform-comparison-q06-explanation-2",
+      "s08-05-database-platform-comparison-q06-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2898,6 +3082,7 @@
       "s08-05-database-platform-comparison-q07-contrast",
       "s08-05-database-platform-comparison-q07-warning",
       "s08-05-database-platform-comparison-q07-notebook",
+      "s08-05-database-platform-comparison-q07-case-input-1",
       "s08-05-database-platform-comparison-q07-case",
       "s08-05-database-platform-comparison-q07-T01-slide",
       "s08-05-database-platform-comparison-q07-T02-slide",
@@ -2918,7 +3103,8 @@
       "s08-05-database-platform-comparison-q07-contrast",
       "s08-05-database-platform-comparison-q07-warning",
       "s08-05-database-platform-comparison-q07-notebook",
-      "s08-05-database-platform-comparison-q07-explanation-2"
+      "s08-05-database-platform-comparison-q07-explanation-2",
+      "s08-05-database-platform-comparison-q07-case-input-1"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   },
@@ -2935,6 +3121,8 @@
       "s08-05-database-platform-comparison-q08-contrast",
       "s08-05-database-platform-comparison-q08-warning",
       "s08-05-database-platform-comparison-q08-notebook",
+      "s08-05-database-platform-comparison-q08-case-input-1",
+      "s08-05-database-platform-comparison-q08-case-input-2",
       "s08-05-database-platform-comparison-q08-case",
       "s08-05-database-platform-comparison-q08-T01-slide",
       "s08-05-database-platform-comparison-q08-T02-slide",
@@ -2955,7 +3143,9 @@
       "s08-05-database-platform-comparison-q08-contrast",
       "s08-05-database-platform-comparison-q08-warning",
       "s08-05-database-platform-comparison-q08-notebook",
-      "s08-05-database-platform-comparison-q08-explanation-2"
+      "s08-05-database-platform-comparison-q08-explanation-2",
+      "s08-05-database-platform-comparison-q08-case-input-1",
+      "s08-05-database-platform-comparison-q08-case-input-2"
     ],
     "source": "Исходные формулировки + авторский пример и задания"
   }

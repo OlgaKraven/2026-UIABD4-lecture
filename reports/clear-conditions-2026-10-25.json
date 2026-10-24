@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-25",
+  "sourceSha256": "8bc0034b9694d9b21969b81c1b36162e050839bc4c9a278a376f1b77c4110627",
+  "conditions": 80,
+  "inputSlides": 95,
+  "slides": 1393,
+  "originalIdentifiersRetained": 1060,
+  "unitTests": 25,
+  "layoutIssues": 0,
+  "checkedExample": {
+    "orders": 4,
+    "selectedIds": [
+      11,
+      13
+    ],
+    "resultRows": 2,
+    "sumRub": 200
+  }
+}
