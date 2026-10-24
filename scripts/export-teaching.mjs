@@ -16,11 +16,16 @@ for(const [li,lecture] of course.lectures.entries()){
   const note=pack.notes[slide.id];if(!note?.script?.trim())throw Error('Missing script: '+slide.id);
   const anchor=`screen-${String(i+1).padStart(3,'0')}`;
   teacher+=`<a id="${anchor}"></a>\n### ${i+1}. ${slide.title}\n\n${note.script.replace(/\nПоказ:[^\n]+/g,'')}\n\n`;
+  const references=(slide.references||[]).map(r=>`- ${r.citation}${r.url?` [Открыть источник](${r.url})`:''}`).join('\n');
+  if(references)teacher+=references+'\n\n';
+  if(slide.kind==='materials')teacher+=`[Материалы курса](${course.materialsUrl})\n\n`;
   if(slide.notebook)teacher+=`**Запишите:** ${slide.notebook}\n\n`;
   if(slide.task)teacher+=`**Разбор после попытки.** ${note.answer}\n\n`;
   const item=cases.find(item=>item.returnSlide===slide.id);
   if(item)teacher+=`**Самостоятельный случай.** ${item.context} ${item.operation}\n\n**Разбор после выполнения.** ${item.solution}\n\n`;
   presenter+=`<a id="${anchor}"></a>\n## ${i+1}. ${slide.title}\n\n${note.script}\n\n`;
+  if(references)presenter+=references+'\n\n';
+  if(slide.kind==='materials')presenter+=`[Материалы курса](${course.materialsUrl})\n\n`;
   if(note.preparation)presenter+=`**До показа:** ${note.preparation}\n\n`;
   if(note.notebook)presenter+=`**Запишите:** ${note.notebook}\n\n`;
   if(note.questions)presenter+=`**Вопрос группе:** ${note.questions}\n\n`;
