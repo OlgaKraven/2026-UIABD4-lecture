@@ -1,0 +1,135 @@
+{
+  "case-check": {
+    "cases": 80,
+    "wrongAndCorrectValues": 320,
+    "dependencyInvalidation": 80,
+    "persistedDrafts": 10,
+    "status": "passed"
+  },
+  "catalog-check": {
+    "viewports": [
+      {
+        "width": 320,
+        "theme": "light",
+        "overflow": 0
+      },
+      {
+        "width": 320,
+        "theme": "dark",
+        "overflow": 0
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "overflow": 0
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "overflow": 0
+      },
+      {
+        "width": 1024,
+        "theme": "light",
+        "overflow": 0
+      },
+      {
+        "width": 1024,
+        "theme": "dark",
+        "overflow": 0
+      },
+      {
+        "width": 1280,
+        "theme": "light",
+        "overflow": 0
+      },
+      {
+        "width": 1280,
+        "theme": "dark",
+        "overflow": 0
+      }
+    ],
+    "emptySearch": true,
+    "savedFilters": true,
+    "qrInvalidation": true,
+    "longProfile": true,
+    "arrowsAfterButton": true,
+    "catalogSameTab": true,
+    "status": "passed"
+  },
+  "two-windows": {
+    "diagramSynced": true,
+    "themeSynced": true,
+    "pointerSynced": true,
+    "audienceReload": true,
+    "privateAnswerStayedPrivate": true,
+    "teacherRequestsFromAudience": 0,
+    "endClearsAudience": true,
+    "status": "passed"
+  },
+  "layout-check": [
+    {
+      "lecture": "s07-01-queries-on-server-database",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s07-02-calculation-query",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s07-03-procedures-and-triggers",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s07-04-query-performance-and-indexes",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s07-05-server-and-network-requirements",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s08-01-server-metrics",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s08-02-metrics-collection",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s08-03-dashboard-and-alerting",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s08-04-incident-analysis-and-recovery",
+      "pages": 109,
+      "issues": []
+    },
+    {
+      "lecture": "s08-05-database-platform-comparison",
+      "pages": 109,
+      "issues": []
+    }
+  ],
+  "sourceSha256": "df723a4049de6fb611990da983ce68a6db4062c84b31a1d8a1eed40305d95c19",
+  "pdf": {
+    "files": 10,
+    "pages": 1090,
+    "renderedSamples": 100,
+    "format": "16:9, existing approved slide template"
+  },
+  "teacherNotes": {
+    "preservedPersonalEdits": true,
+    "refreshedKnownOldAutomaticFields": true,
+    "alignedSlides": 1090,
+    "documents": 20
+  }
+}

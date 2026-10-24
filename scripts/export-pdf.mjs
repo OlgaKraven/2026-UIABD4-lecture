@@ -69,7 +69,7 @@ try {
       const url = `${baseUrl}?mode=print&scope=${encodeURIComponent(topic)}`
       await page.goto(url, { waitUntil: 'networkidle' })
       await page.locator('.print-page').last().waitFor()
-      await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(im=>im.decode().catch(()=>{})))})
+      await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(im=>im.decode().catch(()=>{})));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))})
       const pageElements = await page.locator('.print-page').count()
       const expected=course.lectures.find(l=>l.id===topic).slides.length
       if (pageElements !== expected) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages`)

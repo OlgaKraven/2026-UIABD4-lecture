@@ -1,0 +1,51 @@
+{
+  "version": "8.4.13",
+  "isolatedDatabase": "uiabd_review_1792868114582",
+  "checks": [
+    {
+      "name": "WHERE strict boundary and NULL",
+      "status": "passed"
+    },
+    {
+      "name": "Independent query sum",
+      "status": "passed"
+    },
+    {
+      "name": "INNER and LEFT with multiplicity",
+      "status": "passed"
+    },
+    {
+      "name": "Group filter after aggregation",
+      "status": "passed"
+    },
+    {
+      "name": "NULL is not zero",
+      "status": "passed"
+    },
+    {
+      "name": "DECIMAL money and separate items",
+      "status": "passed"
+    },
+    {
+      "name": "Preaggregating independent children",
+      "status": "passed"
+    },
+    {
+      "name": "CALL does not commit its caller transaction",
+      "status": "passed"
+    },
+    {
+      "name": "Unique violation rolls back statement then explicit ROLLBACK",
+      "status": "passed"
+    },
+    {
+      "name": "Trigger ignores unchanged NOT NULL status",
+      "status": "passed"
+    },
+    {
+      "name": "Nullable equality in MySQL",
+      "status": "passed"
+    }
+  ],
+  "limits": "Executed SQL fixtures only. Performance measurements and monitoring scenarios in the course remain explicitly stated educational data. PostgreSQL server execution is not claimed."
+}

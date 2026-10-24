@@ -14,20 +14,22 @@
     "test:e2e": "playwright test",
     "export:pdf": "node scripts/export-pdf.mjs",
     "check:pdf": "node scripts/check-pdf.mjs",
-    "migrate": "node private/migrate.mjs",
     "validate:content": "node scripts/validate-migration.mjs",
-    "check:teacher": "node scripts/validate-migration.mjs --teacher",
+    "check:teacher": "node scripts/validate-migration.mjs",
     "build": "npm run validate:content && tsc -b && vite build && node scripts/build-offline.mjs",
-    "check:privacy": "node scripts/check-course-privacy.mjs"
+    "check:privacy": "node scripts/check-course-privacy.mjs",
+    "validate:cases": "node scripts/validate-cases.mjs"
   },
   "dependencies": {
-    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.2.1-uiabd.1.tgz",
+    "@olgakraven/lecture-engine": "file:engine-extension/runtime",
     "lucide-react": "^1.38.0",
     "motion": "^13.1.1",
+    "qrcode": "^1.5.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@olgakraven/lecture-validation": "file:vendor/olgakraven-lecture-engine-0.2.1-uiabd.1.tgz",
     "@playwright/test": "^1.62.1",
     "@types/node": "^24.13.3",
     "@types/pngjs": "^6.0.5",

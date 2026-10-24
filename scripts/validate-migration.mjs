@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {validateCourse,validateBank,validateTeacherPack,readiness,courseAssets} from '@olgakraven/lecture-engine';
+import {validateCourse,validateBank,validateTeacherPack,readiness,courseAssets} from '@olgakraven/lecture-validation';
 const c=JSON.parse(fs.readFileSync('public/course.json','utf8'));
 const bank=JSON.parse(fs.readFileSync('public/assessment.json','utf8'));
 validateCourse(c);validateBank(bank,c);
@@ -25,4 +25,4 @@ if(process.argv.includes('--teacher')){
  if(Object.keys(pack.notes).length!==ids.length)throw Error('Лишние/недостающие заметки');
  for(const id of ids)if(!pack.notes[id]?.script.trim())throw Error('Нет заметки '+id);
 }
-console.log(JSON.stringify({lectures:c.lectures.length,slides:c.lectures.reduce((s,l)=>s+l.slides.length,0),questions:questions.length,tasks:Object.keys(bank.keys).length,teacherChecked:process.argv.includes('--teacher'),status:'passed'},null,2));
+console.log(JSON.stringify({lectures:c.lectures.length,slides:c.lectures.reduce((s,l)=>s+l.slides.length,0),questions:questions.length,tasks:Object.keys(bank.keys).length,bundledTeacherChecked:true,privateTeacherChecked:process.argv.includes('--teacher'),status:'passed'},null,2));

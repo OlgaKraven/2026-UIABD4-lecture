@@ -1,6 +1,6 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
-import { courseAssets } from '@olgakraven/lecture-engine'
+import { courseAssets } from '@olgakraven/lecture-validation'
 async function files(dir) {
   return (
     await Promise.all(
