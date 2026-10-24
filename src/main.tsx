@@ -4,6 +4,7 @@ import '@olgakraven/lecture-engine/style.css'
 import {CourseCatalog} from './CourseCatalog'
 import {prepareTeacherSession} from './teacherNotes'
 import {LearningVisual} from './learning/LearningVisual'
+import {ContentVisual} from './learning/ContentVisual'
 import {installPresentation} from './presentation'
 import './presentation-design.css'
 import './learning/learning.css'
@@ -35,7 +36,7 @@ async function load(){
    teacherSession=await prepareTeacherSession(course,base,await response.json(),{getItem:k=>localStorage.getItem(k)})
   }
   installPresentation(course,base)
-  root.render(<VisualRendererProvider render={props=>props.slide.id.endsWith('-logic')?<LearningVisual key={props.slide.id} {...props}/>:undefined}>
+  root.render(<VisualRendererProvider render={props=>props.slide.id.endsWith('-logic')?<LearningVisual key={props.slide.id} {...props}/>:props.slide.visual||props.slide.steps?<ContentVisual slide={props.slide}/>:undefined}>
    <LectureSite course={course} base={base} teacherNotes={teacherSession?.notes} resolveTeacherNotes={teacherSession?.resolve} renderCatalog={props=><CourseCatalog {...props}/>}/>
   </VisualRendererProvider>)
  }catch(error){root.render(<main><h1>Курс не загрузился</h1><p role="alert">{String(error)}</p><button onClick={()=>void load()}>Повторить</button></main>)}

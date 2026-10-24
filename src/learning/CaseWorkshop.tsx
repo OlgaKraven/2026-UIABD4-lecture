@@ -2,6 +2,7 @@ import {useEffect,useRef,useState} from 'react'
 import cases from '../../authoring/cases.json'
 import demonstrations from './demonstrations.json'
 import {ScenarioBoard} from './ScenarioBoard'
+import {TechnicalText} from './TechnicalText'
 export function CaseWorkshop({base,id}:{base:string;id:string}){
  const index=cases.findIndex(c=>c.id===id)
  return index>=0?<Workshop key={id} base={base} index={index}/>:<main className="case-workshop"><h1>Задача не найдена</h1><a href={base}>К каталогу</a></main>
@@ -33,11 +34,11 @@ function Workshop({base,index}:{base:string;index:number}){
   {started&&<section className="demo-stage" aria-label="Демонстрация решения">
    {model.scenarios.length>1&&(audience?<p>Условия: {model.scenarios[branch].label}</p>:<div className="scenario-picker" role="group" aria-label="Условия задачи"><span>Условия:</span>{model.scenarios.map((s,i)=><button type="button" key={s.label} aria-pressed={branch===i} onClick={()=>{setBranch(i);setStep(0)}}>{s.label}</button>)}</div>)}
    <div className="demo-step-heading"><span>{String(step+1).padStart(2,'0')} / {String(frames.length).padStart(2,'0')}</span><h2>{current.title}</h2></div>
-   <ScenarioBoard board={current.board}/>
+   <ScenarioBoard board={current.board} focus={step>0?(current.board.items?.length||current.board.rows?.length||1)-1:undefined}/>
    <p className="oral-prompt"><strong>Обсудите с группой.</strong> {current.prompt}</p>
    {!audience&&<div className="demo-controls"><button type="button" disabled={step===0} onClick={()=>setStep(s=>s-1)}>← Назад</button><span role="status" aria-live="polite">{current.title}</span>{!last?<button className="solve-button" type="button" onClick={()=>setStep(s=>s+1)}>Следующий шаг →</button>:<button className="solve-button" type="button" onClick={()=>setStep(0)}>Показать сначала</button>}</div>}
   </section>}
-  {started&&last&&<section className="demo-explanation"><h2>Разбор и граница вывода</h2><p>{branch===0?item.solution:model.scenarios[branch].conclusion}</p><p>Назовите изменённое условие и объясните, какой шаг решения придётся пересмотреть.</p></section>}
+  {started&&last&&<section className="demo-explanation"><h2>Разбор и граница вывода</h2><p><TechnicalText text={branch===0?item.solution:model.scenarios[branch].conclusion}/></p><p>Назовите изменённое условие и объясните, какой шаг решения придётся пересмотреть.</p></section>}
   <p className="case-environment">Учебная модель для показа и устного обсуждения. Команды на этой странице не выполняются на сервере.</p>
   <footer>{started&&!audience&&<button type="button" onClick={()=>{setStarted(false);setStep(0)}}>К условию задачи</button>}<a href={back}>Вернуться к лекции →</a></footer>
  </main>

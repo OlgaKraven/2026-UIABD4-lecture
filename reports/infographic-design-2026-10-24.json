@@ -1,0 +1,210 @@
+{
+  "designReferenceSha256": "c57c27db01480b8529c725ab771a09354c795e0c36c8649007184541868c2754",
+  "design": {
+    "panels": 250,
+    "codes": 1174,
+    "diagrams": 80,
+    "focusSteps": 241,
+    "styleIssues": [],
+    "stableGeometry": true,
+    "audienceSync": true,
+    "lateAudience": true,
+    "teacherRequests": 0
+  },
+  "themes": {
+    "checks": [
+      {
+        "theme": "light",
+        "id": "s07-01-queries-on-server-database-q02-example",
+        "background": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 17.90239242086526,
+        "captionContrast": 5.776152909371688,
+        "minButton": null
+      },
+      {
+        "theme": "light",
+        "id": "s07-01-queries-on-server-database-q02-contrast",
+        "background": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 17.90239242086526,
+        "captionContrast": 5.776152909371688,
+        "minButton": null
+      },
+      {
+        "theme": "light",
+        "id": "s07-01-queries-on-server-database-q05-logic",
+        "background": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 17.90239242086526,
+        "captionContrast": 5.776152909371688,
+        "minButton": 44
+      },
+      {
+        "theme": "light",
+        "id": "s08-03-dashboard-and-alerting-q05-logic",
+        "background": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 17.90239242086526,
+        "captionContrast": 5.776152909371688,
+        "minButton": 44
+      },
+      {
+        "theme": "light",
+        "id": "s07-01-queries-on-server-database-code",
+        "background": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 17.90239242086526,
+        "captionContrast": 5.776152909371688,
+        "minButton": null
+      },
+      {
+        "theme": "dark",
+        "id": "s07-01-queries-on-server-database-q02-example",
+        "background": "rgb(35, 35, 38)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 14.259194685865747,
+        "captionContrast": 7.615678839990406,
+        "minButton": null
+      },
+      {
+        "theme": "dark",
+        "id": "s07-01-queries-on-server-database-q02-contrast",
+        "background": "rgb(35, 35, 38)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 14.259194685865747,
+        "captionContrast": 7.615678839990406,
+        "minButton": null
+      },
+      {
+        "theme": "dark",
+        "id": "s07-01-queries-on-server-database-q05-logic",
+        "background": "rgb(35, 35, 38)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 14.259194685865747,
+        "captionContrast": 7.615678839990406,
+        "minButton": 44
+      },
+      {
+        "theme": "dark",
+        "id": "s08-03-dashboard-and-alerting-q05-logic",
+        "background": "rgb(35, 35, 38)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 14.259194685865747,
+        "captionContrast": 7.615678839990406,
+        "minButton": 44
+      },
+      {
+        "theme": "dark",
+        "id": "s07-01-queries-on-server-database-code",
+        "background": "rgb(35, 35, 38)",
+        "radius": "12px",
+        "shadow": "none",
+        "bodyContrast": 14.259194685865747,
+        "captionContrast": 7.615678839990406,
+        "minButton": null
+      }
+    ],
+    "mobile": [
+      "s07-01-queries-on-server-database-q02-example",
+      "s07-01-queries-on-server-database-q02-contrast",
+      "s07-01-queries-on-server-database-q05-logic",
+      "s07-01-queries-on-server-database-code"
+    ],
+    "minimumContrast": 5.776152909371688,
+    "themes": "passed",
+    "mobileOverflow": 0
+  },
+  "cases": {
+    "tasks": 80,
+    "scenarios": 85,
+    "snapshots": 255,
+    "forms": 0,
+    "quizzes": 0,
+    "backRestoration": "passed",
+    "consoleErrors": []
+  },
+  "projection": {
+    "twoWindows": "steps, intentional reveal, branch reset, late reload and theme passed",
+    "audienceControls": 0,
+    "mobileWidths": [
+      390
+    ],
+    "mobileExamples": [
+      4,
+      17,
+      49,
+      60,
+      65,
+      74
+    ],
+    "reducedMotion": "manual controls passed"
+  },
+  "printLayout": [
+    {
+      "lecture": "s07-01-queries-on-server-database",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s07-02-calculation-query",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s07-03-procedures-and-triggers",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s07-04-query-performance-and-indexes",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s07-05-server-and-network-requirements",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s08-01-server-metrics",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s08-02-metrics-collection",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s08-03-dashboard-and-alerting",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s08-04-incident-analysis-and-recovery",
+      "pages": 106,
+      "issues": []
+    },
+    {
+      "lecture": "s08-05-database-platform-comparison",
+      "pages": 106,
+      "issues": []
+    }
+  ],
+  "pdf": {
+    "documents": 2,
+    "pages": 212,
+    "rendered": 10
+  },
+  "unitTests": 18
+}
