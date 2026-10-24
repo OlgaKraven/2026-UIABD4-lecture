@@ -58,5 +58,6 @@ end=s.index('\t\t\t\t\t\t\tU ?',start)
 s=s[:start]+s[end:]
 s=s.replace('animations: !0','animations: !1')
 p.write_text(s,encoding='utf-8')
+p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8');s=s.replace('fetch(k(e.assessment.url, t))','fetch(k(e.assessment.url, t),{cache:"no-cache"})');p.write_text(s,encoding='utf-8')
 p=root/'package.json';d=json.loads(p.read_text(encoding='utf-8'));d['version']='0.1.1-uiabd4.1';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Runtime prepared:',root)

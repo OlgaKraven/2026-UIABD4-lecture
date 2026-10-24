@@ -11,7 +11,7 @@ const root=createRoot(document.getElementById('root')!)
 async function load(){
  root.render(<p role="status">Загружаем курс…</p>)
  try {
-  const response=await fetch(`${import.meta.env.BASE_URL}course.json`,{signal:AbortSignal.timeout(15000)})
+  const response=await fetch(`${import.meta.env.BASE_URL}course.json`,{cache:'no-cache',signal:AbortSignal.timeout(15000)})
   if(!response.ok) throw Error(`Не удалось загрузить курс: ${response.status}`)
   const course=await response.json();validateCourse(course)
   const url=new URL(location.href),topic=url.searchParams.get('topic')

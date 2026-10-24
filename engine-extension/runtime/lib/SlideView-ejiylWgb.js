@@ -2584,7 +2584,7 @@ function Ke({ course: e, base: t, children: n, snapshot: r, readonly: i = !1 }) 
 		return M(a, r) || g("Не удалось сохранить попытку на устройстве."), r;
 	}), y = async () => {
 		if (!e.assessment) throw Error("Банк самопроверки не подключён");
-		return _.current ||= fetch(k(e.assessment.url, t)).then((e) => {
+		return _.current ||= fetch(k(e.assessment.url, t),{cache:"no-cache"}).then((e) => {
 			if (!e.ok) throw Error("Не удалось загрузить банк ответов");
 			return e.json();
 		}).then((t) => {
