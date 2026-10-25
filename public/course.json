@@ -2748,7 +2748,7 @@
           "id": "s07-01-queries-on-server-database-code",
           "kind": "example",
           "title": "Выборка и соединение заказов",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -2758,7 +2758,7 @@
                 "explanation": "LEFT сохраняет заказы без позиций. Набор таблиц и ожидаемые пары приведены в практике."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -5374,7 +5374,7 @@
           "id": "s07-02-calculation-query-code",
           "kind": "example",
           "title": "Промежуточный итог материалов",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -5384,7 +5384,7 @@
                 "explanation": "Одна строка соответствует заказу. Число неизвестных цен сохраняется отдельно от известной суммы."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -5499,7 +5499,7 @@
           "id": "s07-03-procedures-and-triggers-exam",
           "kind": "example",
           "title": "Процедура, аудит и управляемый откат",
-          "body": "MySQL 8.4, InnoDB, пустая учебная база uiabd4_training. Нужны CREATE ROUTINE, EXECUTE и TRIGGER на учебных объектах. Объекты файла постоянные; повторный запуск выполняют в новой пустой учебной базе с заменой USE.",
+          "body": "MySQL 8.4, InnoDB, учебная база uiabd4_training. Перед первым запуском имена procedure_orders, procedure_audit, procedure_order_audit и close_paid_order должны быть свободны. Нужны CREATE ROUTINE, EXECUTE и TRIGGER. Полный 03-procedure.sql создаёт постоянные объекты один раз; для повторения испытания используйте sql/03-reset.sql после завершения всех учебных транзакций.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -5622,7 +5622,7 @@
           "kind": "theory",
           "kicker": "Вопрос 1 · практика",
           "title": "Процедура, аудит и управляемый откат",
-          "body": "MySQL 8.4, InnoDB, пустая учебная база uiabd4_training. Нужны CREATE ROUTINE, EXECUTE и TRIGGER на учебных объектах. Объекты файла постоянные; повторный запуск выполняют в новой пустой учебной базе с заменой USE.",
+          "body": "MySQL 8.4, InnoDB, учебная база uiabd4_training. Перед первым запуском имена procedure_orders, procedure_audit, procedure_order_audit и close_paid_order должны быть свободны. Нужны CREATE ROUTINE, EXECUTE и TRIGGER. Полный 03-procedure.sql создаёт постоянные объекты один раз; для повторения испытания используйте sql/03-reset.sql после завершения всех учебных транзакций.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -7997,21 +7997,21 @@
           "id": "s07-03-procedures-and-triggers-code",
           "kind": "example",
           "title": "Вызов и откат процедуры",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Перед повторным вызовом завершите учебные транзакции. Файл sql/03-reset.sql возвращает два заказа и аудит к исходному состоянию упражнения.",
           "visual": {
             "type": "codeParts",
             "parts": [
               {
-                "code": "START TRANSACTION;\nCALL close_paid_order(1);\nSELECT status FROM procedure_orders WHERE id=1;\nROLLBACK;",
+                "code": "SOURCE sql/03-reset.sql;\nSTART TRANSACTION;\nCALL close_paid_order(1);\nSELECT status FROM procedure_orders WHERE id=1;\nROLLBACK;\nSELECT status FROM procedure_orders WHERE id=1;",
                 "label": "SQL · MySQL",
-                "explanation": "Процедура из практики не фиксирует транзакцию. ROLLBACK отменяет статус и связанный аудит InnoDB."
+                "explanation": "После подготовки: paid и пустой аудит. Внутри вызова: closed. После ROLLBACK: paid и пустой аудит."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "03-procedure.sql создаёт определения один раз; 03-reset.sql готовит повтор опыта, не создавая их заново."
           },
           "supplement": {
-            "label": "К исходным данным",
-            "href": "?lecture=s07-03-procedures-and-triggers&slide=s07-03-procedures-and-triggers-practice-environment"
+            "label": "Скачать 03-reset.sql",
+            "href": "practice/03-reset.sql"
           }
         },
         {
@@ -10593,7 +10593,7 @@
           "id": "s07-04-query-performance-and-indexes-code",
           "kind": "example",
           "title": "Чтение плана запроса",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -10603,7 +10603,7 @@
                 "explanation": "Запрос выполняется. Сравните доступ, строки, loops и повторные длительности до и после индекса на наборе практики."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -13106,7 +13106,7 @@
           "id": "s07-05-server-and-network-requirements-code",
           "kind": "example",
           "title": "Расчёт профиля нагрузки",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -13116,7 +13116,7 @@
                 "explanation": "24 пользователя, 5 запросов в минуту и 120 КБ на ответ дают 2 запроса/с и 240 КБ/с в средней модели."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -15659,7 +15659,7 @@
           "id": "s08-01-server-metrics-code",
           "kind": "example",
           "title": "Показатели MySQL",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -15669,7 +15669,7 @@
                 "explanation": "Текущие значения и накопительные счётчики интерпретируются по-разному. Запишите время и единицы каждого образца."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -16257,18 +16257,18 @@
           "body": "Интервал 15 с ограничивает временную детализацию; чаще не всегда экономически оправданно."
         },
         {
-          "id": "s08-02-metrics-collection-practice-03-action",
+          "id": "s08-02-metrics-collection-practice-02-action",
           "kind": "theory",
           "kicker": "Вопрос 2 · практика",
-          "title": "Проверить состояние и скорость",
-          "body": "После нескольких опросов выполните запросы в Prometheus. Запрос range [30s] выбирает окно ряда; rate вычисляет среднюю скорость counter за секунду с учётом сбросов. Gauge объёма переводится в ГиБ делением на 1024³.",
+          "title": "Настроить и запустить сборщик",
+          "body": "Прочитайте prometheus.yml: scrape_interval и evaluation_interval заданы по 5 с, job_name — uiabd4_demo, target — локальный экспортёр. Запустите из той же папки установленный Prometheus; на Windows имя исполняемого файла — prometheus.exe.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
           }
         },
         {
-          "id": "s08-02-metrics-collection-practice-03-code-1-1",
+          "id": "s08-02-metrics-collection-practice-02-code-1-1",
           "kind": "example",
           "kicker": "Вопрос 2 · практика",
           "title": "Код практики",
@@ -16277,7 +16277,7 @@
             "parts": [
               {
                 "label": "Команды",
-                "code": "demo_db_active_connections{env=\"training\"}\nrate(demo_db_connection_attempts_total{env=\"training\"}[30s])\ndemo_volume_free_bytes{mount=\"/data\"} / 1024^3",
+                "code": "prometheus --config.file=prometheus.yml --web.listen-address=127.0.0.1:9090",
                 "explanation": "Выполните команды в указанной среде."
               }
             ],
@@ -16285,11 +16285,11 @@
           }
         },
         {
-          "id": "s08-02-metrics-collection-practice-03-check",
+          "id": "s08-02-metrics-collection-practice-02-check",
           "kind": "example",
           "kicker": "Вопрос 2 · практика",
           "title": "Ожидаемый результат",
-          "body": "Текущее значение 27, скорость приблизительно 2/с, свободно 2 ГиБ. Точное значение rate зависит от временных отметок опросов; нужны как минимум два образца."
+          "body": "В интерфейсе http://127.0.0.1:9090 на странице Targets цель доступна. Запрос up{job=\"uiabd4_demo\"} даёт 1 после успешного опроса."
         },
         {
           "id": "s08-02-metrics-collection-q02-case-input-1",
@@ -16581,18 +16581,18 @@
           "body": "Недоступность цепочки сбора отличается от нулевого числа запросов."
         },
         {
-          "id": "s08-02-metrics-collection-practice-02-action",
+          "id": "s08-02-metrics-collection-practice-03-action",
           "kind": "theory",
           "kicker": "Вопрос 3 · практика",
-          "title": "Настроить и запустить сборщик",
-          "body": "Прочитайте prometheus.yml: scrape_interval и evaluation_interval заданы по 5 с, job_name — uiabd4_demo, target — локальный экспортёр. Запустите из той же папки установленный Prometheus; на Windows имя исполняемого файла — prometheus.exe.",
+          "title": "Проверить состояние и скорость",
+          "body": "После нескольких опросов выполните запросы в Prometheus. Запрос range [30s] выбирает окно ряда; rate вычисляет среднюю скорость counter за секунду с учётом сбросов. Gauge объёма переводится в ГиБ делением на 1024³.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
           }
         },
         {
-          "id": "s08-02-metrics-collection-practice-02-code-1-1",
+          "id": "s08-02-metrics-collection-practice-03-code-1-1",
           "kind": "example",
           "kicker": "Вопрос 3 · практика",
           "title": "Код практики",
@@ -16600,8 +16600,8 @@
             "type": "codeParts",
             "parts": [
               {
-                "label": "Команды",
-                "code": "prometheus --config.file=prometheus.yml --web.listen-address=127.0.0.1:9090",
+                "label": "PromQL · интерфейс Prometheus",
+                "code": "demo_db_active_connections{env=\"training\"}\nrate(demo_db_connection_attempts_total{env=\"training\"}[30s])\ndemo_volume_free_bytes{mount=\"/data\"} / 1024^3",
                 "explanation": "Выполните команды в указанной среде."
               }
             ],
@@ -16609,11 +16609,11 @@
           }
         },
         {
-          "id": "s08-02-metrics-collection-practice-02-check",
+          "id": "s08-02-metrics-collection-practice-03-check",
           "kind": "example",
           "kicker": "Вопрос 3 · практика",
           "title": "Ожидаемый результат",
-          "body": "В интерфейсе http://127.0.0.1:9090 на странице Targets цель доступна. Запрос up{job=\"uiabd4_demo\"} даёт 1 после успешного опроса."
+          "body": "Текущее значение 27, скорость приблизительно 2/с, свободно 2 ГиБ. Точное значение rate зависит от временных отметок опросов; нужны как минимум два образца."
         },
         {
           "id": "s08-02-metrics-collection-q03-case-input-1",
@@ -17471,7 +17471,7 @@
           "kind": "theory",
           "kicker": "Вопрос 6 · практика",
           "title": "Отличить отказ источника от нулевого значения",
-          "body": "Остановите экспортёр Ctrl+C и дождитесь следующего опроса. Сам Prometheus продолжает работать; это контролируемый отказ endpoint, а не доказательство отказа MySQL.",
+          "body": "Остановите экспортёр Ctrl+C, оставив Prometheus работать. После неудачного scrape проверьте up и отсутствие gauge. Затем запустите py -3 demo_exporter.py --connections 10 и дождитесь up=1 и значения 10 — исходной нормы для следующей лекции.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -18232,7 +18232,7 @@
           "id": "s08-02-metrics-collection-code",
           "kind": "example",
           "title": "Настройка опроса",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -18242,7 +18242,7 @@
                 "explanation": "Цель — учебный экспортёр из практики. Полный файл задаёт интервалы сбора и вычисления правил."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -18357,7 +18357,7 @@
           "id": "s08-03-dashboard-and-alerting-exam",
           "kind": "example",
           "title": "Панель и переходы учебного правила",
-          "body": "Работающий стенд из предыдущей лекции. Файлы prometheus.yml и alerts.yml находятся рядом; правило вычисляется каждые 5 с. Alertmanager и внешние адресаты в этой практике не настроены.",
+          "body": "Оставьте Prometheus из предыдущей лекции работающим, а экспортёр запустите с --connections 10. Дождитесь up=1, значения 10 и отсутствия активных оповещений. Файлы prometheus.yml и alerts.yml находятся рядом; вычисление каждые 5 с. Alertmanager и внешние адресаты здесь не настроены.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -18479,7 +18479,7 @@
           "kind": "theory",
           "kicker": "Вопрос 1 · практика",
           "title": "Панель и переходы учебного правила",
-          "body": "Работающий стенд из предыдущей лекции. Файлы prometheus.yml и alerts.yml находятся рядом; правило вычисляется каждые 5 с. Alertmanager и внешние адресаты в этой практике не настроены.",
+          "body": "Оставьте Prometheus из предыдущей лекции работающим, а экспортёр запустите с --connections 10. Дождитесь up=1, значения 10 и отсутствия активных оповещений. Файлы prometheus.yml и alerts.yml находятся рядом; вычисление каждые 5 с. Alertmanager и внешние адресаты здесь не настроены.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -19701,7 +19701,7 @@
           "kind": "theory",
           "kicker": "Вопрос 5 · практика",
           "title": "Проследить pending и firing",
-          "body": "При экспортёре с --connections 27 правило DemoConnectionsHigh проверяет значение >25 с for=20s. На странице Alerts наблюдайте переходы и запишите фактические моменты; они зависят от ближайшего вычисления правила.",
+          "body": "После нормального состояния 10 остановите экспортёр Ctrl+C и запустите py -3 demo_exporter.py --connections 27. DemoConnectionsHigh проверяет >25 с for=20s. На странице Alerts запишите моменты pending и firing; они зависят от ближайшего вычисления правила. Уже активное firing не позволяет заново наблюдать pending без предварительного возврата к норме.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -19719,7 +19719,7 @@
           "kind": "theory",
           "kicker": "Вопрос 5 · практика",
           "title": "Проверить отказ и восстановление",
-          "body": "Остановите экспортёр более чем на 15 с. Затем запустите его с --connections 10 и дождитесь новых опросов и вычислений.",
+          "body": "Остановите экспортёр Ctrl+C. На странице Alerts дождитесь pending, затем firing у DemoExporterDown: 15 с отсчитываются от первого вычисления истинного условия, а не от Ctrl+C; опросы и вычисления идут каждые 5 с. Затем запустите его с --connections 10 и дождитесь новых опросов и вычислений.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -20795,7 +20795,7 @@
           "id": "s08-03-dashboard-and-alerting-code",
           "kind": "example",
           "title": "Правило оповещения",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -20805,7 +20805,7 @@
                 "explanation": "Фрагмент помещается в rules файла alerts.yml. При 27 соединениях правило ждёт устойчивого нарушения; доставка проверяется отдельно."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -23454,7 +23454,7 @@
           "id": "s08-04-incident-analysis-and-recovery-code",
           "kind": "example",
           "title": "Контроль восстановленной базы",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -23464,7 +23464,7 @@
                 "explanation": "Практика дополняет количество и сумму проверкой внешних связей и числа позиций каждого заказа."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",
@@ -23768,7 +23768,7 @@
           "kind": "theory",
           "kicker": "Вопрос 1 · практика",
           "title": "Подтвердить сервер и базу",
-          "body": "MySQL: SELECT VERSION(),DATABASE(),CURRENT_USER(). PostgreSQL: SELECT version(),current_database(),current_user. У клиентов разные ключи порта: mysql -P и psql -p; метакоманды клиента не смешивают с SQL.",
+          "body": "MySQL: откройте .\\client.ps1 и выполните SELECT VERSION(),DATABASE(),CURRENT_USER(). Для PostgreSQL 18 сначала подготовьте отдельную учебную базу командой createdb -h127.0.0.1 -p5432 -U postgres -W uiabd4_training, если она ещё не предоставлена. Затем psql -X -h127.0.0.1 -p5432 -U postgres -W -d uiabd4_training и SELECT version(),current_database(),current_user. Замените postgres и 5432 своими учебными параметрами; пароль вводится по приглашению. Программы createdb и psql находятся в bin установленного PostgreSQL. Этот отдельный сервер не запускается MySQL-комплектом.",
           "supplement": {
             "label": "Тестовый стенд",
             "href": "practice/uiabd4-stand.zip"
@@ -23812,7 +23812,7 @@
             "type": "codeParts",
             "parts": [
               {
-                "label": "SQL · MySQL",
+                "label": "SQL · обе СУБД",
                 "code": "CREATE TEMPORARY TABLE transfer_orders(\n id BIGINT PRIMARY KEY CHECK(id BETWEEN 0 AND 4294967295),\n total DECIMAL(10,2) NOT NULL\n);\nINSERT INTO transfer_orders VALUES (0,12.50),(4000000000,27.50);\nSELECT id,total FROM transfer_orders ORDER BY id;",
                 "explanation": "Выполняйте файл целиком, включая продолжения."
               }
@@ -23829,7 +23829,7 @@
             "type": "codeParts",
             "parts": [
               {
-                "label": "SQL · MySQL",
+                "label": "SQL · обе СУБД",
                 "code": "SELECT COUNT(*) AS n,SUM(total) AS total_sum,MAX(id) AS max_id FROM transfer_orders;",
                 "explanation": "Выполняйте файл целиком, включая продолжения."
               }
@@ -26301,7 +26301,7 @@
           "id": "s08-05-database-platform-comparison-code",
           "kind": "example",
           "title": "Проверка перенесённых данных",
-          "body": "Пример использует учебные данные практики далее в этой лекции.",
+          "body": "Пример использует набор из практики этой лекции. Сохраните указанное соединение и исходное состояние.",
           "visual": {
             "type": "codeParts",
             "parts": [
@@ -26311,7 +26311,7 @@
                 "explanation": "Одинаковый набор практики сопоставляется по каждой строке и агрегатам. Временная таблица должна быть создана в том же сеансе."
               }
             ],
-            "caption": "Исходные данные и порядок выполнения — на следующих слайдах."
+            "caption": "Подготовка набора — по ссылке к практике; временные таблицы остаются в своём соединении."
           },
           "supplement": {
             "label": "К исходным данным",

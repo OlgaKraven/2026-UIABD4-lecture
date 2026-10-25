@@ -5667,13 +5667,15 @@
       "2d9e591b1c7d7ba2e1b8aaa739cf8ac7b6e8b1350ea4230c3ef0edd6b124f586",
       "11fb5390ef93d5da918d8de3209c7ab02103c2c282b7a718015cbe7c7fb883bd",
       "86c102943f25da91a12a27c57df8fa52cdaf5d8e0c3a92bf8621f155cd604b83",
-      "ec1646b2ef9a5dac81f3c63c5bec4355a1af737ff6abece191e8a3e4ddaf243f"
+      "ec1646b2ef9a5dac81f3c63c5bec4355a1af737ff6abece191e8a3e4ddaf243f",
+      "a87cb3771187f46dc64e7b7d772600ebe7dfb6d2ab8ecf931b9e6b701cafbc2b"
     ],
     "preparation": [
       "3e2ab02c372f138eec47d59814e5ae65547bb8443735be626376bb966937cf53",
       "71835d8ecf79dd1646011f9845b2d5e6d4fcd6c0934223958317773794ac9ee7",
       "8147dfed03f12e1ce72b6968f70d1b9fe9849496c2ccf9292b08b985879d6673",
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "notebook": [
       "4b9aac9595754bf88cc73a20bdd7456bfbde3af54aa85cd3581255ab536236e3",
@@ -5690,7 +5692,8 @@
     ],
     "estimatedSeconds": [
       "6c658ee83fb7e812482494f3e416a876f63f418a0b8a1f5e76d47ee4177035cb",
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569"
     ]
   },
   "s07-03-procedures-and-triggers-q01-section": {
@@ -8090,7 +8093,8 @@
     "script": [
       "30d1086613f3c81d17bcdea463c38e39c0228198e6edca666c44459b474ed16b",
       "d7e2ae78acc19a4e1697c0050c884bee70781434c0c318dd5429954a385d1255",
-      "b7e4eccb55047bc9e93fdc7bbb318e2bfb852bd9426928eb4573ca3f754e299b"
+      "b7e4eccb55047bc9e93fdc7bbb318e2bfb852bd9426928eb4573ca3f754e299b",
+      "c3bab47b39fae5f5a4c48b4d6c1b403207b98fc84b65c28cc0f9f7c362bbb403"
     ],
     "preparation": [
       "8b344259e2f97fcf9a44b31e82acafdfc3638739aebaef32e0174a24bed0da0d",
@@ -8111,7 +8115,8 @@
     ],
     "estimatedSeconds": [
       "16dc368a89b428b2485484313ba67a3912ca03f2b2b42429174a4f8b3dc84e44",
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "5f9c4ab08cac7457e9111a30e4664920607ea2c115a1433d7be98e97e64244ca"
     ]
   },
   "s07-03-procedures-and-triggers-summary": {
@@ -19274,13 +19279,15 @@
       "55a50a21ecec28460c49290d0fbef904ac44ff137d12c9d2b013cb6a8f36fa51",
       "9fa5d68f1f7cc55ba0b08f82fd1cf4e1a6d23212fe7182d53c736bc8c3e4c87d",
       "c0b4a7b3d2915204f2133597053ae5dc52d83a244e632a770c1f2f52ded361f1",
-      "33e950a6509e46e5b7442da11de9b6d0b1a81df7214380958d1f4934936c0851"
+      "33e950a6509e46e5b7442da11de9b6d0b1a81df7214380958d1f4934936c0851",
+      "3840207da2abdd0715e1fe7f5c2f6a810d6f150fb2e9f5e86385d9eb9df3ce1d"
     ],
     "preparation": [
       "d8aec3276eeb3f4e7804f3c252f8800df183c6a9fbe6d760575ec5c959530965",
       "71835d8ecf79dd1646011f9845b2d5e6d4fcd6c0934223958317773794ac9ee7",
       "8147dfed03f12e1ce72b6968f70d1b9fe9849496c2ccf9292b08b985879d6673",
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "notebook": [
       "4b9aac9595754bf88cc73a20bdd7456bfbde3af54aa85cd3581255ab536236e3",
@@ -19297,7 +19304,8 @@
     ],
     "estimatedSeconds": [
       "9537f32ec7599e1ae953af6c9f929fe747ff9dadf79a9beff1f304c550173011",
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "785f3ec7eb32f30b90cd0fcf3657d388b5ff4297f2f9716ff66e9b69c05ddd09"
     ]
   },
   "s08-03-dashboard-and-alerting-q01-section": {
@@ -30284,16 +30292,19 @@
   "s07-03-procedures-and-triggers-practice-02-code-1-1": {
     "script": [
       "ac700c8c8963dfe220246f7bed739b42c46e7866573e41e31183f693d22d389d",
-      "ae5bbc61080b79d92511f2ac386fdf7e9d89b1984a471ee0551e0bc741c29bd9"
+      "ae5bbc61080b79d92511f2ac386fdf7e9d89b1984a471ee0551e0bc741c29bd9",
+      "f7ad79e909c8314d2fe23bda54e74e3bb16a6e02ff4dd584ed7da04ebf33d126"
     ],
     "questions": [
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
-      "86e50149658661312a9e0b35558d84f6c6d3da797f552a9657fe0558ca40cdef"
+      "86e50149658661312a9e0b35558d84f6c6d3da797f552a9657fe0558ca40cdef",
+      "785f3ec7eb32f30b90cd0fcf3657d388b5ff4297f2f9716ff66e9b69c05ddd09"
     ]
   },
   "s07-03-procedures-and-triggers-practice-02-code-1-2": {
@@ -30305,7 +30316,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -30320,7 +30332,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -30335,7 +30348,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
@@ -30554,7 +30568,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33511,17 +33526,20 @@
   "s07-03-procedures-and-triggers-practice-environment": {
     "script": [
       "ec1646b2ef9a5dac81f3c63c5bec4355a1af737ff6abece191e8a3e4ddaf243f",
-      "a8a0a31b85ab1fab2671051af6c0e205a1204d1f373b71d28f61de14283a4698"
+      "a8a0a31b85ab1fab2671051af6c0e205a1204d1f373b71d28f61de14283a4698",
+      "d89e969c817d1f36dbeb41012614ba4ab4463beb0ce97a0c53ae99b3964373a3"
     ],
     "questions": [
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
-      "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569"
+      "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+      "b17ef6d19c7a5b1ee83b907c595526dcb1eb06db8227d650d5dda0a9f4ce8cd9"
     ]
   },
   "s07-03-procedures-and-triggers-practice-01-action": {
@@ -33535,7 +33553,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33549,7 +33568,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33583,7 +33603,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33597,7 +33618,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33611,7 +33633,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953"
@@ -33625,7 +33648,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33639,7 +33663,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33724,7 +33749,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33738,7 +33764,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -33752,7 +33779,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8a4b78848ed586e4e96e1091e01ce56ad7e4f22dc8cbce0a4023f7433642323f"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -34936,7 +34964,8 @@
   },
   "s08-02-metrics-collection-practice-04-action": {
     "script": [
-      "708f903cae640807ff073d9c45e1eea33983dc93144e64e8b6f36de7b9cfff34"
+      "708f903cae640807ff073d9c45e1eea33983dc93144e64e8b6f36de7b9cfff34",
+      "a38fb3585f7b42f8ed70a3e51b973b286f22205dedeb4321d77228ff090522c2"
     ],
     "answer": [
       "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -34948,7 +34977,8 @@
       "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
     ],
     "estimatedSeconds": [
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb"
     ]
   },
   "s08-02-metrics-collection-practice-04-check": {
@@ -35039,7 +35069,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
@@ -35054,7 +35085,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35071,7 +35103,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35085,7 +35118,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35161,7 +35195,8 @@
   },
   "s08-03-dashboard-and-alerting-practice-02-action": {
     "script": [
-      "37e6bfe7b21d454e51bc74fda4afd6739551f64e306c44b17f5a99c470d246d0"
+      "37e6bfe7b21d454e51bc74fda4afd6739551f64e306c44b17f5a99c470d246d0",
+      "5ba3bde85a7a764f1f4d7a6539587ff1e56ca93604909bcd201ee861755cf91f"
     ],
     "answer": [
       "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -35170,10 +35205,12 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb"
     ]
   },
   "s08-03-dashboard-and-alerting-practice-02-check": {
@@ -35184,7 +35221,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35192,7 +35230,8 @@
   },
   "s08-03-dashboard-and-alerting-practice-03-action": {
     "script": [
-      "56bc6bc3cec18a8075b9a4bb5d0b02793136e21e9e5d4fb0ba4aec66200ff2d1"
+      "56bc6bc3cec18a8075b9a4bb5d0b02793136e21e9e5d4fb0ba4aec66200ff2d1",
+      "166d659d978e95f283782c28d2cabbc2247fcfa3b7a552642e2572a116ff6bdf"
     ],
     "answer": [
       "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -35201,10 +35240,12 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb"
     ]
   },
   "s08-03-dashboard-and-alerting-practice-03-code-1-1": {
@@ -35215,7 +35256,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35229,7 +35271,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35297,7 +35340,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35311,7 +35355,8 @@
       "95a95d04cf99360eda112f26cc14aa684835600957535b1d698cca6a5260b54f"
     ],
     "preparation": [
-      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
+      "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe",
+      "8669b1a0b1abf017517989665e3c345a0b513b4d1cc4f7ef401e6c31ad0837e8"
     ],
     "estimatedSeconds": [
       "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
@@ -35719,7 +35764,8 @@
   },
   "s08-05-database-platform-comparison-practice-01-action": {
     "script": [
-      "18b3df7fc3966f81b1cc0916bdc6fe001884cb9a69a7a2d366f4650d871a101e"
+      "18b3df7fc3966f81b1cc0916bdc6fe001884cb9a69a7a2d366f4650d871a101e",
+      "4f6b675d996c2fd808367e7fd3530e7d99de28be2f22a0287cbc85049717b532"
     ],
     "answer": [
       "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -35731,7 +35777,8 @@
       "b0b391e80e70cef17a0ddbe7db10b9b9cded4d6b4e14507de449be86e9e34afe"
     ],
     "estimatedSeconds": [
-      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+      "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb"
     ]
   },
   "s08-05-database-platform-comparison-practice-01-check": {
