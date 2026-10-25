@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-25",
+  "courseId": "uiabd4",
+  "sourceSha256": "f12788f983b19dfabd272daa92786fd816680b8170145c1d146f0db2d86d8e7d",
+  "checks": {
+    "course": "uiabd4",
+    "tocNumbers": 8,
+    "search": true,
+    "presenterOutline": true,
+    "mouse": true,
+    "keyboard": true,
+    "expandedListInAudience": true,
+    "highlightInAudience": true,
+    "committedValueInAudience": true,
+    "lateAudience": true,
+    "escapeKeepsValue": true,
+    "outsideCloses": true,
+    "deliberateReveal": true,
+    "mobile": [
+      390,
+      320
+    ],
+    "darkTheme": true,
+    "audienceQuestionHeadings": 10,
+    "errors": []
+  },
+  "printLayout": [
+    {
+      "lecture": "s07-01-queries-on-server-database",
+      "pages": 143,
+      "issues": []
+    },
+    {
+      "lecture": "s07-02-calculation-query",
+      "pages": 138,
+      "issues": []
+    },
+    {
+      "lecture": "s07-03-procedures-and-triggers",
+      "pages": 139,
+      "issues": []
+    },
+    {
+      "lecture": "s07-04-query-performance-and-indexes",
+      "pages": 136,
+      "issues": []
+    },
+    {
+      "lecture": "s07-05-server-and-network-requirements",
+      "pages": 132,
+      "issues": []
+    },
+    {
+      "lecture": "s08-01-server-metrics",
+      "pages": 134,
+      "issues": []
+    },
+    {
+      "lecture": "s08-02-metrics-collection",
+      "pages": 138,
+      "issues": []
+    },
+    {
+      "lecture": "s08-03-dashboard-and-alerting",
+      "pages": 135,
+      "issues": []
+    },
+    {
+      "lecture": "s08-04-incident-analysis-and-recovery",
+      "pages": 141,
+      "issues": []
+    },
+    {
+      "lecture": "s08-05-database-platform-comparison",
+      "pages": 157,
+      "issues": []
+    }
+  ],
+  "unitTests": 25
+}

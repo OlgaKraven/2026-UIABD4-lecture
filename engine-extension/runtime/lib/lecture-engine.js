@@ -1,3 +1,4 @@
+import {outlineLabel} from "./navigation-label.js";
 import { C as e, S as t, T as n, _ as r, b as i, d as a, f as o, h as s, i as c, l, m as u, n as d, o as f, r as ee, s as p, t as m, u as h, v as te, w as g, x as ne, y as re } from "./SlideView-ejiylWgb.js";
 import { Suspense as ie, lazy as _, useEffect as v, useState as y } from "react";
 import { jsx as b, jsxs as x } from "react/jsx-runtime";
@@ -633,12 +634,12 @@ function T({ course: n, base: s = "/", teacherNotes: d, resolveTeacherNotes: f, 
 					children: K.slides.map((e, t) => ({
 						s: e,
 						i: t
-					})).filter(({ s: e }) => e.title.toLowerCase().includes(F.toLowerCase())).map(({ s: e, i: t }) => /* @__PURE__ */ b("li", { children: /* @__PURE__ */ x("button", {
+					})).filter(({ s: e }) => outlineLabel(e).toLowerCase().includes(F.toLowerCase())).map(({ s: e, i: t }) => /* @__PURE__ */ b("li", { children: /* @__PURE__ */ x("button", {
 						"aria-current": t === q ? "step" : void 0,
 						onClick: () => {
 							X(t), P("");
 						},
-						children: [/* @__PURE__ */ b("b", { children: String(t + 1).padStart(2, "0") }), e.title]
+						children: [/* @__PURE__ */ b("b", { children: String(t + 1).padStart(2, "0") }), outlineLabel(e)]
 					}) }, e.id))
 				})]
 			}),

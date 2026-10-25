@@ -1,3 +1,4 @@
+import {CourseMatchingChoice} from "./matching-choice.js";
 import { createContext as e, createElement as t, forwardRef as n, useContext as r, useEffect as i, useId as a, useMemo as o, useRef as s, useState as c } from "react";
 import { Fragment as l, jsx as u, jsxs as d } from "react/jsx-runtime";
 //#region \0rolldown/runtime.js
@@ -2702,22 +2703,11 @@ function qe({ task: e }) {
 				tabIndex: 0,
 				role: "group",
 				"aria-label": "Пары для сопоставления",
-				children: e.items?.map((r) => /* @__PURE__ */ d("label", { children: [/* @__PURE__ */ u("span", { children: r.text }), /* @__PURE__ */ d("select", {
-					"aria-label": `Соответствие: ${r.text}`,
-					disabled: s,
-					value: n?.draft && typeof n.draft == "object" && !Array.isArray(n.draft) && n.draft[r.id] || "",
-					onChange: (i) => t.change(e, {
-						...typeof n?.draft == "object" && !Array.isArray(n.draft) ? n.draft : {},
-						[r.id]: i.target.value
-					}),
-					children: [/* @__PURE__ */ u("option", {
-						value: "",
-						children: "Выберите соответствие"
-					}), i.map((e) => /* @__PURE__ */ u("option", {
-						value: e.id,
-						children: e.text
-					}, e.id))]
-				})] }, r.id))
+				children: e.items?.map((r) => /* @__PURE__ */ d("label", { children: [/* @__PURE__ */ u("span", { children: r.text }), u(CourseMatchingChoice, {
+ task:e,item:r,options:i,disabled:s,readOnly:t.readonly,
+ value:n?.draft&&typeof n.draft==="object"&&!Array.isArray(n.draft)&&n.draft[r.id]||"",
+ onChange:id=>t.change(e,{...typeof n?.draft==="object"&&!Array.isArray(n.draft)?n.draft:{},[r.id]:id})
+ },e.id+":"+r.id)] }, r.id))
 			}),
 			/* @__PURE__ */ d("div", {
 				className: "task-actions",

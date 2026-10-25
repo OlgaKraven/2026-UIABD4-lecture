@@ -1,6 +1,6 @@
 """Prepare the pinned runtime with the course toolbar and presenter layout."""
 from pathlib import Path
-import tarfile,json
+import tarfile,json,subprocess
 root=Path('engine-extension/runtime')
 archive=Path('vendor/olgakraven-lecture-engine-0.1.1-okfks.10-visuals.2.tgz')
 with tarfile.open(archive) as tar:
@@ -76,4 +76,31 @@ assert old in s
 s=s.replace(old,new);p.write_text(s,encoding='utf-8')
 p=root/'lib/model.d.ts';s=p.read_text(encoding='utf-8').replace('export type Course = {','export type Course = {\n    slideAliases?: Record<string,string>;');p.write_text(s,encoding='utf-8')
 p=root/'package.json';d=json.loads(p.read_text(encoding='utf-8'));d['version']='0.1.1-uiabd4.1';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+# Keep shared UI sources readable and reproduce the same additions from the
+# pinned package when preparing the runtime again.
+extension=Path(__file__).resolve().parent.parent/'engine-extension'
+subprocess.run(['node',str(extension/'build-matching-choice.mjs')],check=True)
+for name in ['navigation-label.js']:
+    (root/'lib'/name).write_text((extension/name).read_text(encoding='utf-8'),encoding='utf-8')
+for name,query in [('lecture-engine.js','F'),('Teaching-CZWN6_7h.js','ye')]:
+    p=root/'lib'/name;s=p.read_text(encoding='utf-8')
+    s='import {outlineLabel} from "./navigation-label.js";\n'+s
+    old=f'e.title.toLowerCase().includes({query}.toLowerCase())'
+    assert s.count(old)==1
+    s=s.replace(old,f'outlineLabel(e).toLowerCase().includes({query}.toLowerCase())')
+    old='children: [/* @__PURE__ */ b("b", { children: String(t + 1).padStart(2, "0") }), e.title]'
+    assert s.count(old)==1
+    s=s.replace(old,old.replace('e.title]','outlineLabel(e)]'))
+    p.write_text(s,encoding='utf-8')
+p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8')
+start=s.index('/* @__PURE__ */ d("select", {',s.index('className: "matching-fields"'))
+end=s.index('\n\t\t\t\t})] }, r.id))',start)+len('\n\t\t\t\t})')
+s=s[:start]+'''u(CourseMatchingChoice, {
+ task:e,item:r,options:i,disabled:s,readOnly:t.readonly,
+ value:n?.draft&&typeof n.draft==="object"&&!Array.isArray(n.draft)&&n.draft[r.id]||"",
+ onChange:id=>t.change(e,{...typeof n?.draft==="object"&&!Array.isArray(n.draft)?n.draft:{},[r.id]:id})
+ },e.id+":"+r.id)'''+s[end:]
+s='import {CourseMatchingChoice} from "./matching-choice.js";\n'+s
+p.write_text(s,encoding='utf-8')
+p=root/'lib/lecture-engine.css';p.write_text(p.read_text(encoding='utf-8')+'\n'+(extension/'matching-choice.css').read_text(encoding='utf-8'),encoding='utf-8')
 print('Runtime prepared:',root)

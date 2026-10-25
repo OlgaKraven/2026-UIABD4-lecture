@@ -1,5 +1,7 @@
-Расширение общего движка для этого проекта
+# Локальный runtime лекционного сайта
 
-Основа: dd0a0dc09e10916e3c07157677f7a1769396a110 репозитория 2026-lecture-shablone.
-Примените integration.patch к этой версии. Установите версию package.json 0.2.1-uiabd.1 и files: ["lib"], выполните npm ci, npm run build:engine, npm pack. Исходный репозиторий шаблона не изменялся.
-Дополнительный необязательный prop LectureSite: bundledTeacherNotes — относительный путь к TeacherPack. Его загружает только Presenter, проверяя курс и версию и сохраняя приоритет локальных правок. У Audience нет загрузки сценария.
+Рабочий runtime в `runtime/` подключён локальной зависимостью. Основа — закреплённый `vendor/olgakraven-lecture-engine-0.1.1-okfks.10-visuals.2.tgz`. После `npm ci` скрипт `scripts/prepare-runtime.py` разворачивает архив и применяет местные изменения. Версия рабочего runtime — `0.1.1-uiabd4.1`. Результат хранится в Git; общий шаблон не меняется.
+
+`navigation-label.js` формирует подписи тематических разделов. `matching-choice.jsx` и `matching-choice.css` задают список соответствий; `build-matching-choice.mjs` компилирует JSX в обычный JS при подготовке runtime. Состояние ответа использует существующий assessment provider; раскрытие и подсветка синхронизируются отдельно через BroadcastChannel и storage.
+
+Пакет `vendor/olgakraven-lecture-engine-0.2.1-uiabd.1.tgz` используется для содержательной валидации; `integration.patch` сохраняет происхождение его расширения. Учебное содержание курса находится в `authoring/` и `src/learning/` этого проекта.

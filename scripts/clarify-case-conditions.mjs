@@ -4,6 +4,7 @@ import {models,initialValues} from '../src/learning/workbenchModels.ts';
 import {briefs,inputTables} from '../authoring/case-briefs.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),save=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');
 const course=read('public/course.json'),pack=read('public/teacher-notes.json'),cases=read('authoring/cases.json'),questions=read('authoring/questions.json');
+for(const l of course.lectures)for(const s of l.slides)if(s.kind==='questions')s.title='Вопросы к аудитории';
 if(briefs.length!==80||models.length!==80)throw Error('Неполный набор условий');
 for(const lecture of course.lectures)lecture.slides=lecture.slides.filter(s=>!s.id.includes('-case-input-'));
 function note(id,value){if(pack.notes[id])for(const field of Object.keys(value))if(pack.notes[id][field]!==value[field]){pack.previousNoteHashes??={};const fields=pack.previousNoteHashes[id]??={};fields[field]=[...new Set([...(fields[field]||[]),crypto.createHash('sha256').update(String(pack.notes[id][field]??'')).digest('hex')])]}pack.notes[id]=value}

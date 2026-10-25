@@ -1,3 +1,4 @@
+import {outlineLabel} from "./navigation-label.js";
 import { C as e, S as t, T as n, _ as r, a as i, b as a, c as o, g as s, l as c, p as l, r as u, t as d, u as f, v as p, w as m, x as h, y as g } from "./SlideView-ejiylWgb.js";
 import { useCallback as ee, useEffect as _, useRef as v, useState as y } from "react";
 import { jsx as b, jsxs as x } from "react/jsx-runtime";
@@ -733,10 +734,10 @@ function ce({ course: n, lecture: u, base: h, profile: S, session: C, initialSli
 							children: u.slides.map((e, t) => ({
 								s: e,
 								i: t
-							})).filter(({ s: e }) => e.title.toLowerCase().includes(ye.toLowerCase())).map(({ s: e, i: t }) => /* @__PURE__ */ b("li", { children: /* @__PURE__ */ x("button", {
+							})).filter(({ s: e }) => outlineLabel(e).toLowerCase().includes(ye.toLowerCase())).map(({ s: e, i: t }) => /* @__PURE__ */ b("li", { children: /* @__PURE__ */ x("button", {
 								"aria-current": e.id === k ? "step" : void 0,
 								onClick: () => {A(e.id);setOutline(false)},
-								children: [/* @__PURE__ */ b("b", { children: String(t + 1).padStart(2, "0") }), e.title]
+								children: [/* @__PURE__ */ b("b", { children: String(t + 1).padStart(2, "0") }), outlineLabel(e)]
 							}) }, e.id))
 						})]
 					})
