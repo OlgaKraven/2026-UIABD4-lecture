@@ -15,22 +15,22 @@ for(const [li,lecture] of course.lectures.entries()){
  for(const [i,slide] of lecture.slides.entries()){
   const note=pack.notes[slide.id];if(!note?.script?.trim())throw Error('Missing script: '+slide.id);
   const anchor=`screen-${String(i+1).padStart(3,'0')}`;
-  teacher+=`<a id="${anchor}"></a>\n### ${i+1}. ${slide.title}\n\n${note.script.replace(/\nПоказ:[^\n]+/g,'')}\n\n`;
+  const source=(slide.visual?.parts||[]).map(p=>`**${p.label}**\n\n~~~\n${p.code}\n~~~`).join('\n\n');
+  teacher+=`<a id="${anchor}"></a>\n### ${i+1}. ${slide.title}\n\n${source?source+'\n\n':''}${note.script}\n\n`;
   const references=(slide.references||[]).map(r=>`- ${r.citation}${r.url?` [Открыть источник](${r.url})`:''}`).join('\n');
   if(references)teacher+=references+'\n\n';
   if(slide.kind==='materials')teacher+=`[Материалы курса](${course.materialsUrl})\n\n`;
   if(slide.notebook)teacher+=`**Запишите:** ${slide.notebook}\n\n`;
-  if(slide.task)teacher+=`**Разбор после попытки.** ${note.answer}\n\n`;
+  if(slide.task||slide.kind==='questions')teacher+=`**Разбор после попытки.** ${note.answer}\n\n`;
   const item=cases.find(item=>item.returnSlide===slide.id);
   if(item)teacher+=`**Разбор после ответа группы.**\n\n${note.answer}\n\n`;
-  presenter+=`<a id="${anchor}"></a>\n## ${i+1}. ${slide.title}\n\n${note.script}\n\n`;
+  presenter+=`<a id="${anchor}"></a>\n## ${i+1}. ${slide.title}\n\n${source?source+'\n\n':''}${note.script}\n\n`;
   if(references)presenter+=references+'\n\n';
   if(slide.kind==='materials')presenter+=`[Материалы курса](${course.materialsUrl})\n\n`;
   if(note.preparation)presenter+=`**До показа:** ${note.preparation}\n\n`;
   if(note.notebook)presenter+=`**Запишите:** ${note.notebook}\n\n`;
   if(note.questions)presenter+=`**Вопрос группе:** ${note.questions}\n\n`;
   if(note.answer)presenter+=`**Ответ и разбор:** ${note.answer}\n\n`;
-  if(lecture.slides[i+1])presenter+=`**Далее:** ${lecture.slides[i+1].title}.\n\n`;
   alignment.slides.push({lectureId:lecture.id,slideId:slide.id,displayNumber:i+1,title:slide.title,anchors:{teacher:anchor,presenter:anchor}});
  }
  write(prefix+'.teacher.md',teacher);write(prefix+'.presenter.md',presenter);write(prefix+'.alignment.json',JSON.stringify(alignment,null,2)+'\n');
