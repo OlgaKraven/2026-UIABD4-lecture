@@ -80,7 +80,7 @@ p=root/'package.json';d=json.loads(p.read_text(encoding='utf-8'));d['version']='
 # pinned package when preparing the runtime again.
 extension=Path(__file__).resolve().parent.parent/'engine-extension'
 subprocess.run(['node',str(extension/'build-matching-choice.mjs')],check=True)
-for name in ['navigation-label.js']:
+for name in ['navigation-label.js','matching-choice.d.ts']:
     (root/'lib'/name).write_text((extension/name).read_text(encoding='utf-8'),encoding='utf-8')
 for name,query in [('lecture-engine.js','F'),('Teaching-CZWN6_7h.js','ye')]:
     p=root/'lib'/name;s=p.read_text(encoding='utf-8')
@@ -103,4 +103,11 @@ s=s[:start]+'''u(CourseMatchingChoice, {
 s='import {CourseMatchingChoice} from "./matching-choice.js";\n'+s
 p.write_text(s,encoding='utf-8')
 p=root/'lib/lecture-engine.css';p.write_text(p.read_text(encoding='utf-8')+'\n'+(extension/'matching-choice.css').read_text(encoding='utf-8'),encoding='utf-8')
+# Command-line flags retain case: mysql -P and -p have different meanings.
+p=root/'lib/SlideView-ejiylWgb.js';s=p.read_text(encoding='utf-8')
+old='let e = We(String(n));'
+assert s.count(old)==1
+s=s.replace(old,'let normalize=t.accepted?.some(x=>/^-[A-Za-z]$/.test(x))?x=>String(x).trim():We;let e=normalize(String(n));')
+s=s.replace('We(t) === e','normalize(t) === e')
+p.write_text(s,encoding='utf-8')
 print('Runtime prepared:',root)

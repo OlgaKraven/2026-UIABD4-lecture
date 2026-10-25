@@ -2552,8 +2552,8 @@ function Ge(e, t, n) {
 		let a = Array.isArray(n) ? new Set(n) : /* @__PURE__ */ new Set([String(n)]), o = new Set(t.correct || []);
 		r = o.size > 0 && o.size === a.size && [...a].every((e) => o.has(e)) ? 1 : 0, i = e.options?.filter((e) => o.has(e.id)).map((e) => e.text).join("; ") || "";
 	} else if (e.type === "short") {
-		let e = We(String(n));
-		if (r = +!!t.accepted?.some((t) => We(t) === e), t.numeric) {
+		let normalize=t.accepted?.some(x=>/^-[A-Za-z]$/.test(x))?x=>String(x).trim():We;let e=normalize(String(n));
+		if (r = +!!t.accepted?.some((t) => normalize(t) === e), t.numeric) {
 			let n = Number(e.replace(",", "."));
 			r = e !== "" && Number.isFinite(n) && Math.abs(n - t.numeric.value) <= t.numeric.tolerance ? 1 : 0;
 		}

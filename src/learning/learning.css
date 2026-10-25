@@ -115,3 +115,13 @@
  .slide-frame:has(.learning-visual)>.slide-content{padding-top:.4cqw}
  .case-workshop,.diagram-workspace{background:white;color:black}
 }
+
+/* Keep the same proportions in the presenter preview and the projected frame. */
+.slide-frame .timeline-row,.slide-frame .timeline-axis{gap:1.2cqw}
+.slide-frame .timeline-row{margin-block:1.2cqw}
+.slide-frame .scenario-timeline figcaption{margin-bottom:1.2cqw}
+.slide-frame .timeline-track{height:1.8cqw}
+.slide-frame .timeline-range{top:.5cqw;height:.75cqw}
+.slide-frame .timeline-point{top:.2cqw;height:1.35cqw}
+.slide-frame .visual-controls{gap:.8cqw}
+.slide-frame .visual-controls button{min-height:3.3cqw;padding:.65cqw 1cqw;font-size:1.13cqw}

@@ -1,3 +1,4 @@
+import {ProjectionChoiceScope} from './projectionChoiceScope'
 import {useEffect,useRef,useState} from 'react'
 import cases from '../../authoring/cases.json'
 import {models,initialValues} from './workbenchModels'
@@ -28,9 +29,9 @@ function Workshop({base,index,onClose,readOnly,sessionId}:Omit<Props,'id'>&{inde
   if(audience){try{receive(JSON.parse(localStorage.getItem(key)||'null'))}catch{/* No public snapshot. */}channel.postMessage({request:true})}
   return()=>{channel.close();bus.current=null}
  },[audience,session,item.id,model])
- useEffect(()=>{document.documentElement.dataset.theme=state.theme;if(audience)return;const value={...state,sequence:Date.now()};latest.current=value;bus.current?.postMessage(value);try{localStorage.setItem(`uiabd4:workbench:${session}:${item.id}`,JSON.stringify(value))}catch{/* Broadcast still works. */}},[state,audience,session,item.id])
+ useEffect(()=>{document.documentElement.dataset.theme=state.theme;if(audience)return;const value={...state,sequence:Math.max(Date.now(),latest.current.sequence+1)};latest.current=value;bus.current?.postMessage(value);try{localStorage.setItem(`uiabd4:workbench:${session}:${item.id}`,JSON.stringify(value))}catch{/* Broadcast still works. */}},[state,audience,session,item.id])
  useEffect(()=>{const previous=document.title;document.title=`${item.title} · Рабочая схема`;return()=>{document.title=previous}},[item.title])
  const back=`${base}?lecture=${item.lectureId}&slide=${item.returnSlide}`
  const toggleTheme=()=>{const theme=state.theme==='dark'?'light':'dark';setState({...state,theme});try{localStorage.setItem(`lecture:${base}:uiabd4:theme`,JSON.stringify(theme))}catch{/* Theme still changes for this view. */}window.dispatchEvent(new Event('course-theme'))}
- return <main className="case-workshop case-demo"><header>{!onClose&&<a href={back}>← К условию на слайде</a>}<span>{item.semester} семестр</span>{!audience&&<button onClick={toggleTheme}>{state.theme==='dark'?'Светлая тема':'Тёмная тема'}</button>}</header><h1>{item.title}</h1><OperationWorkbench model={model} state={state} onChange={change} onUndo={undo} canUndo={canUndo} audience={audience}/>{!onClose&&<footer><a href={back}>Вернуться к условию на слайде →</a></footer>}</main>
+ return <main className="case-workshop case-demo"><header>{!onClose&&<a href={back}>← К условию на слайде</a>}<span>{item.semester} семестр</span>{!audience&&<button onClick={toggleTheme}>{state.theme==='dark'?'Светлая тема':'Тёмная тема'}</button>}</header><h1>{item.title}</h1><ProjectionChoiceScope value={item.id}><OperationWorkbench model={model} state={state} onChange={change} onUndo={undo} canUndo={canUndo} audience={audience}/></ProjectionChoiceScope>{!onClose&&<footer><a href={back}>Вернуться к условию на слайде →</a></footer>}</main>
 }

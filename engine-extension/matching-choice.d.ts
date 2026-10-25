@@ -1,0 +1,1 @@
+export function CourseMatchingChoice(props:{task:{id:string};item:{id:string;text:string};options:{id:string;text:string}[];value:string;disabled:boolean;readOnly:boolean;label?:string;onChange:(value:string)=>void}):import('react').ReactNode

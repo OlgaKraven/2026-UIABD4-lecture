@@ -3,10 +3,10 @@ import { useEffect, useLayoutEffect, useCallback, useId, useRef, useState } from
 import { createPortal } from 'react-dom';
 // The answer stays in the assessment provider. This channel shares only the
 // open list and highlighted option, which native select popups cannot project.
-export function CourseMatchingChoice({ task, item, options, value, disabled, readOnly, onChange }) {
+export function CourseMatchingChoice({ task, item, options, value, disabled, readOnly, onChange, label }) {
     const session = new URLSearchParams(location.search).get('session');
     const channelKey = session ? `lecture:matching:${session}:${task.id}:${item.id}` : null;
-    const [ui, setUI] = useState({ open: false, active: 0 }), [position, setPosition] = useState(null);
+    const [ui, setUI] = useState({ open: false, active: 0 }), [position, setPosition] = useState(null), [portalRoot, setPortalRoot] = useState(null);
     const trigger = useRef(null), popup = useRef(null), bus = useRef(null), revision = useRef(0), latest = useRef(ui), optionRefs = useRef([]);
     const id = 'matching-' + useId().replace(/[^a-zA-Z0-9_-]/g, '');
     useLayoutEffect(() => { latest.current = ui; }, [ui]);
@@ -81,6 +81,7 @@ export function CourseMatchingChoice({ task, item, options, value, disabled, rea
         const place = () => {
             if (!trigger.current)
                 return;
+            setPortalRoot(trigger.current.closest('dialog') || document.body);
             const r = trigger.current.getBoundingClientRect(), width = Math.min(Math.max(r.width, 360), 720, innerWidth - 24), below = innerHeight - r.bottom - 16, above = r.top - 16, up = below < 200 && above > below, maxHeight = Math.max(120, Math.min(520, up ? above : below));
             const next = { left: Math.max(12, Math.min(r.left, innerWidth - width - 12)), width, maxHeight, ...(up ? { bottom: innerHeight - r.top + 6 } : { top: r.bottom + 6 }) };
             setPosition(old => JSON.stringify(old) === JSON.stringify(next) ? old : next);
@@ -133,7 +134,7 @@ export function CourseMatchingChoice({ task, item, options, value, disabled, rea
             update({ open: true, active });
         }
     };
-    const attributes = { className: 'matching-combobox', role: 'combobox', 'aria-label': `Соответствие: ${item.text}`, 'aria-expanded': expanded, 'aria-haspopup': 'listbox', 'aria-controls': expanded ? id : undefined, 'aria-activedescendant': expanded ? `${id}-${ui.active}` : undefined, 'aria-readonly': readOnly || undefined, onKeyDown: keys };
+    const attributes = { className: 'matching-combobox', role: 'combobox', 'aria-label': label || `Соответствие: ${item.text}`, 'aria-expanded': expanded, 'aria-haspopup': 'listbox', 'aria-controls': expanded ? id : undefined, 'aria-activedescendant': expanded ? `${id}-${ui.active}` : undefined, 'aria-readonly': readOnly || undefined, onKeyDown: keys };
     const content = _jsxs(_Fragment, { children: [_jsx("span", { className: "matching-value", children: current?.text || 'Выберите соответствие' }), _jsx("span", { "aria-hidden": "true", className: "matching-caret", children: "\u2304" })] });
-    return _jsxs("div", { className: "matching-control", children: [readOnly ? _jsx("div", { ...attributes, ref: trigger, "aria-disabled": "true", children: content }) : _jsx("button", { ...attributes, ref: trigger, type: "button", disabled: disabled, onClick: () => expanded ? update({ ...ui, open: false }) : open(), children: content }), expanded && position && createPortal(_jsxs("div", { className: "matching-popup", ref: popup, style: position, "data-audience": readOnly, onKeyDown: keys, children: [_jsx("div", { className: "matching-popup-heading", children: item.text }), _jsx("div", { id: id, role: "listbox", "aria-label": `Варианты соответствия: ${item.text}`, className: "matching-option-list", children: options.map((option, index) => _jsxs("div", { id: `${id}-${index}`, ref: node => { optionRefs.current[index] = node; }, role: "option", "aria-selected": option.id === value, "data-active": ui.active === index, className: "matching-option", ...(!readOnly ? { onPointerEnter: () => update({ open: true, active: index }), onPointerDown: e => e.preventDefault(), onClick: () => choose(index) } : {}), children: [_jsx("span", { children: option.text }), option.id === value && _jsx("span", { "aria-hidden": "true", children: "\u2713" })] }, option.id)) })] }), document.body)] });
+    return _jsxs("div", { className: "matching-control", children: [readOnly ? _jsx("div", { ...attributes, ref: trigger, "aria-disabled": "true", children: content }) : _jsx("button", { ...attributes, ref: trigger, type: "button", disabled: disabled, onClick: () => expanded ? update({ ...ui, open: false }) : open(), children: content }), expanded && position && createPortal(_jsxs("div", { className: "matching-popup", ref: popup, style: position, "data-audience": readOnly, onKeyDown: keys, children: [_jsx("div", { className: "matching-popup-heading", children: item.text }), _jsx("div", { id: id, role: "listbox", "aria-label": `Варианты соответствия: ${item.text}`, className: "matching-option-list", children: options.map((option, index) => _jsxs("div", { id: `${id}-${index}`, ref: node => { optionRefs.current[index] = node; }, role: "option", "aria-selected": option.id === value, "data-active": ui.active === index, className: "matching-option", ...(!readOnly ? { onPointerEnter: () => update({ open: true, active: index }), onPointerDown: e => e.preventDefault(), onClick: () => choose(index) } : {}), children: [_jsx("span", { children: option.text }), option.id === value && _jsx("span", { "aria-hidden": "true", children: "\u2713" })] }, option.id)) })] }), portalRoot || document.body)] });
 }
