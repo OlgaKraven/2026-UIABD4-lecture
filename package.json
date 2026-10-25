@@ -16,9 +16,10 @@
     "check:pdf": "node scripts/check-pdf.mjs",
     "validate:content": "node scripts/validate-migration.mjs",
     "check:teacher": "node scripts/validate-migration.mjs",
-    "build": "node scripts/clarify-case-conditions.mjs && node scripts/package-stand.mjs && npm run validate:content && tsc -b && vite build && node scripts/build-offline.mjs",
+    "build": "node scripts/clarify-case-conditions.mjs && node scripts/package-stand.mjs && npm run validate:content && npm run validate:teacher && tsc -b && vite build && node scripts/build-offline.mjs",
     "check:privacy": "node scripts/check-course-privacy.mjs",
-    "validate:cases": "node scripts/validate-cases.mjs"
+    "validate:cases": "node scripts/validate-cases.mjs",
+    "validate:teacher": "node scripts/validate-teacher-cases.mjs && node scripts/validate-cases.mjs"
   },
   "dependencies": {
     "@olgakraven/lecture-engine": "file:engine-extension/runtime",

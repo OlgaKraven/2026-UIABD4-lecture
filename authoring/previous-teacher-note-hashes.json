@@ -1,0 +1,3502 @@
+{
+  "s07-01-queries-on-server-database-q01-case": {
+    "script": [
+      "df8e0602fa59ef21ef1c39b99679eff228768e2520367780e5b6bdc87905f34d"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "5f088ccdc85c101c89e9c61d31b2267609d45fd3aa1d9367c491e401166295d3"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q02-case": {
+    "script": [
+      "8810eaaf0159d498fe359d98787b5d0f01a19ef51ec09173c80169767f8a9f0d"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "554ece77e02c81d46eb8f0fda79d0786729afea0ee664c5920cfda2ca95b60ed"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q03-case": {
+    "script": [
+      "09f57930d19a32834ada6690b60114994b6b9cedcf482e2b8eedbe29ab1039ce"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "8a3cdc1c7bade19694a3383fd58ec82a9b4cc4ad3d54747d4a5f7f90b7a1832f"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q04-case": {
+    "script": [
+      "117023e2ca7a6df78491a01052e6a300f824b30857b96e1d777fea856568ed7c"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "3aa528ddc0279d1dc3f229e92aeaada1120d34d5609182eaed1aa30513904df4"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q05-case": {
+    "script": [
+      "ef83cb8361392c4f0c7b610e2c18f73b4e44aff4c44362c756ca21dcb26cea6e"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "2e51618ae5a0163187b0225252b8cd94aaf4e57d891d5a83e1c75031ffd31c23"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q06-case": {
+    "script": [
+      "67280849840174608c306d1950e37941288e15f7295a663200e3f1e3c474504a"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "78375895a3be87dded6eac45d6504e8699fb03403ca2fb1b2ab796d23e8ef164"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q07-case": {
+    "script": [
+      "520e5a1cacf321a6aab11ea93bee4a62aa7ab435645ab245219195424a7b27b8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "20f24b9e7990023de39a12c4efee466324857e9d52af8bef022e3a4e4014dd1e"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q08-case": {
+    "script": [
+      "aec5be8fcb09eb32c93a85da33d3e18a309e0f731407a62153d520f3c80d18da"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "d81d1eb556995803bd8194d89f11fdfa7e7162a39b15e4f7a81d8db1acf91eac"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q01-case": {
+    "script": [
+      "00eaac4cd8837556515c62264bb901fc1b25f795a7d35c67c67ce5a9ce5a482f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "d9c965da4e46859a6c5ee65ad09661c4841b7237e8d8ed68dd14e703801d6f70"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q02-case": {
+    "script": [
+      "6d63c8975d6fb8a4210edf42cf6b521a97fd2debedd4acedcb7a90b007095591"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "758775311241846bdbd2d4340ec68ccd6ed27c4e88efc0a387a01313404da3a6"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q03-case": {
+    "script": [
+      "c627494550a793d10971783b114175a4eb677d2233b1c5b64aeae566ef6315d1"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "1ea5f738aa4d89327584bb4bd97deb95d535528a2b38cb1bef2461cd7d30ee13"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q04-case": {
+    "script": [
+      "1049fe30aef63455b69cd5f46431d6bcd968f09bac95f928c52850ca6733e972"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7499dfe4c02c0a994123866f58533fa017c47d515af63b02840b415a2828bcb7"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q05-case": {
+    "script": [
+      "9ddfd0498ffc2b7f04ffc63d9d9bd506ee4ebf3a27e885fed576cc7a105c934e"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7c7f1870daabe7a28391051f09a8093c8d7fecada5ac49a19b9aefb1026c6291"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q06-case": {
+    "script": [
+      "75db4f79ee29199203ce9be7ca227ebb4ed126517c001177d3173ee42aa3f176"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "64b296ede98184c37b25514120a0781a5e476cc5e2b56179dc1e6c68e9e36a34"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q07-case": {
+    "script": [
+      "94cf9c228ca891cc9c6a35f8cc3c9b8ea161d6f11b4f2808567105f381c127ed"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "02d758e76e6c0e3114020f2b4aedd0df3838e72dcb41bf30441b61af71420d16"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-02-calculation-query-q08-case": {
+    "script": [
+      "60f8215bbb4375efac366ee36e675f99faf4072fe3f5813dd08a20502c5be04a"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "5910ddd9e847ce3b49dfea667ac2dd0fbbd9c22b44f8bbfbf2069feeb4c6d440"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q01-case": {
+    "script": [
+      "13396f771cc4c0fd3af41ab1993dca64d9c9a5c76cc54e1b8e6c1a8e77ff369f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "4b5dc242de1d9006d9fb4f17032955730ee39a23dd58bc67a463d22f45f0276b"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q02-case": {
+    "script": [
+      "ccd495e2432e3d6e60a27c5a2444de59ffb2e0e563ec724f8e2ebbef24e148b0"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "1775b036006815ff4fbdf8cfef0cb8dacc8e654992a26efdded8131213b70f28"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q03-case": {
+    "script": [
+      "bd26b18a25b500f43d5da374206390541e1a7e55a1189f63687d48d90bed67b4"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "67fcfb8116205c32452ff6b0d3b26f6376c4cfeb4b65a67554fd56312a1dc6be"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q04-case": {
+    "script": [
+      "c1d9c8791b67e594636f114725f7e4cd04303e57323e8797642cdd6e3117a59b"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "28039ec67cbb952d00a32a09e8254d2446b22017891757a3a7f0ac9a58d21e9b"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q05-case": {
+    "script": [
+      "bc674068989d115e1b29ffea38182bb9a8a1c7a709c6bbe091350f48df2e129f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "c4e35903035d2bf57adc936c9c3bcd822f0b486f5d048f3a36b15c03c85a7fa0"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q06-case": {
+    "script": [
+      "cc3d0e3ca89274632d78c6bf913207d063415931c7b0e4e65eef1a44f91f2e26"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7bb7e86608a75889ebc3bfb7674a6c9932d5443e5f48a60c073ce6459808f694"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q07-case": {
+    "script": [
+      "6931c719318dae8e0924cf802ae9bb74c1c56d1c25696e8cb5ac7a800b892776"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "6c6f2b0a99728d6065ef52e4498f00825a60b9627cb1fa7d9b2e0ea29f19affa"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q08-case": {
+    "script": [
+      "764d8e0cb0b1d24356ea53682fc1d3290069b61ab5c9f8d937aa3aa473b28b80"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7c866f5428ad734d35732247a14637a42037d581f607a720e6ee6edfc302f434"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q01-case": {
+    "script": [
+      "c05a1003880a42bdafb895b813909e036665b7a2bd88dbd615c1a1c2626384e8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e48a1e5ebfafdf1df3af678d48d8cc67fff49b75621401c72b1863c769f35135"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q02-case": {
+    "script": [
+      "07c77d52654ac5fe3d5fbae26818342886ae6c9824277db5427240abc5406171"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7a461c44fb1ef33bc8cb905133f22864692e68cac688b002d1bcf9d9b9a10f9a"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q03-case": {
+    "script": [
+      "e6850aefdfbc10511fb65a3d71e0bd0513e187bdc7b95fd15903ade7be252e78"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "fdee41c404ec739788190a02e10f15cfa8037cb54b88cc58a8830b4013cd7071"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q04-case": {
+    "script": [
+      "d62f10dbd6a26b3fef2be151a10da812e782a15a707e5355618da8889e2b0564"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "0a615e23ef12fb30b16ae9bda811fbb5b6dc215a52c8bc81e42693b72d80b885"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q05-case": {
+    "script": [
+      "976b40dc7092b56098f4002855eb44d1989ebfb5d35a9fc4c6f122d871aca899"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "4c344bff5cb3d1c41c7bb6445e4edd9e0bb8e7bd9d205b708da44c962e2725cc"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q06-case": {
+    "script": [
+      "82924419cb3f5fb7933f629361f3473bab0cc7b45bca1886f7b778984f229865"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "f54a33dec3d7ca80822ae9593a0eb3d2550b895d3093ef92a6314c7fd8822ed9"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q07-case": {
+    "script": [
+      "9e7dd6be0a4c2718c325e70cea3eb4bfcf24f18580a3b2cee15dc9d7b5c7beb7"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "5092def41ff4752e273892d70afda6cc3e6e7d7c7d25885f9cb46c03463369dc"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q08-case": {
+    "script": [
+      "d79818d7fed477ed53ada22a2e21cfd71cd21efec15afacfb9280f17d40e64b1"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "c0eb504e45855c423c7a38b6c8cfc269db4627c2f275b7de3c59dc911c9d948c"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q01-case": {
+    "script": [
+      "ca5a162b0fb913f561bf4b9e93fa5c62b9763ca487b1b23fcf663dc76633f38f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "3561cb1f0efdc67c033a329ce77f22f44823f765cbd41ab9d2276c4385446282"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q02-case": {
+    "script": [
+      "5cc96918e648901c3cf669af967864eef641fb36d6646ddf5c899ba2cedecd98"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "73251a7d6b954e487174b7f80d7c65b436518c279a29a564d9f3e428aa6875ec"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q03-case": {
+    "script": [
+      "9f03cd0e9dc3fb0755c8b79545bb101f286acab1cbc174089fe920d22711fd5d"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "379aa24602c3fac1134596d46e473a6d269a601cd10acfbcb732163ea273f33c"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q04-case": {
+    "script": [
+      "a1661048ff0cf98613b7db0f27c8663ed066e7826cd943f528a486e42b917420"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "ca2faf14c817c6f4a81209d0771e2220e0750171e8a2dabcb029436c568c1e2e"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q05-case": {
+    "script": [
+      "d2012c039d5cb24230fa691ac11a444ea1809769d576ef928ebb9215563f923e"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "c0ed6231052fe54f2d6cee79f4ad41f21541e9894c3cb3eabddab298968bbc9f"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q06-case": {
+    "script": [
+      "d9b703406887ef2bb3434c1bc2ae40fe6af141afd164704e7e5aa60289ac61d4"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "46e817ba487c1854551a52f54dc87918cc6cb52d460fa83bca8d082f3a229e7c"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q07-case": {
+    "script": [
+      "914bcab0a4a14c2df5d4d79ee49ebe3576341bc44a177cd4c1634416cd1bc0bf"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "ad0866c70e0dbb93bf2584f5661387bb4859136cc49196360ad8a4cf82159bce"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q08-case": {
+    "script": [
+      "c1363320a206c3734fdbe5b7341de7efa11d16da4b72fd62556b63b5fbe7a07c"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "5e27bf136874cbd3f207222db3a932b42c54e8ef71cdf930b45c72332a9477f2"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q01-case": {
+    "script": [
+      "be40193956fb635a459ed4abcf59d3b944c289d4ec989037668bc7f76f9b9cf5"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e0eb7b579a0db8cfb4bd795a283635c04f53bba15663ec225c9fe6f63d3a632e"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q02-case": {
+    "script": [
+      "edfc27e2b01da63b894059066aad9feff78401aa12c22412fe0a6bd6eef005ad"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "a2abe30e9f94b8795ab57fba164fb6f10c920c8fbbeb06890a3c0865c5b6805a"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q03-case": {
+    "script": [
+      "4a7022845ebeaae0b4ab87441c0d3099d448629058017c3371dd0e23fb23c7fb"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "fa4f81242289693d44532c1258d4d9939fceff819d74a958e6b072a7362490e2"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q04-case": {
+    "script": [
+      "ffe2eb710846e112b9e2b478a35dd7a00504a030c534d33b9bc0d77fa5f6a019"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "b96c443ca17f3732e40b2f311cb0191b7cedcbbc27c520aef168134d8cc1d03d"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q05-case": {
+    "script": [
+      "c8b24757d43dd9e2408dd6242fa3314ea068d536bdcb58181265a792e649eb16"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "50584b557c467b5da2d4ba7e9d1784b16e9ea70957c5dcf6e9a1398814e7a50e"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q06-case": {
+    "script": [
+      "33bfcd9a29d3c73a29a039ba09b3d83c0face1158aba52da6edf4e3d0a22c376"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "b6fbe881c7bb0a7bcd50a662e06fddc21c9fcf6e2bd9146fcdd4189ef4dddc60"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q07-case": {
+    "script": [
+      "9a53793fb38bb4b10e1c05e5322603cd1478c5d1850becf97ad7cf61880e4e2d"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "25f6bd9dcf521e1a3f2521e0eafeacbf2a29677e159aa371fa4360f59b0cc832"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-01-server-metrics-q08-case": {
+    "script": [
+      "5a88b84b2dd3aa2a28297a27f345066e0e2b6829a2d1d71caee289fd05c110e1"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "98c04f9ac6df296ffd03a8af91ee65576733b83fdbda27ea4aa954d6c91c1ab9"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q01-case": {
+    "script": [
+      "77b2cb97c28b9823315116da96972509b32841706e678e9824ed4f81c65e8036"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "63111326c3845cab286f72858e9ce27e13e67a9c7c2f3f25034cd39211442b99"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q02-case": {
+    "script": [
+      "df8861074ebcc1d6d8305340e05fc54addb696156a4027016c0bf36d981ae4f2"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "7b606936aee79144610cbabcd5814a0df5e0ea94cf64c8a4befd65951f4c297d"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q03-case": {
+    "script": [
+      "e6db85f16b9b2786fe8b149200922de377d2748316e2ef584bfcc3e85537efde"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "10af188043fc3c5d86560a047f39689b792012872cdaf786fa254bae8ade1837"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q04-case": {
+    "script": [
+      "e1b43c701a6e0292f0cc8496dfc9f96ba2dff7e24a3aeacbb4c7f592590a3553"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "15f165541a67014e2230839f16f58ef90b052fa4c4bc66c15c370a38376daf9b"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q05-case": {
+    "script": [
+      "d6bedc4dbd8fcf2fb3a3a2469227150ba3612e6562f1d1fca142f14b8bbf1744"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "a4d68240fc982f482d2a4178a35297f9cbcd9e8d1d94e73e17138c058288ed6e"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q06-case": {
+    "script": [
+      "ce20abf5da012a32885cd6f04109f484c0fb1411a5e58acdcfe509f5dee88605"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "13646ebbbee9d048bdd0dac0b1523c64f40b9f60094559642995054d7ca9a2a9"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q07-case": {
+    "script": [
+      "f20917467ed54ef83aeda476c1c4db6e5cb7cd0e8e2a53a1c87e03a9c607efb8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "311e11c32d881e7095a328dfbd05d17a5f84072509d515eb74ac05c0d8b10cb4"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-02-metrics-collection-q08-case": {
+    "script": [
+      "d93ed6f8a4d3104f675c9f6b3996450c6f96bb9a6c2c31dfa437b64f229ae82e"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "1fb87d50c6e88d0490da67437c5366e959f8a21511177797a30160c22d30eb9a"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q01-case": {
+    "script": [
+      "b5b3d696daac2e58cdad88846fc35d8a56541bbf982635c09c9f6e9d9e18ea26"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "9ffa180def8ea5ab2c5da3947166be35777d297e718a0ee99bc5d3ff0936c6c6"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q02-case": {
+    "script": [
+      "d4c310ca2f3b464524897a45d63c497916f15525575000b0f9ea488b5d7cb6d8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "20d2986ff65dd206ac9fb836b40c2b81655f9e314b8f1fb74ef02c57ea6a4374"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q03-case": {
+    "script": [
+      "901b399b0abb44c1ac3bec99adff2c6ec3360504983a63195330f091618b8b1f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e2aebe750f838842b9f1cded74f3b71eef7d31478c659d3aeeced6dd7238ab34"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q04-case": {
+    "script": [
+      "e978e55607434c8169badc01a223af6080caa9e51ce68589712c6cf3f1ffee0a"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "4f0692c5c7e26df406d71c4a11db09597f65ab0c7a7603a333ca40d133c2dfd8"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q05-case": {
+    "script": [
+      "faa7784735cad2f422ac969008b75836c528533ccf11d65eb6eb4ed3cacec2f8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "88b57b9e9cc7f2f7b3646ed8ee7c98fb10fa994fdae994d71ff6d62f853622a0"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q06-case": {
+    "script": [
+      "c8dc8a6bdf965a317ed0d5743767f8150813d22663c4c126bdceeaef9bba37a0"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "6eddfc10e8a09a17ef0322e4f28cf098055934c56ccfed5a869a20a6241f9da7"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q07-case": {
+    "script": [
+      "aa285f0a362e7c05ddf1216f506000072472fe6968418eec403b70440ef4089a"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "f19c316e6740972243963dd4a59a0fec59417fbccbc0f2e7103bf4d5264571d6"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q08-case": {
+    "script": [
+      "0e312e4b2dd0042035c230176d34a22b50b42177314d321910a3dcd0c91ab706"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e95550470797a0a3371c12de6226a043f58772ea4c3ce9450eb2d50b52555aa4"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q01-case": {
+    "script": [
+      "b3b0ae128d4b9a48e840c3eed3184979f6974adabf1c8ae7ee29a9349d173ddc"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e74f03e1517db0d9dbe061855e7f0e061c39562b5bddbccbbcdc918152e5fb2b"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q02-case": {
+    "script": [
+      "7c01d2017cf7adabd1fc908a2c8c6e138a2abfd5ade189f736034b32091559c6"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "6d3cc216e46c2e243e430d223bda34c1c1b4a122ed195da46a684eb904c23de8"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q03-case": {
+    "script": [
+      "3c44ec2d504db8e646127b9c385016a704def96d8908e576fcaef85b46b50b85"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "68b009842dc98397e69359a026e9ce39adc65046fec73afcf6e100a531f83e46"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q04-case": {
+    "script": [
+      "c652a95fd08675c154348a9770322a1587cdeba99121580189d30d413901a521"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "01b7c03a35653d52fc63ea5faff572b9372a23aef60de4b597c75e29a14421a0"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q05-case": {
+    "script": [
+      "77681521763de9354744ca41f86a58279997da2411ab8eb148f2819273fbe7ae"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "f21734d7073cd175934b94f619bcd03f7363668e189391a4c16463dc4ed9923b"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q06-case": {
+    "script": [
+      "239dd3ada890d54c116c1692f8b9d4c4a85826f9b44ce8f7e2109154b60ce6d8"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "1679693fa408f54f70a5fe676079ca3e367cff15609017d031b0975007caf9c4"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q07-case": {
+    "script": [
+      "1afe026c98bfc8ff1d222caedc8e9b02cd76a212994609d29067f11b5eaf0cfd"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e9071db7d81ca8c29d0fd94ba5486616203d996dbcc85c188e68d1643df10f46"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q08-case": {
+    "script": [
+      "bd9f1fd2ed6e352eb680a99092ecc9d7bb39f0cb24e2d9c4af803da513799f7c"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "0e6e28ef521e8545416b7a41fcb83e3a131e4707db5ba5f14b2555bf80d5b57c"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q01-case": {
+    "script": [
+      "2fc898ce01348c4d477cea601d1fcaf5fb2d11ecd99bf8cce70f8e3ca6f17912"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "16441aca34fc01c19e8ee5c9621b0865e530ddfe6fbb09700fc1f1ac734930af"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q02-case": {
+    "script": [
+      "0272ef9dc021e9fd17b1099f753b933a7f20a9cfe932b8a1a1ba08cbb21501b6"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "ee061ca9acaae99f5216bd1135a788a85a7953d0509bfe0f041965b502701a04"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q03-case": {
+    "script": [
+      "619caf281f36da7d07097828791a54e8b355fff463ee923453db6e77d89b1b1f"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "cf5fe4e67c7ac7107427044bf1409deb6d24c4eea69579677a40c169b7d35ceb"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q04-case": {
+    "script": [
+      "e1b3b2fec488ffadf994225cb4cc090bb698b241ca383abcaba1f8a7c8a17edb"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "e28f80c6d66af20633d70b557081dbc0cae9fa9f7a2f21410ab67f02c4a83128"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q05-case": {
+    "script": [
+      "3e7fc8f11fc3ee5c9697783a43229dc0419668294b2e5a13894058377cb8b729"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "eab95271d763c1e06af5c8e27488a43ef9615f195888a489ff760800e0d9c2ea"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q06-case": {
+    "script": [
+      "50d469ac136bb9b9f648939bd86f2f6357f1bcc811743ddf75d81c21a2784e81"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "19eb1b786e87a6a3202a6df940e9febd69cce23d68148697d2836c7de243b3d7"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q07-case": {
+    "script": [
+      "754727c6443beec7b3ba59bf965d452cf9eca0a63275f2feb1bc0baf6c6e0149"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "0eac6a76594c2386847b24b058f28beb15d1869e2bd1cb32926e8d7e6496e193"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s08-05-database-platform-comparison-q08-case": {
+    "script": [
+      "82b5cdf6d34a079a500704e465aa46b9e2977c1d383b8749e24717f5ffc16573"
+    ],
+    "preparation": [
+      "9a92c09b318c62e36fe89526764bc4febe4ec4f5710ec4ab48c69fa808b07732"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "questions": [
+      "ef2bc2b0e8007c044184b0a237c06f78c0cf63be4832b8fe681f899e5fe13422"
+    ],
+    "answer": [
+      "9f3fe8c0bc818c654247852b8e5411c030f9cf61183fabe271aadbee91924d13"
+    ],
+    "estimatedSeconds": [
+      "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405"
+    ]
+  },
+  "s07-01-queries-on-server-database-q02-case-input-1": {
+    "script": [
+      "b41dfdebd23fc3bca59879eda3f9dc0253e86f282848130145dab76ef3fa5f3a"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q02-case-input-2": {
+    "script": [
+      "c173011f9235f6c77175bc60fb1f59a37f279ec09375fdb2fbc1eec6cbe08e32"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q04-case-input-1": {
+    "script": [
+      "d0bb59906614a0f40829d3c7f55613c971b5d40a52c149f83eb8f971a8e39b5d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q04-case-input-2": {
+    "script": [
+      "0133b0b99761ce04ff3369409d7fc82099ceccd63051d28e5c4ef6be27d62fbe"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q05-case-input-1": {
+    "script": [
+      "b0b65a9708ec104bce4e2c99da2b8bfde362307660741f6db76795d52c831583"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q06-case-input-1": {
+    "script": [
+      "418d42d20fd3d1b2f03159a8446e922829a70f94588486af734c80bf79f8608b"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q07-case-input-1": {
+    "script": [
+      "f68beddc3c221f37a5e08c76967cb7f25d68f00bf651729078bb2718885bb148"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q07-case-input-2": {
+    "script": [
+      "de4417d42454b0cfdd9fab105cb3622927997c3ee0386dc752baff02472bf52f"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q08-case-input-1": {
+    "script": [
+      "80c5f91ce35d8669bd8a317b331cc316ba9d8c9daf0c41beef77b235ea216305"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q08-case-input-2": {
+    "script": [
+      "d3bb8d9113db13d05df50c3d6aea3dcfa2a4f8daca61ab13b472d7b7c0e46c58"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q01-case-input-1": {
+    "script": [
+      "0855b3d0f25826ecb4b4c3228f35d2a06cd608e16621e740b4e1387c0ff63c0e"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q01-case-input-2": {
+    "script": [
+      "dbcb6af7510b3d913ca20dc8cd93168db2d99b53ec7f2ec6e3ab0de5843679b2"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q02-case-input-1": {
+    "script": [
+      "8366b7b858825a6cd55f2d45cc2747b426954883535c0b35fffae023bc4d3aac"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q02-case-input-2": {
+    "script": [
+      "4b1fc3c54ecc6650e5abe51257ba0baefb39ffa441eb9e98905bc8020e35c0f6"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q03-case-input-1": {
+    "script": [
+      "3a0f20ec0b489cc93d099e0d195a2681de99b681fcefb01551b568f82ddae235"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q04-case-input-1": {
+    "script": [
+      "a1d2b6d69abc56c8e0a2468675f8675871328b3b584b7868c44511e69fbf678a"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q05-case-input-1": {
+    "script": [
+      "08610c389a272a1d91df03da530fd79416ad15043245d4f11eb23644974cd146"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q06-case-input-1": {
+    "script": [
+      "e9cac90cbd230d289e863b98a5ea0aeeaf944c5799ff7688d90d2b0064714747"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q07-case-input-1": {
+    "script": [
+      "849b2ba9655671e59c9374da80e7d709d5e210985d54f57c66eb81fdcc3f46e3"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-02-calculation-query-q08-case-input-1": {
+    "script": [
+      "5dbe0eb189178b1b468b204833c24380f12b8617fc3fd2b081601f7c69b7476d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q01-case-input-1": {
+    "script": [
+      "e3a4917b2670b198dfda7ec1ec700b73f966e96100cfddec51c31e12ede5d1be"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q02-case-input-1": {
+    "script": [
+      "828f136a95623b6b53ab46408d6c5346c2aba4b5a56579b242f2e3021c7b72c5"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q03-case-input-1": {
+    "script": [
+      "72db10dc84c8bda60fdbb761da37e1d4b5c02cf92a03569c2593124a79ef14dd"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q04-case-input-1": {
+    "script": [
+      "774126fe7ab1e33ec209cf4064556f0a46fdcce8eefaf713038cf919c6849552"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q05-case-input-1": {
+    "script": [
+      "c2e74a16c65a17e048a61e49f2652343514f8e6497ebb16097163205e291a988"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q06-case-input-1": {
+    "script": [
+      "85d3fa52541d25e707ce2d2d6efef3e57330a275f9ce24a45bde5f6c4f6cf774"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q07-case-input-1": {
+    "script": [
+      "e91b878766d858942631a62cbc50a1f2833beb0165a9e3651754519ccdd947aa"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-03-procedures-and-triggers-q08-case-input-1": {
+    "script": [
+      "fef8343e8f9a25f6ef76e69690fb77ef9efe84604f898c7781aa34369305c2c1"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q01-case-input-1": {
+    "script": [
+      "050813632e13b6b809bec6311b982ba0970cc76a7c58a8bd9609ac103669daf8"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q01-case-input-2": {
+    "script": [
+      "c43bdb2091f92c08a143b641e017a7ee4bfc81fdadb3bbc0ccd915c448982d6f"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q02-case-input-1": {
+    "script": [
+      "9abea5ea9ba73e88cbfaf7c2a76954b28d3d9df474f5e2142d0f47f8f6f97b1a"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q03-case-input-1": {
+    "script": [
+      "7089f10e74de6d2bdc1c7a8999ebaa1f1615ef4b51c59ca172f13729183b3bee"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q04-case-input-1": {
+    "script": [
+      "e7e75c25fba5bb74cc33ddd96dbec9e62de665cd284d238b56e632abf11aaf5d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q05-case-input-1": {
+    "script": [
+      "0935abaf4d82207f644411d50f5c2731e037344f6b96face87672d6748ba7389"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q06-case-input-1": {
+    "script": [
+      "c914c61926888101011d87357c1b9cfba192e0537b6f8bf05e029caad8e7fb57"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q07-case-input-1": {
+    "script": [
+      "855ffcfab8617921e1542450c86fac459e5a3fa0fac83d6502a97e6e04ab0903"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-04-query-performance-and-indexes-q08-case-input-1": {
+    "script": [
+      "213009ef454dbe27ace26356dbe0ebe1bdf40ca9a9c5dc2a5cb446e957d0e969"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q01-case-input-1": {
+    "script": [
+      "09a91a03f0004a8a15841add172719eb3240dfe9e723f9a4046f77baed4290ec"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q02-case-input-1": {
+    "script": [
+      "e9d3f8557b5d0ddb9c1c5fd768260e5cfca2dda9c11bb0b660c902db151dcd52"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q03-case-input-1": {
+    "script": [
+      "80415f45b4df277a046caaff9293ea421db183dd46c4ca3a4d0baca6a4238acf"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q04-case-input-1": {
+    "script": [
+      "fe2603e0034069428f1382b19b3a3db3f144d92f28fd4e137de50a6ea4fcc8c2"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q04-case-input-2": {
+    "script": [
+      "b6e5c36c831c5942eb7e37b283648e331f3a0c5f08a25f50fd577b575b232885"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q05-case-input-1": {
+    "script": [
+      "cb80b0baa1a4079d3cf77606306554cfb26a8189de5481d84502a07030847f08"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q06-case-input-1": {
+    "script": [
+      "ff5071b9d3a2dd800a70cd3da1bd2c148ef3f85755f83f1707db467fcba84be0"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q07-case-input-1": {
+    "script": [
+      "f8e0aad074b6a28cf1bf88775b9a43bbd2aca021ede8665aa7e0b1e9d1291b69"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q08-case-input-1": {
+    "script": [
+      "cb9e520162051961fbc80556eaf74fe83dfac96f779cc9dec78538a86ab4808e"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-05-server-and-network-requirements-q08-case-input-2": {
+    "script": [
+      "60230d8706f1b4b273a31e281311e0b2434debe4e8aa7bdb0e7d280f80edbe22"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q01-case-input-1": {
+    "script": [
+      "a268306d0691123ef457c73477761f1decebc760487d846742678d4545bd4572"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q02-case-input-1": {
+    "script": [
+      "366df5608e6cf76e6a64d7f1e6185e4cfe4220337925434675a3ca281aa966a5"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q03-case-input-1": {
+    "script": [
+      "95a59f135c6700cb733a7035d9df0a373087f49b0d8a07ee5125a0a1743d6954"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q04-case-input-1": {
+    "script": [
+      "592bd2332943c10584a44c30a01258b717285fb533d2270df6bafa9eaf2a16ca"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q05-case-input-1": {
+    "script": [
+      "6f048f3d061ca7f4524b9f11658dca99c336877f70ef8b5d3552a76d1678e2d8"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q06-case-input-1": {
+    "script": [
+      "418bdc5989bb7ed027172e30a369650addd56f1875c25c89139853f25a95257d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q07-case-input-1": {
+    "script": [
+      "40a50dbda66e25fe48f09c6128a8c938a2ff7adacf0a44a3419f78e29d182175"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-01-server-metrics-q08-case-input-1": {
+    "script": [
+      "743954e74c6eba5f049580cef34cf9a925761924216a3909c5b2349a17b9ddc9"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q01-case-input-1": {
+    "script": [
+      "14af4597c3394adbabc374cdc9e944321c26f3011356444aa3485b39806f9286"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q02-case-input-1": {
+    "script": [
+      "9a55519e719fa2ab343fa6e7e7d8b35f4ae3ab294ff888665066afd9f79bb4cf"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q03-case-input-1": {
+    "script": [
+      "6e36b39cecc8370369a986601d7555312bed74b7a95626dc2adb6fe423af07b6"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q04-case-input-1": {
+    "script": [
+      "69dbace6ac5fd95e36c88c5ea2ede68553d25d38bd1dd471782c74a2951a8305"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q05-case-input-1": {
+    "script": [
+      "e0c597aa28b72f68624b3acbede3fef61b4c93357de71929503002d441fd676e"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q06-case-input-1": {
+    "script": [
+      "ba07699fb6d77e6e3c0e2cdf6f412c789d22315b588426ed89894c89dbb7698a"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q07-case-input-1": {
+    "script": [
+      "4e665ee72713220731a3f1c1a67ad9f9e5b474724648166b8de1da193aef42ca"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-02-metrics-collection-q08-case-input-1": {
+    "script": [
+      "845f5b9ea06d7a9121c514eaaf79762c1a1137e99018650203f48852d5797db2"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q01-case-input-1": {
+    "script": [
+      "4df109be4b4c5f0844e053b2b193ff6987c090e2d67455bc6778e87ae7d1b93e"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q02-case-input-1": {
+    "script": [
+      "993b4b73ff639b5d878f04818cc390fa161c8b0b582bc2ca6857a699d9431dd8"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q03-case-input-1": {
+    "script": [
+      "59aa55c6f43418deed0955a363d4511f5cdd4a86f2150474426b6f2732b94f47"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q04-case-input-1": {
+    "script": [
+      "ffc60f6c977c61d34c35a9b4cc80a210033c5eb3ac427078463142005dd2c6ed"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q04-case-input-2": {
+    "script": [
+      "9027f689da817d13bc15d3c62fab6105a8348ce22eef1fa160f588cf337b52fe"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q05-case-input-1": {
+    "script": [
+      "2d2148017bfcd1e763f7f83b57a9b1dd2cc10211e59e27f1ac3ec9089b5c6808"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q06-case-input-1": {
+    "script": [
+      "89806035f7bbe4f793d54657193a809f37ae1116772bea8bd47273ead5ab6ac5"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q07-case-input-1": {
+    "script": [
+      "d1f5b0a6e37b75ae13cce5bbf6f7cd9109caa512e83166e0659c7f277f2eea97"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-03-dashboard-and-alerting-q08-case-input-1": {
+    "script": [
+      "1ed20ba591cb851dbd9eeb87bfa9ec2a48f7751525b648a2071f2115216166f1"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q01-case-input-1": {
+    "script": [
+      "631db27699e2fecba46cf17c7bb04c847f24e8ac3b9bc4e4edb6d4c4a058e3be"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q01-case-input-2": {
+    "script": [
+      "a9618718e262b35497d879df1cfe4b5c720826172f9977d9c3fcc0f8d63edbe6"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q02-case-input-1": {
+    "script": [
+      "86c7b00f180527c56d299e67efea3d993f413a574d4a0fae5f2ef936f7bf84c4"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q03-case-input-1": {
+    "script": [
+      "164ef5cbe7348b4ac5bd2cd5f1bb1756aebdb0149d90b91fa9f50ff924abae70"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q04-case-input-1": {
+    "script": [
+      "ff30c48315ba90828702cd069d63cda99d68b106cb0d2662304e7c1ed17a9f37"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q05-case-input-1": {
+    "script": [
+      "0293406d22e6d92c99aacaa14a737ddb2093da90f92fa55716a6aaf01b0a1db5"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q06-case-input-1": {
+    "script": [
+      "cb43e0d8793bafd17a561bd55179992fd3aeabd49718dda5a530123fc883211e"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q07-case-input-1": {
+    "script": [
+      "073a767a42f66514ac6987edc004432256cc5e306eac1641c8bc4b3b7f453ca3"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q07-case-input-2": {
+    "script": [
+      "86c9ff0bc7a017eb887c24543cad18463534f7a8148f70b2d6bcfe50f6d4f54d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-04-incident-analysis-and-recovery-q08-case-input-1": {
+    "script": [
+      "59aa4cddc5868ab52f135c714f8cdc7b39e14329816391befcf001d35ec05ca3"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q01-case-input-1": {
+    "script": [
+      "cd683bb7abde9e3e87f41d7f63497e23fcfb5d907d4004b4acd9be9e35bb60a2"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q01-case-input-2": {
+    "script": [
+      "1d2f0bc1cc8bab305ec3b56863620bf690e2e56ebdc48366f6b9ffa8f39439df"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q02-case-input-1": {
+    "script": [
+      "f7904280aad017d5b4ba7c1d9d14b9d5ca583ee8496c4cab019cbf5c0c62f58d"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q03-case-input-1": {
+    "script": [
+      "69516f2794a195221fa7957aaaebeb80f4c7b93eafd23f9974a8f92976968dec"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q04-case-input-1": {
+    "script": [
+      "836f89c98b08af6bda1c5f9eb2680316a7b309c44f8b1fabb81fffa44b064709"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q05-case-input-1": {
+    "script": [
+      "08352e3e99bf88a438981e9bf9547e713b8a6cf783516624a47f795658875901"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q06-case-input-1": {
+    "script": [
+      "5b931aeeceb7e863fb7894fd7f05216d52ef5be573eb1b8b5b3b6f64fc625f31"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q07-case-input-1": {
+    "script": [
+      "08c7e2133fb45280147939922120d8a65a682988d564c364af85ed06ff0b2ee0"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q08-case-input-1": {
+    "script": [
+      "8efc20f0290b7704b9312bd89fa9331e8f01fb7ba02a031f7cfb678e8d3ed2ae"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s08-05-database-platform-comparison-q08-case-input-2": {
+    "script": [
+      "17f34b2563a25df74d8edc4d07138f62925f50beee55f6f5b6dabf3776ddecf6"
+    ],
+    "preparation": [
+      "4b6d7ef60471287065844e134e4d4cf738f05a78f6b245e5806703d717fce765"
+    ],
+    "questions": [
+      "d882eb120621644da2730b57c61a6aa45678dbb59010b68c8ab7150faa12876b"
+    ],
+    "answer": [
+      "aee4ed36b6c64d27017ad64872e6997974294fb1383cfc0c3c6ece0574f7fc7f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q03-case-input-2": {
+    "script": [
+      "ec19f23be3f7e3f2e52ef054e8033b0207256712ee1029bdb72a7bece813422a"
+    ],
+    "preparation": [
+      "81d3760fb48250779575d39d4bac4ed03601f12ce57dda62914c2dc226e7d42f"
+    ],
+    "questions": [
+      "4ff89af7ad931166054c6e30d83ea2ba7ef3b6cc3a8a451003bbacb54b34579a"
+    ],
+    "answer": [
+      "8a3cdc1c7bade19694a3383fd58ec82a9b4cc4ad3d54747d4a5f7f90b7a1832f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q01-case-input-1": {
+    "script": [
+      "e5bfd529b1fe7718ced3009958ccf0ac4082dd8aa50555c2df2e75ccd02b9865"
+    ],
+    "preparation": [
+      "81d3760fb48250779575d39d4bac4ed03601f12ce57dda62914c2dc226e7d42f"
+    ],
+    "questions": [
+      "4ff89af7ad931166054c6e30d83ea2ba7ef3b6cc3a8a451003bbacb54b34579a"
+    ],
+    "answer": [
+      "5f088ccdc85c101c89e9c61d31b2267609d45fd3aa1d9367c491e401166295d3"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  },
+  "s07-01-queries-on-server-database-q03-case-input-1": {
+    "script": [
+      "c41e653db2ce70efa2f37f44d3bf08d64ea67805748a4ec2b79668dca0a0aeed"
+    ],
+    "preparation": [
+      "81d3760fb48250779575d39d4bac4ed03601f12ce57dda62914c2dc226e7d42f"
+    ],
+    "questions": [
+      "4ff89af7ad931166054c6e30d83ea2ba7ef3b6cc3a8a451003bbacb54b34579a"
+    ],
+    "answer": [
+      "8a3cdc1c7bade19694a3383fd58ec82a9b4cc4ad3d54747d4a5f7f90b7a1832f"
+    ],
+    "notebook": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "estimatedSeconds": [
+      "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+    ]
+  }
+}
